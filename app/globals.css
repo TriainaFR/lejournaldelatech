@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  /* ——— Palette « Le Journal de la Tech » : rouge signal, noir encre, blanc, argent ——— */
+  --color-paper: #ffffff;
+  --color-paper-deep: #f4f5f7;
+  --color-card: #ffffff;
+  --color-ink: #0f1115;
+  --color-ink-soft: #4e555f;
+  --color-ink-faint: #667079;
+
+  --color-rouge: #e11326;
+  --color-rouge-deep: #b30d1d;
+  --color-rouge-bright: #ff3547;
+
+  --color-night: #0b0c0f;
+
+  --color-silver: #c9cdd3;
+  --color-silver-deep: #868d98;
+  --color-silver-soft: #e9ebef;
+
+  --font-masthead: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-display: var(--font-schibsted), "Schibsted Grotesk", "Helvetica Neue", sans-serif;
+  --font-sans: var(--font-schibsted), "Schibsted Grotesk", "Helvetica Neue", sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-rouge);
+  color: #ffffff;
+}
+
+/* ——— Grille technique en filigrane (remplace le grain papier) ——— */
+.tech-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(15, 17, 21, 0.03) 0,
+      rgba(15, 17, 21, 0.03) 1px,
+      transparent 1px,
+      transparent 64px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(15, 17, 21, 0.03) 0,
+      rgba(15, 17, 21, 0.03) 1px,
+      transparent 1px,
+      transparent 64px
+    );
+}
+
+/* ——— Filets de presse : double filet gras + maigre ——— */
+.rule-double {
+  border-top: 3px solid var(--color-ink);
+  position: relative;
+}
+.rule-double::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--color-ink);
+}
+/* ——— Fil d'actualités : pas de filet sous la dernière ligne de chaque colonne ——— */
+@media (min-width: 768px) {
+  .news-list > li:nth-last-child(-n + 2) {
+    border-bottom-width: 0;
+  }
+}
+
+/* ——— Ticker « en continu » ——— */
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+.ticker-track {
+  animation: ticker-scroll 42s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* ——— Révélation au chargement, en cascade ——— */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.15s; }
+.rise-3 { animation-delay: 0.25s; }
+.rise-4 { animation-delay: 0.35s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .ticker-track,
+  .animate-pulse {
+    animation: none;
+  }
+}
+
+/* ——— Liens d'articles : soulignement éditorial ——— */
+.headline-link {
+  background-image: linear-gradient(var(--color-rouge), var(--color-rouge));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 96%;
+  transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+a:hover .headline-link,
+a:focus-visible .headline-link {
+  background-size: 100% 2px;
+}
