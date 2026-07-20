@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Article } from "@/lib/data";
-import { categoryBySlug } from "@/lib/data";
-import ArticleArt from "./ArticleArt";
+import { articleImage, categoryBySlug } from "@/lib/data";
+import EditorialPhoto from "./EditorialPhoto";
 
 /** Carte article réutilisée sur les pages rubrique / actualités / recherche. */
 export default function ArticleCard({ article }: { article: Article }) {
@@ -10,11 +10,12 @@ export default function ArticleCard({ article }: { article: Article }) {
     <article>
       <Link href={`/${article.category}/${article.slug}`} className="group block">
         <figure className="relative aspect-[16/9] overflow-hidden bg-night">
-          <ArticleArt
+          <EditorialPhoto
+            image={articleImage(article)}
             seed={article.seed}
             tone={cat.tone}
             glyph={cat.short.charAt(0)}
-            className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.22,.61,.21,1)] group-hover:scale-[1.035]"
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           />
         </figure>
         <p className="mt-4 font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-rouge">

@@ -11,18 +11,23 @@ export type CategorySlug =
   | "energie-solaire"
   | "green-tech";
 
+export type EditorialImage = { src: string; alt: string };
+
 export type Category = {
   slug: CategorySlug;
   name: string;
   short: string;
-  /** teinte dominante de l'illustration générée */
+  /** teinte dominante de l'illustration générée (repli sans photo) */
   tone: "rouge" | "silver" | "ink";
   description: string;
+  /** alt de la photo /public/images/cat-<slug>.jpg ; absent = pas de photo */
+  imageAlt?: string;
 };
 
 export const categories: Category[] = [
   {
     slug: "intelligence-artificielle",
+    imageAlt: "Lettres « AI » en trois dimensions sur un circuit imprimé bleu",
     name: "Intelligence artificielle",
     short: "IA",
     tone: "rouge",
@@ -31,6 +36,7 @@ export const categories: Category[] = [
   },
   {
     slug: "saas-logiciels",
+    imageAlt: "Ordinateur portable affichant du code dans un bureau lumineux",
     name: "SaaS & Logiciels",
     short: "SaaS",
     tone: "ink",
@@ -39,6 +45,7 @@ export const categories: Category[] = [
   },
   {
     slug: "hebergement-web",
+    imageAlt: "Baies de serveurs câblées dans un datacenter",
     name: "Hébergement web",
     short: "Hébergement",
     tone: "silver",
@@ -47,6 +54,7 @@ export const categories: Category[] = [
   },
   {
     slug: "mobilite",
+    imageAlt: "Prise de recharge branchée sur une voiture électrique",
     name: "Mobilité",
     short: "Mobilité",
     tone: "ink",
@@ -55,6 +63,7 @@ export const categories: Category[] = [
   },
   {
     slug: "energie-solaire",
+    imageAlt: "Rangées de panneaux solaires dans un champ sous un ciel nuageux",
     name: "Énergie & Solaire",
     short: "Solaire",
     tone: "rouge",
@@ -63,6 +72,7 @@ export const categories: Category[] = [
   },
   {
     slug: "green-tech",
+    imageAlt: "Mains tenant une jeune plante au-dessus d'un sol forestier",
     name: "Green tech",
     short: "Green tech",
     tone: "silver",
@@ -80,13 +90,16 @@ export type Article = {
   date: string; // ISO
   dateLabel: string;
   readingTime: number; // minutes
-  /** graine de variation pour l'illustration générée */
+  /** graine de variation pour l'illustration générée (repli sans photo) */
   seed: number;
+  /** alt de la photo /public/images/art-<slug>.jpg ; absent = pas de photo */
+  imageAlt?: string;
 };
 
 export const articles: Article[] = [
   {
     slug: "ia-souveraine-entreprises-francaises",
+    imageAlt: "Main d'un robot humanoïde blanc tendue en avant",
     title:
       "IA souveraine : pourquoi les entreprises françaises rapatrient leurs modèles",
     excerpt:
@@ -100,6 +113,7 @@ export const articles: Article[] = [
   },
   {
     slug: "comparatif-crm-pme-2026",
+    imageAlt: "Équipe en réunion devant un mur de post-its colorés",
     title: "CRM pour PME : notre comparatif 2026 des 12 meilleures solutions",
     excerpt:
       "Prix réels, intégrations, support en français : nous avons testé douze CRM pendant trois mois pour départager les solutions adaptées aux PME françaises.",
@@ -112,6 +126,7 @@ export const articles: Article[] = [
   },
   {
     slug: "hebergeurs-verts-datacenters-france",
+    imageAlt: "Panneau de brassage réseau avec câbles Ethernet",
     title:
       "Datacenters bas carbone : le classement des hébergeurs web les plus verts",
     excerpt:
@@ -125,6 +140,7 @@ export const articles: Article[] = [
   },
   {
     slug: "retrofit-electrique-flottes-entreprise",
+    imageAlt: "Mécanicien effectuant une intervention sur un moteur de véhicule",
     title:
       "Rétrofit électrique : la seconde vie des flottes d'entreprise a commencé",
     excerpt:
@@ -138,6 +154,7 @@ export const articles: Article[] = [
   },
   {
     slug: "panneaux-solaires-installateurs-certifies",
+    imageAlt: "Panneaux solaires en toiture avec une éolienne en arrière-plan",
     title:
       "Panneaux solaires : comment choisir son installateur certifié RGE en 2026",
     excerpt:
@@ -151,6 +168,7 @@ export const articles: Article[] = [
   },
   {
     slug: "numerique-responsable-referentiel-rgesn",
+    imageAlt: "Sentier traversant une forêt dense et lumineuse",
     title:
       "Numérique responsable : ce que le nouveau référentiel change pour vos sites",
     excerpt:
@@ -164,6 +182,7 @@ export const articles: Article[] = [
   },
   {
     slug: "agents-ia-support-client-saas",
+    imageAlt: "Poste de travail avec ordinateur portable et téléphone de bureau",
     title:
       "Agents IA et support client : les éditeurs SaaS français passent à l'échelle",
     excerpt:
@@ -177,6 +196,7 @@ export const articles: Article[] = [
   },
   {
     slug: "facturation-electronique-logiciels-conformes",
+    imageAlt: "Documents de facturation, calculatrice et smartphone",
     title:
       "Facturation électronique : les logiciels prêts pour l'échéance de septembre",
     excerpt:
@@ -190,6 +210,7 @@ export const articles: Article[] = [
   },
   {
     slug: "edge-computing-hebergement-proximite",
+    imageAlt: "Vue aérienne des gratte-ciel d'une grande ville au crépuscule",
     title: "Edge computing : l'hébergement de proximité devient un argument SEO",
     excerpt:
       "Latence, Core Web Vitals, souveraineté : pourquoi la localisation des serveurs pèse désormais dans les arbitrages techniques des sites à fort trafic.",
@@ -202,6 +223,7 @@ export const articles: Article[] = [
   },
   {
     slug: "velos-cargo-logistique-urbaine",
+    imageAlt: "Vélo urbain appuyé contre un mur sombre en ville",
     title:
       "Vélos-cargos électriques : la logistique urbaine change de braquet",
     excerpt:
@@ -215,6 +237,7 @@ export const articles: Article[] = [
   },
   {
     slug: "autoconsommation-collective-immeubles",
+    imageAlt: "Immeubles collectifs vus en contre-plongée",
     title:
       "Autoconsommation collective : le solaire partagé séduit les copropriétés",
     excerpt:
@@ -228,6 +251,7 @@ export const articles: Article[] = [
   },
   {
     slug: "greentech-francaise-levees-2026",
+    imageAlt: "Éoliennes dans un champ au coucher du soleil",
     title:
       "Greentech française : les levées de fonds qui comptent au premier semestre",
     excerpt:
@@ -247,12 +271,15 @@ export type Guide = {
   description: string;
   count: string;
   seed: number;
+  /** alt de la photo /public/images/guide-<slug>.jpg ; absent = pas de photo */
+  imageAlt?: string;
 };
 
 /** Comparatifs & guides d'achat — le cœur du positionnement GEO/SEO */
 export const guides: Guide[] = [
   {
     slug: "meilleurs-logiciels-saas",
+    imageAlt: "Écran affichant du code source coloré",
     title: "Les meilleurs logiciels SaaS par secteur et par prix",
     description:
       "CRM, comptabilité, RH, marketing : notre sélection testée et mise à jour chaque mois.",
@@ -261,6 +288,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "meilleurs-hebergeurs-web",
+    imageAlt: "La Terre vue de l'espace avec les lumières des villes",
     title: "Les meilleurs hébergeurs web en 2026",
     description:
       "Performances mesurées, support, écologie des datacenters : le banc d'essai de référence.",
@@ -269,6 +297,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "meilleures-entreprises-panneaux-solaires",
+    imageAlt: "Grande centrale solaire au sol sous un ciel bleu",
     title: "Les meilleures entreprises de panneaux solaires",
     description:
       "Installateurs certifiés RGE, garanties, prix au kWc : le classement région par région.",
@@ -277,6 +306,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "meilleurs-outils-ia",
+    imageAlt: "Gros plan sur les composants d'une carte électronique",
     title: "Les meilleurs outils d'IA pour les entreprises",
     description:
       "Assistants, génération, analyse de données : les solutions qui tiennent leurs promesses.",
@@ -453,4 +483,23 @@ export function categoryBySlug(slug: CategorySlug): Category {
 
 export function articlesByCategory(slug: CategorySlug): Article[] {
   return articles.filter((a) => a.category === slug);
+}
+
+/** Photos éditoriales : fichiers nommés par convention dans /public/images. */
+export function articleImage(a: Article): EditorialImage | undefined {
+  return a.imageAlt
+    ? { src: `/images/art-${a.slug}.jpg`, alt: a.imageAlt }
+    : undefined;
+}
+
+export function categoryImage(c: Category): EditorialImage | undefined {
+  return c.imageAlt
+    ? { src: `/images/cat-${c.slug}.jpg`, alt: c.imageAlt }
+    : undefined;
+}
+
+export function guideImage(g: Guide): EditorialImage | undefined {
+  return g.imageAlt
+    ? { src: `/images/guide-${g.slug}.jpg`, alt: g.imageAlt }
+    : undefined;
 }

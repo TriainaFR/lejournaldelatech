@@ -1,16 +1,19 @@
 import Link from "next/link";
-import ArticleArt from "@/components/ArticleArt";
+import EditorialPhoto from "@/components/EditorialPhoto";
 import NewsletterForm from "@/components/NewsletterForm";
 import SectionHeader from "@/components/SectionHeader";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { CircuitSprig } from "@/components/ornaments";
 import {
+  articleImage,
   articles,
   categories,
   categoryBySlug,
+  categoryImage,
   comparatifsProgramme,
   faqItems,
+  guideImage,
   guides,
   intentTiles,
   popularSearches,
@@ -79,15 +82,14 @@ export default function Home() {
             <article className="rise rise-1">
               <Link href={`/${feature.category}/${feature.slug}`} className="group block">
                 <figure className="relative aspect-[16/10] overflow-hidden bg-night">
-                  <ArticleArt
+                  <EditorialPhoto
+                    image={articleImage(feature)}
                     seed={feature.seed}
                     tone={featureCategory.tone}
                     glyph={featureCategory.short.charAt(0)}
-                    className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.22,.61,.21,1)] group-hover:scale-[1.035]"
+                    sizes="(min-width: 1024px) 58vw, 100vw"
+                    priority
                   />
-                  <figcaption className="sr-only">
-                    Illustration — {featureCategory.name}
-                  </figcaption>
                 </figure>
                 <p className="mt-6 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
                   Enquête — {featureCategory.name}
@@ -213,11 +215,12 @@ export default function Home() {
                   className="group block border border-silver p-1.5 transition-colors hover:border-rouge"
                 >
                   <figure className="relative aspect-[3/4] overflow-hidden bg-night">
-                    <ArticleArt
+                    <EditorialPhoto
+                      image={categoryImage(c)}
                       seed={41 + i * 13}
                       tone={c.tone}
                       glyph={c.short.charAt(0)}
-                      className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.22,.61,.21,1)] group-hover:scale-[1.05]"
+                      sizes="(min-width: 1024px) 16vw, (min-width: 640px) 33vw, 50vw"
                     />
                     <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night/95 via-night/45 to-transparent px-3 pb-3 pt-10 text-center">
                       <span className="font-display text-base font-semibold leading-tight text-paper">
@@ -261,10 +264,11 @@ export default function Home() {
                           dominant ? "aspect-[16/11]" : "aspect-[16/9]"
                         }`}
                       >
-                        <ArticleArt
+                        <EditorialPhoto
+                          image={guideImage(g)}
                           seed={g.seed}
                           tone={i % 2 === 0 ? "rouge" : "silver"}
-                          className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.22,.61,.21,1)] group-hover:scale-[1.035]"
+                          sizes="(min-width: 1024px) 40vw, (min-width: 640px) 50vw, 100vw"
                         />
                       </figure>
                       <div className="relative">
@@ -298,10 +302,11 @@ export default function Home() {
                   <article>
                     <Link href={`/${a.category}/${a.slug}`} className="group block">
                       <figure className="relative aspect-[16/9] overflow-hidden bg-night">
-                        <ArticleArt
+                        <EditorialPhoto
+                          image={articleImage(a)}
                           seed={a.seed}
                           tone={cat.tone}
-                          className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.22,.61,.21,1)] group-hover:scale-[1.035]"
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         />
                       </figure>
                       <div className="relative">

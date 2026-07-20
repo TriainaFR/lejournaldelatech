@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ArticleArt from "@/components/ArticleArt";
+import EditorialPhoto from "@/components/EditorialPhoto";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import { articles, categoryBySlug } from "@/lib/data";
+import { articleImage, articles, categoryBySlug } from "@/lib/data";
 
 export const dynamicParams = false;
 
@@ -22,10 +22,12 @@ export async function generateMetadata({
     (x) => x.slug === article && x.category === categorie
   );
   if (!a) return {};
+  const img = articleImage(a);
   return {
     title: a.title,
     description: a.excerpt.slice(0, 155),
     alternates: { canonical: `/${a.category}/${a.slug}` },
+    ...(img ? { openGraph: { images: [{ url: img.src, alt: img.alt }] } } : {}),
     // Contenu de démonstration : on désindexe jusqu'à publication réelle.
     robots: { index: false, follow: true },
   };
@@ -50,6 +52,9 @@ export default async function ArticlePage({
         "@type": "Article",
         headline: a.title,
         description: a.excerpt,
+        ...(articleImage(a)
+          ? { image: `https://lejournaldelatech.fr${articleImage(a)!.src}` }
+          : {}),
         inLanguage: "fr-FR",
         datePublished: a.date,
         dateModified: a.date,
@@ -96,14 +101,15 @@ export default async function ArticlePage({
             Par {a.author} · <time dateTime={a.date}>{a.dateLabel}</time> ·
             Lecture {a.readingTime} min
           </p>
-          <figure className="relative mt-8 aspect-[16/9] overflow-hidden bg-night">
-            <ArticleArt
+          <figure className="group relative mt-8 aspect-[16/9] overflow-hidden bg-night">
+            <EditorialPhoto
+              image={articleImage(a)}
               seed={a.seed}
               tone={cat.tone}
               glyph={cat.short.charAt(0)}
-              className="absolute inset-0 h-full w-full"
+              sizes="(min-width: 880px) 830px, 100vw"
+              priority
             />
-            <figcaption className="sr-only">Illustration — {cat.name}</figcaption>
           </figure>
           <div className="mt-8 border border-ink/15 bg-paper-deep/60 p-6 text-center">
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">

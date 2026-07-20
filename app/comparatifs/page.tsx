@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ArticleArt from "@/components/ArticleArt";
+import EditorialPhoto from "@/components/EditorialPhoto";
 import PageShell from "@/components/PageShell";
-import { comparatifsProgramme, guides } from "@/lib/data";
+import { comparatifsProgramme, guideImage, guides } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Comparatifs & guides d'achat",
@@ -23,10 +23,11 @@ export default function ComparatifsPage() {
           <article key={g.slug}>
             <Link href={`/comparatifs/${g.slug}`} className="group block">
               <figure className="relative aspect-[16/9] overflow-hidden bg-night">
-                <ArticleArt
+                <EditorialPhoto
+                  image={guideImage(g)}
                   seed={g.seed}
                   tone={i % 2 === 0 ? "rouge" : "silver"}
-                  className="absolute inset-0 h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(.22,.61,.21,1)] group-hover:scale-[1.035]"
+                  sizes="(min-width: 640px) 50vw, 100vw"
                 />
               </figure>
               <h2 className="mt-5 font-display text-2xl font-semibold leading-snug text-ink">

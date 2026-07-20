@@ -48,6 +48,23 @@ export default function MentionsLegalesPage() {
             sans autorisation est interdite.
           </p>
         </section>
+        <section>
+          <h2 className="font-display text-xl font-semibold text-ink">
+            Crédits photos
+          </h2>
+          <p className="mt-2 leading-relaxed text-ink-soft">
+            Les photographies d&apos;illustration proviennent de{" "}
+            <a
+              href="https://unsplash.com"
+              rel="noopener"
+              className="font-semibold text-rouge hover:text-rouge-deep"
+            >
+              Unsplash
+            </a>{" "}
+            et sont utilisées dans le cadre de la licence Unsplash. Le détail
+            des sources est conservé par la rédaction.
+          </p>
+        </section>
       </div>
     </PageShell>
   );
