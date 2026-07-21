@@ -12,9 +12,9 @@ import { useRef, useState } from "react";
  *   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
  *   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
  *
- * Le modèle EmailJS doit utiliser les variables {{from_name}}, {{reply_to}},
- * {{subject}} et {{message}}. Tant que la configuration est absente, le
- * formulaire l'indique au lieu d'échouer silencieusement.
+ * Les champs correspondent aux variables du modèle EmailJS « Contact Us » :
+ * {{name}}, {{email}}, {{title}} et {{message}}. Tant que la configuration est
+ * absente, le formulaire l'indique au lieu d'échouer silencieusement.
  */
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -85,12 +85,12 @@ export default function ContactForm() {
     <form ref={formRef} onSubmit={onSubmit} className="space-y-5">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="from_name" className={label}>
+          <label htmlFor="name" className={label}>
             Votre nom
           </label>
           <input
-            id="from_name"
-            name="from_name"
+            id="name"
+            name="name"
             type="text"
             required
             autoComplete="name"
@@ -99,12 +99,12 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="reply_to" className={label}>
+          <label htmlFor="email" className={label}>
             Votre e-mail
           </label>
           <input
-            id="reply_to"
-            name="reply_to"
+            id="email"
+            name="email"
             type="email"
             required
             autoComplete="email"
@@ -115,12 +115,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className={label}>
+        <label htmlFor="title" className={label}>
           Objet
         </label>
         <select
-          id="subject"
-          name="subject"
+          id="title"
+          name="title"
           required
           defaultValue={SUJETS[0]}
           className={`${champ} mt-2 cursor-pointer`}

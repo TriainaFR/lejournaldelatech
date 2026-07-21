@@ -49,8 +49,9 @@ sans back-end à maintenir. Trois identifiants à renseigner dans `.env.local` :
 `NEXT_PUBLIC_EMAILJS_SERVICE_ID`, `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` et
 `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` (voir `.env.example`).
 
-Le modèle EmailJS doit utiliser les variables `{{from_name}}`, `{{reply_to}}`,
-`{{subject}}` et `{{message}}`. Tant que la configuration est absente, le
+Les champs du formulaire correspondent aux variables du modèle EmailJS par
+défaut : `{{name}}`, `{{email}}`, `{{title}}` (l'objet) et `{{message}}`. Tant
+que la configuration est absente, le
 formulaire affiche un message explicite et renvoie vers l'adresse e-mail de la
 rédaction — il n'échoue jamais en silence. Un champ leurre (honeypot) filtre les
 robots. Sur Vercel, reporter les trois variables dans les réglages du projet.
