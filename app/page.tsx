@@ -191,11 +191,7 @@ export default function Home() {
                       />
                     </figure>
                     <h3 className="mt-4 font-display text-xl font-semibold text-ink">
-                      {nb > 0 ? (
-                        <span className="headline-link">{c.name}</span>
-                      ) : (
-                        c.name
-                      )}
+                      <span className="headline-link">{c.name}</span>
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                       {c.description}
@@ -205,17 +201,14 @@ export default function Home() {
 
                 return (
                   <li key={c.slug}>
-                    {nb > 0 ? (
-                      <Link href={`/${c.slug}`} className="group block">
-                        {media}
-                        <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.1em] text-rouge">
-                          {nb} article{nb > 1 ? "s" : ""} publié
-                          {nb > 1 ? "s" : ""} →
-                        </p>
-                      </Link>
-                    ) : (
-                      media
-                    )}
+                    <Link href={`/${c.slug}`} className="group block">
+                      {media}
+                      <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.1em] text-rouge">
+                        {nb > 0
+                          ? `${nb} article${nb > 1 ? "s" : ""} publié${nb > 1 ? "s" : ""} →`
+                          : "Découvrir la rubrique →"}
+                      </p>
+                    </Link>
                   </li>
                 );
               })}

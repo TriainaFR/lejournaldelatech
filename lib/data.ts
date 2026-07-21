@@ -25,6 +25,8 @@ export type Category = {
   /** teinte dominante de l'illustration générée (repli sans photo) */
   tone: "rouge" | "silver" | "ink";
   description: string;
+  /** sujets que la rubrique couvre — affichés tant qu'aucun article n'est publié */
+  angles: string[];
   /** alt de la photo /public/images/cat-<slug>.jpg ; absent = pas de photo */
   imageAlt?: string;
 };
@@ -33,6 +35,12 @@ export type Category = {
 export const categories: Category[] = [
   {
     slug: "intelligence-artificielle",
+    angles: [
+      "Comparatifs d'assistants et d'outils d'IA pour les entreprises",
+      "Coût réel des API et des abonnements, calculé cas d'usage par cas d'usage",
+      "Conformité : AI Act, RGPD, hébergement des données et sous-traitance",
+      "Agents et automatisation : ce qui fonctionne vraiment en production",
+    ],
     imageAlt: "Lettres « AI » en trois dimensions sur un circuit imprimé bleu",
     name: "Intelligence artificielle",
     short: "IA",
@@ -42,6 +50,12 @@ export const categories: Category[] = [
   },
   {
     slug: "saas-logiciels",
+    angles: [
+      "Comparatifs de logiciels par métier : CRM, comptabilité, RH, marketing",
+      "Coût total sur trois ans, renouvellements et coûts cachés",
+      "Réversibilité : export des données et sortie d'un éditeur",
+      "Facturation électronique et obligations réglementaires",
+    ],
     imageAlt: "Ordinateur portable affichant du code dans un bureau lumineux",
     name: "SaaS & Logiciels",
     short: "SaaS",
@@ -51,6 +65,12 @@ export const categories: Category[] = [
   },
   {
     slug: "hebergement-web",
+    angles: [
+      "Bancs d'essai des hébergeurs : performances mesurées depuis la France",
+      "Coût réel sur trois ans, renouvellement inclus",
+      "Souveraineté, RGPD et localisation des datacenters",
+      "Mutualisé, VPS, cloud, dédié : quel type pour quel trafic",
+    ],
     imageAlt: "Baies de serveurs câblées dans un datacenter",
     name: "Hébergement web",
     short: "Hébergement",
@@ -60,6 +80,12 @@ export const categories: Category[] = [
   },
   {
     slug: "mobilite",
+    angles: [
+      "Véhicules électriques et utilitaires : autonomie et coût d'usage réels",
+      "Bornes de recharge : réseaux, tarifs et disponibilité mesurée",
+      "Rétrofit et seconde vie des flottes d'entreprise",
+      "Logistique urbaine : vélos-cargos et livraison décarbonée",
+    ],
     imageAlt: "Prise de recharge branchée sur une voiture électrique",
     name: "Mobilité",
     short: "Mobilité",
@@ -69,6 +95,12 @@ export const categories: Category[] = [
   },
   {
     slug: "energie-solaire",
+    angles: [
+      "Panneaux solaires : prix au kWc constatés et rendement réel",
+      "Installateurs certifiés RGE : comment les départager, région par région",
+      "Aides, autoconsommation et retour sur investissement",
+      "Stockage et pilotage de la production",
+    ],
     imageAlt: "Rangées de panneaux solaires dans un champ sous un ciel nuageux",
     name: "Énergie & Solaire",
     short: "Solaire",
@@ -78,6 +110,12 @@ export const categories: Category[] = [
   },
   {
     slug: "green-tech",
+    angles: [
+      "Éco-conception des services numériques et sobriété des interfaces",
+      "Mesure de l'empreinte carbone : outils et méthodes vérifiables",
+      "Datacenters bas carbone et récupération de chaleur",
+      "Startups françaises de la transition : ce qu'elles font vraiment",
+    ],
     imageAlt: "Mains tenant une jeune plante au-dessus d'un sol forestier",
     name: "Green tech",
     short: "Green tech",

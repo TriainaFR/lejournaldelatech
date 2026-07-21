@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { authors } from "@/lib/authors";
-import { activeCategories, articlesSorted } from "@/lib/data";
+import { articlesByCategory, articlesSorted, categories } from "@/lib/data";
 
 const BASE = "https://lejournaldelatech.fr";
 
@@ -20,12 +20,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/confidentialite`, lastModified: now, changeFrequency: "yearly", priority: 0.1 },
   ];
 
-  const rubriques: MetadataRoute.Sitemap = activeCategories().map((c) => ({
-    url: `${BASE}/${c.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
+  // Une rubrique sans article reste utile (ligne éditoriale, sujets à venir)
+  // mais pèse moins qu'une rubrique alimentée.
+  const rubriques: MetadataRoute.Sitemap = categories.map((c) => {
+    const alimentee = articlesByCategory(c.slug).length > 0;
+    return {
+      url: `${BASE}/${c.slug}`,
+      lastModified: now,
+      changeFrequency: alimentee ? ("weekly" as const) : ("monthly" as const),
+      priority: alimentee ? 0.7 : 0.3,
+    };
+  });
 
   const articles: MetadataRoute.Sitemap = articlesSorted().map((a) => ({
     url: `${BASE}/${a.category}/${a.slug}`,
