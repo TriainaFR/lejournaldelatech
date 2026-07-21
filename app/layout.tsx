@@ -4,6 +4,7 @@ import {
   Playfair_Display,
   Schibsted_Grotesk,
 } from "next/font/google";
+import { authorBySlug } from "@/lib/authors";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -65,9 +66,24 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+const fondateur = authorBySlug("lucas-lecoq");
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      // Présent sur toutes les pages pour que `founder` et `author` renvoient
+      // vers une entité résolue, y compris sur l'accueil.
+      "@type": "Person",
+      "@id": `${SITE_URL}/#${fondateur.slug}`,
+      name: fondateur.name,
+      url: `${SITE_URL}/auteurs/${fondateur.slug}`,
+      jobTitle: fondateur.role,
+      description: fondateur.bio,
+      knowsAbout: fondateur.expertise,
+      sameAs: fondateur.sameAs,
+      worksFor: { "@id": `${SITE_URL}/#organization` },
+    },
     {
       "@type": "NewsMediaOrganization",
       "@id": `${SITE_URL}/#organization`,
@@ -76,9 +92,22 @@ const jsonLd = {
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/icon.svg`,
+        width: 64,
+        height: 64,
       },
       description: SITE_DESCRIPTION,
-      publishingPrinciples: `${SITE_URL}/a-propos`,
+      foundingDate: "2026-07",
+      inLanguage: "fr-FR",
+      // Politiques éditoriales : chacune pointe vers une page réellement
+      // publiée. Ce sont les propriétés que Google attend d'un éditeur de
+      // presse — les déclarer, c'est réclamer un signal E-E-A-T déjà mérité.
+      publishingPrinciples: `${SITE_URL}/charte-editoriale`,
+      ethicsPolicy: `${SITE_URL}/charte-editoriale`,
+      correctionsPolicy: `${SITE_URL}/charte-editoriale`,
+      actionableFeedbackPolicy: `${SITE_URL}/contact`,
+      masthead: `${SITE_URL}/a-propos`,
+      founder: { "@id": `${SITE_URL}/#lucas-lecoq` },
+      parentOrganization: { "@id": `${SITE_URL}/#editeur` },
       knowsAbout: [
         "SaaS",
         "Logiciels d'entreprise",
@@ -88,6 +117,26 @@ const jsonLd = {
         "Énergie solaire",
         "Green tech",
         "Écologie numérique",
+      ],
+    },
+    {
+      // Personne morale éditrice — rattache le média à une entité légale
+      // identifiable, avec ses identifiants officiels.
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#editeur`,
+      name: "Triaina",
+      legalName: "TRIAINA",
+      foundingDate: "2026-01-06",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "60 rue François Ier",
+        postalCode: "75008",
+        addressLocality: "Paris",
+        addressCountry: "FR",
+      },
+      identifier: [
+        { "@type": "PropertyValue", propertyID: "SIREN", value: "999402654" },
+        { "@type": "PropertyValue", propertyID: "SIRET", value: "99940265400019" },
       ],
     },
     {
