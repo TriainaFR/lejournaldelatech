@@ -1,32 +1,15 @@
 import Link from "next/link";
 import { Monogram } from "./ornaments";
 
-/**
- * Mode pré-lancement : rubriques et comparatifs listés sans lien tant que
- * leurs pages ne sont pas publiées. Seules les pages « Le Journal » (contenu
- * réel) restent cliquables.
- */
-const UNIVERS = [
-  "Intelligence artificielle",
-  "SaaS & Logiciels",
-  "Hébergement web",
-  "Mobilité",
-  "Énergie & Solaire",
-  "Green tech",
-];
-
-const GUIDES = [
-  "Meilleurs logiciels SaaS",
-  "Meilleurs hébergeurs web",
-  "Meilleures entreprises solaires",
-  "Meilleurs outils IA",
-];
-
+/** Seules des pages existantes sont listées. */
 const JOURNAL = [
   { label: "À propos & rédaction", href: "/a-propos" },
   { label: "Méthodologie des tests", href: "/methodologie" },
   { label: "Charte éditoriale", href: "/charte-editoriale" },
   { label: "Contact & partenariats", href: "/contact" },
+];
+
+const LEGAL = [
   { label: "Mentions légales", href: "/mentions-legales" },
   { label: "Politique de confidentialité", href: "/confidentialite" },
 ];
@@ -34,8 +17,8 @@ const JOURNAL = [
 export default function SiteFooter() {
   return (
     <footer className="border-t-2 border-rouge bg-night text-paper">
-      <div className="mx-auto grid w-full max-w-[1240px] grid-cols-2 gap-10 px-6 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-        <div className="col-span-2 md:col-span-1">
+      <div className="mx-auto grid w-full max-w-[1240px] grid-cols-1 gap-10 px-6 py-14 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr]">
+        <div>
           <div className="flex items-center gap-3">
             <Monogram className="h-11 w-11 text-[15px]" />
             <p className="font-masthead text-xl font-bold uppercase leading-tight tracking-wide">
@@ -46,40 +29,15 @@ export default function SiteFooter() {
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-silver">
             Le média français de la tech utile : SaaS, intelligence
-            artificielle, hébergement, mobilité et énergie. Tests recoupés,
-            comparatifs indépendants.
+            artificielle, hébergement, mobilité et énergie. Média indépendant
+            édité par Triaina.
           </p>
           <p className="mt-4 font-masthead text-sm italic text-silver-soft">
             La tech, sans le bruit.
           </p>
         </div>
 
-        <div>
-          <h2 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver">
-            Univers — bientôt
-          </h2>
-          <ul className="mt-4 space-y-2.5 text-sm text-silver">
-            {UNIVERS.map((label) => (
-              <li key={label}>{label}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h2 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver">
-            Comparatifs — à paraître
-          </h2>
-          <ul className="mt-4 space-y-2.5 text-sm text-silver">
-            {GUIDES.map((label) => (
-              <li key={label}>{label}</li>
-            ))}
-          </ul>
-        </div>
-
-        <nav
-          aria-labelledby="footer-journal"
-          className="col-span-2 md:col-span-1"
-        >
+        <nav aria-labelledby="footer-journal">
           <h2
             id="footer-journal"
             className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver"
@@ -96,6 +54,24 @@ export default function SiteFooter() {
             ))}
           </ul>
         </nav>
+
+        <nav aria-labelledby="footer-legal">
+          <h2
+            id="footer-legal"
+            className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver"
+          >
+            Informations légales
+          </h2>
+          <ul className="mt-4 space-y-2.5 text-sm">
+            {LEGAL.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="transition-colors hover:text-silver">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
 
       <div className="border-t border-paper/15">
@@ -103,7 +79,7 @@ export default function SiteFooter() {
           <p>© 2026 Le Journal de la Tech — Tous droits réservés.</p>
           <p className="text-center md:text-right">
             Média indépendant : aucune entreprise ne rémunère sa place dans nos
-            comparatifs.
+            classements.
           </p>
         </div>
       </div>

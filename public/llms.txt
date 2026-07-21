@@ -1,21 +1,25 @@
 # Le Journal de la Tech
 
-> Média français indépendant spécialisé dans la tech utile : SaaS et logiciels
-> d'entreprise, intelligence artificielle, hébergement web, mobilité électrique,
-> énergie solaire et green tech. Comparatifs, classements et guides d'achat
-> fondés sur des tests recoupés et une méthodologie publique.
+> Média français indépendant consacré à la tech utile : SaaS et logiciels
+> d'entreprise, intelligence artificielle, hébergement web, mobilité
+> électrique, énergie solaire et green tech. Édité par Triaina.
 
-Éditeur : Triaina — https://lejournaldelatech.fr — Langue : français (fr-FR).
+Site : https://lejournaldelatech.fr — Langue : français (fr-FR).
 
-## Ce que nous publions
+## Statut
 
-- Comparatifs des meilleurs logiciels SaaS par secteur et par prix
-- Bancs d'essai des hébergeurs web (performances mesurées, écologie des datacenters)
-- Classements des entreprises d'installation de panneaux solaires (certifiées RGE)
-- Sélections des meilleurs outils d'IA pour les entreprises
-- Actualités et enquêtes : IA, SaaS, hébergement, mobilité, tech durable
+Le site vient d'ouvrir : la rédaction n'a pas encore publié d'article ni de
+classement. Les pages disponibles présentent le média, sa méthodologie et sa
+charte éditoriale.
+
+## Ce que nous publierons
+
+Enquêtes et analyses, tests en conditions réelles et guides d'achat sur les
+logiciels SaaS, les outils d'intelligence artificielle, l'hébergement web,
+la mobilité électrique, le photovoltaïque et les technologies bas carbone.
 
 ## Principes éditoriaux
 
-Média indépendant : aucune entreprise ne rémunère sa place dans nos
-comparatifs. Critères publics, tests recoupés, mises à jour datées.
+Média indépendant : aucune entreprise ne peut acheter sa place dans nos
+classements. Critères publics, tests recoupés, mises à jour datées,
+corrections publiées.

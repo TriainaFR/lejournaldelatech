@@ -1,6 +1,9 @@
 /**
- * Contenu de démonstration de la home page.
- * À remplacer par un CMS (ou des fichiers MDX) quand la production éditoriale démarre.
+ * Données du site.
+ *
+ * `articles` est vide tant que la rédaction n'a rien publié : dès qu'une entrée
+ * est ajoutée, il faudra recréer les routes correspondantes (page rubrique et
+ * page article) et rebrancher la navigation.
  */
 
 export type CategorySlug =
@@ -24,6 +27,7 @@ export type Category = {
   imageAlt?: string;
 };
 
+/** Les thématiques couvertes par le journal (ligne éditoriale). */
 export const categories: Category[] = [
   {
     slug: "intelligence-artificielle",
@@ -32,7 +36,7 @@ export const categories: Category[] = [
     short: "IA",
     tone: "rouge",
     description:
-      "Modèles, agents, régulation et cas d'usage : l'actualité de l'IA décryptée pour les entreprises, avec nos comparatifs des meilleurs outils.",
+      "Modèles, agents, régulation et cas d'usage concrets en entreprise.",
   },
   {
     slug: "saas-logiciels",
@@ -41,7 +45,7 @@ export const categories: Category[] = [
     short: "SaaS",
     tone: "ink",
     description:
-      "CRM, comptabilité, RH, marketing : tests et comparatifs des logiciels SaaS qui équipent les TPE et PME françaises, par secteur et par prix.",
+      "CRM, comptabilité, RH, marketing : les outils qui équipent les TPE et PME.",
   },
   {
     slug: "hebergement-web",
@@ -50,7 +54,7 @@ export const categories: Category[] = [
     short: "Hébergement",
     tone: "silver",
     description:
-      "Performances mesurées, support, écologie des datacenters : nos bancs d'essai des hébergeurs web français et européens.",
+      "Performances, support, souveraineté et écologie des datacenters.",
   },
   {
     slug: "mobilite",
@@ -59,7 +63,7 @@ export const categories: Category[] = [
     short: "Mobilité",
     tone: "ink",
     description:
-      "Véhicules électriques, bornes de recharge, rétrofit, logistique urbaine : la mobilité durable côté usages et côté entreprises.",
+      "Véhicules électriques, bornes, rétrofit et logistique urbaine.",
   },
   {
     slug: "energie-solaire",
@@ -68,7 +72,7 @@ export const categories: Category[] = [
     short: "Solaire",
     tone: "rouge",
     description:
-      "Panneaux solaires, autoconsommation, installateurs certifiés RGE : prix constatés, aides et classements région par région.",
+      "Photovoltaïque, autoconsommation, aides et installateurs certifiés.",
   },
   {
     slug: "green-tech",
@@ -77,7 +81,7 @@ export const categories: Category[] = [
     short: "Green tech",
     tone: "silver",
     description:
-      "Éco-conception, mesure carbone, numérique responsable : les technologies qui réduisent l'empreinte environnementale, sans greenwashing.",
+      "Éco-conception, mesure carbone et sobriété numérique, sans greenwashing.",
   },
 ];
 
@@ -96,214 +100,40 @@ export type Article = {
   imageAlt?: string;
 };
 
-// Aucun article publié pour l'instant : les cartes, rubriques et pages
-// article réapparaîtront automatiquement dès qu'on ajoute des entrées ici.
+/** Aucun article publié pour l'instant. */
 export const articles: Article[] = [];
-
-export type Guide = {
-  slug: string;
-  title: string;
-  description: string;
-  count: string;
-  seed: number;
-  /** alt de la photo /public/images/guide-<slug>.jpg ; absent = pas de photo */
-  imageAlt?: string;
-};
-
-/** Comparatifs & guides d'achat — le cœur du positionnement GEO/SEO */
-export const guides: Guide[] = [
-  {
-    slug: "meilleurs-logiciels-saas",
-    imageAlt: "Écran affichant du code source coloré",
-    title: "Les meilleurs logiciels SaaS par secteur et par prix",
-    description:
-      "CRM, comptabilité, RH, marketing : notre sélection testée et mise à jour chaque mois.",
-    count: "48 logiciels à l'essai",
-    seed: 21,
-  },
-  {
-    slug: "meilleurs-hebergeurs-web",
-    imageAlt: "La Terre vue de l'espace avec les lumières des villes",
-    title: "Les meilleurs hébergeurs web en 2026",
-    description:
-      "Performances mesurées, support, écologie des datacenters : le banc d'essai de référence.",
-    count: "16 hébergeurs au banc d'essai",
-    seed: 22,
-  },
-  {
-    slug: "meilleures-entreprises-panneaux-solaires",
-    imageAlt: "Grande centrale solaire au sol sous un ciel bleu",
-    title: "Les meilleures entreprises de panneaux solaires",
-    description:
-      "Installateurs certifiés RGE, garanties, prix au kWc : le classement région par région.",
-    count: "60 installateurs à l'étude",
-    seed: 23,
-  },
-  {
-    slug: "meilleurs-outils-ia",
-    imageAlt: "Gros plan sur les composants d'une carte électronique",
-    title: "Les meilleurs outils d'IA pour les entreprises",
-    description:
-      "Assistants, génération, analyse de données : les solutions qui tiennent leurs promesses.",
-    count: "35 outils à l'évaluation",
-    seed: 24,
-  },
-];
-
-export const tickerItems: string[] = [
-  "Bienvenue sur Le Journal de la Tech, média indépendant de la tech utile",
-  "Meilleurs logiciels SaaS : premier classement en préparation",
-  "Banc d'essai hébergeurs web : 16 offres en cours de test",
-  "Installateurs solaires : enquête région par région en cours",
-  "La Dépêche Tech : nos comparatifs en avant-première, chaque jeudi",
-];
-
-export type IntentTile = {
-  title: string;
-  href: string;
-  keywords: { label: string; href: string }[];
-};
-
-/** Tuiles d'intention « Chaque projet, sa solution » — portes d'entrée SEO */
-export const intentTiles: IntentTile[] = [
-  {
-    title: "Lancer son site web",
-    href: "/guides/lancer-son-site-web",
-    keywords: [
-      { label: "Hébergeurs", href: "/hebergement-web" },
-      { label: "CMS", href: "/saas-logiciels" },
-      { label: "Nom de domaine", href: "/guides/lancer-son-site-web" },
-    ],
-  },
-  {
-    title: "Équiper sa PME",
-    href: "/guides/equiper-sa-pme",
-    keywords: [
-      { label: "CRM", href: "/comparatifs/meilleurs-logiciels-saas" },
-      { label: "Comptabilité", href: "/saas-logiciels" },
-      { label: "RH", href: "/saas-logiciels" },
-    ],
-  },
-  {
-    title: "Passer au solaire",
-    href: "/guides/passer-au-solaire",
-    keywords: [
-      {
-        label: "Installateurs",
-        href: "/comparatifs/meilleures-entreprises-panneaux-solaires",
-      },
-      { label: "Prix au kWc", href: "/energie-solaire" },
-      { label: "Aides 2026", href: "/energie-solaire" },
-    ],
-  },
-  {
-    title: "Électrifier sa flotte",
-    href: "/guides/electrifier-sa-flotte",
-    keywords: [
-      { label: "Véhicules", href: "/mobilite" },
-      { label: "Bornes", href: "/mobilite" },
-      { label: "Rétrofit", href: "/mobilite" },
-    ],
-  },
-  {
-    title: "Automatiser avec l'IA",
-    href: "/guides/automatiser-avec-ia",
-    keywords: [
-      { label: "Assistants", href: "/comparatifs/meilleurs-outils-ia" },
-      { label: "Agents", href: "/intelligence-artificielle" },
-      { label: "Conformité", href: "/intelligence-artificielle" },
-    ],
-  },
-  {
-    title: "Réduire son empreinte",
-    href: "/guides/reduire-son-empreinte",
-    keywords: [
-      { label: "Mesure carbone", href: "/green-tech" },
-      { label: "Éco-conception", href: "/green-tech" },
-      { label: "Hébergement vert", href: "/hebergement-web" },
-    ],
-  },
-];
 
 export type FaqItem = { question: string; answer: string };
 
-/** Questions longue traîne — affichées en accordéon + balisées FAQPage */
+/**
+ * Questions longue traîne — affichées en accordéon et balisées FAQPage.
+ * Chaque réponse se suffit à elle-même : elle n'annonce aucun contenu à venir.
+ */
 export const faqItems: FaqItem[] = [
   {
-    question: "Quel est le meilleur hébergeur web en 2026 ?",
+    question: "Comment choisir son hébergeur web en 2026 ?",
     answer:
-      "Il n'existe pas un meilleur hébergeur unique : tout dépend du trafic, du budget et de vos exigences écologiques. Notre banc d'essai en cours mesure les performances réelles de 16 hébergeurs français et européens, leur support et l'empreinte de leurs datacenters, pour les classer par profil d'usage — premier classement à paraître.",
+      "Partez de votre trafic réel et de vos contraintes, pas du prix d'appel. Vérifiez la localisation des serveurs (l'Union européenne pour les données personnelles), la présence d'un support en français joignable, les sauvegardes automatiques incluses, la facilité de migration en cas de départ, et le prix de renouvellement — souvent deux à trois fois supérieur au tarif de première année.",
   },
   {
-    question: "Quel logiciel CRM choisir pour une PME française ?",
+    question: "Quels critères comptent vraiment pour un logiciel SaaS de PME ?",
     answer:
-      "Pour une PME française, les critères décisifs sont le prix réel par utilisateur, l'hébergement des données en Europe, les intégrations (facturation, emailing) et un support en français. Notre comparatif 2026, en préparation, passera douze CRM au crible sur ces critères, après trois mois de tests en conditions réelles.",
+      "Quatre points décident de la réussite d'un déploiement : le coût réel par utilisateur une fois les options ajoutées, l'hébergement des données et la conformité RGPD, les intégrations avec vos outils existants (facturation, emailing, comptabilité), et la réversibilité — pouvez-vous exporter vos données dans un format exploitable si vous changez d'avis ?",
   },
   {
-    question:
-      "Combien coûte une installation de panneaux solaires en 2026 ?",
+    question: "Combien coûte une installation de panneaux solaires ?",
     answer:
-      "Comptez en moyenne entre 7 000 et 12 000 € pour une installation résidentielle de 3 à 6 kWc, aides déduites, selon la région et la complexité de la toiture. Notre guide à paraître détaillera les prix au kWc constatés, les aides en vigueur et les pièges des devis, région par région.",
+      "Pour une installation résidentielle de 3 à 6 kWc, les devis constatés se situent le plus souvent entre 7 000 et 12 000 €, aides déduites, selon la région, l'accessibilité de la toiture et le matériel retenu. Exigez toujours plusieurs devis détaillés, la certification RGE de l'installateur, et méfiez-vous des offres de démarchage téléphonique.",
   },
   {
-    question: "Comment choisir un outil d'IA fiable pour son entreprise ?",
+    question: "Comment évaluer un outil d'IA pour son entreprise ?",
     answer:
-      "Trois questions à poser avant de signer : où sont hébergées et comment sont utilisées vos données, quel est le coût réel à l'usage (et pas seulement l'abonnement), et l'outil est-il conforme à l'AI Act et au RGPD ? Notre sélection des meilleurs outils d'IA, en cours d'évaluation sur 35 solutions, paraîtra prochainement.",
+      "Trois questions avant de signer : où sont hébergées vos données et sont-elles utilisées pour entraîner le modèle, quel est le coût réel à l'usage (et pas seulement l'abonnement affiché), et le fournisseur documente-t-il sa conformité à l'AI Act et au RGPD ? Testez toujours sur un cas d'usage réel avant de généraliser.",
   },
   {
-    question: "Qu'est-ce que la green tech, et pourquoi ça compte ?",
+    question: "Qu'est-ce que la green tech ?",
     answer:
-      "La green tech désigne les technologies conçues pour réduire l'impact environnemental : énergies renouvelables, mobilité électrique, éco-conception logicielle, mesure carbone. C'est l'un des secteurs les plus dynamiques de la tech française — et l'un des axes éditoriaux fondateurs du Journal de la Tech.",
-  },
-];
-
-export const stats: { value: string; label: string }[] = [
-  { value: "48", label: "logiciels SaaS à l'essai" },
-  { value: "16", label: "hébergeurs au banc d'essai" },
-  { value: "60", label: "installateurs solaires à l'étude" },
-];
-
-export const popularSearches: { label: string; href: string }[] = [
-  { label: "Meilleur CRM 2026", href: "/comparatifs/meilleurs-logiciels-saas" },
-  { label: "Hébergeur écologique", href: "/comparatifs/meilleurs-hebergeurs-web" },
-  {
-    label: "Prix panneaux solaires",
-    href: "/comparatifs/meilleures-entreprises-panneaux-solaires",
-  },
-  { label: "Meilleur outil IA", href: "/comparatifs/meilleurs-outils-ia" },
-  { label: "Borne de recharge", href: "/mobilite" },
-];
-
-/** Programme éditorial des comparatifs — table extractible (SEO/GEO) */
-export const comparatifsProgramme: {
-  comparatif: string;
-  univers: string;
-  volume: string;
-  maj: string;
-}[] = [
-  {
-    comparatif: "Meilleurs logiciels SaaS par prix",
-    univers: "SaaS & Logiciels",
-    volume: "48 solutions",
-    maj: "Été 2026",
-  },
-  {
-    comparatif: "Meilleurs hébergeurs web",
-    univers: "Hébergement",
-    volume: "16 hébergeurs",
-    maj: "Été 2026",
-  },
-  {
-    comparatif: "Meilleures entreprises de panneaux solaires",
-    univers: "Énergie & Solaire",
-    volume: "60 installateurs",
-    maj: "Été 2026",
-  },
-  {
-    comparatif: "Meilleurs outils d'IA pour entreprises",
-    univers: "Intelligence artificielle",
-    volume: "35 outils",
-    maj: "Automne 2026",
+      "La green tech désigne les technologies conçues pour réduire l'impact environnemental : énergies renouvelables, mobilité électrique, éco-conception logicielle, mesure et pilotage du carbone. C'est l'un des secteurs les plus dynamiques de la tech française, et l'un des axes éditoriaux fondateurs du Journal de la Tech.",
   },
 ];
 
@@ -325,11 +155,5 @@ export function articleImage(a: Article): EditorialImage | undefined {
 export function categoryImage(c: Category): EditorialImage | undefined {
   return c.imageAlt
     ? { src: `/images/cat-${c.slug}.jpg`, alt: c.imageAlt }
-    : undefined;
-}
-
-export function guideImage(g: Guide): EditorialImage | undefined {
-  return g.imageAlt
-    ? { src: `/images/guide-${g.slug}.jpg`, alt: g.imageAlt }
     : undefined;
 }

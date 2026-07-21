@@ -1,18 +1,66 @@
 "use client";
 
-/**
- * Date du jour. Rendue côté serveur avec la date du build, remplacée par la
- * date réelle à l'hydratation — d'où le suppressHydrationWarning (pattern
- * recommandé par React pour les horodatages).
- */
-export default function DateStamp() {
-  const raw = new Intl.DateTimeFormat("fr-FR", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(new Date());
-  const label = raw.charAt(0).toUpperCase() + raw.slice(1);
+import { useSyncExternalStore } from "react";
+import { labelFromIso, todayIso } from "@/lib/date";
 
-  return <span suppressHydrationWarning>{label}</span>;
+/**
+ * Date d'édition toujours juste chez le visiteur.
+ *
+ * Le site étant statique, le HTML livré porte la date du build : elle sert de
+ * valeur d'hydratation (`initialIso`), puis le client bascule immédiatement sur
+ * la date réelle. L'abonnement la rafraîchit ensuite au passage de minuit et
+ * au retour sur l'onglet, pour un onglet laissé ouvert plusieurs jours.
+ */
+function subscribe(onStoreChange: () => void): () => void {
+  let timer: number | undefined;
+
+  const scheduleMidnight = () => {
+    const now = new Date();
+    const nextDay = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate() + 1,
+      0,
+      0,
+      2
+    );
+    timer = window.setTimeout(() => {
+      onStoreChange();
+      scheduleMidnight();
+    }, nextDay.getTime() - now.getTime());
+  };
+
+  const refresh = () => {
+    if (document.visibilityState === "visible") onStoreChange();
+  };
+
+  scheduleMidnight();
+  document.addEventListener("visibilitychange", refresh);
+  window.addEventListener("focus", refresh);
+
+  return () => {
+    if (timer !== undefined) window.clearTimeout(timer);
+    document.removeEventListener("visibilitychange", refresh);
+    window.removeEventListener("focus", refresh);
+  };
+}
+
+export default function DateStamp({
+  initialIso,
+  initialLabel,
+}: {
+  initialIso: string;
+  initialLabel: string;
+}) {
+  const iso = useSyncExternalStore(
+    subscribe,
+    () => todayIso(),
+    () => initialIso
+  );
+
+  return (
+    <time dateTime={iso}>
+      {iso === initialIso ? initialLabel : labelFromIso(iso)}
+    </time>
+  );
 }

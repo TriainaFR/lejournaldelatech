@@ -53,15 +53,32 @@ app/
   sitemap.ts, robots.ts
   a-propos/, methodologie/, charte-editoriale/, contact/,
   mentions-legales/, confidentialite/   # pages à contenu réel
-components/            # header, footer, ticker, photos, illustrations, ornements
-lib/data.ts            # données du site (articles vides pour l'instant)
+components/            # header, footer, photos, illustrations, ornements
+lib/data.ts            # thématiques, FAQ, articles (vide pour l'instant)
+lib/date.ts            # date d'édition partagée serveur / client
 ```
 
-**Mode pré-lancement** : tant qu'aucun contenu n'est publié, rubriques,
-comparatifs et guides sont affichés en annonces « À paraître » non
-cliquables (nav, cartes, tuiles, footer) et leurs routes n'existent pas.
-Pour rouvrir une section : recréer sa route et rebrancher les `<Link>`
-dans `SiteHeader`, `SiteFooter` et `app/page.tsx` (repères en commentaire).
+**Aucun contenu fantôme** : le site n'affiche et ne référence que des pages
+réellement publiées. Tant que `articles` est vide dans `lib/data.ts`, aucune
+rubrique, aucun comparatif et aucun article n'apparaît — ni à l'écran, ni
+dans la navigation, ni dans le sitemap.
+
+### Publier les premiers articles
+
+1. Ajouter les entrées dans `articles` (`lib/data.ts`), avec la photo
+   `public/images/art-<slug>.jpg` et son `imageAlt`.
+2. Recréer les routes `app/[categorie]/page.tsx` (rubrique) et
+   `app/[categorie]/[article]/page.tsx` (article) — elles étaient basées sur
+   `generateStaticParams()` alimenté par `lib/data.ts` (voir historique git).
+3. Rebrancher les rubriques dans `NAV_LINKS` (`components/SiteHeader.tsx`) et
+   le footer, puis ajouter les URLs au `sitemap.ts`.
+
+### Date d'édition
+
+`components/DateStamp.tsx` affiche toujours la date réelle du visiteur : le
+HTML statique porte la date du build (valeur d'hydratation), le client bascule
+immédiatement sur sa date locale via `useSyncExternalStore`, puis rafraîchit au
+passage de minuit et au retour sur l'onglet.
 
 ## SEO / GEO intégré
 

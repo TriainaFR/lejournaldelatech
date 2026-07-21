@@ -43,6 +43,12 @@ body {
   color: #ffffff;
 }
 
+/* ——— Les ancres ne passent pas sous la barre de navigation collante ——— */
+section[id],
+[id^="titre-"] {
+  scroll-margin-top: 5.5rem;
+}
+
 /* ——— Grille technique en filigrane (remplace le grain papier) ——— */
 .tech-grid::before {
   content: "";

@@ -1,25 +1,26 @@
 import Link from "next/link";
-import { tickerItems } from "@/lib/data";
+import { labelFromIso, todayIso } from "@/lib/date";
 import DateStamp from "./DateStamp";
-import Ticker from "./Ticker";
 import { CircuitSprig, Diamond, Monogram } from "./ornaments";
 
 /**
- * Mode pré-lancement : les rubriques n'ont pas encore de contenu publié,
- * elles sont donc affichées sans lien. Rebrancher les <Link> quand les
- * pages rubriques rouvriront.
+ * Navigation : uniquement des pages existantes. Les rubriques éditoriales
+ * (IA, SaaS, hébergement…) y seront ajoutées quand leurs premiers articles
+ * seront publiés.
  */
-const NAV_ITEMS: string[] = [
-  "Intelligence artificielle",
-  "SaaS & Logiciels",
-  "Hébergement",
-  "Mobilité",
-  "Énergie & Solaire",
-  "Green tech",
-  "Comparatifs",
+const NAV_LINKS: { label: string; href: string }[] = [
+  { label: "Le Journal", href: "/a-propos" },
+  { label: "Méthodologie", href: "/methodologie" },
+  { label: "Charte éditoriale", href: "/charte-editoriale" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function SiteHeader() {
+  // Date du build : sert de valeur d'hydratation, le client affiche ensuite
+  // toujours la date réelle du visiteur.
+  const initialIso = todayIso();
+  const initialLabel = labelFromIso(initialIso);
+
   return (
     <>
       <header>
@@ -27,12 +28,12 @@ export default function SiteHeader() {
         <div className="border-b border-ink/15 bg-paper-deep">
           <div className="mx-auto flex h-9 w-full max-w-[1240px] items-center justify-between gap-4 px-6 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft">
             <p className="hidden items-center gap-2 sm:flex">
-              Édition du jour
+              Édition digitale
               <Diamond className="text-[8px] text-silver-deep" />
-              Ouverture prochaine
+              France
             </p>
             <p className="whitespace-nowrap">
-              <DateStamp />
+              <DateStamp initialIso={initialIso} initialLabel={initialLabel} />
             </p>
             <p className="hidden items-center gap-4 lg:flex">
               <span>SaaS · IA · Hébergement · Mobilité · Énergie</span>
@@ -80,9 +81,9 @@ export default function SiteHeader() {
         </div>
       </header>
 
-      {/* ——— Rubriques (hors <header> pour le sticky) — sans lien avant l'ouverture ——— */}
+      {/* ——— Navigation (hors <header> pour que le sticky fonctionne) ——— */}
       <nav
-        aria-label="Rubriques du journal (ouverture prochaine)"
+        aria-label="Navigation principale"
         className="border-b border-ink/15 bg-paper/95 backdrop-blur-sm md:sticky md:top-0 md:z-40"
       >
         <div className="mx-auto flex w-full max-w-[1240px] items-center justify-between gap-3 px-6">
@@ -93,24 +94,48 @@ export default function SiteHeader() {
           >
             <Monogram className="h-9 w-9 text-[13px] tracking-[-0.06em]" />
           </Link>
-          <ul className="flex flex-1 flex-wrap items-center justify-center gap-x-5 gap-y-1.5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-soft lg:gap-x-7 lg:text-xs">
-            {NAV_ITEMS.map((label) => (
-              <li key={label} className="shrink-0 cursor-default">
-                {label}
+          <ul className="flex flex-1 flex-wrap items-center justify-center gap-x-6 gap-y-1.5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink lg:gap-x-8 lg:text-xs">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href} className="shrink-0">
+                <Link
+                  href={link.href}
+                  className="transition-colors hover:text-rouge"
+                >
+                  {link.label}
+                </Link>
               </li>
             ))}
           </ul>
           <Link
-            href="/contact"
-            className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-soft transition-colors hover:text-rouge sm:flex"
+            href="/#newsletter"
+            className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-rouge transition-colors hover:text-rouge-deep sm:flex"
           >
-            Nous écrire
+            Newsletter
           </Link>
         </div>
       </nav>
 
-      {/* ——— Fil « en continu » ——— */}
-      <Ticker items={tickerItems} />
+      {/* ——— Bandeau d'annonce ——— */}
+      <div className="border-b border-night/40 bg-night text-paper">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-wrap items-center justify-center gap-x-4 gap-y-1 px-6 py-2.5 text-center font-mono text-[11px] tracking-wide">
+          <span className="inline-flex items-center gap-2 font-bold uppercase tracking-[0.18em] text-rouge-bright">
+            <span
+              aria-hidden="true"
+              className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-rouge-bright"
+            />
+            Ouverture prochaine
+          </span>
+          <span className="text-silver">
+            La rédaction prépare ses premières publications.
+          </span>
+          <Link
+            href="/#newsletter"
+            className="font-semibold text-paper underline underline-offset-4 transition-colors hover:text-silver"
+          >
+            Être prévenu
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
