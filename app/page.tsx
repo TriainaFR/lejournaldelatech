@@ -71,7 +71,11 @@ export default function Home() {
             <h2 id="titre-une" className="sr-only">
               À la une
             </h2>
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-[7fr_5fr] lg:gap-14">
+            <div
+              className={`grid grid-cols-1 gap-10 lg:gap-14 ${
+                autres.length > 0 ? "lg:grid-cols-[7fr_5fr]" : ""
+              }`}
+            >
               <article className="rise rise-1">
                 <Link
                   href={`/${feature.category}/${feature.slug}`}
@@ -104,65 +108,54 @@ export default function Home() {
                 </Link>
               </article>
 
-              <aside
-                aria-labelledby="titre-presentation"
-                className="rise rise-2 lg:border-l lg:border-ink/15 lg:pl-10"
-              >
-                <h3
-                  id="titre-presentation"
-                  className="rule-double pt-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-ink"
+              {autres.length > 0 ? (
+                <aside
+                  aria-labelledby="titre-aussi"
+                  className="rise rise-2 lg:border-l lg:border-ink/15 lg:pl-10"
                 >
-                  Le Journal de la Tech
-                </h3>
-                <p className="mt-5 leading-relaxed text-ink-soft">
-                  Média français indépendant consacré aux technologies qui font
-                  tourner les entreprises et accélèrent la transition :
-                  logiciels et SaaS, intelligence artificielle, hébergement web,
-                  mobilité, énergie solaire et green tech.
-                </p>
-                <p className="mt-4 leading-relaxed text-ink-soft">
-                  Nos critères sont publics, nos sources citées, nos chiffres
-                  datés. Aucune entreprise ne rémunère sa place dans nos
-                  classements.
-                </p>
-                <div className="mt-6 flex flex-col gap-3">
-                  <a
-                    href="#newsletter"
-                    className="bg-rouge px-5 py-3 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-rouge-deep"
+                  <h3
+                    id="titre-aussi"
+                    className="rule-double pt-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-ink"
                   >
-                    S&apos;abonner à la newsletter
-                  </a>
-                  <Link
-                    href="/methodologie"
-                    className="border border-ink/25 bg-card px-5 py-3 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
-                  >
-                    Notre méthodologie
-                  </Link>
-                </div>
-
-                {autres.length > 0 ? (
-                  <ol className="mt-8 divide-y divide-ink/10 border-t border-ink/15">
-                    {autres.slice(0, 4).map((a) => {
+                    Également à la une
+                  </h3>
+                  <ol className="mt-2 divide-y divide-ink/10">
+                    {autres.slice(0, 5).map((a) => {
                       const c = categoryBySlug(a.category);
                       return (
                         <li key={a.slug}>
                           <Link
                             href={`/${a.category}/${a.slug}`}
-                            className="group block py-4"
+                            className="group flex gap-4 py-5"
                           >
-                            <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-rouge">
-                              {c.name}
-                            </span>
-                            <span className="mt-1 block font-display text-lg font-medium leading-snug text-ink">
-                              <span className="headline-link">{a.title}</span>
+                            <figure className="relative aspect-square w-24 shrink-0 overflow-hidden bg-night">
+                              <EditorialPhoto
+                                image={articleImage(a)}
+                                seed={a.seed}
+                                tone={c.tone}
+                                glyph={c.short.charAt(0)}
+                                sizes="96px"
+                              />
+                            </figure>
+                            <span className="min-w-0">
+                              <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-rouge">
+                                {c.name}
+                              </span>
+                              <span className="mt-1 block font-display text-lg font-medium leading-snug text-ink">
+                                <span className="headline-link">{a.title}</span>
+                              </span>
+                              <span className="mt-1 block font-mono text-[10px] uppercase tracking-[0.1em] text-ink-faint">
+                                <time dateTime={a.date}>{a.dateLabel}</time> ·{" "}
+                                {a.readingTime} min
+                              </span>
                             </span>
                           </Link>
                         </li>
                       );
                     })}
                   </ol>
-                ) : null}
-              </aside>
+                </aside>
+              ) : null}
             </div>
           </section>
         ) : null}
