@@ -78,8 +78,7 @@ export default function SiteFooter() {
         <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-silver md:flex-row">
           <p>© 2026 Le Journal de la Tech — Tous droits réservés.</p>
           <p className="text-center md:text-right">
-            Média indépendant : aucune entreprise ne rémunère sa place dans nos
-            classements.
+            Critères publics, sources citées, chiffres datés.
           </p>
         </div>
       </div>

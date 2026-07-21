@@ -33,8 +33,8 @@ const pageJsonLd = {
 
 const ENGAGEMENTS: { title: string; text: string }[] = [
   {
-    title: "Indépendance",
-    text: "Aucune entreprise ne peut acheter sa place dans nos classements. La publicité, quand il y en a, est signalée et séparée de l'éditorial.",
+    title: "Sources vérifiables",
+    text: "Chaque chiffre renvoie à sa source, avec sa date et la version testée. Nos propres mesures sont identifiées comme telles.",
   },
   {
     title: "Méthode publique",
@@ -320,11 +320,10 @@ export default function Home() {
             </h2>
             <CircuitSprig className="mt-4 h-5 w-28 text-silver-deep" />
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              Le Journal de la Tech est un média indépendant. Aucune entreprise
-              ne rémunère sa place dans nos classements, nos critères sont
-              publics et nos tests sont recoupés. Nous croyons à une
-              technologie utile, mesurable et durable — et nous la racontons
-              sans le bruit.
+              Le Journal de la Tech teste, mesure et compare. Nos critères sont
+              publics et pondérés, nos sources citées, nos chiffres datés et nos
+              tests recoupés. Nous croyons à une technologie utile, mesurable et
+              durable — et nous la racontons sans le bruit.
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
               <Link

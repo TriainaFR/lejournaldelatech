@@ -327,9 +327,9 @@ export default async function ArticlePage({
                 Comment nous travaillons
               </p>
               <p className="mt-3 leading-relaxed text-ink-soft">
-                Nos critères sont publics, nos sources citées et nos chiffres
-                datés : aucune entreprise ne rémunère sa place dans nos
-                classements.
+                Nos critères sont publics et pondérés, nos sources citées et nos
+                chiffres datés. Les contenus commerciaux, lorsqu&apos;il y en a,
+                sont signalés comme tels.
               </p>
               <p className="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.12em]">
                 {a.methodology ? (

@@ -81,8 +81,8 @@ export default function ContactPage() {
               formulaire avec l&apos;objet correspondant.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Rappel : aucune entreprise ne peut acheter sa place dans nos
-              classements, quelle que soit la nature du partenariat.
+              Les contenus commerciaux sont signalés comme tels et distingués de
+              l&apos;éditorial.
             </p>
           </div>
 

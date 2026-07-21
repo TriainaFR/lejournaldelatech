@@ -31,12 +31,13 @@ export default function AProposPage() {
         </section>
         <section>
           <h2 className="font-display text-2xl font-semibold text-ink">
-            Notre indépendance
+            Ce sur quoi nous nous engageons
           </h2>
           <p className="mt-3 leading-relaxed text-ink-soft">
-            Aucune entreprise ne rémunère sa place dans nos comparatifs. La
-            publicité, lorsqu&apos;il y en a, est signalée comme telle et
-            n&apos;influence jamais les classements. Notre{" "}
+            Nos critères d&apos;évaluation sont publics et pondérés, nos sources
+            citées, nos chiffres datés et nos corrections publiées. Les contenus
+            commerciaux, lorsqu&apos;il y en a, sont signalés comme tels et
+            distingués de l&apos;éditorial. Notre{" "}
             <Link href="/charte-editoriale" className="font-semibold text-rouge hover:text-rouge-deep">
               charte éditoriale
             </Link>{" "}
