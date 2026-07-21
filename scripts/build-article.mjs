@@ -72,6 +72,43 @@ for (const [pattern, replacement] of config.links ?? []) {
   html = html.replace(new RegExp(pattern, "g"), replacement);
 }
 
+/* — Politique de liens sortants —
+ *
+ * Les exports de l'éditeur posent `nofollow` sur tous les liens. Pour un média
+ * qui revendique des sources vérifiables, mettre ses sources primaires en
+ * `nofollow` est incohérent et prive d'un signal de qualité. On le retire donc
+ * sur les documentations officielles, les régulateurs et les travaux de
+ * recherche — et on le conserve partout ailleurs : pages commerciales des
+ * produits classés (qui peuvent devenir des liens d'affiliation) et blogs
+ * tiers, qui n'ont pas valeur de source primaire.
+ */
+const SOURCES_PRIMAIRES = [
+  "platform.claude.com", // documentation API Anthropic
+  "www.anthropic.com/news", // annonces officielles Anthropic
+  "developers.openai.com", // documentation API OpenAI
+  "developers.google.com", // documentation Google Search
+  "www.cnil.fr", // régulateur
+  "wordpress.org", // documentation officielle
+  "obsidian.md/help", // documentation officielle
+  "menlovc.com/perspective", // étude primaire
+];
+
+const estSourcePrimaire = (url) => {
+  const bare = url.replace(/^https?:\/\//, "");
+  return SOURCES_PRIMAIRES.some((p) => bare === p || bare.startsWith(p));
+};
+
+let liensSuivis = 0;
+html = html.replace(/<a\b[^>]*>/g, (tag) => {
+  const href = tag.match(/href="([^"]+)"/)?.[1];
+  if (!href || !estSourcePrimaire(href) || !/\bnofollow\b/.test(tag)) return tag;
+  liensSuivis += 1;
+  return tag.replace(/\s*rel="([^"]*)"/, (_m, rel) => {
+    const kept = rel.split(/\s+/).filter((t) => t && t !== "nofollow");
+    return kept.length ? ` rel="${kept.join(" ")}"` : "";
+  });
+});
+
 /* — Le premier blockquote devient l'encadré « L'essentiel » — */
 html = html.replace(
   /<blockquote>(.*?)<\/blockquote>/s,
@@ -178,5 +215,5 @@ export const sources: { url: string; label: string }[] = ${JSON.stringify(source
 
 const words = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
 console.log(
-  `${slug} — ${words} mots, ${toc.length} sections, ${faq.length} FAQ, ${sources.length} sources, ${(config.dataBlocks ?? []).length} encadré(s) de données`
+  `${slug} — ${words} mots, ${toc.length} sections, ${faq.length} FAQ, ${sources.length} sources (${liensSuivis} en dofollow), ${(config.dataBlocks ?? []).length} encadré(s) de données`
 );
