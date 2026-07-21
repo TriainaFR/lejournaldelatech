@@ -185,6 +185,15 @@ section[id],
   color: var(--color-rouge-deep);
 }
 
+.article-body code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-paper-deep);
+  border: 1px solid rgba(15, 17, 21, 0.12);
+  padding: 0.1em 0.4em;
+  color: var(--color-ink);
+}
+
 .article-body ul,
 .article-body ol {
   padding-left: 1.5rem;

@@ -277,6 +277,58 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "notion-vs-obsidian",
+    title: "Notion vs Obsidian : quel outil choisir en 2026",
+    metaTitle: "Notion vs Obsidian 2026 : le comparatif chiffré",
+    excerpt:
+      "Coût total pour une équipe de dix personnes, performances mesurées sur 500 notes, collaboration et souveraineté des données : notre comparatif chiffré de Notion et Obsidian.",
+    metaDescription:
+      "Notion ou Obsidian en 2026 ? Coût réel sur 12 mois pour 10 personnes, benchmark mesuré sur 500+ notes, collaboration et RGPD comparés pour les entreprises françaises.",
+    category: "saas-logiciels",
+    author: "La rédaction",
+    date: "2026-07-21",
+    dateLabel: "21 juillet 2026",
+    readingTime: 14,
+    seed: 103,
+    imageAlt:
+      "Carnet de notes ouvert avec un stylo plume et une paire de lunettes posés sur un bureau",
+    topics: [
+      "Notion",
+      "Obsidian",
+      "Gestion de connaissances",
+      "Prise de notes",
+      "Markdown",
+      "Logiciel collaboratif",
+      "RGPD",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Coût total de possession de Notion et Obsidian pour une équipe de dix personnes (Protocole JDLT)",
+        description:
+          "Coût sur douze mois pour dix utilisateurs, tous postes inclus : abonnements, licences, intégrations et plugins, complété par une estimation du temps d'implémentation. Résultats : environ 2 400 $ pour Notion Business contre 980 $ pour Obsidian Sync Standard et licence commerciale, soit 59 % d'écart avant intégration du coût humain.",
+        date: "2026-07",
+        measured: [
+          "Coût annuel des abonnements (dollars)",
+          "Coût des licences et intégrations (dollars)",
+          "Temps d'implémentation par utilisateur (heures)",
+        ],
+      },
+      {
+        name: "Benchmark de performance de Notion et Obsidian sur 500+ notes (Protocole JDLT)",
+        description:
+          "Mesures effectuées sur MacBook Pro M3 sous macOS Sequoia 15.4, sur une base de 512 notes et pages, moyenne de cinq mesures consécutives. Résultats : 0,4 s de démarrage pour Obsidian contre 3,1 s pour Notion, et une consommation mémoire 2,5 à 3 fois inférieure.",
+        date: "2026-07",
+        measured: [
+          "Temps de démarrage de l'application (s)",
+          "Temps de chargement d'une page et d'une base (s)",
+          "Temps de recherche plein texte (s)",
+          "Mémoire vive consommée au repos et sous charge (Mo)",
+        ],
+      },
+    ],
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

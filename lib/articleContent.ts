@@ -1,5 +1,6 @@
 import * as claudeVsChatgpt from "@/content/articles/claude-vs-chatgpt";
 import * as meilleurHebergeurWordpress from "@/content/articles/meilleur-hebergeur-wordpress";
+import * as notionVsObsidian from "@/content/articles/notion-vs-obsidian";
 
 export type ArticleContent = {
   html: string;
@@ -12,6 +13,7 @@ export type ArticleContent = {
 const CONTENTS: Record<string, ArticleContent> = {
   "claude-vs-chatgpt": claudeVsChatgpt,
   "meilleur-hebergeur-wordpress": meilleurHebergeurWordpress,
+  "notion-vs-obsidian": notionVsObsidian,
 };
 
 export function articleContent(slug: string): ArticleContent | undefined {
