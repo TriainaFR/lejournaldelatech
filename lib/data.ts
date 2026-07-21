@@ -118,7 +118,7 @@ export const guides: Guide[] = [
     title: "Les meilleurs logiciels SaaS par secteur et par prix",
     description:
       "CRM, comptabilité, RH, marketing : notre sélection testée et mise à jour chaque mois.",
-    count: "48 logiciels comparés",
+    count: "48 logiciels à l'essai",
     seed: 21,
   },
   {
@@ -127,7 +127,7 @@ export const guides: Guide[] = [
     title: "Les meilleurs hébergeurs web en 2026",
     description:
       "Performances mesurées, support, écologie des datacenters : le banc d'essai de référence.",
-    count: "16 hébergeurs testés",
+    count: "16 hébergeurs au banc d'essai",
     seed: 22,
   },
   {
@@ -136,7 +136,7 @@ export const guides: Guide[] = [
     title: "Les meilleures entreprises de panneaux solaires",
     description:
       "Installateurs certifiés RGE, garanties, prix au kWc : le classement région par région.",
-    count: "60 installateurs évalués",
+    count: "60 installateurs à l'étude",
     seed: 23,
   },
   {
@@ -145,7 +145,7 @@ export const guides: Guide[] = [
     title: "Les meilleurs outils d'IA pour les entreprises",
     description:
       "Assistants, génération, analyse de données : les solutions qui tiennent leurs promesses.",
-    count: "35 outils passés au crible",
+    count: "35 outils à l'évaluation",
     seed: 24,
   },
 ];
@@ -232,23 +232,23 @@ export const faqItems: FaqItem[] = [
   {
     question: "Quel est le meilleur hébergeur web en 2026 ?",
     answer:
-      "Il n'existe pas un meilleur hébergeur unique : tout dépend du trafic, du budget et de vos exigences écologiques. Notre banc d'essai mesure les performances réelles de 16 hébergeurs français et européens, leur support et l'empreinte de leurs datacenters, puis les classe par profil d'usage — du site vitrine au e-commerce à fort trafic.",
+      "Il n'existe pas un meilleur hébergeur unique : tout dépend du trafic, du budget et de vos exigences écologiques. Notre banc d'essai en cours mesure les performances réelles de 16 hébergeurs français et européens, leur support et l'empreinte de leurs datacenters, pour les classer par profil d'usage — premier classement à paraître.",
   },
   {
     question: "Quel logiciel CRM choisir pour une PME française ?",
     answer:
-      "Pour une PME française, les critères décisifs sont le prix réel par utilisateur, l'hébergement des données en Europe, les intégrations (facturation, emailing) et un support en français. Notre comparatif 2026 passe douze CRM au crible sur ces critères, avec trois mois de tests en conditions réelles.",
+      "Pour une PME française, les critères décisifs sont le prix réel par utilisateur, l'hébergement des données en Europe, les intégrations (facturation, emailing) et un support en français. Notre comparatif 2026, en préparation, passera douze CRM au crible sur ces critères, après trois mois de tests en conditions réelles.",
   },
   {
     question:
       "Combien coûte une installation de panneaux solaires en 2026 ?",
     answer:
-      "Comptez en moyenne entre 7 000 et 12 000 € pour une installation résidentielle de 3 à 6 kWc, aides déduites, selon la région et la complexité de la toiture. Notre guide détaille les prix au kWc constatés, les aides en vigueur et les pièges des devis, région par région.",
+      "Comptez en moyenne entre 7 000 et 12 000 € pour une installation résidentielle de 3 à 6 kWc, aides déduites, selon la région et la complexité de la toiture. Notre guide à paraître détaillera les prix au kWc constatés, les aides en vigueur et les pièges des devis, région par région.",
   },
   {
     question: "Comment choisir un outil d'IA fiable pour son entreprise ?",
     answer:
-      "Trois questions à poser avant de signer : où sont hébergées et comment sont utilisées vos données, quel est le coût réel à l'usage (et pas seulement l'abonnement), et l'outil est-il conforme à l'AI Act et au RGPD ? Notre sélection des meilleurs outils d'IA évalue 35 solutions sur ces critères.",
+      "Trois questions à poser avant de signer : où sont hébergées et comment sont utilisées vos données, quel est le coût réel à l'usage (et pas seulement l'abonnement), et l'outil est-il conforme à l'AI Act et au RGPD ? Notre sélection des meilleurs outils d'IA, en cours d'évaluation sur 35 solutions, paraîtra prochainement.",
   },
   {
     question: "Qu'est-ce que la green tech, et pourquoi ça compte ?",
@@ -258,9 +258,9 @@ export const faqItems: FaqItem[] = [
 ];
 
 export const stats: { value: string; label: string }[] = [
-  { value: "48", label: "logiciels SaaS comparés" },
-  { value: "16", label: "hébergeurs testés en conditions réelles" },
-  { value: "60", label: "installateurs solaires évalués" },
+  { value: "48", label: "logiciels SaaS à l'essai" },
+  { value: "16", label: "hébergeurs au banc d'essai" },
+  { value: "60", label: "installateurs solaires à l'étude" },
 ];
 
 export const popularSearches: { label: string; href: string }[] = [
@@ -280,35 +280,30 @@ export const comparatifsProgramme: {
   univers: string;
   volume: string;
   maj: string;
-  majIso: string;
 }[] = [
   {
     comparatif: "Meilleurs logiciels SaaS par prix",
     univers: "SaaS & Logiciels",
     volume: "48 solutions",
-    maj: "Juillet 2026",
-    majIso: "2026-07",
+    maj: "Été 2026",
   },
   {
     comparatif: "Meilleurs hébergeurs web",
     univers: "Hébergement",
     volume: "16 hébergeurs",
-    maj: "Juillet 2026",
-    majIso: "2026-07",
+    maj: "Été 2026",
   },
   {
     comparatif: "Meilleures entreprises de panneaux solaires",
     univers: "Énergie & Solaire",
     volume: "60 installateurs",
-    maj: "Juin 2026",
-    majIso: "2026-06",
+    maj: "Été 2026",
   },
   {
     comparatif: "Meilleurs outils d'IA pour entreprises",
     univers: "Intelligence artificielle",
     volume: "35 outils",
-    maj: "Juillet 2026",
-    majIso: "2026-07",
+    maj: "Automne 2026",
   },
 ];
 

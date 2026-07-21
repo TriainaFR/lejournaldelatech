@@ -1,24 +1,25 @@
 import Link from "next/link";
 import { Monogram } from "./ornaments";
 
+/**
+ * Mode pré-lancement : rubriques et comparatifs listés sans lien tant que
+ * leurs pages ne sont pas publiées. Seules les pages « Le Journal » (contenu
+ * réel) restent cliquables.
+ */
 const UNIVERS = [
-  { label: "Intelligence artificielle", href: "/intelligence-artificielle" },
-  { label: "SaaS & Logiciels", href: "/saas-logiciels" },
-  { label: "Hébergement web", href: "/hebergement-web" },
-  { label: "Mobilité", href: "/mobilite" },
-  { label: "Énergie & Solaire", href: "/energie-solaire" },
-  { label: "Green tech", href: "/green-tech" },
+  "Intelligence artificielle",
+  "SaaS & Logiciels",
+  "Hébergement web",
+  "Mobilité",
+  "Énergie & Solaire",
+  "Green tech",
 ];
 
 const GUIDES = [
-  { label: "Meilleurs logiciels SaaS", href: "/comparatifs/meilleurs-logiciels-saas" },
-  { label: "Meilleurs hébergeurs web", href: "/comparatifs/meilleurs-hebergeurs-web" },
-  {
-    label: "Meilleures entreprises solaires",
-    href: "/comparatifs/meilleures-entreprises-panneaux-solaires",
-  },
-  { label: "Meilleurs outils IA", href: "/comparatifs/meilleurs-outils-ia" },
-  { label: "Tous les comparatifs", href: "/comparatifs" },
+  "Meilleurs logiciels SaaS",
+  "Meilleurs hébergeurs web",
+  "Meilleures entreprises solaires",
+  "Meilleurs outils IA",
 ];
 
 const JOURNAL = [
@@ -53,43 +54,32 @@ export default function SiteFooter() {
           </p>
         </div>
 
-        <nav aria-labelledby="footer-univers">
-          <h2
-            id="footer-univers"
-            className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver"
-          >
-            Univers
+        <div>
+          <h2 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver">
+            Univers — bientôt
           </h2>
-          <ul className="mt-4 space-y-2.5 text-sm">
-            {UNIVERS.map((l) => (
-              <li key={l.href}>
-                <Link href={l.href} className="transition-colors hover:text-silver">
-                  {l.label}
-                </Link>
-              </li>
+          <ul className="mt-4 space-y-2.5 text-sm text-silver">
+            {UNIVERS.map((label) => (
+              <li key={label}>{label}</li>
             ))}
           </ul>
-        </nav>
+        </div>
 
-        <nav aria-labelledby="footer-guides">
-          <h2
-            id="footer-guides"
-            className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver"
-          >
-            Comparatifs &amp; guides
+        <div>
+          <h2 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver">
+            Comparatifs — à paraître
           </h2>
-          <ul className="mt-4 space-y-2.5 text-sm">
-            {GUIDES.map((l) => (
-              <li key={l.href + l.label}>
-                <Link href={l.href} className="transition-colors hover:text-silver">
-                  {l.label}
-                </Link>
-              </li>
+          <ul className="mt-4 space-y-2.5 text-sm text-silver">
+            {GUIDES.map((label) => (
+              <li key={label}>{label}</li>
             ))}
           </ul>
-        </nav>
+        </div>
 
-        <nav aria-labelledby="footer-journal" className="col-span-2 md:col-span-1">
+        <nav
+          aria-labelledby="footer-journal"
+          className="col-span-2 md:col-span-1"
+        >
           <h2
             id="footer-journal"
             className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-silver"

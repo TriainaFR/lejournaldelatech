@@ -46,27 +46,30 @@ npm run build    # build de production statique
 ```
 app/
   layout.tsx           # metadata, polices, JSON-LD (NewsMediaOrganization + WebSite)
-  page.tsx             # home page + JSON-LD (ItemList + FAQPage)
+  page.tsx             # home page + JSON-LD (FAQPage)
   globals.css          # tokens Tailwind v4, filets, grille technique, animations
   icon.svg             # favicon monogramme JLT
   opengraph-image.tsx  # image OG générée (1200×630)
   sitemap.ts, robots.ts
-  [categorie]/         # pages rubriques + articles (SSG depuis lib/data.ts)
-  comparatifs/         # hub + pages guides d'achat
-  guides/[slug]/       # pages d'intention « Que choisir pour… »
-  actualites/, recherche/, a-propos/, methodologie/, charte-editoriale/,
-  contact/, mentions-legales/, confidentialite/
-components/            # header, footer, ticker, cartes, illustrations, ornements
-lib/data.ts            # contenu de démonstration (à remplacer par un CMS/MDX)
+  a-propos/, methodologie/, charte-editoriale/, contact/,
+  mentions-legales/, confidentialite/   # pages à contenu réel
+components/            # header, footer, ticker, photos, illustrations, ornements
+lib/data.ts            # données du site (articles vides pour l'instant)
 ```
+
+**Mode pré-lancement** : tant qu'aucun contenu n'est publié, rubriques,
+comparatifs et guides sont affichés en annonces « À paraître » non
+cliquables (nav, cartes, tuiles, footer) et leurs routes n'existent pas.
+Pour rouvrir une section : recréer sa route et rebrancher les `<Link>`
+dans `SiteHeader`, `SiteFooter` et `app/page.tsx` (repères en commentaire).
 
 ## SEO / GEO intégré
 
 - JSON-LD `@graph` : `NewsMediaOrganization` (knowsAbout, publishingPrinciples),
-  `WebSite` + `SearchAction`, `ItemList` des comparatifs phares, `FAQPage`
-- Une seule `h1` (masthead, avec extension `sr-only`), hiérarchie `h2`/`h3` stricte
-- `<time datetime>` sur toutes les dates, table HTML extractible, FAQ en
-  `<details>/<summary>` miroir du balisage
+  `WebSite`, `FAQPage` (réintégrer `SearchAction` et `ItemList` quand les
+  pages recherche et comparatifs rouvriront)
+- Une seule `h1` (masthead), hiérarchie `h2`/`h3` stricte
+- Table HTML extractible, FAQ en `<details>/<summary>` miroir du balisage
 - `robots` : `max-image-preview:large`, `max-snippet:-1`
 - Questions FAQ formulées en requêtes longue traîne conversationnelles
 

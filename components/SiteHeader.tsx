@@ -4,14 +4,19 @@ import DateStamp from "./DateStamp";
 import Ticker from "./Ticker";
 import { CircuitSprig, Diamond, Monogram } from "./ornaments";
 
-const NAV_LINKS: { label: string; href: string }[] = [
-  { label: "Intelligence artificielle", href: "/intelligence-artificielle" },
-  { label: "SaaS & Logiciels", href: "/saas-logiciels" },
-  { label: "Hébergement", href: "/hebergement-web" },
-  { label: "Mobilité", href: "/mobilite" },
-  { label: "Énergie & Solaire", href: "/energie-solaire" },
-  { label: "Green tech", href: "/green-tech" },
-  { label: "Comparatifs", href: "/comparatifs" },
+/**
+ * Mode pré-lancement : les rubriques n'ont pas encore de contenu publié,
+ * elles sont donc affichées sans lien. Rebrancher les <Link> quand les
+ * pages rubriques rouvriront.
+ */
+const NAV_ITEMS: string[] = [
+  "Intelligence artificielle",
+  "SaaS & Logiciels",
+  "Hébergement",
+  "Mobilité",
+  "Énergie & Solaire",
+  "Green tech",
+  "Comparatifs",
 ];
 
 export default function SiteHeader() {
@@ -24,7 +29,7 @@ export default function SiteHeader() {
             <p className="hidden items-center gap-2 sm:flex">
               Édition du jour
               <Diamond className="text-[8px] text-silver-deep" />
-              Édition digitale
+              Ouverture prochaine
             </p>
             <p className="whitespace-nowrap">
               <DateStamp />
@@ -32,7 +37,7 @@ export default function SiteHeader() {
             <p className="hidden items-center gap-4 lg:flex">
               <span>SaaS · IA · Hébergement · Mobilité · Énergie</span>
               <Link
-                href="#newsletter"
+                href="/#newsletter"
                 className="font-semibold text-rouge transition-colors hover:text-rouge-deep"
               >
                 S&apos;abonner à la newsletter
@@ -75,9 +80,9 @@ export default function SiteHeader() {
         </div>
       </header>
 
-      {/* ——— Navigation (hors <header> pour que sticky fonctionne) ——— */}
+      {/* ——— Rubriques (hors <header> pour le sticky) — sans lien avant l'ouverture ——— */}
       <nav
-        aria-label="Navigation principale"
+        aria-label="Rubriques du journal (ouverture prochaine)"
         className="border-b border-ink/15 bg-paper/95 backdrop-blur-sm md:sticky md:top-0 md:z-40"
       >
         <div className="mx-auto flex w-full max-w-[1240px] items-center justify-between gap-3 px-6">
@@ -88,34 +93,18 @@ export default function SiteHeader() {
           >
             <Monogram className="h-9 w-9 text-[13px] tracking-[-0.06em]" />
           </Link>
-          <ul className="flex flex-1 flex-wrap items-center justify-center gap-x-5 gap-y-1.5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink lg:gap-x-7 lg:text-xs">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href} className="shrink-0">
-                <Link
-                  href={link.href}
-                  className="transition-colors hover:text-rouge"
-                >
-                  {link.label}
-                </Link>
+          <ul className="flex flex-1 flex-wrap items-center justify-center gap-x-5 gap-y-1.5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-soft lg:gap-x-7 lg:text-xs">
+            {NAV_ITEMS.map((label) => (
+              <li key={label} className="shrink-0 cursor-default">
+                {label}
               </li>
             ))}
           </ul>
           <Link
-            href="/recherche"
+            href="/contact"
             className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-soft transition-colors hover:text-rouge sm:flex"
           >
-            <svg
-              viewBox="0 0 20 20"
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              aria-hidden="true"
-            >
-              <circle cx="9" cy="9" r="6" />
-              <line x1="13.5" y1="13.5" x2="18" y2="18" />
-            </svg>
-            Recherche
+            Nous écrire
           </Link>
         </div>
       </nav>

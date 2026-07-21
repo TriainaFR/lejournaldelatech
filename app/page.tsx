@@ -13,7 +13,6 @@ import {
   guideImage,
   guides,
   intentTiles,
-  popularSearches,
   stats,
 } from "@/lib/data";
 
@@ -26,19 +25,6 @@ export const metadata = {
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "ItemList",
-      "@id": `${SITE_URL}/#comparatifs-phares`,
-      name: "Les comparatifs de référence du Journal de la Tech",
-      itemListOrder: "https://schema.org/ItemListUnordered",
-      numberOfItems: guides.length,
-      itemListElement: guides.map((g, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        name: g.title,
-        url: `${SITE_URL}/comparatifs/${g.slug}`,
-      })),
-    },
     {
       "@type": "FAQPage",
       "@id": `${SITE_URL}/#faq`,
@@ -75,33 +61,36 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[7.2fr_4.8fr] lg:gap-14">
             <article className="rise rise-1">
-              <Link
-                href={`/comparatifs/${featureGuide.slug}`}
-                className="group block"
+              <figure className="relative aspect-[16/10] overflow-hidden bg-night">
+                <EditorialPhoto
+                  image={guideImage(featureGuide)}
+                  seed={featureGuide.seed}
+                  tone="rouge"
+                  sizes="(min-width: 1024px) 58vw, 100vw"
+                  priority
+                />
+                <span className="absolute left-4 top-4 z-10 bg-rouge px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-white">
+                  À paraître
+                </span>
+              </figure>
+              <p className="mt-6 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
+                À la une — Guide d&apos;achat
+              </p>
+              <h3 className="mt-3 font-display text-3xl font-bold leading-[1.08] tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
+                {featureGuide.title}
+              </h3>
+              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
+                {featureGuide.description}
+              </p>
+              <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
+                {featureGuide.count} · Critères publics · Publication été 2026
+              </p>
+              <a
+                href="#newsletter"
+                className="mt-6 inline-block bg-rouge px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-rouge-deep"
               >
-                <figure className="relative aspect-[16/10] overflow-hidden bg-night">
-                  <EditorialPhoto
-                    image={guideImage(featureGuide)}
-                    seed={featureGuide.seed}
-                    tone="rouge"
-                    sizes="(min-width: 1024px) 58vw, 100vw"
-                    priority
-                  />
-                </figure>
-                <p className="mt-6 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
-                  À la une — Guide d&apos;achat
-                </p>
-                <h3 className="mt-3 font-display text-3xl font-bold leading-[1.08] tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
-                  <span className="headline-link">{featureGuide.title}</span>
-                </h3>
-                <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-                  {featureGuide.description}
-                </p>
-                <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
-                  {featureGuide.count} · Critères publics · Mise à jour
-                  mensuelle
-                </p>
-              </Link>
+                Être averti de la publication
+              </a>
             </article>
 
             <aside
@@ -113,38 +102,27 @@ export default function Home() {
               </h3>
               <ol className="mt-2 divide-y divide-ink/10">
                 {railGuides.map((g, i) => (
-                  <li key={g.slug}>
-                    <Link
-                      href={`/comparatifs/${g.slug}`}
-                      className="group flex gap-5 py-5"
+                  <li key={g.slug} className="flex gap-5 py-5">
+                    <span
+                      aria-hidden="true"
+                      className="font-mono text-2xl font-semibold leading-none text-silver-deep"
                     >
-                      <span
-                        aria-hidden="true"
-                        className="font-mono text-2xl font-semibold leading-none text-silver-deep transition-colors group-hover:text-rouge"
-                      >
-                        {i + 1}
+                      {i + 1}
+                    </span>
+                    <span>
+                      <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-rouge">
+                        Guide d’achat — À paraître
                       </span>
-                      <span>
-                        <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-rouge">
-                          Guide d’achat
-                        </span>
-                        <span className="mt-1 block font-display text-lg font-medium leading-snug text-ink">
-                          <span className="headline-link">{g.title}</span>
-                        </span>
-                        <span className="mt-1 block text-xs text-ink-faint">
-                          {g.count}
-                        </span>
+                      <span className="mt-1 block font-display text-lg font-medium leading-snug text-ink">
+                        {g.title}
                       </span>
-                    </Link>
+                      <span className="mt-1 block text-xs text-ink-faint">
+                        {g.count}
+                      </span>
+                    </span>
                   </li>
                 ))}
               </ol>
-              <Link
-                href="/comparatifs"
-                className="mt-2 inline-block text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft transition-colors hover:text-rouge"
-              >
-                Tous les comparatifs <span aria-hidden="true">→</span>
-              </Link>
             </aside>
           </div>
         </section>
@@ -206,10 +184,7 @@ export default function Home() {
           <ul className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
             {categories.map((c, i) => (
               <li key={c.slug}>
-                <Link
-                  href={`/${c.slug}`}
-                  className="group block border border-silver p-1.5 transition-colors hover:border-rouge"
-                >
+                <div className="border border-silver p-1.5">
                   <figure className="relative aspect-[3/4] overflow-hidden bg-night">
                     <EditorialPhoto
                       image={categoryImage(c)}
@@ -224,7 +199,7 @@ export default function Home() {
                       </span>
                     </figcaption>
                   </figure>
-                </Link>
+                </div>
               </li>
             ))}
           </ul>
@@ -239,9 +214,7 @@ export default function Home() {
             <SectionHeader
               id="titre-comparatifs"
               kicker="Sélections & guides d’achat"
-              title="Les comparatifs du moment"
-              moreHref="/comparatifs"
-              moreLabel="Tous les comparatifs"
+              title="Les comparatifs à paraître"
             />
             <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
               {railGuides.map((g, i) => (
@@ -249,33 +222,28 @@ export default function Home() {
                   key={g.slug}
                   className={i === 2 ? "sm:col-span-2 lg:col-span-1" : ""}
                 >
-                  <Link
-                    href={`/comparatifs/${g.slug}`}
-                    className="group block"
-                  >
-                    <figure className="relative aspect-[16/9] overflow-hidden bg-night">
-                      <EditorialPhoto
-                        image={guideImage(g)}
-                        seed={g.seed}
-                        tone={i % 2 === 0 ? "silver" : "rouge"}
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      />
-                    </figure>
-                    <div className="relative">
-                      <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap border border-silver bg-card px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-rouge">
-                        Comparatif
-                      </span>
-                    </div>
-                    <h3 className="mt-7 text-center font-display text-lg font-semibold leading-snug text-ink">
-                      <span className="headline-link">{g.title}</span>
-                    </h3>
-                    <p className="mt-2 text-center text-sm leading-relaxed text-ink-soft">
-                      {g.description}
-                    </p>
-                    <p className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
-                      {g.count}
-                    </p>
-                  </Link>
+                  <figure className="relative aspect-[16/9] overflow-hidden bg-night">
+                    <EditorialPhoto
+                      image={guideImage(g)}
+                      seed={g.seed}
+                      tone={i % 2 === 0 ? "silver" : "rouge"}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    />
+                  </figure>
+                  <div className="relative">
+                    <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap border border-silver bg-card px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-rouge">
+                      À paraître
+                    </span>
+                  </div>
+                  <h3 className="mt-7 text-center font-display text-lg font-semibold leading-snug text-ink">
+                    {g.title}
+                  </h3>
+                  <p className="mt-2 text-center text-sm leading-relaxed text-ink-soft">
+                    {g.description}
+                  </p>
+                  <p className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
+                    {g.count}
+                  </p>
                 </article>
               ))}
 
@@ -296,7 +264,7 @@ export default function Home() {
                         Univers
                       </th>
                       <th scope="col" className="py-2 pr-3">Volume</th>
-                      <th scope="col" className="py-2">Mise à jour</th>
+                      <th scope="col" className="py-2">Publication</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-ink/10">
@@ -309,9 +277,7 @@ export default function Home() {
                           {row.univers}
                         </td>
                         <td className="py-3 pr-3 text-ink-soft">{row.volume}</td>
-                        <td className="py-3 text-ink-soft">
-                          <time dateTime={row.majIso}>{row.maj}</time>
-                        </td>
+                        <td className="py-3 text-ink-soft">{row.maj}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -356,29 +322,17 @@ export default function Home() {
             {intentTiles.map((tile) => (
               <li
                 key={tile.title}
-                className="group relative border border-ink/20 bg-card p-5 transition-colors hover:border-rouge"
+                className="relative border border-ink/20 bg-card p-5"
               >
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute inset-1.5 border border-transparent transition-colors group-hover:border-silver"
+                  className="pointer-events-none absolute inset-1.5 border border-silver-soft"
                 />
                 <h3 className="font-display text-lg font-semibold leading-tight text-ink">
-                  <Link href={tile.href}>
-                    <span className="absolute inset-0" aria-hidden="true" />
-                    {tile.title}
-                  </Link>
+                  {tile.title}
                 </h3>
-                <p className="relative z-10 mt-3 flex flex-wrap gap-x-2 gap-y-1 font-mono text-[10px] uppercase tracking-[0.06em] text-ink-soft">
-                  {tile.keywords.map((k, i) => (
-                    <Link
-                      key={k.label}
-                      href={k.href}
-                      className="transition-colors hover:text-rouge"
-                    >
-                      {k.label}
-                      {i < tile.keywords.length - 1 ? " ·" : ""}
-                    </Link>
-                  ))}
+                <p className="relative z-10 mt-3 font-mono text-[10px] uppercase tracking-[0.06em] text-ink-soft">
+                  {tile.keywords.map((k) => k.label).join(" · ")}
                 </p>
               </li>
             ))}
@@ -445,9 +399,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ——————— Manifeste + recherche ——————— */}
+        {/* ——————— Manifeste ——————— */}
         <section
-          id="recherche"
+          id="manifeste"
           aria-labelledby="titre-manifeste"
           className="border-t border-ink/15 bg-paper-deep/60"
         >
@@ -466,43 +420,20 @@ export default function Home() {
               technologie utile, mesurable et durable — et nous la racontons
               sans le bruit.
             </p>
-            <form
-              action="/recherche"
-              method="get"
-              role="search"
-              className="mt-8 flex w-full max-w-xl"
-            >
-              <label htmlFor="site-search" className="sr-only">
-                Rechercher sur le site
-              </label>
-              <input
-                id="site-search"
-                type="search"
-                name="q"
-                placeholder="Un logiciel, un hébergeur, une solution…"
-                className="h-12 flex-1 border border-ink/60 bg-card px-4 font-sans text-sm text-ink placeholder:text-ink-faint focus:border-rouge focus:outline-none focus:ring-1 focus:ring-rouge"
-              />
-              <button
-                type="submit"
-                className="h-12 shrink-0 cursor-pointer bg-rouge px-6 text-xs font-semibold uppercase tracking-[0.2em] text-paper transition-colors hover:bg-rouge-deep"
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
+              <a
+                href="#newsletter"
+                className="bg-rouge px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-rouge-deep"
               >
-                Rechercher
-              </button>
-            </form>
-            <p className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs">
-              <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
-                Recherches populaires :
-              </span>
-              {popularSearches.map((s) => (
-                <Link
-                  key={s.label}
-                  href={s.href}
-                  className="border border-ink/20 bg-card px-3 py-1 font-mono text-[11px] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
-                >
-                  {s.label}
-                </Link>
-              ))}
-            </p>
+                S&apos;abonner à la newsletter
+              </a>
+              <Link
+                href="/charte-editoriale"
+                className="border border-ink/25 bg-card px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
+              >
+                Lire notre charte éditoriale
+              </Link>
+            </div>
           </div>
         </section>
       </main>
