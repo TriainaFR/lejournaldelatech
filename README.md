@@ -24,7 +24,7 @@ logo, étiquettes monospace et grille technique en filigrane.
 |---|---|---|
 | `--color-paper` | `#ffffff` | fond |
 | `--color-rouge` | `#e11326` | accent principal, wordmark |
-| `--color-night` | `#0b0c0f` | ticker, newsletter, footer |
+| `--color-night` | `#0b0c0f` | ticker, footer |
 | `--color-silver` | `#c9cdd3` | filets, ornements |
 | `--color-ink` | `#0f1115` | texte |
 
@@ -149,11 +149,31 @@ passage de minuit et au retour sur l'onglet.
 - `robots` : `max-image-preview:large`, `max-snippet:-1`
 - Questions FAQ formulées en requêtes longue traîne conversationnelles
 
+### Indexation IndexNow (Bing, Yandex, Seznam, Naver)
+
+`npm run indexnow` prévient les moteurs qu'une URL a changé, sans console
+webmaster. **Google ne participe pas à IndexNow** : pour Google, seuls le
+sitemap déclaré dans `robots.txt` et la Search Console font foi.
+
+La clé est publiée en clair dans `public/11ac43af4a39e363ad6ef131cc77afb8.txt`
+— c'est le fonctionnement normal du protocole : elle sert à prouver qu'on
+contrôle le domaine, pas à authentifier. Elle doit rester accessible à la
+racine, sinon les soumissions repartent en 403.
+
+```bash
+npm run indexnow                                   # tout le sitemap publié
+npm run indexnow -- --dry-run                      # affiche sans envoyer
+node scripts/indexnow.mjs https://lejournaldelatech.fr/…  # URLs précises
+```
+
+À lancer **après** déploiement : le script relit le sitemap en ligne et vérifie
+la clé avant d'envoyer. Soumettre une URL qui renvoie encore un 404 est
+contre-productif. Après une publication, préférer la liste explicite des URLs
+concernées (article + rubrique + `/articles`) plutôt que le sitemap entier.
+
 ## À faire avant mise en production
 
-- [ ] Brancher le formulaire newsletter sur un fournisseur (Brevo, Mailjet…)
-- [ ] Remplacer le contenu de démonstration (`lib/data.ts`) par de vrais articles
-      (et retirer le `noindex` des pages articles à la publication)
-- [ ] Remplacer les illustrations génératives par de vraies photos éditoriales (webp)
+- [ ] Déployer (Vercel + domaine) puis lancer `npm run indexnow`
 - [ ] Compléter les mentions légales (SIREN, hébergeur) et la politique de confidentialité
-- [ ] Flux RSS + publication du premier classement complet par comparatif
+- [ ] Flux RSS
+- [ ] Mettre à jour `public/llms.txt` à chaque vague de publication
