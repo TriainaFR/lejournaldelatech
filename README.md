@@ -64,11 +64,20 @@ l'accueil) qu'à partir de son premier article — voir `activeCategories()`.
 
 ### Publier un article
 
-1. Déposer le corps HTML nettoyé dans `content/articles/<slug>.ts` (exporte
-   `html`, `toc`, `faq`, `sources`) et le référencer dans `lib/articleContent.ts`.
+1. Déposer le HTML livré par la rédaction dans `scripts/raw/<slug>.html` et sa
+   configuration de transformation dans `scripts/articles/<slug>.mjs`
+   (corrections de coquilles, maillage, encadrés de données), puis lancer :
+
+   ```bash
+   node scripts/build-article.mjs <slug>
+   ```
+
+   Le corps prêt à rendre est écrit dans `content/articles/<slug>.ts` ; le
+   référencer dans `lib/articleContent.ts`.
 2. Ajouter l'entrée dans `articles` (`lib/data.ts`) : titre, `metaTitle`,
-   `excerpt`, `metaDescription`, date, temps de lecture, `topics`, et la photo
-   `public/images/art-<slug>.jpg` avec son `imageAlt`.
+   `excerpt`, `metaDescription`, date, temps de lecture, `topics`, `datasets`,
+   `ranking` éventuel, et la photo `public/images/art-<slug>.jpg` avec son
+   `imageAlt`.
 3. C'est tout : la page article, la page rubrique, la navigation, l'accueil,
    le bandeau « À la une » et le sitemap se mettent à jour automatiquement.
 
