@@ -12,7 +12,9 @@ import { CircuitSprig, Diamond, Monogram } from "./ornaments";
 const PAGES: { label: string; href: string }[] = [
   { label: "Le Journal", href: "/a-propos" },
   { label: "Méthodologie", href: "/methodologie" },
-  { label: "Contact", href: "/contact" },
+  // « Tous les articles » porte aussi la recherche : c'est le seul accès à
+  // /articles depuis l'en-tête depuis que le coin droit est pris par Contact.
+  { label: "Tous les articles", href: "/articles" },
 ];
 
 /**
@@ -52,14 +54,10 @@ export default function SiteHeader({
             <p className="whitespace-nowrap">
               <DateStamp initialIso={initialIso} initialLabel={initialLabel} />
             </p>
+            {/* Le contact est porté par le bouton de la barre de navigation :
+                pas de second lien ici, qui ferait doublon dans le même coin. */}
             <p className="hidden items-center gap-4 lg:flex">
               <span>SaaS · IA · Hébergement · Mobilité · Énergie</span>
-              <Link
-                href="/contact"
-                className="font-semibold text-rouge transition-colors hover:text-rouge-deep"
-              >
-                Nous écrire
-              </Link>
             </p>
           </div>
         </div>
@@ -124,22 +122,10 @@ export default function SiteHeader({
             ))}
           </ul>
           <Link
-            href="/articles"
-            aria-label="Rechercher parmi tous les articles"
-            className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-rouge transition-colors hover:text-rouge-deep sm:flex"
+            href="/contact"
+            className="shrink-0 bg-rouge px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-rouge-deep"
           >
-            <svg
-              viewBox="0 0 20 20"
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              aria-hidden="true"
-            >
-              <circle cx="9" cy="9" r="6" />
-              <line x1="13.5" y1="13.5" x2="18" y2="18" />
-            </svg>
-            Rechercher
+            Contact
           </Link>
         </div>
       </nav>
