@@ -55,10 +55,10 @@ export default function SiteHeader({
             <p className="hidden items-center gap-4 lg:flex">
               <span>SaaS · IA · Hébergement · Mobilité · Énergie</span>
               <Link
-                href="/#newsletter"
+                href="/contact"
                 className="font-semibold text-rouge transition-colors hover:text-rouge-deep"
               >
-                S&apos;abonner à la newsletter
+                Nous écrire
               </Link>
             </p>
           </div>
@@ -124,10 +124,10 @@ export default function SiteHeader({
             ))}
           </ul>
           <Link
-            href="/#newsletter"
+            href="/articles"
             className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-rouge transition-colors hover:text-rouge-deep sm:flex"
           >
-            Newsletter
+            Tous les articles
           </Link>
         </div>
       </nav>

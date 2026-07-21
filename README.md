@@ -37,9 +37,23 @@ footer 4 colonnes à devise.
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
-npm run build    # build de production statique
+cp .env.example .env.local   # puis renseigner les identifiants EmailJS
+npm run dev                  # http://localhost:3000
+npm run build                # build de production statique
 ```
+
+### Formulaire de contact (EmailJS)
+
+La page `/contact` envoie les messages via [EmailJS](https://dashboard.emailjs.com),
+sans back-end à maintenir. Trois identifiants à renseigner dans `.env.local` :
+`NEXT_PUBLIC_EMAILJS_SERVICE_ID`, `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` et
+`NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` (voir `.env.example`).
+
+Le modèle EmailJS doit utiliser les variables `{{from_name}}`, `{{reply_to}}`,
+`{{subject}}` et `{{message}}`. Tant que la configuration est absente, le
+formulaire affiche un message explicite et renvoie vers l'adresse e-mail de la
+rédaction — il n'échoue jamais en silence. Un champ leurre (honeypot) filtre les
+robots. Sur Vercel, reporter les trois variables dans les réglages du projet.
 
 ## Structure
 

@@ -4,7 +4,7 @@ import PageShell from "@/components/PageShell";
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description:
-    "Politique de confidentialité de lejournaldelatech.fr : données collectées, newsletter, cookies, droits RGPD.",
+    "Politique de confidentialité de lejournaldelatech.fr : données collectées via le formulaire de contact, cookies et droits RGPD.",
   alternates: { canonical: "/confidentialite" },
 };
 
@@ -17,20 +17,22 @@ export default function ConfidentialitePage() {
             Données collectées
           </h2>
           <p className="mt-2 leading-relaxed text-ink-soft">
-            Le site ne collecte aujourd&apos;hui aucune donnée personnelle en
-            dehors de l&apos;adresse e-mail que vous fournissez volontairement
-            pour recevoir la newsletter La Dépêche Tech.
+            Le site ne collecte aucune donnée personnelle en dehors de celles
+            que vous saisissez volontairement dans le formulaire de contact :
+            votre nom, votre adresse e-mail et le contenu de votre message.
             {/* À réviser lors de l'ajout d'un outil de mesure d'audience. */}
           </p>
         </section>
         <section>
           <h2 className="font-display text-xl font-semibold text-ink">
-            Newsletter
+            Formulaire de contact
           </h2>
           <p className="mt-2 leading-relaxed text-ink-soft">
-            Votre adresse n&apos;est utilisée que pour l&apos;envoi de la
-            newsletter (un e-mail par semaine). Chaque envoi contient un lien de
-            désinscription en un clic. Elle n&apos;est ni vendue ni partagée.
+            Les messages envoyés depuis la page contact sont acheminés par le
+            service EmailJS, qui les transmet à la boîte de la rédaction. Ces
+            données servent uniquement à traiter votre demande et à vous
+            répondre. Elles ne sont ni vendues, ni utilisées à des fins
+            commerciales, et sont supprimées une fois l&apos;échange terminé.
           </p>
         </section>
         <section>

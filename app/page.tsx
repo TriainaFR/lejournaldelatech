@@ -1,6 +1,5 @@
 import Link from "next/link";
 import EditorialPhoto from "@/components/EditorialPhoto";
-import NewsletterForm from "@/components/NewsletterForm";
 import SectionHeader from "@/components/SectionHeader";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -282,35 +281,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ——————— Newsletter ——————— */}
-        <section
-          id="newsletter"
-          aria-labelledby="titre-newsletter"
-          className="bg-night text-paper"
-        >
-          <div className="mx-auto flex w-full max-w-[880px] flex-col items-center px-6 py-16 text-center">
-            <CircuitSprig className="h-6 w-32 text-silver" />
-            <p className="mt-4 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-silver">
-              La newsletter du Journal
-            </p>
-            <h2
-              id="titre-newsletter"
-              className="mt-3 font-display text-3xl font-semibold sm:text-4xl"
-            >
-              La Dépêche Tech, chaque jeudi matin
-            </h2>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-silver-soft">
-              Dès l’ouverture : nos enquêtes et nos bancs d’essai en
-              avant-première, l’actualité décryptée et zéro publicité déguisée.
-            </p>
-            <div className="mt-7 flex w-full justify-center">
-              <NewsletterForm />
-            </div>
-            <p className="mt-4 text-xs text-silver">
-              Un e-mail par semaine. Désinscription en un clic.
-            </p>
-          </div>
-        </section>
 
         {/* ——————— FAQ ——————— */}
         <section
@@ -364,17 +334,17 @@ export default function Home() {
               sans le bruit.
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
-              <a
-                href="#newsletter"
-                className="bg-rouge px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-rouge-deep"
-              >
-                S&apos;abonner à la newsletter
-              </a>
               <Link
                 href="/charte-editoriale"
-                className="border border-ink/25 bg-card px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
+                className="bg-rouge px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-rouge-deep"
               >
                 Lire notre charte éditoriale
+              </Link>
+              <Link
+                href="/contact"
+                className="border border-ink/25 bg-card px-5 py-3 font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
+              >
+                Nous écrire
               </Link>
             </div>
           </div>
