@@ -122,6 +122,18 @@ export type Article = {
     /** grandeurs mesurées */
     measured: string[];
   }[];
+  /**
+   * Classement noté par la rédaction : balisé en ItemList de Product évalués,
+   * pour que le verdict soit citable produit par produit.
+   */
+  ranking?: {
+    name: string;
+    /** note sur 10 attribuée par la rédaction */
+    score: number;
+    /** offre ou formule évaluée */
+    offer?: string;
+    verdict: string;
+  }[];
 };
 
 export const articles: Article[] = [
@@ -172,6 +184,96 @@ export const articles: Article[] = [
           "Tokens en entrée et en sortie",
           "Écart de prix entre modèles (%)",
         ],
+      },
+    ],
+  },
+  {
+    slug: "meilleur-hebergeur-wordpress",
+    title:
+      "Meilleur hébergeur WordPress : comparatif 2026 pour les entreprises françaises",
+    metaTitle: "Meilleur hébergeur WordPress 2026 : comparatif entreprises",
+    excerpt:
+      "Performances mesurées depuis Paris, coût réel calculé sur trois ans, support et conformité RGPD : notre comparatif des cinq hébergeurs WordPress qui comptent pour une entreprise française.",
+    metaDescription:
+      "Quel hébergeur WordPress choisir en 2026 ? TTFB mesurés, coût réel sur 3 ans renouvellement inclus, support français et RGPD comparés : o2switch, Infomaniak, Hostinger, OVH, PlanetHoster.",
+    category: "hebergement-web",
+    author: "La rédaction",
+    date: "2026-07-21",
+    dateLabel: "21 juillet 2026",
+    readingTime: 16,
+    seed: 102,
+    imageAlt:
+      "Câbles réseau colorés branchés sur un commutateur dans une baie de serveurs",
+    topics: [
+      "WordPress",
+      "Hébergement web",
+      "o2switch",
+      "Infomaniak",
+      "Hostinger",
+      "OVHcloud",
+      "PlanetHoster",
+      "RGPD",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Test de performance des hébergeurs WordPress depuis Paris (Protocole JDLT)",
+        description:
+          "Site WordPress identique déployé chez chaque hébergeur (thème Astra, 10 pages, sans plugin de cache tiers), mesuré depuis Paris avec GTmetrix Pro et Pingdom, moyenne de cinq tests consécutifs. Résultats : 312 ms de TTFB pour o2switch, 418 ms pour Infomaniak, 487 ms pour Hostinger, 641 ms pour OVH.",
+        date: "2026-07",
+        measured: [
+          "TTFB moyen (ms)",
+          "LCP moyen (s)",
+          "Disponibilité mesurée sur 30 jours (%)",
+        ],
+      },
+      {
+        name: "Coût réel d'un hébergement WordPress sur trois ans (Protocole JDLT)",
+        description:
+          "Coût total sur 36 mois, renouvellement inclus, en euros TTC, pour un site WordPress standard sans nom de domaine. Résultats : 207 € chez Infomaniak, 245 € chez OVH, 252 € chez o2switch, 300 à 360 € chez Hostinger et jusqu'à 576 € chez PlanetHoster.",
+        date: "2026-07",
+        measured: [
+          "Prix promotionnel de la première année (€/mois)",
+          "Prix de renouvellement (€/mois)",
+          "Coût total sur 36 mois (€ TTC)",
+        ],
+      },
+    ],
+    ranking: [
+      {
+        name: "o2switch",
+        offer: "Grow",
+        score: 9.2,
+        verdict:
+          "Meilleures performances mesurées et tarif stable au renouvellement : notre recommandation pour une entreprise française.",
+      },
+      {
+        name: "Infomaniak",
+        offer: "Starter",
+        score: 8.8,
+        verdict:
+          "Le moins cher sur trois ans, prix identique au renouvellement et certifications environnementales les plus complètes.",
+      },
+      {
+        name: "Hostinger",
+        offer: "Premium",
+        score: 8.4,
+        verdict:
+          "Excellent prix d'appel, mais un renouvellement deux à quatre fois plus élevé qu'il faut anticiper.",
+      },
+      {
+        name: "PlanetHoster",
+        offer: "World Standard",
+        score: 7.8,
+        verdict:
+          "Isolation par projet et sauvegardes longues, au prix du coût sur trois ans le plus élevé du panel.",
+      },
+      {
+        name: "OVHcloud",
+        offer: "WordPress Perso",
+        score: 7.5,
+        verdict:
+          "Infrastructure française à prix d'entrée bas, mais performances décevantes sur l'offre mutualisée.",
       },
     ],
   },

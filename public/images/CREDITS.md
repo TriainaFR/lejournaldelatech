@@ -9,3 +9,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `cat-energie-solaire.jpg` — https://images.unsplash.com/photo-1509391366360-2e959784a276
 - `cat-green-tech.jpg` — https://images.unsplash.com/photo-1542601906990-b4d3fb778b09
 - `art-claude-vs-chatgpt.jpg` — https://images.unsplash.com/photo-1531746790731-6c087fecd65a
+- `art-meilleur-hebergeur-wordpress.jpg` — https://images.unsplash.com/photo-1520869562399-e772f042f422

@@ -1,4 +1,5 @@
 import * as claudeVsChatgpt from "@/content/articles/claude-vs-chatgpt";
+import * as meilleurHebergeurWordpress from "@/content/articles/meilleur-hebergeur-wordpress";
 
 export type ArticleContent = {
   html: string;
@@ -10,6 +11,7 @@ export type ArticleContent = {
 /** Corps des articles publiés, indexé par slug. */
 const CONTENTS: Record<string, ArticleContent> = {
   "claude-vs-chatgpt": claudeVsChatgpt,
+  "meilleur-hebergeur-wordpress": meilleurHebergeurWordpress,
 };
 
 export function articleContent(slug: string): ArticleContent | undefined {

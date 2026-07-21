@@ -13,6 +13,8 @@ import { articles } from "./data";
 export const plannedPillars: { slug: string; label: string }[] = [
   { slug: "meilleur-outil-ia-2026", label: "Meilleur outil IA 2026" },
   { slug: "alternative-chatgpt", label: "Alternative à ChatGPT" },
+  { slug: "meilleur-vps-2026", label: "Meilleur VPS 2026" },
+  { slug: "meilleur-hebergeur-web-2026", label: "Meilleur hébergeur web 2026" },
 ];
 
 export function pillarHref(slug: string): string | undefined {

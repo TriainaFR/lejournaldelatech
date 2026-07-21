@@ -82,6 +82,38 @@ export default async function ArticlePage({
   const others = articlesByCategory(a.category).filter((x) => x.slug !== a.slug);
   const body = resolveInternalLinks(content.html);
 
+  /** Classement noté : chaque produit évalué devient citable individuellement. */
+  const rankingLd = a.ranking?.length
+    ? {
+        "@type": "ItemList",
+        "@id": `${url}#classement`,
+        name: `Classement du Journal de la Tech — ${a.title}`,
+        itemListOrder: "https://schema.org/ItemListOrderDescending",
+        numberOfItems: a.ranking.length,
+        itemListElement: a.ranking.map((r, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "Product",
+            name: r.offer ? `${r.name} ${r.offer}` : r.name,
+            brand: { "@type": "Brand", name: r.name },
+            review: {
+              "@type": "Review",
+              reviewBody: r.verdict,
+              datePublished: a.date,
+              author: { "@id": `${SITE_URL}/#organization` },
+              reviewRating: {
+                "@type": "Rating",
+                ratingValue: r.score,
+                bestRating: 10,
+                worstRating: 0,
+              },
+            },
+          },
+        })),
+      }
+    : null;
+
   /** Études produites par la rédaction : balisées pour être citables. */
   const datasets = (a.datasets ?? []).map((d, i) => ({
     "@type": "Dataset",
@@ -157,6 +189,7 @@ export default async function ArticlePage({
         })),
       },
       ...datasets,
+      ...(rankingLd ? [rankingLd] : []),
       {
         "@type": "BreadcrumbList",
         itemListElement: [

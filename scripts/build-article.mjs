@@ -1,93 +1,93 @@
+/**
+ * Pipeline de publication d'un article.
+ *
+ *   node scripts/build-article.mjs <slug>
+ *
+ * Lit le HTML livré par la rédaction (`scripts/raw/<slug>.html`) et sa
+ * configuration de transformation (`scripts/articles/<slug>.mjs`), puis écrit
+ * le corps prêt à rendre dans `content/articles/<slug>.ts`.
+ *
+ * Transformations communes à tous les articles : retrait du <h1> (porté par la
+ * page), nettoyage des résidus d'éditeur, typographie française, ancres sur les
+ * titres, tableaux défilables, extraction du sommaire, de la FAQ et des sources.
+ */
+
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-const SRC =
-  "/private/tmp/claude-501/-Users-l-l-Desktop-Triaina-Site-Web--lejournaldelatech/05db6a12-8585-4edf-a0c8-18a12cf3e696/scratchpad/article-raw.html";
-const OUT_DIR =
-  "/Users/l.l/Desktop/Triaina/Site Web /lejournaldelatech/content/articles";
-const OUT = `${OUT_DIR}/claude-vs-chatgpt.ts`;
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const slug = process.argv[2];
 
-let html = readFileSync(SRC, "utf8").trim();
+if (!slug) {
+  console.error("Usage : node scripts/build-article.mjs <slug>");
+  process.exit(1);
+}
 
-/* — 1. Le titre devient le <h1> de la page, on le retire du corps — */
+const config = (
+  await import(pathToFileURL(`${ROOT}/scripts/articles/${slug}.mjs`).href)
+).default;
+
+let html = readFileSync(`${ROOT}/scripts/raw/${slug}.html`, "utf8").trim();
+
+/* — Le titre devient le <h1> de la page, on le retire du corps — */
 html = html.replace(/^<h1>.*?<\/h1>/s, "");
 
-/* — 2. Séparateurs : les titres portent déjà leur filet — */
+/* — Séparateurs : les titres portent déjà leur filet — */
 html = html.replace(/<hr\s*\/?>/g, "");
 
-/* — 3. Nettoyage des tableaux issus de l'éditeur — */
+/* — Nettoyage des tableaux issus de l'éditeur — */
 html = html
   .replace(/<colgroup>.*?<\/colgroup>/gs, "")
   .replace(/\s*style="min-width:[^"]*"/g, "")
   .replace(/\s*colspan="1"/g, "")
   .replace(/\s*rowspan="1"/g, "");
 
-/* — 4. Coquilles éditoriales du texte source — */
-html = html
-  .replace("TL;DR - Lequel choisir ?Claude", "Lequel choisir ? Claude")
-  .replace(
-    "ChatGPT ou claude n'est même pas une question",
-    "ChatGPT ou Claude n'est même pas une question"
-  );
+/* — Corrections éditoriales propres à l'article — */
+for (const [from, to] of config.replacements ?? []) {
+  if (!html.includes(from)) throw new Error(`Remplacement introuvable : ${from}`);
+  html = html.replaceAll(from, to);
+}
 
-/* — 5. Typographie française : incises en tiret cadratin — */
+/* — Typographie française : incises en tiret cadratin — */
 html = html.replace(/ - /g, " — ");
 
-/* — 6. Maillage interne différé : le lien s'activera à la publication du pilier — */
-html = html
-  .replace(
-    /, notamment dans notre guide \[LIEN INTERNE : Meilleur outil IA 2026\]\./,
-    ", notamment dans notre guide [[lien:meilleur-outil-ia-2026|Meilleur outil IA 2026]]."
-  )
-  .replace(
-    /Notre guide \[LIEN INTERNE : Alternative à ChatGPT\] couvre les options souveraines en détail\./,
-    "Notre guide [[lien:alternative-chatgpt|Alternative à ChatGPT]] couvre les options souveraines en détail."
-  );
+/* — Maillage interne différé et liens de méthodologie — */
+for (const [pattern, replacement] of config.links ?? []) {
+  const re = new RegExp(pattern, "g");
+  if (!re.test(html)) throw new Error(`Lien introuvable : ${pattern}`);
+  html = html.replace(new RegExp(pattern, "g"), replacement);
+}
 
-/* — 6 bis. Le Protocole JDLT renvoie vers sa page de référence — */
-html = html.replace(
-  "est notre cadre d'évaluation maison",
-  'est notre <a href="/protocole-jdlt">cadre d’évaluation maison</a>'
-);
-
-/* — 7. Le premier blockquote devient l'encadré TL;DR — */
+/* — Le premier blockquote devient l'encadré « L'essentiel » — */
 html = html.replace(
   /<blockquote>(.*?)<\/blockquote>/s,
   (_m, inner) =>
     `<aside class="tldr"><p class="tldr-label">L’essentiel</p>${inner}</aside>`
 );
 
-/* — 7 bis. Les données propriétaires sont mises en avant (différenciateur) — */
-function wrapBlock(source, startNeedle, endNeedle, label) {
+/* — Données produites par la rédaction : mises en avant (différenciateur) — */
+function wrapBlock(source, { start: startNeedle, end: endNeedle, label }) {
   const start = source.indexOf(startNeedle);
   if (start === -1) throw new Error(`Bloc introuvable : ${startNeedle}`);
   const endAt = source.indexOf(endNeedle, start);
   if (endAt === -1) throw new Error(`Fin de bloc introuvable : ${endNeedle}`);
   const end = endAt + endNeedle.length;
-  const inner = source.slice(start, end);
-  const badge = `<p class="data-badge">${label}</p>`;
   return (
     source.slice(0, start) +
-    `<aside class="donnee-jdlt">${badge}${inner}</aside>` +
+    `<aside class="donnee-jdlt"><p class="data-badge">${label}</p>` +
+    source.slice(start, end) +
+    "</aside>" +
     source.slice(end)
   );
 }
 
-html = wrapBlock(
-  html,
-  "<p><strong>Protocole JDLT — test de fiabilité en français",
-  "</ul>",
-  "Donnée exclusive — Protocole JDLT · Test de fiabilité en français"
-);
+for (const block of config.dataBlocks ?? []) {
+  html = wrapBlock(html, block);
+}
 
-html = wrapBlock(
-  html,
-  "<p><strong>Cas d'usage :</strong>",
-  "50 000+ appels/mois.</p>",
-  "Donnée exclusive — Protocole JDLT · Simulation de coût réel"
-);
-
-/* — 8. Identifiants d'ancre sur les titres + sommaire — */
-const slug = (s) =>
+/* — Identifiants d'ancre sur les titres + sommaire — */
+const slugify = (s) =>
   s
     .toLowerCase()
     .normalize("NFD")
@@ -100,43 +100,53 @@ const slug = (s) =>
 const toc = [];
 html = html.replace(/<h([23])>(.*?)<\/h\1>/g, (_m, level, inner) => {
   const text = inner.replace(/<[^>]+>/g, "").trim();
-  const id = slug(text);
+  const id = slugify(text);
   if (level === "2") toc.push({ id, text });
   return `<h${level} id="${id}">${inner}</h${level}>`;
 });
 
-/* — 9. Tableaux défilables sur mobile — */
+/* — Tableaux défilables sur mobile — */
 html = html.replace(
   /<table>(.*?)<\/table>/gs,
   (_m, inner) => `<div class="table-wrap"><table>${inner}</table></div>`
 );
 
-/* — 10. Extraction des questions/réponses pour le balisage FAQPage — */
-const faqSection = html.split('<h2 id="faq-claude-vs-chatgpt">')[1] ?? "";
+/* — Questions/réponses pour le balisage FAQPage — */
+const faqAnchor = toc.find((t) => t.text.toUpperCase().startsWith("FAQ"));
+const faqSection = faqAnchor
+  ? html.split(`<h2 id="${faqAnchor.id}">`)[1] ?? ""
+  : "";
 const faq = [];
-for (const m of faqSection.matchAll(
-  /<p><strong>(.*?)<\/strong>\s*(.*?)<\/p>/gs
-)) {
-  const question = m[1].replace(/<[^>]+>/g, "").trim();
-  const answer = m[2].replace(/<[^>]+>/g, "").trim();
+/** Le balisage FAQPage attend du texte : on y déplie les marqueurs de lien. */
+const plain = (s) =>
+  s
+    .replace(/\[\[lien:[a-z0-9-]+\|([^\]]+)\]\]/g, "$1")
+    .replace(/<[^>]+>/g, "")
+    .trim();
+for (const m of faqSection.matchAll(/<p><strong>(.*?)<\/strong>\s*(.*?)<\/p>/gs)) {
+  const question = plain(m[1]);
+  const answer = plain(m[2]);
   if (question.endsWith("?") && answer) faq.push({ question, answer });
 }
 
-/* — 11. Sources : liste d'autorité pour l'E-E-A-T — */
+/* — Sources citées : autorité et vérifiabilité — */
 const sources = [];
-for (const m of html.matchAll(/<a[^>]*href="(https?:[^"]+)"[^>]*>(.*?)<\/a>/g)) {
+for (const m of html.matchAll(
+  /<a[^>]*href="(https?:[^"]+)"[^>]*>(.*?)<\/a>/g
+)) {
   sources.push({ url: m[1], label: m[2].replace(/<[^>]+>/g, "").trim() });
 }
 
-const esc = (s) => s.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
+const esc = (s) =>
+  s.replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
 
-mkdirSync(OUT_DIR, { recursive: true });
+mkdirSync(`${ROOT}/content/articles`, { recursive: true });
 writeFileSync(
-  OUT,
+  `${ROOT}/content/articles/${slug}.ts`,
   `/**
- * Corps de l'article « Claude vs ChatGPT ».
- * Généré depuis le HTML fourni par la rédaction, nettoyé (tableaux, ancres,
- * typographie française) — ne pas éditer à la main sans reporter les changements.
+ * Corps de l'article « ${config.title} ».
+ * Généré par scripts/build-article.mjs depuis scripts/raw/${slug}.html —
+ * modifier la source ou la config, puis relancer le script.
  */
 
 export const html = \`${esc(html.trim())}\`;
@@ -154,5 +164,6 @@ export const sources: { url: string; label: string }[] = ${JSON.stringify(source
 );
 
 const words = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
-console.log(`OK — ${words} mots, ${toc.length} sections, ${faq.length} FAQ, ${sources.length} sources`);
-console.log(toc.map((t) => `  · ${t.text} (#${t.id})`).join("\n"));
+console.log(
+  `${slug} — ${words} mots, ${toc.length} sections, ${faq.length} FAQ, ${sources.length} sources, ${(config.dataBlocks ?? []).length} encadré(s) de données`
+);
