@@ -154,6 +154,12 @@ export default function Home() {
                       );
                     })}
                   </ol>
+                  <Link
+                    href="/articles"
+                    className="mt-6 block border border-ink/25 bg-card px-5 py-3 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
+                  >
+                    Voir tous les articles <span aria-hidden="true">→</span>
+                  </Link>
                 </aside>
               ) : null}
             </div>

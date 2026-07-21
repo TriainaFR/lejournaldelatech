@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const pages: MetadataRoute.Sitemap = [
     { url: `${BASE}/`, lastModified: now, changeFrequency: "daily", priority: 1 },
+    { url: `${BASE}/articles`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE}/a-propos`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/methodologie`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/protocole-jdlt`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
