@@ -125,9 +125,21 @@ export default function SiteHeader({
           </ul>
           <Link
             href="/articles"
+            aria-label="Rechercher parmi tous les articles"
             className="hidden shrink-0 items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-rouge transition-colors hover:text-rouge-deep sm:flex"
           >
-            Tous les articles
+            <svg
+              viewBox="0 0 20 20"
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              aria-hidden="true"
+            >
+              <circle cx="9" cy="9" r="6" />
+              <line x1="13.5" y1="13.5" x2="18" y2="18" />
+            </svg>
+            Rechercher
           </Link>
         </div>
       </nav>

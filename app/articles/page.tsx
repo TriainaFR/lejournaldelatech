@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ArticleCard from "@/components/ArticleCard";
+import ArticleSearch, { type SearchEntry } from "@/components/ArticleSearch";
 import PageShell from "@/components/PageShell";
-import { activeCategories, articlesSorted } from "@/lib/data";
+import {
+  activeCategories,
+  articlesSorted,
+  categoryBySlug,
+  type Article,
+} from "@/lib/data";
+
+/** Texte indexé pour la recherche : titre, chapô, rubrique, sujets, auteur. */
+function haystack(a: Article): string {
+  return [
+    a.title,
+    a.excerpt,
+    a.kind ?? "Comparatif",
+    categoryBySlug(a.category).name,
+    ...(a.topics ?? []),
+  ]
+    .join(" ")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "");
+}
 
 const SITE_URL = "https://lejournaldelatech.fr";
 
@@ -24,6 +45,10 @@ export const metadata: Metadata = {
 export default function ArticlesPage() {
   const items = articlesSorted();
   const rubriques = activeCategories();
+  const index: SearchEntry[] = items.map((a) => ({
+    slug: a.slug,
+    haystack: haystack(a),
+  }));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -77,8 +102,8 @@ export default function ArticlesPage() {
       />
 
       <nav
-        aria-label="Filtrer par rubrique"
-        className="mb-10 flex flex-wrap justify-center gap-2"
+        aria-label="Parcourir par rubrique"
+        className="mb-8 flex flex-wrap justify-center gap-2"
       >
         {rubriques.map((c) => (
           <Link
@@ -91,11 +116,11 @@ export default function ArticlesPage() {
         ))}
       </nav>
 
-      <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <ArticleSearch index={index}>
         {items.map((a) => (
           <ArticleCard key={a.slug} article={a} />
         ))}
-      </div>
+      </ArticleSearch>
     </PageShell>
   );
 }
