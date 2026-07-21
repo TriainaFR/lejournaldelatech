@@ -75,7 +75,8 @@ l'accueil) qu'à partir de son premier article — voir `activeCategories()`.
    Le corps prêt à rendre est écrit dans `content/articles/<slug>.ts` ; le
    référencer dans `lib/articleContent.ts`.
 2. Ajouter l'entrée dans `articles` (`lib/data.ts`) : titre, `metaTitle`,
-   `excerpt`, `metaDescription`, date, temps de lecture, `topics`, `datasets`,
+   `excerpt`, `metaDescription`, `author` (clé de `lib/authors.ts`),
+   `authorNote` éventuelle, date, temps de lecture, `topics`, `datasets`,
    `ranking` éventuel, et la photo `public/images/art-<slug>.jpg` avec son
    `imageAlt`.
 3. C'est tout : la page article, la page rubrique, la navigation, l'accueil,
@@ -97,6 +98,16 @@ Dans un article, ces données se déclarent dans `datasets` (`lib/data.ts`) :
 elles sont alors balisées en `Dataset` rattaché au `DataCatalog` « Protocole
 JDLT », donc citables nommément par les moteurs génératifs. Le rendu les
 signale par un encadré rouge « Donnée exclusive ».
+
+### Signature des articles
+
+Les auteurs sont décrits une fois dans `lib/authors.ts` (fonction, bio,
+expertises, profils externes). Chaque article référence une clé d'auteur, ce
+qui alimente automatiquement la byline, l'encadré de fin d'article, la page
+`/auteurs/<slug>` et le balisage `Person` (`jobTitle`, `knowsAbout`, `sameAs`)
+lié à l'`Article` — la brique E-E-A-T attendue sur des comparatifs chiffrés.
+Le champ `authorNote` sert aux précisions de transparence (« qui a mené les
+tests, comment »).
 
 ### Maillage interne différé
 
