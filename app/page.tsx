@@ -5,7 +5,15 @@ import SectionHeader from "@/components/SectionHeader";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { CircuitSprig } from "@/components/ornaments";
-import { categories, categoryImage, faqItems } from "@/lib/data";
+import {
+  articleImage,
+  articlesByCategory,
+  articlesSorted,
+  categories,
+  categoryBySlug,
+  categoryImage,
+  faqItems,
+} from "@/lib/data";
 
 const SITE_URL = "https://lejournaldelatech.fr";
 
@@ -40,7 +48,8 @@ const ENGAGEMENTS: { title: string; text: string }[] = [
 ];
 
 export default function Home() {
-  const feature = categories[0];
+  const [feature, ...autres] = articlesSorted();
+  const featureCat = feature ? categoryBySlug(feature.category) : null;
 
   return (
     <>
@@ -50,62 +59,113 @@ export default function Home() {
           __html: JSON.stringify(pageJsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <SiteHeader />
+      <SiteHeader isHomepage />
 
       <main id="contenu" className="flex-1">
-        {/* ——————— Ouverture ——————— */}
-        <section
-          aria-labelledby="titre-ouverture"
-          className="mx-auto w-full max-w-[1240px] px-6 pb-16 pt-12"
-        >
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[6fr_6fr] lg:gap-14">
-            <div className="rise rise-1">
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
-                Nouveau média · France · 2026
-              </p>
-              <h2
-                id="titre-ouverture"
-                className="mt-4 font-display text-4xl font-bold leading-[1.06] tracking-tight text-ink sm:text-5xl"
-              >
-                La tech utile, sans le bruit.
-              </h2>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
-                Le Journal de la Tech est un média français indépendant consacré
-                aux technologies qui font tourner les entreprises et accélèrent
-                la transition : logiciels et SaaS, intelligence artificielle,
-                hébergement web, mobilité, énergie solaire et green tech.
-              </p>
-              <p className="mt-4 max-w-xl leading-relaxed text-ink-soft">
-                La rédaction ouvre ses colonnes prochainement. Laissez-nous
-                votre adresse pour recevoir le premier numéro.
-              </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#newsletter"
-                  className="bg-rouge px-5 py-3 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-rouge-deep"
-                >
-                  Recevoir le premier numéro
-                </a>
+        {/* ——————— À la une ——————— */}
+        {feature && featureCat ? (
+          <section
+            aria-labelledby="titre-une"
+            className="mx-auto w-full max-w-[1240px] px-6 pb-16 pt-10"
+          >
+            <h2 id="titre-une" className="sr-only">
+              À la une
+            </h2>
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-[7fr_5fr] lg:gap-14">
+              <article className="rise rise-1">
                 <Link
-                  href="/a-propos"
-                  className="border border-ink/25 bg-card px-5 py-3 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
+                  href={`/${feature.category}/${feature.slug}`}
+                  className="group block"
                 >
-                  Qui sommes-nous
+                  <figure className="relative aspect-[16/10] overflow-hidden bg-night">
+                    <EditorialPhoto
+                      image={articleImage(feature)}
+                      seed={feature.seed}
+                      tone={featureCat.tone}
+                      glyph={featureCat.short.charAt(0)}
+                      sizes="(min-width: 1024px) 56vw, 100vw"
+                      priority
+                    />
+                  </figure>
+                  <p className="mt-6 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
+                    Comparatif — {featureCat.name}
+                  </p>
+                  <h3 className="mt-3 font-display text-3xl font-bold leading-[1.08] tracking-tight text-ink sm:text-4xl lg:text-[2.6rem]">
+                    <span className="headline-link">{feature.title}</span>
+                  </h3>
+                  <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
+                    {feature.excerpt}
+                  </p>
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
+                    Par {feature.author} ·{" "}
+                    <time dateTime={feature.date}>{feature.dateLabel}</time> ·
+                    Lecture {feature.readingTime} min
+                  </p>
                 </Link>
-              </div>
-            </div>
+              </article>
 
-            <figure className="rise rise-2 relative aspect-[16/11] overflow-hidden bg-night">
-              <EditorialPhoto
-                image={categoryImage(feature)}
-                seed={7}
-                tone="rouge"
-                sizes="(min-width: 1024px) 48vw, 100vw"
-                priority
-              />
-            </figure>
-          </div>
-        </section>
+              <aside
+                aria-labelledby="titre-presentation"
+                className="rise rise-2 lg:border-l lg:border-ink/15 lg:pl-10"
+              >
+                <h3
+                  id="titre-presentation"
+                  className="rule-double pt-4 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-ink"
+                >
+                  Le Journal de la Tech
+                </h3>
+                <p className="mt-5 leading-relaxed text-ink-soft">
+                  Média français indépendant consacré aux technologies qui font
+                  tourner les entreprises et accélèrent la transition :
+                  logiciels et SaaS, intelligence artificielle, hébergement web,
+                  mobilité, énergie solaire et green tech.
+                </p>
+                <p className="mt-4 leading-relaxed text-ink-soft">
+                  Nos critères sont publics, nos sources citées, nos chiffres
+                  datés. Aucune entreprise ne rémunère sa place dans nos
+                  classements.
+                </p>
+                <div className="mt-6 flex flex-col gap-3">
+                  <a
+                    href="#newsletter"
+                    className="bg-rouge px-5 py-3 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-rouge-deep"
+                  >
+                    S&apos;abonner à la newsletter
+                  </a>
+                  <Link
+                    href="/methodologie"
+                    className="border border-ink/25 bg-card px-5 py-3 text-center font-mono text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:border-rouge hover:text-rouge"
+                  >
+                    Notre méthodologie
+                  </Link>
+                </div>
+
+                {autres.length > 0 ? (
+                  <ol className="mt-8 divide-y divide-ink/10 border-t border-ink/15">
+                    {autres.slice(0, 4).map((a) => {
+                      const c = categoryBySlug(a.category);
+                      return (
+                        <li key={a.slug}>
+                          <Link
+                            href={`/${a.category}/${a.slug}`}
+                            className="group block py-4"
+                          >
+                            <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-rouge">
+                              {c.name}
+                            </span>
+                            <span className="mt-1 block font-display text-lg font-medium leading-snug text-ink">
+                              <span className="headline-link">{a.title}</span>
+                            </span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                ) : null}
+              </aside>
+            </div>
+          </section>
+        ) : null}
 
         {/* ——————— Nos univers ——————— */}
         <section
@@ -119,25 +179,48 @@ export default function Home() {
               title="Ce que nous couvrons"
             />
             <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {categories.map((c, i) => (
-                <li key={c.slug}>
-                  <figure className="relative aspect-[16/9] overflow-hidden bg-night">
-                    <EditorialPhoto
-                      image={categoryImage(c)}
-                      seed={41 + i * 13}
-                      tone={c.tone}
-                      glyph={c.short.charAt(0)}
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    />
-                  </figure>
-                  <h3 className="mt-4 font-display text-xl font-semibold text-ink">
-                    {c.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                    {c.description}
-                  </p>
-                </li>
-              ))}
+              {categories.map((c, i) => {
+                const nb = articlesByCategory(c.slug).length;
+                const media = (
+                  <>
+                    <figure className="relative aspect-[16/9] overflow-hidden bg-night">
+                      <EditorialPhoto
+                        image={categoryImage(c)}
+                        seed={41 + i * 13}
+                        tone={c.tone}
+                        glyph={c.short.charAt(0)}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      />
+                    </figure>
+                    <h3 className="mt-4 font-display text-xl font-semibold text-ink">
+                      {nb > 0 ? (
+                        <span className="headline-link">{c.name}</span>
+                      ) : (
+                        c.name
+                      )}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                      {c.description}
+                    </p>
+                  </>
+                );
+
+                return (
+                  <li key={c.slug}>
+                    {nb > 0 ? (
+                      <Link href={`/${c.slug}`} className="group block">
+                        {media}
+                        <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.1em] text-rouge">
+                          {nb} article{nb > 1 ? "s" : ""} publié
+                          {nb > 1 ? "s" : ""} →
+                        </p>
+                      </Link>
+                    ) : (
+                      media
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>

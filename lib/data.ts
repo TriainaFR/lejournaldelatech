@@ -88,20 +88,54 @@ export const categories: Category[] = [
 export type Article = {
   slug: string;
   title: string;
+  /** titre optimisé pour la balise <title> (sinon `title`) */
+  metaTitle?: string;
   excerpt: string;
+  /** meta description ≤ 160 caractères (sinon `excerpt` tronqué) */
+  metaDescription?: string;
   category: CategorySlug;
   author: string;
-  date: string; // ISO
+  date: string; // ISO — publication
   dateLabel: string;
+  /** ISO — dernière mise à jour, si différente de la publication */
+  updated?: string;
+  updatedLabel?: string;
   readingTime: number; // minutes
   /** graine de variation pour l'illustration générée (repli sans photo) */
   seed: number;
   /** alt de la photo /public/images/art-<slug>.jpg ; absent = pas de photo */
   imageAlt?: string;
+  /** entités couvertes — alimente `about` du balisage Article (GEO) */
+  topics?: string[];
 };
 
-/** Aucun article publié pour l'instant. */
-export const articles: Article[] = [];
+export const articles: Article[] = [
+  {
+    slug: "claude-vs-chatgpt",
+    title: "Claude vs ChatGPT : le comparatif complet pour choisir en 2026",
+    metaTitle: "Claude vs ChatGPT 2026 : le comparatif complet",
+    excerpt:
+      "Raisonnement, code, français, RGPD, coût réel de l'API : notre comparatif complet de Claude et ChatGPT, benchmarks vérifiés et simulation chiffrée pour une PME française à l'appui.",
+    metaDescription:
+      "Claude ou ChatGPT en 2026 ? Benchmarks vérifiés, tests en français, conformité RGPD et coût réel de l'API comparés pour les entreprises françaises.",
+    category: "intelligence-artificielle",
+    author: "La rédaction",
+    date: "2026-07-21",
+    dateLabel: "21 juillet 2026",
+    readingTime: 14,
+    seed: 101,
+    imageAlt:
+      "Main d'un robot humanoïde blanc tendue en avant, symbole des assistants d'intelligence artificielle",
+    topics: [
+      "Claude",
+      "ChatGPT",
+      "Anthropic",
+      "OpenAI",
+      "Intelligence artificielle générative",
+      "RGPD",
+    ],
+  },
+];
 
 export type FaqItem = { question: string; answer: string };
 
@@ -142,7 +176,18 @@ export function categoryBySlug(slug: CategorySlug): Category {
 }
 
 export function articlesByCategory(slug: CategorySlug): Article[] {
-  return articles.filter((a) => a.category === slug);
+  return articles
+    .filter((a) => a.category === slug)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+/** Rubriques ayant au moins un article : les seules à exposer publiquement. */
+export function activeCategories(): Category[] {
+  return categories.filter((c) => articlesByCategory(c.slug).length > 0);
+}
+
+export function articlesSorted(): Article[] {
+  return [...articles].sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 /** Photos éditoriales : fichiers nommés par convention dans /public/images. */

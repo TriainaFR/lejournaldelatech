@@ -59,19 +59,22 @@ lib/date.ts            # date d'édition partagée serveur / client
 ```
 
 **Aucun contenu fantôme** : le site n'affiche et ne référence que des pages
-réellement publiées. Tant que `articles` est vide dans `lib/data.ts`, aucune
-rubrique, aucun comparatif et aucun article n'apparaît — ni à l'écran, ni
-dans la navigation, ni dans le sitemap.
+réellement publiées. Une rubrique n'apparaît (navigation, sitemap, lien depuis
+l'accueil) qu'à partir de son premier article — voir `activeCategories()`.
 
-### Publier les premiers articles
+### Publier un article
 
-1. Ajouter les entrées dans `articles` (`lib/data.ts`), avec la photo
-   `public/images/art-<slug>.jpg` et son `imageAlt`.
-2. Recréer les routes `app/[categorie]/page.tsx` (rubrique) et
-   `app/[categorie]/[article]/page.tsx` (article) — elles étaient basées sur
-   `generateStaticParams()` alimenté par `lib/data.ts` (voir historique git).
-3. Rebrancher les rubriques dans `NAV_LINKS` (`components/SiteHeader.tsx`) et
-   le footer, puis ajouter les URLs au `sitemap.ts`.
+1. Déposer le corps HTML nettoyé dans `content/articles/<slug>.ts` (exporte
+   `html`, `toc`, `faq`, `sources`) et le référencer dans `lib/articleContent.ts`.
+2. Ajouter l'entrée dans `articles` (`lib/data.ts`) : titre, `metaTitle`,
+   `excerpt`, `metaDescription`, date, temps de lecture, `topics`, et la photo
+   `public/images/art-<slug>.jpg` avec son `imageAlt`.
+3. C'est tout : la page article, la page rubrique, la navigation, l'accueil,
+   le bandeau « À la une » et le sitemap se mettent à jour automatiquement.
+
+Le balisage produit par page article : `Article` (avec `wordCount`, `about`,
+`citation`), `FAQPage`, `BreadcrumbList`, Open Graph `article` complet et
+sommaire ancré.
 
 ### Date d'édition
 
