@@ -1,3 +1,4 @@
+import * as claudeOuChatgptSelonVotreMetier from "@/content/articles/claude-ou-chatgpt-selon-votre-metier";
 import * as claudeVsChatgpt from "@/content/articles/claude-vs-chatgpt";
 import * as meilleurHebergeurWeb2026 from "@/content/articles/meilleur-hebergeur-web-2026";
 import * as meilleurHebergeurWordpress from "@/content/articles/meilleur-hebergeur-wordpress";
@@ -12,6 +13,7 @@ export type ArticleContent = {
 
 /** Corps des articles publiés, indexé par slug. */
 const CONTENTS: Record<string, ArticleContent> = {
+  "claude-ou-chatgpt-selon-votre-metier": claudeOuChatgptSelonVotreMetier,
   "claude-vs-chatgpt": claudeVsChatgpt,
   "meilleur-hebergeur-web-2026": meilleurHebergeurWeb2026,
   "meilleur-hebergeur-wordpress": meilleurHebergeurWordpress,

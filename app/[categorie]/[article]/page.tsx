@@ -248,7 +248,7 @@ export default async function ArticlePage({
             </nav>
 
             <p className="mt-6 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
-              Comparatif — {cat.name}
+              {a.kind ?? "Comparatif"} — {cat.name}
             </p>
             <h1 className="mt-3 font-display text-3xl font-bold leading-[1.08] tracking-tight text-ink sm:text-[2.6rem]">
               {a.title}

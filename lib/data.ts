@@ -90,6 +90,8 @@ export const categories: Category[] = [
 export type Article = {
   slug: string;
   title: string;
+  /** genre affiché en surtitre : « Comparatif », « Guide », « Enquête »… */
+  kind?: string;
   /** titre optimisé pour la balise <title> (sinon `title`) */
   metaTitle?: string;
   excerpt: string;
@@ -142,6 +144,34 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "claude-ou-chatgpt-selon-votre-metier",
+    kind: "Guide",
+    title: "Claude ou ChatGPT selon votre métier : le guide par cas d'usage",
+    metaTitle: "Claude ou ChatGPT selon votre métier : le guide 2026",
+    excerpt:
+      "Rédacteur, développeur, marketeur, dirigeant de PME : le bon assistant dépend de ce que vous en faites. Notre guide de choix métier par métier, sources à l'appui.",
+    metaDescription:
+      "Claude ou ChatGPT selon votre métier : rédaction, code, marketing, PME et création visuelle comparés cas d'usage par cas d'usage, avec les chiffres publiés en 2026.",
+    category: "intelligence-artificielle",
+    author: "lucas-lecoq",
+    authorNote:
+      "Les chiffres cités dans ce guide proviennent d'études publiées par des tiers, indiquées à chaque affirmation. Ils complètent, sans les remplacer, les mesures que la rédaction conduit elle-même dans ses comparatifs.",
+    date: "2026-07-21",
+    dateLabel: "21 juillet 2026",
+    readingTime: 11,
+    seed: 105,
+    imageAlt:
+      "Réunion d'équipe autour d'une table de conférence, ordinateurs portables ouverts",
+    topics: [
+      "Claude",
+      "ChatGPT",
+      "Rédaction assistée par IA",
+      "Assistance au code",
+      "Marketing de contenu",
+      "Productivité en entreprise",
+    ],
+  },
   {
     slug: "meilleur-hebergeur-web-2026",
     title:

@@ -92,7 +92,7 @@ export default function Home() {
                     />
                   </figure>
                   <p className="mt-6 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
-                    Comparatif — {featureCat.name}
+                    {feature.kind ?? "Comparatif"} — {featureCat.name}
                   </p>
                   <h3 className="mt-3 font-display text-3xl font-bold leading-[1.08] tracking-tight text-ink sm:text-4xl lg:text-[2.6rem]">
                     <span className="headline-link">{feature.title}</span>
