@@ -48,8 +48,8 @@ const AXES: { titre: string; texte: string; controle: string }[] = [
 ];
 
 export default function ProtocoleJdltPage() {
-  const applications = articlesSorted().filter((a) =>
-    a.topics?.some((t) => ["Claude", "ChatGPT"].includes(t))
+  const applications = articlesSorted().filter(
+    (a) => a.methodology?.name === "Protocole JDLT"
   );
 
   const jsonLd = {
