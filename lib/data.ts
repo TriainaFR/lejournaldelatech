@@ -96,174 +96,9 @@ export type Article = {
   imageAlt?: string;
 };
 
-export const articles: Article[] = [
-  {
-    slug: "ia-souveraine-entreprises-francaises",
-    imageAlt: "Main d'un robot humanoïde blanc tendue en avant",
-    title:
-      "IA souveraine : pourquoi les entreprises françaises rapatrient leurs modèles",
-    excerpt:
-      "Hébergement européen, maîtrise des données, coûts d'inférence : enquête sur un mouvement de fond qui redessine le marché de l'IA en France, des startups aux grands groupes.",
-    category: "intelligence-artificielle",
-    author: "Rédaction JLT",
-    date: "2026-07-20",
-    dateLabel: "20 juillet 2026",
-    readingTime: 8,
-    seed: 1,
-  },
-  {
-    slug: "comparatif-crm-pme-2026",
-    imageAlt: "Équipe en réunion devant un mur de post-its colorés",
-    title: "CRM pour PME : notre comparatif 2026 des 12 meilleures solutions",
-    excerpt:
-      "Prix réels, intégrations, support en français : nous avons testé douze CRM pendant trois mois pour départager les solutions adaptées aux PME françaises.",
-    category: "saas-logiciels",
-    author: "Rédaction JLT",
-    date: "2026-07-19",
-    dateLabel: "19 juillet 2026",
-    readingTime: 14,
-    seed: 2,
-  },
-  {
-    slug: "hebergeurs-verts-datacenters-france",
-    imageAlt: "Panneau de brassage réseau avec câbles Ethernet",
-    title:
-      "Datacenters bas carbone : le classement des hébergeurs web les plus verts",
-    excerpt:
-      "PUE, énergie renouvelable, récupération de chaleur : notre méthodologie passe au crible les promesses écologiques des hébergeurs français et européens.",
-    category: "hebergement-web",
-    author: "Rédaction JLT",
-    date: "2026-07-18",
-    dateLabel: "18 juillet 2026",
-    readingTime: 11,
-    seed: 3,
-  },
-  {
-    slug: "retrofit-electrique-flottes-entreprise",
-    imageAlt: "Mécanicien effectuant une intervention sur un moteur de véhicule",
-    title:
-      "Rétrofit électrique : la seconde vie des flottes d'entreprise a commencé",
-    excerpt:
-      "Convertir plutôt que remplacer : le rétrofit s'impose comme l'option la plus sobre pour électrifier les véhicules utilitaires. Coûts, aides et acteurs à connaître.",
-    category: "mobilite",
-    author: "Rédaction JLT",
-    date: "2026-07-17",
-    dateLabel: "17 juillet 2026",
-    readingTime: 7,
-    seed: 4,
-  },
-  {
-    slug: "panneaux-solaires-installateurs-certifies",
-    imageAlt: "Panneaux solaires en toiture avec une éolienne en arrière-plan",
-    title:
-      "Panneaux solaires : comment choisir son installateur certifié RGE en 2026",
-    excerpt:
-      "Garanties, rendement réel, pièges des devis : le guide complet pour sélectionner une entreprise d'installation fiable, région par région.",
-    category: "energie-solaire",
-    author: "Rédaction JLT",
-    date: "2026-07-16",
-    dateLabel: "16 juillet 2026",
-    readingTime: 12,
-    seed: 5,
-  },
-  {
-    slug: "numerique-responsable-referentiel-rgesn",
-    imageAlt: "Sentier traversant une forêt dense et lumineuse",
-    title:
-      "Numérique responsable : ce que le nouveau référentiel change pour vos sites",
-    excerpt:
-      "Éco-conception, sobriété des interfaces, mesure d'impact : décryptage des exigences qui s'imposent progressivement aux services numériques.",
-    category: "green-tech",
-    author: "Rédaction JLT",
-    date: "2026-07-15",
-    dateLabel: "15 juillet 2026",
-    readingTime: 6,
-    seed: 6,
-  },
-  {
-    slug: "agents-ia-support-client-saas",
-    imageAlt: "Poste de travail avec ordinateur portable et téléphone de bureau",
-    title:
-      "Agents IA et support client : les éditeurs SaaS français passent à l'échelle",
-    excerpt:
-      "Résolution autonome des tickets, escalade intelligente : comment les éditeurs hexagonaux intègrent les agents IA sans dégrader l'expérience client.",
-    category: "intelligence-artificielle",
-    author: "Rédaction JLT",
-    date: "2026-07-14",
-    dateLabel: "14 juillet 2026",
-    readingTime: 9,
-    seed: 7,
-  },
-  {
-    slug: "facturation-electronique-logiciels-conformes",
-    imageAlt: "Documents de facturation, calculatrice et smartphone",
-    title:
-      "Facturation électronique : les logiciels prêts pour l'échéance de septembre",
-    excerpt:
-      "La réforme entre dans sa phase décisive. Tour d'horizon des plateformes de dématérialisation partenaires et des solutions conformes pour TPE et PME.",
-    category: "saas-logiciels",
-    author: "Rédaction JLT",
-    date: "2026-07-13",
-    dateLabel: "13 juillet 2026",
-    readingTime: 10,
-    seed: 8,
-  },
-  {
-    slug: "edge-computing-hebergement-proximite",
-    imageAlt: "Vue aérienne des gratte-ciel d'une grande ville au crépuscule",
-    title: "Edge computing : l'hébergement de proximité devient un argument SEO",
-    excerpt:
-      "Latence, Core Web Vitals, souveraineté : pourquoi la localisation des serveurs pèse désormais dans les arbitrages techniques des sites à fort trafic.",
-    category: "hebergement-web",
-    author: "Rédaction JLT",
-    date: "2026-07-12",
-    dateLabel: "12 juillet 2026",
-    readingTime: 8,
-    seed: 9,
-  },
-  {
-    slug: "velos-cargo-logistique-urbaine",
-    imageAlt: "Vélo urbain appuyé contre un mur sombre en ville",
-    title:
-      "Vélos-cargos électriques : la logistique urbaine change de braquet",
-    excerpt:
-      "Les flottes de vélos-cargos remplacent les utilitaires en centre-ville. Modèles économiques, acteurs français et retours d'expérience chiffrés.",
-    category: "mobilite",
-    author: "Rédaction JLT",
-    date: "2026-07-11",
-    dateLabel: "11 juillet 2026",
-    readingTime: 6,
-    seed: 10,
-  },
-  {
-    slug: "autoconsommation-collective-immeubles",
-    imageAlt: "Immeubles collectifs vus en contre-plongée",
-    title:
-      "Autoconsommation collective : le solaire partagé séduit les copropriétés",
-    excerpt:
-      "Cadre juridique assoupli, tarifs en hausse : l'autoconsommation collective devient rentable. Ce qu'il faut savoir avant de lancer un projet en immeuble.",
-    category: "energie-solaire",
-    author: "Rédaction JLT",
-    date: "2026-07-10",
-    dateLabel: "10 juillet 2026",
-    readingTime: 9,
-    seed: 11,
-  },
-  {
-    slug: "greentech-francaise-levees-2026",
-    imageAlt: "Éoliennes dans un champ au coucher du soleil",
-    title:
-      "Greentech française : les levées de fonds qui comptent au premier semestre",
-    excerpt:
-      "Stockage d'énergie, matériaux biosourcés, mesure carbone : cartographie des startups écologiques françaises qui ont convaincu les investisseurs.",
-    category: "green-tech",
-    author: "Rédaction JLT",
-    date: "2026-07-09",
-    dateLabel: "9 juillet 2026",
-    readingTime: 7,
-    seed: 12,
-  },
-];
+// Aucun article publié pour l'instant : les cartes, rubriques et pages
+// article réapparaîtront automatiquement dès qu'on ajoute des entrées ici.
+export const articles: Article[] = [];
 
 export type Guide = {
   slug: string;
@@ -316,11 +151,11 @@ export const guides: Guide[] = [
 ];
 
 export const tickerItems: string[] = [
-  "L'Union européenne précise le calendrier d'application de l'AI Act pour les PME",
-  "Un datacenter alimenté à 100 % par géothermie ouvre en Alsace",
-  "Le marché français du SaaS dépasse les 20 milliards d'euros",
-  "Bornes de recharge : le cap des 250 000 points publics est franchi",
-  "Le photovoltaïque français bat son record de production mensuelle",
+  "Bienvenue sur Le Journal de la Tech, média indépendant de la tech utile",
+  "Meilleurs logiciels SaaS : premier classement en préparation",
+  "Banc d'essai hébergeurs web : 16 offres en cours de test",
+  "Installateurs solaires : enquête région par région en cours",
+  "La Dépêche Tech : nos comparatifs en avant-première, chaque jeudi",
 ];
 
 export type IntentTile = {

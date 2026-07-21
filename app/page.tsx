@@ -6,10 +6,7 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { CircuitSprig } from "@/components/ornaments";
 import {
-  articleImage,
-  articles,
   categories,
-  categoryBySlug,
   categoryImage,
   comparatifsProgramme,
   faqItems,
@@ -55,9 +52,7 @@ const pageJsonLd = {
 };
 
 export default function Home() {
-  const [feature, ...rest] = articles;
-  const featureCategory = categoryBySlug(feature.category);
-  const latest = rest.slice(0, 6);
+  const [featureGuide, ...railGuides] = guides;
 
   return (
     <>
@@ -80,30 +75,31 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[7.2fr_4.8fr] lg:gap-14">
             <article className="rise rise-1">
-              <Link href={`/${feature.category}/${feature.slug}`} className="group block">
+              <Link
+                href={`/comparatifs/${featureGuide.slug}`}
+                className="group block"
+              >
                 <figure className="relative aspect-[16/10] overflow-hidden bg-night">
                   <EditorialPhoto
-                    image={articleImage(feature)}
-                    seed={feature.seed}
-                    tone={featureCategory.tone}
-                    glyph={featureCategory.short.charAt(0)}
+                    image={guideImage(featureGuide)}
+                    seed={featureGuide.seed}
+                    tone="rouge"
                     sizes="(min-width: 1024px) 58vw, 100vw"
                     priority
                   />
                 </figure>
                 <p className="mt-6 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-rouge">
-                  Enquête — {featureCategory.name}
+                  À la une — Guide d&apos;achat
                 </p>
                 <h3 className="mt-3 font-display text-3xl font-bold leading-[1.08] tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
-                  <span className="headline-link">{feature.title}</span>
+                  <span className="headline-link">{featureGuide.title}</span>
                 </h3>
                 <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-                  {feature.excerpt}
+                  {featureGuide.description}
                 </p>
                 <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
-                  Par {feature.author} ·{" "}
-                  <time dateTime={feature.date}>{feature.dateLabel}</time> ·
-                  Lecture {feature.readingTime} min
+                  {featureGuide.count} · Critères publics · Mise à jour
+                  mensuelle
                 </p>
               </Link>
             </article>
@@ -116,7 +112,7 @@ export default function Home() {
                 Les indispensables
               </h3>
               <ol className="mt-2 divide-y divide-ink/10">
-                {guides.map((g, i) => (
+                {railGuides.map((g, i) => (
                   <li key={g.slug}>
                     <Link
                       href={`/comparatifs/${g.slug}`}
@@ -247,86 +243,41 @@ export default function Home() {
               moreHref="/comparatifs"
               moreLabel="Tous les comparatifs"
             />
-            <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr]">
-              {guides.map((g, i) => {
-                const dominant = i === 0;
-                return (
-                  <article
-                    key={g.slug}
-                    className={dominant ? "sm:col-span-2 lg:col-span-1 lg:row-span-2" : ""}
+            <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+              {railGuides.map((g, i) => (
+                <article
+                  key={g.slug}
+                  className={i === 2 ? "sm:col-span-2 lg:col-span-1" : ""}
+                >
+                  <Link
+                    href={`/comparatifs/${g.slug}`}
+                    className="group block"
                   >
-                    <Link
-                      href={`/comparatifs/${g.slug}`}
-                      className="group block"
-                    >
-                      <figure
-                        className={`relative overflow-hidden bg-night ${
-                          dominant ? "aspect-[16/11]" : "aspect-[16/9]"
-                        }`}
-                      >
-                        <EditorialPhoto
-                          image={guideImage(g)}
-                          seed={g.seed}
-                          tone={i % 2 === 0 ? "rouge" : "silver"}
-                          sizes="(min-width: 1024px) 40vw, (min-width: 640px) 50vw, 100vw"
-                        />
-                      </figure>
-                      <div className="relative">
-                        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap border border-silver bg-card px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-rouge">
-                          Comparatif
-                        </span>
-                      </div>
-                      <h3
-                        className={`mt-7 text-center font-display font-semibold leading-snug text-ink ${
-                          dominant ? "text-2xl" : "text-lg"
-                        }`}
-                      >
-                        <span className="headline-link">{g.title}</span>
-                      </h3>
-                      <p className="mt-2 text-center text-sm leading-relaxed text-ink-soft">
-                        {g.description}
-                      </p>
-                      <p className="mt-2 text-center text-xs uppercase tracking-[0.16em] text-ink-faint">
-                        {g.count}
-                      </p>
-                    </Link>
-                  </article>
-                );
-              })}
-
-              {/* 5e carte : l'article comparatif à la une, pour fermer la grille */}
-              {(() => {
-                const a = articles[1];
-                const cat = categoryBySlug(a.category);
-                return (
-                  <article>
-                    <Link href={`/${a.category}/${a.slug}`} className="group block">
-                      <figure className="relative aspect-[16/9] overflow-hidden bg-night">
-                        <EditorialPhoto
-                          image={articleImage(a)}
-                          seed={a.seed}
-                          tone={cat.tone}
-                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        />
-                      </figure>
-                      <div className="relative">
-                        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap border border-silver bg-card px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-rouge">
-                          {cat.short}
-                        </span>
-                      </div>
-                      <h3 className="mt-7 text-center font-display text-lg font-semibold leading-snug text-ink">
-                        <span className="headline-link">{a.title}</span>
-                      </h3>
-                      <p className="mt-2 text-center text-sm leading-relaxed text-ink-soft">
-                        {a.excerpt.slice(0, 110)}…
-                      </p>
-                      <p className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
-                        <time dateTime={a.date}>{a.dateLabel}</time> · {a.readingTime} min
-                      </p>
-                    </Link>
-                  </article>
-                );
-              })()}
+                    <figure className="relative aspect-[16/9] overflow-hidden bg-night">
+                      <EditorialPhoto
+                        image={guideImage(g)}
+                        seed={g.seed}
+                        tone={i % 2 === 0 ? "silver" : "rouge"}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      />
+                    </figure>
+                    <div className="relative">
+                      <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap border border-silver bg-card px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-rouge">
+                        Comparatif
+                      </span>
+                    </div>
+                    <h3 className="mt-7 text-center font-display text-lg font-semibold leading-snug text-ink">
+                      <span className="headline-link">{g.title}</span>
+                    </h3>
+                    <p className="mt-2 text-center text-sm leading-relaxed text-ink-soft">
+                      {g.description}
+                    </p>
+                    <p className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
+                      {g.count}
+                    </p>
+                  </Link>
+                </article>
+              ))}
 
               {/* Table extractible : le programme des bancs d’essai */}
               <div className="border border-ink/15 bg-card p-6 sm:col-span-2 lg:col-span-3">
@@ -390,52 +341,6 @@ export default function Home() {
           </p>
         </section>
 
-        {/* ——————— L’actualité ——————— */}
-        <section
-          aria-labelledby="titre-actu"
-          className="border-y border-ink/15 bg-paper-deep/60"
-        >
-          <div className="mx-auto w-full max-w-[1240px] px-6 py-16">
-            <SectionHeader
-              id="titre-actu"
-              kicker="Le fil du journal"
-              title="Les dernières actualités"
-              moreHref="/actualites"
-              moreLabel="Toute l’actualité"
-            />
-            <ul className="news-list grid grid-cols-1 gap-x-14 md:grid-cols-2">
-              {latest.map((a) => {
-                const cat = categoryBySlug(a.category);
-                return (
-                  <li
-                    key={a.slug}
-                    className="border-b border-ink/10 last:border-b-0"
-                  >
-                    <Link
-                      href={`/${a.category}/${a.slug}`}
-                      className="group flex gap-5 py-5"
-                    >
-                      <time
-                        dateTime={a.date}
-                        className="mt-0.5 shrink-0 border-l-2 border-rouge pl-3 font-mono text-[11px] font-semibold uppercase tracking-[0.06em] text-ink-soft"
-                      >
-                        {a.dateLabel.replace(" 2026", "")}
-                      </time>
-                      <span>
-                        <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-rouge">
-                          {cat.name}
-                        </span>
-                        <span className="mt-1 block font-display text-lg font-medium leading-snug text-ink">
-                          <span className="headline-link">{a.title}</span>
-                        </span>
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
 
         {/* ——————— Chaque projet, sa solution ——————— */}
         <section
