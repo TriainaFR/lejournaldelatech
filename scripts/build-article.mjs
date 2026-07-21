@@ -43,6 +43,19 @@ html = html
   .replace(/\s*colspan="1"/g, "")
   .replace(/\s*rowspan="1"/g, "");
 
+/* — Blocs retirés du corps (signature reprise par le gabarit, etc.) — */
+function cutBlock(source, { start: startNeedle, end: endNeedle }) {
+  const start = source.indexOf(startNeedle);
+  if (start === -1) throw new Error(`Bloc à retirer introuvable : ${startNeedle}`);
+  const endAt = source.indexOf(endNeedle, start);
+  if (endAt === -1) throw new Error(`Fin du bloc à retirer introuvable : ${endNeedle}`);
+  return source.slice(0, start) + source.slice(endAt + endNeedle.length);
+}
+
+for (const block of config.removeBlocks ?? []) {
+  html = cutBlock(html, block);
+}
+
 /* — Corrections éditoriales propres à l'article — */
 for (const [from, to] of config.replacements ?? []) {
   if (!html.includes(from)) throw new Error(`Remplacement introuvable : ${from}`);

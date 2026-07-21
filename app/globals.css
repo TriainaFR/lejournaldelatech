@@ -278,6 +278,15 @@ section[id],
   background: var(--color-ink);
 }
 
+/* Encadré « ce qu'il faut retenir » au fil du texte */
+.article-body blockquote {
+  border-left: 3px solid var(--color-silver-deep);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+}
+.article-body blockquote p {
+  color: var(--color-ink);
+}
+
 /* Tableaux comparatifs */
 .article-body .table-wrap {
   overflow-x: auto;

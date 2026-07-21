@@ -11,3 +11,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-claude-vs-chatgpt.jpg` — https://images.unsplash.com/photo-1531746790731-6c087fecd65a
 - `art-meilleur-hebergeur-wordpress.jpg` — https://images.unsplash.com/photo-1520869562399-e772f042f422
 - `art-notion-vs-obsidian.jpg` — https://images.unsplash.com/photo-1517842645767-c639042777db
+- `art-meilleur-hebergeur-web-2026.jpg` — https://images.unsplash.com/photo-1573164713988-8665fc963095

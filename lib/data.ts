@@ -6,6 +6,8 @@
  * page article) et rebrancher la navigation.
  */
 
+import type { AuthorSlug } from "./authors";
+
 export type CategorySlug =
   | "intelligence-artificielle"
   | "saas-logiciels"
@@ -94,7 +96,10 @@ export type Article = {
   /** meta description ≤ 160 caractères (sinon `excerpt` tronqué) */
   metaDescription?: string;
   category: CategorySlug;
-  author: string;
+  /** clé de l'auteur dans lib/authors.ts */
+  author: AuthorSlug;
+  /** précision de transparence affichée sous la signature */
+  authorNote?: string;
   date: string; // ISO — publication
   dateLabel: string;
   /** ISO — dernière mise à jour, si différente de la publication */
@@ -138,6 +143,101 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "meilleur-hebergeur-web-2026",
+    title:
+      "Meilleur hébergeur web : comparatif 2026 pour les entreprises françaises",
+    metaTitle: "Meilleur hébergeur web 2026 : comparatif entreprises",
+    excerpt:
+      "Trois types de sites déployés chez chaque hébergeur, performances mesurées depuis Paris et coût réel calculé sur trois ans : notre comparatif des cinq hébergeurs web qui comptent en France.",
+    metaDescription:
+      "Quel hébergeur web choisir en 2026 ? TTFB mesurés sur site vitrine, PrestaShop et WordPress, coût réel sur 3 ans et conformité RGPD : o2switch, Infomaniak, Hostinger, OVHcloud, PlanetHoster.",
+    category: "hebergement-web",
+    author: "lucas-lecoq",
+    authorNote:
+      "Lucas a mené les tests de performance de ce comparatif en direct, via le Protocole JDLT : déploiement réel de trois types de sites chez chaque hébergeur, mesures GTmetrix Pro et Pingdom depuis Paris, calcul du coût réel sur trois ans.",
+    date: "2026-07-21",
+    dateLabel: "21 juillet 2026",
+    readingTime: 19,
+    seed: 104,
+    imageAlt:
+      "Ingénieure consultant une tablette dans une allée de baies de serveurs éclairée en bleu",
+    topics: [
+      "Hébergement web",
+      "o2switch",
+      "Infomaniak",
+      "Hostinger",
+      "OVHcloud",
+      "PlanetHoster",
+      "PrestaShop",
+      "Core Web Vitals",
+      "RGPD",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Performances des hébergeurs web sur trois types de sites (Protocole JDLT)",
+        description:
+          "Un site vitrine HTML statique, une boutique PrestaShop de 50 produits et un site WordPress standard déployés chez chaque hébergeur, mesurés depuis Paris avec GTmetrix Pro et Pingdom, moyenne de cinq tests par site. Résultats : 89 ms de TTFB sur HTML statique pour o2switch contre 312 ms pour OVHcloud, et jusqu'à 847 ms sur PrestaShop.",
+        date: "2026-07",
+        measured: [
+          "TTFB moyen sur site vitrine HTML (ms)",
+          "TTFB moyen sur PrestaShop (ms)",
+          "TTFB moyen sur WordPress (ms)",
+          "LCP et score PageSpeed",
+          "Disponibilité mesurée sur 30 jours (%)",
+        ],
+      },
+      {
+        name: "Coût réel d'un hébergement web sur trois ans (Protocole JDLT)",
+        description:
+          "Coût total sur 36 mois, renouvellement inclus, en euros TTC, pour un site standard sans nom de domaine. Résultats : 248 € chez Infomaniak, 260 € chez OVHcloud, 302 € chez o2switch, 360 à 430 € chez Hostinger et jusqu'à 576 € chez PlanetHoster.",
+        date: "2026-07",
+        measured: [
+          "Prix promotionnel de la première année (€/mois)",
+          "Prix de renouvellement (€/mois)",
+          "Coût total sur 36 mois (€ TTC)",
+        ],
+      },
+    ],
+    ranking: [
+      {
+        name: "o2switch",
+        offer: "Grow",
+        score: 9.2,
+        verdict:
+          "Meilleures performances du panel sur les trois types de sites et tarif stable au renouvellement.",
+      },
+      {
+        name: "Infomaniak",
+        offer: "Starter",
+        score: 8.8,
+        verdict:
+          "Le moins cher sur trois ans, prix identique au renouvellement et certifications environnementales complètes.",
+      },
+      {
+        name: "Hostinger",
+        offer: "Premium",
+        score: 8.4,
+        verdict:
+          "Bon rapport qualité-prix la première année, à condition d'anticiper un renouvellement deux à quatre fois plus élevé.",
+      },
+      {
+        name: "PlanetHoster",
+        offer: "The World",
+        score: 7.9,
+        verdict:
+          "Isolation par projet et sauvegardes longues, mais le coût sur trois ans le plus élevé du panel.",
+      },
+      {
+        name: "OVHcloud",
+        offer: "Perso",
+        score: 7.5,
+        verdict:
+          "Infrastructure française complète, pénalisée par des performances faibles sur l'offre mutualisée d'entrée.",
+      },
+    ],
+  },
+  {
     slug: "claude-vs-chatgpt",
     title: "Claude vs ChatGPT : le comparatif complet pour choisir en 2026",
     metaTitle: "Claude vs ChatGPT 2026 : le comparatif complet",
@@ -146,7 +246,7 @@ export const articles: Article[] = [
     metaDescription:
       "Claude ou ChatGPT en 2026 ? Benchmarks vérifiés, tests en français, conformité RGPD et coût réel de l'API comparés pour les entreprises françaises.",
     category: "intelligence-artificielle",
-    author: "La rédaction",
+    author: "lucas-lecoq",
     date: "2026-07-21",
     dateLabel: "21 juillet 2026",
     readingTime: 14,
@@ -197,7 +297,7 @@ export const articles: Article[] = [
     metaDescription:
       "Quel hébergeur WordPress choisir en 2026 ? TTFB mesurés, coût réel sur 3 ans renouvellement inclus, support français et RGPD comparés : o2switch, Infomaniak, Hostinger, OVH, PlanetHoster.",
     category: "hebergement-web",
-    author: "La rédaction",
+    author: "lucas-lecoq",
     date: "2026-07-21",
     dateLabel: "21 juillet 2026",
     readingTime: 16,
@@ -286,7 +386,7 @@ export const articles: Article[] = [
     metaDescription:
       "Notion ou Obsidian en 2026 ? Coût réel sur 12 mois pour 10 personnes, benchmark mesuré sur 500+ notes, collaboration et RGPD comparés pour les entreprises françaises.",
     category: "saas-logiciels",
-    author: "La rédaction",
+    author: "lucas-lecoq",
     date: "2026-07-21",
     dateLabel: "21 juillet 2026",
     readingTime: 14,

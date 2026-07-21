@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { authors } from "@/lib/authors";
 import { activeCategories, articlesSorted } from "@/lib/data";
 
 const BASE = "https://lejournaldelatech.fr";
@@ -32,5 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...pages, ...rubriques, ...articles];
+  const auteurs: MetadataRoute.Sitemap = Object.keys(authors).map((slug) => ({
+    url: `${BASE}/auteurs/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.4,
+  }));
+
+  return [...pages, ...rubriques, ...articles, ...auteurs];
 }

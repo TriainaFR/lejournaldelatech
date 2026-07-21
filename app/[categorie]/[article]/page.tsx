@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ArticleBox from "@/components/AuthorBox";
 import ArticleCard from "@/components/ArticleCard";
+import AuthorByline from "@/components/AuthorByline";
 import EditorialPhoto from "@/components/EditorialPhoto";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { articleContent } from "@/lib/articleContent";
+import { authorBySlug } from "@/lib/authors";
 import {
   articleImage,
   articles,
@@ -81,6 +84,7 @@ export default async function ArticlePage({
   const url = `${SITE_URL}/${a.category}/${a.slug}`;
   const others = articlesByCategory(a.category).filter((x) => x.slug !== a.slug);
   const body = resolveInternalLinks(content.html);
+  const author = authorBySlug(a.author);
 
   /** Classement noté : chaque produit évalué devient citable individuellement. */
   const rankingLd = a.ranking?.length
@@ -165,11 +169,7 @@ export default async function ArticlePage({
           : {}),
         ...(a.topics ? { about: a.topics.map((t) => ({ "@type": "Thing", name: t })) } : {}),
         ...(img ? { image: [`${SITE_URL}${img.src}`] } : {}),
-        author: {
-          "@type": "Organization",
-          name: "La rédaction du Journal de la Tech",
-          url: `${SITE_URL}/a-propos`,
-        },
+        author: { "@id": `${SITE_URL}/#${author.slug}` },
         publisher: { "@id": `${SITE_URL}/#organization` },
         isPartOf: { "@id": `${SITE_URL}/#website` },
         mainEntityOfPage: url,
@@ -187,6 +187,17 @@ export default async function ArticlePage({
           name: f.question,
           acceptedAnswer: { "@type": "Answer", text: f.answer },
         })),
+      },
+      {
+        "@type": "Person",
+        "@id": `${SITE_URL}/#${author.slug}`,
+        name: author.name,
+        url: `${SITE_URL}/auteurs/${author.slug}`,
+        jobTitle: author.role,
+        description: author.bio,
+        knowsAbout: author.expertise,
+        sameAs: author.sameAs,
+        worksFor: { "@id": `${SITE_URL}/#organization` },
       },
       ...datasets,
       ...(rankingLd ? [rankingLd] : []),
@@ -245,17 +256,7 @@ export default async function ArticlePage({
             <p className="mt-5 text-lg leading-relaxed text-ink-soft">
               {a.excerpt}
             </p>
-            <p className="mt-5 border-t border-ink/15 pt-4 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-faint">
-              Par {a.author} ·{" "}
-              <time dateTime={a.date}>Publié le {a.dateLabel}</time>
-              {a.updated && a.updatedLabel ? (
-                <>
-                  {" · "}
-                  <time dateTime={a.updated}>Mis à jour le {a.updatedLabel}</time>
-                </>
-              ) : null}{" "}
-              · Lecture {a.readingTime} min
-            </p>
+            <AuthorByline article={a} />
           </header>
 
           {/* ——— Image d'ouverture ——— */}
@@ -318,27 +319,32 @@ export default async function ArticlePage({
             dangerouslySetInnerHTML={{ __html: body }}
           />
 
-          {/* ——— Bloc auteur / méthode ——— */}
-          <aside className="mx-auto mt-14 w-full max-w-[760px] px-6">
-            <div className="border-t-2 border-rouge bg-paper-deep/60 p-6">
+          {/* ——— Auteur & méthode ——— */}
+          <aside className="mx-auto mt-14 w-full max-w-[760px] space-y-6 px-6">
+            <ArticleBox article={a} />
+            <div className="border border-ink/15 bg-card p-6">
               <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-rouge">
                 Comment nous travaillons
               </p>
               <p className="mt-3 leading-relaxed text-ink-soft">
-                Cet article a été rédigé par la rédaction du Journal de la Tech.
                 Nos critères sont publics, nos sources citées et nos chiffres
                 datés : aucune entreprise ne rémunère sa place dans nos
                 classements.
               </p>
               <p className="mt-3 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] uppercase tracking-[0.12em]">
+                {a.methodology ? (
+                  <Link
+                    href={a.methodology.href}
+                    className="text-rouge hover:text-rouge-deep"
+                  >
+                    {a.methodology.name} →
+                  </Link>
+                ) : null}
                 <Link href="/methodologie" className="text-rouge hover:text-rouge-deep">
                   Notre méthodologie →
                 </Link>
                 <Link href="/charte-editoriale" className="text-rouge hover:text-rouge-deep">
                   Charte éditoriale →
-                </Link>
-                <Link href="/contact" className="text-rouge hover:text-rouge-deep">
-                  Signaler une erreur →
                 </Link>
               </p>
             </div>
