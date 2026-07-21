@@ -88,25 +88,11 @@ export default function ContactPage() {
 
           <div className="border border-ink/15 bg-card p-6">
             <h2 className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-rouge">
-              Par e-mail
+              Délai de réponse
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Rédaction :{" "}
-              <a
-                href="mailto:redaction@lejournaldelatech.fr"
-                className="font-semibold text-rouge hover:text-rouge-deep"
-              >
-                redaction@lejournaldelatech.fr
-              </a>
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-              Partenariats :{" "}
-              <a
-                href="mailto:partenariats@lejournaldelatech.fr"
-                className="font-semibold text-rouge hover:text-rouge-deep"
-              >
-                partenariats@lejournaldelatech.fr
-              </a>
+              La rédaction traite les messages sous deux jours ouvrés. Les
+              signalements d&apos;erreur sont prioritaires.
             </p>
           </div>
         </aside>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
@@ -49,14 +50,15 @@ export default function ConfidentialitePage() {
           </h2>
           <p className="mt-2 leading-relaxed text-ink-soft">
             Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de
-            rectification et de suppression de vos données. Écrivez-nous à{" "}
-            <a
-              href="mailto:redaction@lejournaldelatech.fr"
+            rectification et de suppression de vos données. Adressez votre
+            demande via notre{" "}
+            <Link
+              href="/contact"
               className="font-semibold text-rouge hover:text-rouge-deep"
             >
-              redaction@lejournaldelatech.fr
-            </a>
-            .
+              formulaire de contact
+            </Link>
+            , en précisant l&apos;objet « Autre ».
           </p>
         </section>
       </div>

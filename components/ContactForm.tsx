@@ -56,7 +56,7 @@ export default function ContactForm() {
     if (!configure) {
       setState("error");
       setMessage(
-        "Le formulaire n'est pas encore configuré. Écrivez-nous directement à redaction@lejournaldelatech.fr."
+        "Le formulaire n'est pas encore configuré. Merci de réessayer un peu plus tard."
       );
       return;
     }
@@ -74,7 +74,7 @@ export default function ContactForm() {
     } catch {
       setState("error");
       setMessage(
-        "L'envoi a échoué. Réessayez dans un instant, ou écrivez-nous à redaction@lejournaldelatech.fr."
+        "L'envoi a échoué. Vérifiez votre connexion et réessayez dans un instant."
       );
     } finally {
       requestAnimationFrame(() => statusRef.current?.focus());
