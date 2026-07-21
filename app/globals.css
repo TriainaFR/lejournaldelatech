@@ -243,6 +243,32 @@ section[id],
   color: var(--color-ink);
 }
 
+/* Données produites par la rédaction — le différenciateur éditorial */
+.article-body .donnee-jdlt {
+  border: 1px solid rgba(15, 17, 21, 0.15);
+  border-left: 3px solid var(--color-rouge);
+  background: var(--color-paper-deep);
+  padding: 1.5rem;
+}
+.article-body .donnee-jdlt > * + * {
+  margin-top: 1.15em;
+}
+.article-body .donnee-jdlt .data-badge {
+  display: inline-block;
+  background: var(--color-rouge);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  margin-bottom: 0.35rem;
+}
+.article-body .donnee-jdlt ul > li::before {
+  background: var(--color-ink);
+}
+
 /* Tableaux comparatifs */
 .article-body .table-wrap {
   overflow-x: auto;

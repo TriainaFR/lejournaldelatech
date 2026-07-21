@@ -107,6 +107,21 @@ export type Article = {
   imageAlt?: string;
   /** entités couvertes — alimente `about` du balisage Article (GEO) */
   topics?: string[];
+  /** méthodologie appliquée — alimente `isBasedOn` */
+  methodology?: { name: string; href: string };
+  /**
+   * Études produites par la rédaction, balisées en `Dataset` : c'est ce qui
+   * distingue nos comparatifs des contenus qui recopient les benchmarks
+   * publics, et ce que les moteurs génératifs peuvent citer nommément.
+   */
+  datasets?: {
+    name: string;
+    description: string;
+    /** période couverte, format ISO (AAAA-MM) */
+    date: string;
+    /** grandeurs mesurées */
+    measured: string[];
+  }[];
 };
 
 export const articles: Article[] = [
@@ -133,6 +148,31 @@ export const articles: Article[] = [
       "OpenAI",
       "Intelligence artificielle générative",
       "RGPD",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Test de fiabilité en français — Claude Sonnet 5 vs GPT-5.5 (Protocole JDLT)",
+        description:
+          "Cinquante prompts standardisés en français professionnel soumis aux deux modèles dans les mêmes conditions, notés sur la cohérence stylistique, la précision lexicale, l'absence de calques anglais et le respect des conventions typographiques françaises. Résultat : 88 % de sorties exploitables sans correction pour Claude, 74 % pour ChatGPT.",
+        date: "2026-07",
+        measured: [
+          "Taux de sorties sans correction nécessaire (%)",
+          "Calques syntaxiques anglais",
+          "Conformité typographique française",
+        ],
+      },
+      {
+        name: "Simulation de coût réel API pour une PME française (Protocole JDLT)",
+        description:
+          "Coût mensuel calculé pour un cas d'usage documenté — 200 appels API de synthèse de comptes-rendus, 4 000 tokens en entrée et 700 en sortie par appel — aux tarifs en vigueur au 21 juillet 2026. Résultat : environ 3,00 $ avec Claude Sonnet 5 contre 4,10 $ avec GPT-5.4, soit 27 % d'écart.",
+        date: "2026-07",
+        measured: [
+          "Coût mensuel en dollars",
+          "Tokens en entrée et en sortie",
+          "Écart de prix entre modèles (%)",
+        ],
+      },
     ],
   },
 ];

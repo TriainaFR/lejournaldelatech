@@ -12,6 +12,7 @@ import {
   articlesByCategory,
   categoryBySlug,
 } from "@/lib/data";
+import { resolveInternalLinks } from "@/lib/internalLinks";
 
 const SITE_URL = "https://lejournaldelatech.fr";
 
@@ -79,6 +80,30 @@ export default async function ArticlePage({
   const img = articleImage(a);
   const url = `${SITE_URL}/${a.category}/${a.slug}`;
   const others = articlesByCategory(a.category).filter((x) => x.slug !== a.slug);
+  const body = resolveInternalLinks(content.html);
+
+  /** Études produites par la rédaction : balisées pour être citables. */
+  const datasets = (a.datasets ?? []).map((d, i) => ({
+    "@type": "Dataset",
+    "@id": `${url}#donnee-${i + 1}`,
+    name: d.name,
+    description: d.description,
+    temporalCoverage: d.date,
+    variableMeasured: d.measured,
+    isAccessibleForFree: true,
+    inLanguage: "fr-FR",
+    creator: { "@id": `${SITE_URL}/#organization` },
+    includedInDataCatalog: {
+      "@type": "DataCatalog",
+      name: "Protocole JDLT",
+      url: `${SITE_URL}/protocole-jdlt`,
+    },
+    distribution: {
+      "@type": "DataDownload",
+      encodingFormat: "text/html",
+      contentUrl: url,
+    },
+  }));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -91,9 +116,21 @@ export default async function ArticlePage({
         inLanguage: "fr-FR",
         datePublished: a.date,
         dateModified: a.updated ?? a.date,
-        wordCount: content.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean)
+        wordCount: body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean)
           .length,
         articleSection: cat.name,
+        ...(a.methodology
+          ? {
+              isBasedOn: {
+                "@type": "CreativeWork",
+                name: a.methodology.name,
+                url: `${SITE_URL}${a.methodology.href}`,
+              },
+            }
+          : {}),
+        ...(datasets.length
+          ? { hasPart: datasets.map((d) => ({ "@id": d["@id"] })) }
+          : {}),
         ...(a.topics ? { about: a.topics.map((t) => ({ "@type": "Thing", name: t })) } : {}),
         ...(img ? { image: [`${SITE_URL}${img.src}`] } : {}),
         author: {
@@ -119,6 +156,7 @@ export default async function ArticlePage({
           acceptedAnswer: { "@type": "Answer", text: f.answer },
         })),
       },
+      ...datasets,
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -244,7 +282,7 @@ export default async function ArticlePage({
           {/* ——— Corps ——— */}
           <div
             className="article-body mx-auto mt-12 w-full max-w-[760px] px-6"
-            dangerouslySetInnerHTML={{ __html: content.html }}
+            dangerouslySetInnerHTML={{ __html: body }}
           />
 
           {/* ——— Bloc auteur / méthode ——— */}

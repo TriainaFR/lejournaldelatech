@@ -73,8 +73,29 @@ l'accueil) qu'à partir de son premier article — voir `activeCategories()`.
    le bandeau « À la une » et le sitemap se mettent à jour automatiquement.
 
 Le balisage produit par page article : `Article` (avec `wordCount`, `about`,
-`citation`), `FAQPage`, `BreadcrumbList`, Open Graph `article` complet et
-sommaire ancré.
+`citation`, `isBasedOn`, `hasPart`), `Dataset` pour chaque étude propriétaire,
+`FAQPage`, `BreadcrumbList`, Open Graph `article` complet et sommaire ancré.
+
+### Protocole JDLT et données propriétaires
+
+Le [Protocole JDLT](https://lejournaldelatech.fr/protocole-jdlt) est la
+méthodologie d'évaluation des outils d'IA du journal — c'est le principal
+différenciateur face aux comparatifs qui recopient les benchmarks publics.
+Deux de ses axes produisent des données originales (test de fiabilité en
+français sur 50 prompts, simulation de coût réel pour une PME).
+
+Dans un article, ces données se déclarent dans `datasets` (`lib/data.ts`) :
+elles sont alors balisées en `Dataset` rattaché au `DataCatalog` « Protocole
+JDLT », donc citables nommément par les moteurs génératifs. Le rendu les
+signale par un encadré rouge « Donnée exclusive ».
+
+### Maillage interne différé
+
+Un article peut viser une page pilier pas encore publiée avec le marqueur
+`[[lien:<slug>|texte]]`. Tant que l'article cible n'existe pas, le marqueur
+rend du texte simple ; dès qu'il est publié, le lien s'active partout
+automatiquement (`lib/internalLinks.ts`). Piliers actuellement en attente :
+`meilleur-outil-ia-2026` et `alternative-chatgpt`.
 
 ### Date d'édition
 

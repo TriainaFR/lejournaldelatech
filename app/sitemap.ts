@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/`, lastModified: now, changeFrequency: "daily", priority: 1 },
     { url: `${BASE}/a-propos`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/methodologie`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE}/protocole-jdlt`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/charte-editoriale`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE}/mentions-legales`, lastModified: now, changeFrequency: "yearly", priority: 0.1 },

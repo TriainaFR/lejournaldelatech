@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
@@ -39,6 +40,27 @@ export default function MethodologiePage() {
       intro="La crédibilité d'un comparatif tient à sa méthode. Voici la nôtre, appliquée à chaque banc d'essai publié."
     >
       <div className="mx-auto max-w-[720px]">
+        <div className="mb-10 border border-ink/15 bg-paper-deep/60 p-6">
+          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-rouge">
+            Évaluation des outils d&apos;IA
+          </p>
+          <h2 className="mt-2 font-display text-xl font-semibold text-ink">
+            Le Protocole JDLT
+          </h2>
+          <p className="mt-2 leading-relaxed text-ink-soft">
+            Nos comparatifs d&apos;intelligence artificielle suivent un cadre
+            dédié en quatre axes, dont deux produisent des données mesurées par
+            la rédaction : un test de fiabilité en français et un calcul de coût
+            réel.
+          </p>
+          <Link
+            href="/protocole-jdlt"
+            className="mt-3 inline-block font-mono text-xs font-semibold uppercase tracking-[0.16em] text-rouge transition-colors hover:text-rouge-deep"
+          >
+            Lire le protocole <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+
         <ol className="space-y-8">
           {PILLARS.map((p, i) => (
             <li key={p.title} className="flex gap-5">

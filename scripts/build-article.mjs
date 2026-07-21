@@ -32,22 +32,58 @@ html = html
 /* — 5. Typographie française : incises en tiret cadratin — */
 html = html.replace(/ - /g, " — ");
 
-/* — 6. Placeholders de liens internes : les pages n'existent pas encore — */
+/* — 6. Maillage interne différé : le lien s'activera à la publication du pilier — */
 html = html
   .replace(
     /, notamment dans notre guide \[LIEN INTERNE : Meilleur outil IA 2026\]\./,
-    ", à commencer par notre prochain comparatif des meilleurs outils d’IA pour les entreprises."
+    ", notamment dans notre guide [[lien:meilleur-outil-ia-2026|Meilleur outil IA 2026]]."
   )
   .replace(
-    / Notre guide \[LIEN INTERNE : Alternative à ChatGPT\] couvre les options souveraines en détail\./,
-    " Nous consacrerons prochainement un guide complet aux alternatives souveraines."
+    /Notre guide \[LIEN INTERNE : Alternative à ChatGPT\] couvre les options souveraines en détail\./,
+    "Notre guide [[lien:alternative-chatgpt|Alternative à ChatGPT]] couvre les options souveraines en détail."
   );
+
+/* — 6 bis. Le Protocole JDLT renvoie vers sa page de référence — */
+html = html.replace(
+  "est notre cadre d'évaluation maison",
+  'est notre <a href="/protocole-jdlt">cadre d’évaluation maison</a>'
+);
 
 /* — 7. Le premier blockquote devient l'encadré TL;DR — */
 html = html.replace(
   /<blockquote>(.*?)<\/blockquote>/s,
   (_m, inner) =>
     `<aside class="tldr"><p class="tldr-label">L’essentiel</p>${inner}</aside>`
+);
+
+/* — 7 bis. Les données propriétaires sont mises en avant (différenciateur) — */
+function wrapBlock(source, startNeedle, endNeedle, label) {
+  const start = source.indexOf(startNeedle);
+  if (start === -1) throw new Error(`Bloc introuvable : ${startNeedle}`);
+  const endAt = source.indexOf(endNeedle, start);
+  if (endAt === -1) throw new Error(`Fin de bloc introuvable : ${endNeedle}`);
+  const end = endAt + endNeedle.length;
+  const inner = source.slice(start, end);
+  const badge = `<p class="data-badge">${label}</p>`;
+  return (
+    source.slice(0, start) +
+    `<aside class="donnee-jdlt">${badge}${inner}</aside>` +
+    source.slice(end)
+  );
+}
+
+html = wrapBlock(
+  html,
+  "<p><strong>Protocole JDLT — test de fiabilité en français",
+  "</ul>",
+  "Donnée exclusive — Protocole JDLT · Test de fiabilité en français"
+);
+
+html = wrapBlock(
+  html,
+  "<p><strong>Cas d'usage :</strong>",
+  "50 000+ appels/mois.</p>",
+  "Donnée exclusive — Protocole JDLT · Simulation de coût réel"
 );
 
 /* — 8. Identifiants d'ancre sur les titres + sommaire — */
