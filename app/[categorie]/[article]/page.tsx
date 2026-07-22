@@ -16,8 +16,7 @@ import {
   categoryBySlug,
 } from "@/lib/data";
 import { resolveInternalLinks } from "@/lib/internalLinks";
-
-const SITE_URL = "https://lejournaldelatech.fr";
+import { EDITEUR, LICENCE, SITE_URL } from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -105,7 +104,7 @@ export default async function ArticlePage({
               "@type": "Review",
               reviewBody: r.verdict,
               datePublished: a.date,
-              author: { "@id": `${SITE_URL}/#organization` },
+              author: EDITEUR,
               reviewRating: {
                 "@type": "Rating",
                 ratingValue: r.score,
@@ -126,9 +125,11 @@ export default async function ArticlePage({
     description: d.description,
     temporalCoverage: d.date,
     variableMeasured: d.measured,
+    url,
     isAccessibleForFree: true,
+    license: LICENCE,
     inLanguage: "fr-FR",
-    creator: { "@id": `${SITE_URL}/#organization` },
+    creator: EDITEUR,
     includedInDataCatalog: {
       "@type": "DataCatalog",
       name: "Protocole JDLT",
@@ -170,7 +171,7 @@ export default async function ArticlePage({
         ...(a.topics ? { about: a.topics.map((t) => ({ "@type": "Thing", name: t })) } : {}),
         ...(img ? { image: [`${SITE_URL}${img.src}`] } : {}),
         author: { "@id": `${SITE_URL}/#${author.slug}` },
-        publisher: { "@id": `${SITE_URL}/#organization` },
+        publisher: EDITEUR,
         isPartOf: { "@id": `${SITE_URL}/#website` },
         mainEntityOfPage: url,
         citation: content.sources.map((s) => ({

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import { articlesSorted } from "@/lib/data";
-
-const SITE_URL = "https://lejournaldelatech.fr";
+import { EDITEUR, SITE_URL } from "@/lib/schema";
 
 const DESCRIPTION =
   "Le Protocole JDLT est la méthodologie d'évaluation des outils d'IA du Journal de la Tech : benchmarks vérifiés, tests en français natif, coût réel calculé et grille de conformité RGPD.";
@@ -63,7 +62,7 @@ export default function ProtocoleJdltPage() {
         description: DESCRIPTION,
         inLanguage: "fr-FR",
         isPartOf: { "@id": `${SITE_URL}/#website` },
-        publisher: { "@id": `${SITE_URL}/#organization` },
+        publisher: EDITEUR,
         mainEntity: {
           "@type": "DefinedTerm",
           "@id": `${SITE_URL}/protocole-jdlt#terme`,
