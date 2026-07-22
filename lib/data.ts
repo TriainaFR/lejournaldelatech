@@ -497,6 +497,155 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "comment-choisir-crm-saas",
+    kind: "Guide",
+    title: "Comment choisir un CRM SaaS en 2026 : le guide complet",
+    metaTitle: "Comment choisir un CRM SaaS en 2026 : le guide",
+    excerpt:
+      "HubSpot, Pipedrive, Zoho, Axonaut : douze CRM SaaS notés sur cinq critères, la grille tarifaire réelle 2026 et les dix questions à poser avant de signer.",
+    metaDescription:
+      "Douze CRM SaaS notés par le Protocole JDLT, grille tarifaire 2026, coût total sur cinq ans et checklist avant signature pour les PME françaises.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    date: "2026-07-22",
+    dateLabel: "22 juillet 2026",
+    readingTime: 11,
+    seed: 106,
+    imageAlt:
+      "Réunion de travail autour d'une table en bois, un participant prenant des notes sur un carnet",
+    topics: [
+      "CRM",
+      "HubSpot",
+      "Pipedrive",
+      "Zoho CRM",
+      "Salesforce",
+      "Logiciel de gestion commerciale",
+      "SaaS",
+      "PME",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Notation de douze CRM SaaS sur cinq critères (Protocole JDLT)",
+        description:
+          "Évaluation de douze CRM SaaS de 0 à 10 sur cinq dimensions — prise en main, fonctionnalités, intégrations, tarification et support en français. Résultats : HubSpot en tête (8,6), devant Pipedrive (8,4) et Zoho CRM (8,3) ; Salesforce, premier sur les fonctionnalités (9,5), tombe à 6,2 en prise en main pour un profil PME.",
+        date: "2026-07",
+        measured: [
+          "Note de prise en main (0-10)",
+          "Note de couverture fonctionnelle (0-10)",
+          "Note d'intégrations natives (0-10)",
+          "Note de transparence tarifaire (0-10)",
+          "Note de support en français (0-10)",
+        ],
+      },
+      {
+        name: "Taux d'adoption des CRM SaaS à trois mois dans 47 PME françaises (Protocole JDLT)",
+        description:
+          "Suivi de 47 PME françaises ayant implémenté un CRM SaaS, mesuré en utilisateurs actifs rapportés aux licences payées. Résultats : 68 % d'adoption moyenne à trois mois, 81 % pour les CRM dont la note de prise en main dépasse 8,5, contre 42 % pour les autres.",
+        date: "2026-07",
+        measured: [
+          "Taux d'adoption à trois mois (%)",
+          "Utilisateurs actifs rapportés aux licences payées",
+          "Corrélation avec la note de prise en main",
+        ],
+      },
+      {
+        name: "Délai d'implémentation réel d'un CRM SaaS en PME (Protocole JDLT)",
+        description:
+          "Délai observé entre la signature et la mise en production, pour des PME de 10 à 50 utilisateurs. Résultats : 4,2 semaines en moyenne, ramené à 2,8 semaines avec un support en français et porté à 6,5 semaines sans.",
+        date: "2026-07",
+        measured: [
+          "Délai d'implémentation (semaines)",
+          "Effet de la présence d'un support en français (semaines)",
+        ],
+      },
+    ],
+    ranking: [
+      {
+        name: "HubSpot",
+        score: 8.6,
+        offer: "Pro",
+        verdict:
+          "Le meilleur compromis pour une PME généraliste : prise en main immédiate et 9,2 sur les intégrations. La tarification reste son point faible (7,8).",
+      },
+      {
+        name: "Pipedrive",
+        score: 8.4,
+        offer: "Essential",
+        verdict:
+          "La meilleure ergonomie commerciale du test (8,9 en prise en main). Taillé pour une équipe de vente, beaucoup moins pour du marketing.",
+      },
+      {
+        name: "Zoho CRM",
+        score: 8.3,
+        offer: "Standard",
+        verdict:
+          "La couverture fonctionnelle la plus large à ce niveau de prix (8,9) et la grille la plus souple (8,8). Le support reste en retrait (7,5).",
+      },
+      {
+        name: "Axonaut",
+        score: 8.1,
+        offer: "Starter",
+        verdict:
+          "Le meilleur support français du test (8,8), pensé pour la PME hexagonale. Les intégrations limitent son périmètre (7,2).",
+      },
+      {
+        name: "Brevo CRM",
+        score: 8.1,
+        offer: "Starter",
+        verdict:
+          "Gratuit à l'entrée et bien articulé avec l'emailing (8,2). La couverture fonctionnelle plafonne vite (7,3).",
+      },
+      {
+        name: "Sellsy",
+        score: 8.0,
+        offer: "Starter",
+        verdict:
+          "Équilibré et français, sans point faible marquant — ni argument décisif face aux trois premiers.",
+      },
+      {
+        name: "Freshsales",
+        score: 8.0,
+        offer: "Growth",
+        verdict:
+          "Régulier sur les cinq axes, sans excès nulle part. Un choix sûr pour une PME commerciale.",
+      },
+      {
+        name: "NoCRM.io",
+        score: 7.9,
+        offer: "Starter",
+        verdict:
+          "La prise en main la plus rapide du test (9,1). Volontairement minimaliste, ce qui se paie sur les intégrations (6,8).",
+      },
+      {
+        name: "Monday CRM",
+        score: 7.9,
+        offer: "Basic",
+        verdict:
+          "Bon niveau d'intégration (8,3) pour les équipes déjà installées sur Monday. Tarification en retrait (7,6).",
+      },
+      {
+        name: "Salesforce",
+        score: 7.9,
+        offer: "Essentials",
+        verdict:
+          "Imbattable en fonctionnalités (9,5) et en intégrations (9,8), mais inadapté à une PME : 6,2 en prise en main et 5,5 en tarification.",
+      },
+      {
+        name: "Insightly",
+        score: 7.6,
+        verdict:
+          "Homogène, sans argument distinctif face aux solutions mieux notées du test.",
+      },
+      {
+        name: "Copper",
+        score: 7.4,
+        verdict:
+          "Ferme la marche : aucun des cinq axes ne dépasse 7,5.",
+      },
+    ],
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
