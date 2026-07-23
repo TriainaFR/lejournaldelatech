@@ -31,8 +31,18 @@ const argv = process.argv.slice(2);
 const dryRun = argv.includes("--dry-run");
 const hostIndex = argv.indexOf("--host");
 const host = hostIndex !== -1 ? argv[hostIndex + 1] : "lejournaldelatech.fr";
+if (hostIndex !== -1 && !host) {
+  console.error("Échec : --host attend une valeur.");
+  process.exit(1);
+}
+/**
+ * URLs passées en argument. La valeur qui suit `--host` n'en est pas une —
+ * mais seulement si `--host` est présent : sans le test, `indexOf` renvoie -1
+ * et l'exclusion porte sur l'indice 0, ce qui avalait silencieusement la
+ * première URL de la liste.
+ */
 const explicitUrls = argv.filter(
-  (a, i) => a.startsWith("http") && i !== hostIndex + 1,
+  (a, i) => a.startsWith("http") && !(hostIndex !== -1 && i === hostIndex + 1),
 );
 
 const origin = `https://${host}`;
