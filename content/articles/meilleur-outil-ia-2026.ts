@@ -6,7 +6,7 @@
 
 export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p><strong>Le verdict direct.</strong> <strong>Claude</strong> domine la rédaction et le code (9,2/10). <strong>ChatGPT</strong> reste le plus polyvalent (8,8). <strong>Gemini</strong> s'impose si vous vivez dans Google Workspace (8,6). <strong>Le Chat</strong> de Mistral est le meilleur gratuit et le seul souverain (8,1). Le vrai enseignement de notre test : les professionnels les plus productifs n'utilisent pas le meilleur outil, ils en utilisent deux — un généraliste et un spécialisé. Budget réaliste : 20 à 40 € par mois. Au-delà de quatre outils, la productivité baisse.</p></aside>
 <p>En 2026, le problème n'est plus de trouver un outil d'intelligence artificielle. C'est d'en choisir un sans perdre trois semaines à les tester ni deux cents euros en abonnements inutilisés.</p>
-<p>Ce guide fait le tri : dix outils classés par usage réel, évalués sur des critères vérifiables, avec un verdict par profil. Chaque note est décomposée, chaque limite est nommée.</p>
+<p>Ce guide fait le tri : dix outils évalués sur des critères vérifiables, classés par note et assortis d'un verdict par profil. Chaque limite est nommée.</p>
 
 <h2 id="notre-methode-le-protocole-jdlt-applique-aux-outils-d-ia">Notre méthode : le Protocole JDLT appliqué aux outils d'IA</h2>
 <p>Avant le classement, la méthode. Le <a href="/protocole-jdlt">Protocole JDLT</a> est notre cadre d’évaluation maison, déjà appliqué à nos comparatifs [[lien:claude-vs-chatgpt|Claude vs ChatGPT]] et [[lien:notion-vs-obsidian|Notion vs Obsidian]]. Pour les outils d'IA, il repose sur trois piliers.</p>
@@ -30,10 +30,9 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <tr><td><p><strong>Le Chat</strong> (Mistral)</p></td><td><p>Assistant généraliste</p></td><td><p>Gratuit</p></td><td><p>8,1</p></td><td><p>Souveraineté, français</p></td></tr>
 <tr><td><p><strong>Grok</strong> (xAI)</p></td><td><p>Assistant généraliste</p></td><td><p>16 €</p></td><td><p>7,9</p></td><td><p>Veille temps réel</p></td></tr>
 </tbody></table></div>
-<p>Une précision de lecture s'impose : ces notes évaluent chaque outil dans sa catégorie, pas les catégories entre elles. Comparer ElevenLabs à ChatGPT n'a pas de sens — une synthèse vocale et un assistant généraliste ne rendent pas le même service. Les sections qui suivent sont donc ordonnées par usage, du plus courant au plus spécialisé.</p>
+<p>Une précision de lecture s'impose : la note mesure la qualité d'un outil dans son domaine, pas l'utilité de ce domaine pour vous. Qu'ElevenLabs devance ChatGPT ne signifie pas qu'une synthèse vocale remplace un assistant généraliste — seulement qu'elle fait mieux son travail. Lisez la colonne « catégorie » avant la colonne « note ». Les sections qui suivent reprennent ce même ordre.</p>
 
 <h2 id="les-dix-outils-en-detail">Les dix outils en détail</h2>
-
 <h3 id="claude-pour-ecrire-et-raisonner">Claude, pour écrire et raisonner</h3>
 <p>Éditeur : Anthropic. Gratuit, puis 20 € par mois en Pro et 100 $ par mois en Max.</p>
 <p>Claude s'est imposé sur deux usages : la rédaction professionnelle en français et le développement logiciel. Sur SWE-Bench Verified, le benchmark qui mesure la résolution de vraies anomalies GitHub, la génération Opus se situe autour de 80,8 à 80,9 % — le meilleur niveau constaté sur les modèles commerciaux.</p>
@@ -41,6 +40,21 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>À son actif : les Projects, qui conservent un contexte persistant avec vos documents ; Claude Code, qui travaille directement dans une base de code depuis le terminal.</p>
 <p>Ses limites : pas de génération d'images native, un abonnement Max élevé, et une vitesse inférieure à ChatGPT sur les tâches simples.</p>
 <p>Notre verdict : premier choix pour les freelances, rédacteurs, développeurs et consultants.</p>
+
+<h3 id="elevenlabs-la-synthese-vocale-de-reference">ElevenLabs, la synthèse vocale de référence</h3>
+<p>Éditeur : ElevenLabs. À partir de 5 € par mois.</p>
+<p>ElevenLabs est la référence de la synthèse vocale : voix très réaliste, clonage à partir de quelques minutes d'échantillon, doublage multilingue. Le résultat est souvent difficile à distinguer d'une voix humaine, pour un tarif d'entrée modeste.</p>
+<p>Notre verdict : incontournable si vous produisez du contenu audio ou vidéo. Sans objet sinon.</p>
+
+<h3 id="midjourney-les-images-les-plus-abouties">Midjourney, les images les plus abouties</h3>
+<p>Éditeur : Midjourney. 10 € par mois.</p>
+<p>Midjourney produit les images les plus abouties du marché : rendu cinématographique, cohérence stylistique, richesse des textures. Son interface, historiquement adossée à Discord, reste déroutante pour les non-initiés, mais la qualité de sortie est sans équivalent.</p>
+<p>Notre verdict : pour les agences créatives, les designers et les marques. Peu pertinent pour une PME sans budget créatif.</p>
+
+<h3 id="cursor-l-environnement-de-developpement-augmente">Cursor, l'environnement de développement augmenté</h3>
+<p>Éditeur : Anysphere. 20 € par mois.</p>
+<p>Cursor est un éditeur de code entièrement repensé autour de l'IA : complétion prédictive, édition en langage naturel, débogage conversationnel, navigation dans l'ensemble d'une base de code. La courbe d'apprentissage est quasi nulle pour qui vient de VS Code.</p>
+<p>Notre verdict : à considérer sérieusement par tout développeur. Sans intérêt pour les autres profils.</p>
 
 <h3 id="chatgpt-le-plus-polyvalent">ChatGPT, le plus polyvalent</h3>
 <p>Éditeur : OpenAI. Gratuit, puis 20 € par mois en Plus et 200 $ par mois en Pro.</p>
@@ -54,6 +68,17 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>S'y ajoutent une fenêtre de contexte très large et un accès direct à l'index de recherche Google.</p>
 <p>Notre verdict : difficile à ignorer si votre entreprise est sur Google. Sans objet si vous travaillez sous Microsoft 365.</p>
 
+<h3 id="perplexity-la-recherche-qui-cite-ses-sources">Perplexity, la recherche qui cite ses sources</h3>
+<p>Éditeur : Perplexity. Gratuit, puis 20 € par mois.</p>
+<p>Là où un assistant conversationnel peut inventer une référence, Perplexity structure ses réponses autour de sources vérifiables et affichées. C'est le meilleur outil du marché pour la recherche factuelle.</p>
+<p>Il se combine bien avec un assistant généraliste : Perplexity pour chercher, Claude ou ChatGPT pour rédiger.</p>
+<p>Notre verdict : précieux pour les journalistes, chercheurs et consultants. Optionnel pour les autres.</p>
+
+<h3 id="notebooklm-pour-digerer-des-documents">NotebookLM, pour digérer des documents</h3>
+<p>Éditeur : Google. Gratuit.</p>
+<p>NotebookLM transforme un corpus de documents en synthèses interrogeables, et sait en produire des résumés audio. Un outil sous-estimé, particulièrement efficace pour absorber rapidement des rapports volumineux.</p>
+<p>Notre verdict : gratuit et solide. À tester si vous manipulez beaucoup de documents.</p>
+
 <h3 id="le-chat-l-alternative-souveraine-et-gratuite">Le Chat, l'alternative souveraine et gratuite</h3>
 <p>Éditeur : Mistral AI. Gratuit.</p>
 <p>Mistral AI est le champion européen du secteur, et Le Chat son assistant grand public. Il est gratuit, sans limitation de messages : une proposition unique sur ce marché.</p>
@@ -64,32 +89,6 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>Éditeur : xAI. 16 € par mois, inclus dans l'abonnement X Premium+.</p>
 <p>Sa connexion native aux flux de X et sa très large fenêtre de contexte en font un outil singulier pour la veille en temps réel et le contenu social. En revanche, il reste attaché à l'écosystème X et convient mal aux usages professionnels structurés.</p>
 <p>Notre verdict : pour les responsables de communauté, les journalistes et les veilleurs. Pas pour les consultants ni les développeurs.</p>
-
-<h3 id="perplexity-la-recherche-qui-cite-ses-sources">Perplexity, la recherche qui cite ses sources</h3>
-<p>Éditeur : Perplexity. Gratuit, puis 20 € par mois.</p>
-<p>Là où un assistant conversationnel peut inventer une référence, Perplexity structure ses réponses autour de sources vérifiables et affichées. C'est le meilleur outil du marché pour la recherche factuelle.</p>
-<p>Il se combine bien avec un assistant généraliste : Perplexity pour chercher, Claude ou ChatGPT pour rédiger.</p>
-<p>Notre verdict : précieux pour les journalistes, chercheurs et consultants. Optionnel pour les autres.</p>
-
-<h3 id="midjourney-les-images-les-plus-abouties">Midjourney, les images les plus abouties</h3>
-<p>Éditeur : Midjourney. 10 € par mois.</p>
-<p>Midjourney produit les images les plus abouties du marché : rendu cinématographique, cohérence stylistique, richesse des textures. Son interface, historiquement adossée à Discord, reste déroutante pour les non-initiés, mais la qualité de sortie est sans équivalent.</p>
-<p>Notre verdict : pour les agences créatives, les designers et les marques. Peu pertinent pour une PME sans budget créatif.</p>
-
-<h3 id="elevenlabs-la-synthese-vocale-de-reference">ElevenLabs, la synthèse vocale de référence</h3>
-<p>Éditeur : ElevenLabs. À partir de 5 € par mois.</p>
-<p>ElevenLabs est la référence de la synthèse vocale : voix très réaliste, clonage à partir de quelques minutes d'échantillon, doublage multilingue. Le résultat est souvent difficile à distinguer d'une voix humaine, pour un tarif d'entrée modeste.</p>
-<p>Notre verdict : incontournable si vous produisez du contenu audio ou vidéo. Sans objet sinon.</p>
-
-<h3 id="cursor-l-environnement-de-developpement-augmente">Cursor, l'environnement de développement augmenté</h3>
-<p>Éditeur : Anysphere. 20 € par mois.</p>
-<p>Cursor est un éditeur de code entièrement repensé autour de l'IA : complétion prédictive, édition en langage naturel, débogage conversationnel, navigation dans l'ensemble d'une base de code. La courbe d'apprentissage est quasi nulle pour qui vient de VS Code.</p>
-<p>Notre verdict : à considérer sérieusement par tout développeur. Sans intérêt pour les autres profils.</p>
-
-<h3 id="notebooklm-pour-digerer-des-documents">NotebookLM, pour digérer des documents</h3>
-<p>Éditeur : Google. Gratuit.</p>
-<p>NotebookLM transforme un corpus de documents en synthèses interrogeables, et sait en produire des résumés audio. Un outil sous-estimé, particulièrement efficace pour absorber rapidement des rapports volumineux.</p>
-<p>Notre verdict : gratuit et solide. À tester si vous manipulez beaucoup de documents.</p>
 
 <h2 id="combien-d-outils-faut-il-vraiment-utiliser">Combien d'outils faut-il vraiment utiliser ?</h2>
 <aside class="donnee-jdlt"><p class="data-badge">Donnée exclusive — Protocole JDLT · Enquête auprès de 847 professionnels français</p><p>Sur les 847 professionnels français interrogés en juin 2026, 73 % utilisent deux ou trois outils d'IA, 18 % un seul, et 9 % plus de quatre. Le résultat le plus net concerne le dernier groupe : au-delà de quatre outils, les répondants déclarent une perte de productivité de 23 %, attribuée à la dispersion. Les 15 % les plus productifs en utilisent exactement deux — un généraliste et un spécialisé.</p></aside>

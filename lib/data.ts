@@ -613,7 +613,7 @@ export const articles: Article[] = [
       },
       {
         name: "NoCRM.io",
-        score: 7.9,
+        score: 8.0,
         offer: "Starter",
         verdict:
           "La prise en main la plus rapide du test (9,1). Volontairement minimaliste, ce qui se paie sur les intégrations (6,8).",
