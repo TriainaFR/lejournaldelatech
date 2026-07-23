@@ -14,3 +14,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-hebergeur-web-2026.jpg` — https://images.unsplash.com/photo-1573164713988-8665fc963095
 - `art-claude-ou-chatgpt-selon-votre-metier.jpg` — https://images.unsplash.com/photo-1542744173-8e7e53415bb0
 - `art-comment-choisir-crm-saas.jpg` — https://images.unsplash.com/photo-1517048676732-d65bc937f952
+- `art-meilleur-outil-ia-2026.jpg` — https://images.unsplash.com/photo-1499951360447-b19be8fe80f5

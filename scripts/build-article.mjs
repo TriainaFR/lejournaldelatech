@@ -91,6 +91,8 @@ const SOURCES_PRIMAIRES = [
   "wordpress.org", // documentation officielle
   "obsidian.md/help", // documentation officielle
   "menlovc.com/perspective", // étude primaire
+  "lmarena.ai", // benchmark public
+  "www.swebench.com", // benchmark public
 ];
 
 const estSourcePrimaire = (url) => {
