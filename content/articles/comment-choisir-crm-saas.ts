@@ -129,7 +129,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <tr><td><p><strong>Zoho CRM</strong></p></td><td><p>Standard</p></td><td><p>25 €</p></td><td><p>3 000 €</p></td><td><p>Budget serré</p></td></tr>
 <tr><td><p><strong>Sellsy</strong></p></td><td><p>Starter</p></td><td><p>29 €</p></td><td><p>3 480 €</p></td><td><p>TPE et PME</p></td></tr>
 <tr><td><p><strong>Freshsales</strong></p></td><td><p>Growth</p></td><td><p>35 €</p></td><td><p>4 200 €</p></td><td><p>PME commerciales</p></td></tr>
-<tr><td><p><strong>Pipedrive</strong></p></td><td><p>Essential</p></td><td><p>39 €</p></td><td><p>4 680 €</p></td><td><p>Équipes commerciales</p></td></tr>
+<tr><td><p><strong>Pipedrive</strong></p></td><td><p>Growth</p></td><td><p>39 €</p></td><td><p>4 680 €</p></td><td><p>Équipes commerciales</p></td></tr>
 <tr><td><p><strong>Axonaut</strong></p></td><td><p>Starter</p></td><td><p>45 €</p></td><td><p>5 400 €</p></td><td><p>PME françaises</p></td></tr>
 <tr><td><p><strong>HubSpot</strong></p></td><td><p>Pro</p></td><td><p>50 €</p></td><td><p>6 000 €</p></td><td><p>PME généralistes</p></td></tr>
 <tr><td><p><strong>Monday CRM</strong></p></td><td><p>Basic</p></td><td><p>59 €</p></td><td><p>7 080 €</p></td><td><p>Équipes agiles</p></td></tr>
@@ -174,7 +174,23 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <li><p>planifier la formation et l'accompagnement ;</p></li>
 <li><p>mesurer l'adoption et le retour sur investissement.</p></li>
 </ol>
-<p>Nos chiffres situent l'écart entre une PME qui suit cette démarche et une PME qui choisit à l'instinct : 62 % de réussite contre 28 %. Commencez par tester deux ou trois offres gratuites, puis appliquez la checklist. Deux semaines suffisent à trancher.</p>`;
+<p>Nos chiffres situent l'écart entre une PME qui suit cette démarche et une PME qui choisit à l'instinct : 62 % de réussite contre 28 %. Commencez par tester deux ou trois offres gratuites, puis appliquez la checklist. Deux semaines suffisent à trancher.</p>
+
+<h2 id="sources">Sources</h2>
+<p>Grilles tarifaires officielles des éditeurs, relevées le 25 juillet 2026. Les montants s'entendent hors taxes, par utilisateur et par mois ; ils varient selon la durée d'engagement, le pays de facturation et les options retenues.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.hubspot.fr/pricing/crm">HubSpot — Tarifs CRM</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pipedrive.com/fr/pricing">Pipedrive — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.zoho.com/fr/crm/zohocrm-pricing.html">Zoho CRM — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://axonaut.com/content/prix">Axonaut — Prix</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.brevo.com/fr/pricing/">Brevo — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.sellsy.fr/">Sellsy — Site officiel</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.freshworks.com/fr/crm/pricing/">Freshworks — Tarifs Freshsales</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.nocrm.io/pricing">NoCRM.io — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://monday.com/crm/pricing">Monday CRM — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.salesforce.com/fr/sales/pricing/">Salesforce — Tarifs Sales Cloud</a></p></li>
+</ul>
+<p>Les notes du Protocole JDLT, les délais d'implémentation et les taux d'adoption proviennent de nos propres relevés, décrits dans les encadrés de cet article. Les éditeurs révisent leurs grilles plusieurs fois par an : vérifiez le tarif en vigueur avant de souscrire.</p>`;
 
 /** Sommaire dérivé des titres de niveau 2. */
 export const toc: { id: string; text: string }[] = [
@@ -209,6 +225,10 @@ export const toc: { id: string; text: string }[] = [
   {
     "id": "conclusion-une-methode-plutot-qu-un-classement",
     "text": "Conclusion : une méthode plutôt qu'un classement"
+  },
+  {
+    "id": "sources",
+    "text": "Sources"
   }
 ];
 
@@ -253,4 +273,45 @@ export const faq: { question: string; answer: string }[] = [
 ];
 
 /** Sources citées, reprises en fin d'article et dans le balisage. */
-export const sources: { url: string; label: string }[] = [];
+export const sources: { url: string; label: string }[] = [
+  {
+    "url": "https://www.hubspot.fr/pricing/crm",
+    "label": "HubSpot — Tarifs CRM"
+  },
+  {
+    "url": "https://www.pipedrive.com/fr/pricing",
+    "label": "Pipedrive — Tarifs"
+  },
+  {
+    "url": "https://www.zoho.com/fr/crm/zohocrm-pricing.html",
+    "label": "Zoho CRM — Tarifs"
+  },
+  {
+    "url": "https://axonaut.com/content/prix",
+    "label": "Axonaut — Prix"
+  },
+  {
+    "url": "https://www.brevo.com/fr/pricing/",
+    "label": "Brevo — Tarifs"
+  },
+  {
+    "url": "https://www.sellsy.fr/",
+    "label": "Sellsy — Site officiel"
+  },
+  {
+    "url": "https://www.freshworks.com/fr/crm/pricing/",
+    "label": "Freshworks — Tarifs Freshsales"
+  },
+  {
+    "url": "https://www.nocrm.io/pricing",
+    "label": "NoCRM.io — Tarifs"
+  },
+  {
+    "url": "https://monday.com/crm/pricing",
+    "label": "Monday CRM — Tarifs"
+  },
+  {
+    "url": "https://www.salesforce.com/fr/sales/pricing/",
+    "label": "Salesforce — Tarifs Sales Cloud"
+  }
+];

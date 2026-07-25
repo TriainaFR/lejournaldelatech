@@ -572,7 +572,7 @@ export const articles: Article[] = [
       {
         name: "Pipedrive",
         score: 8.4,
-        offer: "Essential",
+        offer: "Growth",
         verdict:
           "La meilleure ergonomie commerciale du test (8,9 en prise en main). Taillé pour une équipe de vente, beaucoup moins pour du marketing.",
       },
@@ -833,7 +833,7 @@ export const articles: Article[] = [
       {
         name: "Pipedrive",
         score: 8.4,
-        offer: "Essential",
+        offer: "Growth",
         verdict:
           "Le pipeline le plus lisible du marché : un commercial est autonome en une journée (8,9). Les fonctions avancées arrivent en options payantes.",
       },

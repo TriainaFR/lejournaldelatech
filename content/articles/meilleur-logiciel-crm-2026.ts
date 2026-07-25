@@ -46,7 +46,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>Notre verdict : le meilleur choix pour une PME généraliste, à condition de modéliser le coût sur trois ans avec la croissance prévue de la base.</p>
 
 <h3 id="pipedrive-la-reference-des-equipes-commerciales">Pipedrive, la référence des équipes commerciales</h3>
-<p>Tarif d'entrée : 39 € par utilisateur et par mois.</p>
+<p>Offre Growth : 39 € par utilisateur et par mois. Une formule d'entrée moins complète existe en dessous.</p>
 <p>Pipedrive obtient la meilleure note de prise en main du panel derrière NoCRM.io (8,9). Conçu autour du pipeline, il rend le suivi des opportunités lisible d'un coup d'œil, et un commercial y est autonome en une journée.</p>
 <p>La contrepartie : les fonctions avancées — automatisations poussées, prévisions, signature — arrivent en options payantes qui alourdissent vite la note réelle.</p>
 <p>Notre verdict : le meilleur CRM pour une équipe de vente qui veut un outil de pipeline et rien d'autre.</p>
@@ -130,7 +130,23 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <h2 id="comment-utiliser-ce-classement">Comment utiliser ce classement</h2>
 <p>Une note globale ne remplace pas une décision. Trois réflexes valent mieux qu'un classement appris par cœur.</p>
 <p>Partez de votre objectif métier avant de comparer les interfaces : un CRM commercial et un CRM marketing ne résolvent pas le même problème. Faites ensuite tester les deux ou trois finalistes par les utilisateurs finaux, pas seulement par le dirigeant — le taux d'adoption est le seul indicateur qui compte à trois mois. Enfin, calculez le coût sur trois ans, options et migration comprises, et non le tarif affiché.</p>
-<p>La démarche complète, critère par critère, est détaillée dans notre [[lien:comment-choisir-crm-saas|guide de sélection]].</p>`;
+<p>La démarche complète, critère par critère, est détaillée dans notre [[lien:comment-choisir-crm-saas|guide de sélection]].</p>
+
+<h2 id="sources">Sources</h2>
+<p>Grilles tarifaires officielles des éditeurs, relevées le 25 juillet 2026. Les montants s'entendent hors taxes, par utilisateur et par mois ; ils varient selon la durée d'engagement, le pays de facturation et les options retenues.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.hubspot.fr/pricing/crm">HubSpot — Tarifs CRM</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.pipedrive.com/fr/pricing">Pipedrive — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.zoho.com/fr/crm/zohocrm-pricing.html">Zoho CRM — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://axonaut.com/content/prix">Axonaut — Prix</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.brevo.com/fr/pricing/">Brevo — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.sellsy.fr/">Sellsy — Site officiel</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.freshworks.com/fr/crm/pricing/">Freshworks — Tarifs Freshsales</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.nocrm.io/pricing">NoCRM.io — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://monday.com/crm/pricing">Monday CRM — Tarifs</a></p></li>
+<li><p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.salesforce.com/fr/sales/pricing/">Salesforce — Tarifs Sales Cloud</a></p></li>
+</ul>
+<p>Les notes du Protocole JDLT, les délais d'implémentation et les taux d'adoption proviennent de nos propres relevés, décrits dans les encadrés de cet article. Les éditeurs révisent leurs grilles plusieurs fois par an : vérifiez le tarif en vigueur avant de souscrire.</p>`;
 
 /** Sommaire dérivé des titres de niveau 2. */
 export const toc: { id: string; text: string }[] = [
@@ -161,6 +177,10 @@ export const toc: { id: string; text: string }[] = [
   {
     "id": "comment-utiliser-ce-classement",
     "text": "Comment utiliser ce classement"
+  },
+  {
+    "id": "sources",
+    "text": "Sources"
   }
 ];
 
@@ -201,4 +221,45 @@ export const faq: { question: string; answer: string }[] = [
 ];
 
 /** Sources citées, reprises en fin d'article et dans le balisage. */
-export const sources: { url: string; label: string }[] = [];
+export const sources: { url: string; label: string }[] = [
+  {
+    "url": "https://www.hubspot.fr/pricing/crm",
+    "label": "HubSpot — Tarifs CRM"
+  },
+  {
+    "url": "https://www.pipedrive.com/fr/pricing",
+    "label": "Pipedrive — Tarifs"
+  },
+  {
+    "url": "https://www.zoho.com/fr/crm/zohocrm-pricing.html",
+    "label": "Zoho CRM — Tarifs"
+  },
+  {
+    "url": "https://axonaut.com/content/prix",
+    "label": "Axonaut — Prix"
+  },
+  {
+    "url": "https://www.brevo.com/fr/pricing/",
+    "label": "Brevo — Tarifs"
+  },
+  {
+    "url": "https://www.sellsy.fr/",
+    "label": "Sellsy — Site officiel"
+  },
+  {
+    "url": "https://www.freshworks.com/fr/crm/pricing/",
+    "label": "Freshworks — Tarifs Freshsales"
+  },
+  {
+    "url": "https://www.nocrm.io/pricing",
+    "label": "NoCRM.io — Tarifs"
+  },
+  {
+    "url": "https://monday.com/crm/pricing",
+    "label": "Monday CRM — Tarifs"
+  },
+  {
+    "url": "https://www.salesforce.com/fr/sales/pricing/",
+    "label": "Salesforce — Tarifs Sales Cloud"
+  }
+];
