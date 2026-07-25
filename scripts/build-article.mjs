@@ -93,6 +93,7 @@ const SOURCES_PRIMAIRES = [
   "menlovc.com/perspective", // étude primaire
   "lmarena.ai", // benchmark public
   "www.swebench.com", // benchmark public
+  "docs.mistral.ai", // documentation officielle
 ];
 
 const estSourcePrimaire = (url) => {
