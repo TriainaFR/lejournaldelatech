@@ -2,6 +2,7 @@ import * as claudeOuChatgptSelonVotreMetier from "@/content/articles/claude-ou-c
 import * as claudeVsChatgpt from "@/content/articles/claude-vs-chatgpt";
 import * as commentChoisirCrmSaas from "@/content/articles/comment-choisir-crm-saas";
 import * as meilleurHebergeurWeb2026 from "@/content/articles/meilleur-hebergeur-web-2026";
+import * as meilleurCrmTpePme from "@/content/articles/meilleur-crm-tpe-pme";
 import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-crm-2026";
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
 import * as meilleurOutilIaPme from "@/content/articles/meilleur-outil-ia-pme";
@@ -21,6 +22,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "claude-vs-chatgpt": claudeVsChatgpt,
   "comment-choisir-crm-saas": commentChoisirCrmSaas,
   "meilleur-hebergeur-web-2026": meilleurHebergeurWeb2026,
+  "meilleur-crm-tpe-pme": meilleurCrmTpePme,
   "meilleur-logiciel-crm-2026": meilleurLogicielCrm2026,
   "meilleur-outil-ia-2026": meilleurOutilIa2026,
   "meilleur-outil-ia-pme": meilleurOutilIaPme,

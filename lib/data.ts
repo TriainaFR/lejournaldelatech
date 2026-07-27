@@ -999,6 +999,95 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "meilleur-crm-tpe-pme",
+    kind: "Comparatif",
+    title: "Meilleur CRM pour TPE et petites structures en 2026",
+    metaTitle: "Meilleur CRM pour TPE 2026 : le comparatif",
+    excerpt:
+      "Axonaut, HubSpot, Pipedrive, NoCRM.io : sept CRM notés sur une grille pondérée pour les structures de un à dix salariés, où la simplicité prime sur la puissance.",
+    metaDescription:
+      "Sept CRM notés pour les TPE françaises : grille recalibrée pour les structures de 1 à 10 salariés, tarifs sourcés et verdict par situation.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    date: "2026-07-28",
+    dateLabel: "28 juillet 2026",
+    readingTime: 12,
+    seed: 110,
+    imageAlt:
+      "Commerçante indépendante au téléphone devant son ordinateur portable, dans sa boutique de vêtements",
+    topics: [
+      "CRM",
+      "TPE",
+      "Axonaut",
+      "HubSpot",
+      "Pipedrive",
+      "Sellsy",
+      "Logiciel de gestion commerciale",
+      "Artisans",
+      "Indépendants",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Adoption d'un CRM selon sa complexité en petite structure (Protocole JDLT)",
+        description:
+          "Relevés issus du panel de 47 PME françaises, isolant l'effet de la complexité de l'outil sur son adoption réelle. Résultats : 73 % d'adoption à trois mois pour les CRM dont la prise en main est notée au-dessus de 8, contre 34 % pour les solutions complexes ; 4,2 semaines de délai moyen d'implémentation ; 12 % d'abandon à six mois, imputable à un outil surdimensionné ou à l'absence de référent interne, et non au budget.",
+        date: "2026-07",
+        measured: [
+          "Taux d'adoption à trois mois selon la note de prise en main (%)",
+          "Délai d'implémentation (semaines)",
+          "Taux d'abandon à six mois (%)",
+          "Causes d'abandon déclarées",
+        ],
+      },
+    ],
+    ranking: [
+      {
+        name: "Axonaut",
+        score: 9.0,
+        verdict:
+          "Premier sur la grille TPE : devis, facturation et suivi commercial réunis, meilleur support français du panel. Pipeline basique et intégrations limitées, d'où sa quatrième place sur la grille PME.",
+      },
+      {
+        name: "HubSpot",
+        score: 8.5,
+        verdict:
+          "L'offre gratuite la plus généreuse pour démarrer, et la meilleure articulation marketing-vente. Courbe d'apprentissage plus raide, et facturation au nombre de contacts difficile à anticiper.",
+      },
+      {
+        name: "Pipedrive",
+        score: 8.5,
+        offer: "Growth",
+        verdict:
+          "Pipeline lisible, autonomie en une journée. Pas de facturation intégrée et des fonctions avancées en options payantes.",
+      },
+      {
+        name: "NoCRM.io",
+        score: 8.0,
+        verdict:
+          "La prise en main la plus rapide de tout le panel CRM et le tarif le plus bas du classement. Volontairement minimaliste : ni devis, ni facturation, intégrations faibles.",
+      },
+      {
+        name: "Sellsy",
+        score: 8.0,
+        verdict:
+          "Éditeur français équilibré, fort sur la facturation, les abonnements et les avoirs. Plus complet qu'Axonaut sur le volet commercial, moins sur le volet comptable.",
+      },
+      {
+        name: "Zoho CRM",
+        score: 7.5,
+        verdict:
+          "La couverture fonctionnelle la plus large à ce prix, avec une offre gratuite jusqu'à trois utilisateurs. En TPE, cette richesse se retourne contre lui : interface dense, support en français en retrait.",
+      },
+      {
+        name: "Monday CRM",
+        score: 7.5,
+        verdict:
+          "Pertinent pour une équipe déjà installée sur Monday, avec une vue par tableaux qui convient aux structures créatives. Tarification élevée pour une TPE.",
+      },
+    ],
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
