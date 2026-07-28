@@ -1088,6 +1088,52 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "meilleur-crm-gratuit-2026",
+    kind: "Enquête",
+    title: "Meilleur CRM gratuit 2026 : ce que les offres permettent vraiment",
+    metaTitle: "Meilleur CRM gratuit 2026 : les limites réelles",
+    excerpt:
+      "Cinq CRM proposent une offre réellement gratuite, trois n'offrent qu'un essai. Relevé des limites officielles : utilisateurs, contacts et périmètre, éditeur par éditeur.",
+    metaDescription:
+      "CRM gratuits 2026 : limites réelles relevées sur les grilles officielles. HubSpot, Zoho, Bitrix24, EngageBay, Odoo — et les trois faussement présentés comme gratuits.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    authorNote:
+      "Cet article ne porte pas de note du Protocole JDLT : il relève les limites affichées par chaque éditeur sur sa propre grille tarifaire, à la date indiquée. Les notes du protocole évaluent des produits complets et figurent dans nos comparatifs CRM.",
+    date: "2026-07-28",
+    dateLabel: "28 juillet 2026",
+    readingTime: 8,
+    seed: 111,
+    imageAlt:
+      "Petite équipe réunie autour d'un poste de travail dans un espace de bureau partagé",
+    topics: [
+      "CRM",
+      "Logiciel gratuit",
+      "HubSpot",
+      "Zoho CRM",
+      "Bitrix24",
+      "EngageBay",
+      "Odoo",
+      "TPE",
+      "Startups",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Limites réelles des offres gratuites de CRM (relevé JDLT, juillet 2026)",
+        description:
+          "Relevé des grilles tarifaires officielles de huit éditeurs de CRM, le 28 juillet 2026, portant sur le périmètre exact de leur offre gratuite permanente. Résultats : cinq offres gratuites permanentes — Zoho CRM (3 utilisateurs), HubSpot (2 utilisateurs et 1 000 contacts), Bitrix24 (2 utilisateurs et 5 Go), EngageBay (15 membres et 250 contacts), Odoo (une application, utilisateurs illimités) — et trois éditeurs ne proposant qu'un essai limité malgré leur présence habituelle dans les comparatifs de CRM gratuits : Axonaut, Freshsales et NoCRM.io.",
+        date: "2026-07",
+        measured: [
+          "Existence d'une offre gratuite permanente",
+          "Nombre d'utilisateurs inclus",
+          "Nombre de contacts ou volume de stockage inclus",
+          "Durée de l'essai lorsque aucune offre gratuite n'existe",
+        ],
+      },
+    ],
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
