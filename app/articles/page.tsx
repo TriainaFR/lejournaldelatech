@@ -34,6 +34,13 @@ export const metadata: Metadata = {
   title: "Tous les articles",
   description: DESCRIPTION,
   alternates: { canonical: "/articles" },
+  /**
+   * Fil complet et recherche : utile aux lecteurs, sans contenu propre à
+   * indexer — les articles qu'il liste ont chacun leur page. On le laisse
+   * hors index pour ne pas dépenser de budget d'exploration ici, mais en
+   * `follow` : les liens doivent continuer à mener aux articles.
+   */
+  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     title: "Tous les articles — Le Journal de la Tech",

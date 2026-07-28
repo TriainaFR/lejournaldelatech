@@ -17,7 +17,14 @@ function lastmod(list: { date: string; updated?: string }[]): Date | undefined {
   return stamps.length ? new Date(Math.max(...stamps)) : undefined;
 }
 
-/** Seules les pages réellement publiées sont listées. */
+/**
+ * Seules les pages réellement publiées sont listées.
+ *
+ * Le sitemap n'annonce que ce qui est indexable : pas de page de listing
+ * (`/articles`, qui n'a pas de contenu propre), pas de rubrique encore vide.
+ * Y déclarer une URL en `noindex` enverrait un signal contradictoire et
+ * dépenserait du budget d'exploration au détriment des articles.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const published = articlesSorted();
   const dernierArticle = lastmod(published);
@@ -31,12 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
-    {
-      url: `${BASE}/articles`,
-      lastModified: dernierArticle,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
     { url: `${BASE}/a-propos`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/methodologie`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/protocole-jdlt`, changeFrequency: "monthly", priority: 0.6 },
@@ -46,17 +47,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/confidentialite`, changeFrequency: "yearly", priority: 0.1 },
   ];
 
-  // Une rubrique sans article reste utile (ligne éditoriale, sujets à venir)
-  // mais pèse moins qu'une rubrique alimentée.
-  const rubriques: MetadataRoute.Sitemap = categories.map((c) => {
-    const dedans = articlesByCategory(c.slug);
-    return {
+  // Seules les rubriques alimentées : une rubrique vide est en `noindex`,
+  // elle n'a donc rien à faire ici. Elle réapparaît à sa première publication.
+  const rubriques: MetadataRoute.Sitemap = categories
+    .filter((c) => articlesByCategory(c.slug).length > 0)
+    .map((c) => ({
       url: `${BASE}/${c.slug}`,
-      lastModified: lastmod(dedans),
-      changeFrequency: dedans.length ? ("weekly" as const) : ("monthly" as const),
-      priority: dedans.length ? 0.7 : 0.3,
-    };
-  });
+      lastModified: lastmod(articlesByCategory(c.slug)),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    }));
 
   const articles: MetadataRoute.Sitemap = published.map((a) => ({
     url: `${BASE}/${a.category}/${a.slug}`,

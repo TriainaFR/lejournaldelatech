@@ -27,10 +27,20 @@ export async function generateMetadata({
   const { categorie } = await params;
   const cat = categories.find((c) => c.slug === categorie);
   if (!cat) return {};
+
+  /**
+   * Une rubrique encore vide n'annonce que des sujets à venir : rien à
+   * indexer, et du budget d'exploration détourné des articles réels. Elle
+   * reste `follow` et se rouvre d'elle-même à sa première publication —
+   * la règle est dérivée du contenu, jamais écrite en dur.
+   */
+  const alimentee = articlesByCategory(cat.slug).length > 0;
+
   return {
     title: cat.name,
     description: cat.description,
     alternates: { canonical: `/${cat.slug}` },
+    ...(alimentee ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       type: "website",
       title: `${cat.name} — Le Journal de la Tech`,
