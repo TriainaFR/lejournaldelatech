@@ -20,6 +20,12 @@
 const BASE = "https://lejournaldelatech.fr";
 
 /**
+ * Ordre des signaux repris de l'exemple canonique de la spécification, pour
+ * ne pas dépendre de la tolérance des analyseurs qui la lisent.
+ */
+const SIGNALS = "ai-train=no, search=yes, ai-input=yes";
+
+/**
  * Robots d'IA explicitement autorisés. Le wildcard suffirait, mais les
  * nommer lève l'ambiguïté : le journal veut être exploré et cité par les
  * moteurs génératifs, c'est la raison d'être de son travail de sourçage.
@@ -51,13 +57,13 @@ export function GET(): Response {
     "",
     "User-agent: *",
     "Allow: /",
-    "Content-Signal: search=yes, ai-input=yes, ai-train=no",
+    `Content-Signal: ${SIGNALS}`,
     "",
     "# Moteurs génératifs et robots d'IA — exploration et citation autorisées.",
     ...AI_CRAWLERS.flatMap((bot) => [
       `User-agent: ${bot}`,
       "Allow: /",
-      "Content-Signal: search=yes, ai-input=yes, ai-train=no",
+      `Content-Signal: ${SIGNALS}`,
       "",
     ]),
     `Sitemap: ${BASE}/sitemap.xml`,
