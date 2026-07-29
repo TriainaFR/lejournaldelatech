@@ -6,6 +6,7 @@ import * as meilleurCrmGratuit2026 from "@/content/articles/meilleur-crm-gratuit
 import * as meilleurCrmTpePme from "@/content/articles/meilleur-crm-tpe-pme";
 import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-crm-2026";
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
+import * as meilleurVps2026 from "@/content/articles/meilleur-vps-2026";
 import * as meilleurOutilIaPme from "@/content/articles/meilleur-outil-ia-pme";
 import * as meilleurHebergeurWordpress from "@/content/articles/meilleur-hebergeur-wordpress";
 import * as notionVsObsidian from "@/content/articles/notion-vs-obsidian";
@@ -28,6 +29,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-logiciel-crm-2026": meilleurLogicielCrm2026,
   "meilleur-outil-ia-2026": meilleurOutilIa2026,
   "meilleur-outil-ia-pme": meilleurOutilIaPme,
+  "meilleur-vps-2026": meilleurVps2026,
   "meilleur-hebergeur-wordpress": meilleurHebergeurWordpress,
   "notion-vs-obsidian": notionVsObsidian,
 };

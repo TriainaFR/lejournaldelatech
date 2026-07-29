@@ -19,3 +19,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-outil-ia-pme.jpg` — https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf
 - `art-meilleur-crm-tpe-pme.jpg` — https://images.unsplash.com/photo-1753161618037-e6a8f740fd47
 - `art-meilleur-crm-gratuit-2026.jpg` — https://images.unsplash.com/photo-1556761175-b413da4baf72
+- `art-meilleur-vps-2026.jpg` — https://images.unsplash.com/photo-1695668548342-c0c1ad479aee
