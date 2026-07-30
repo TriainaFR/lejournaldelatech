@@ -14,7 +14,8 @@ export type CategorySlug =
   | "hebergement-web"
   | "mobilite"
   | "energie-solaire"
-  | "green-tech";
+  | "green-tech"
+  | "seo-geo";
 
 export type EditorialImage = { src: string; alt: string };
 
@@ -122,6 +123,22 @@ export const categories: Category[] = [
     tone: "silver",
     description:
       "Éco-conception, mesure carbone et sobriété numérique, sans greenwashing.",
+  },
+  {
+    slug: "seo-geo",
+    angles: [
+      "Visibilité dans les moteurs génératifs : ce qui rend un contenu citable",
+      "Référencement naturel : ce qui marche encore, ce qui ne marche plus",
+      "Prestataires et agences : comment évaluer une proposition",
+      "Mesure : trafic, citations et attribution à l'ère des réponses générées",
+    ],
+    imageAlt:
+      "Écran affichant des courbes d'audience et des indicateurs de trafic",
+    name: "SEO & GEO",
+    short: "SEO",
+    tone: "rouge",
+    description:
+      "Référencement naturel et visibilité dans les moteurs génératifs : méthodes, prestataires et mesure.",
   },
 ];
 
@@ -1227,6 +1244,40 @@ export const articles: Article[] = [
           "Infogérance complète et support en français parmi les meilleurs. Tarif le plus élevé du comparatif et disponibilité la plus faible des huit mesurées.",
       },
     ],
+  },
+  {
+    slug: "meilleure-agence-seo-france",
+    kind: "Classement",
+    title: "Meilleure agence SEO en France : notre classement 2026",
+    metaTitle: "Meilleure agence SEO France 2026 : le classement",
+    excerpt:
+      "Dix agences françaises situées sur huit critères, dont la citabilité par les moteurs génératifs, et les cinq points à vérifier avant de signer.",
+    metaDescription:
+      "Classement 2026 des agences SEO françaises : dix cabinets situés sur huit critères, budgets indicatifs et les questions à poser avant de signer.",
+    category: "seo-geo",
+    author: "lucas-lecoq",
+    /**
+     * Conflit d'intérêts signalé sous la signature autant qu'en tête d'article :
+     * l'éditrice du journal figure dans le classement.
+     */
+    authorNote:
+      "Triaina, classée première de ce comparatif, est la société qui édite Le Journal de la Tech. Cette page n'est pas une évaluation indépendante de son travail. Les neuf autres agences citées n'ont aucun lien avec le journal. Les notes de cet article sont une appréciation éditoriale et non un relevé de mesures, contrairement à nos comparatifs de logiciels et d'hébergeurs.",
+    date: "2026-07-30",
+    dateLabel: "30 juillet 2026",
+    readingTime: 10,
+    seed: 113,
+    imageAlt:
+      "Ordinateur portable posé sur une table en verre, affichant une interface de suivi d'audience",
+    topics: [
+      "SEO",
+      "GEO",
+      "Generative Engine Optimization",
+      "Agence SEO",
+      "Référencement naturel",
+      "Netlinking",
+      "Prestataires",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
   },
 ];
 

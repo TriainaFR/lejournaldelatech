@@ -20,3 +20,5 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-crm-tpe-pme.jpg` — https://images.unsplash.com/photo-1753161618037-e6a8f740fd47
 - `art-meilleur-crm-gratuit-2026.jpg` — https://images.unsplash.com/photo-1556761175-b413da4baf72
 - `art-meilleur-vps-2026.jpg` — https://images.unsplash.com/photo-1695668548342-c0c1ad479aee
+- `cat-seo-geo.jpg` — https://images.unsplash.com/photo-1551288049-bebda4e38f71
+- `art-meilleure-agence-seo-france.jpg` — https://images.unsplash.com/photo-1460925895917-afdab827c52f
