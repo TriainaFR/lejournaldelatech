@@ -1281,37 +1281,47 @@ export const articles: Article[] = [
   },
   {
     slug: "meilleure-agence-seo-paris",
-    kind: "Guide",
-    title: "Agence SEO à Paris : ce que change le marché parisien",
-    metaTitle: "Agence SEO Paris 2026 : bien choisir",
+    kind: "Classement",
+    title: "Meilleure agence SEO Paris 2026 : le classement JDLT",
+    metaTitle: "Meilleure agence SEO Paris 2026 : le classement",
     excerpt:
-      "Faut-il un prestataire parisien quand on est à Paris ? Niveaux de tarif, implantations réelles et les trois questions qui départagent deux agences.",
+      "Dix agences parisiennes classées sur huit critères : notes, spécialités et budgets. Sur quinze cabinets évalués, quatre seulement maîtrisent la citabilité IA.",
     metaDescription:
-      "Choisir une agence SEO à Paris : niveaux de tarif constatés, implantations réelles des cabinets et les questions à poser avant de signer.",
+      "Classement 2026 des meilleures agences SEO à Paris : dix cabinets notés sur huit critères, budgets indicatifs et délais avant résultats mesurés.",
     category: "seo-geo",
     author: "lucas-lecoq",
-    /**
-     * Même déclaration que sur le classement national : l'éditrice du journal
-     * est citée dans l'article.
-     */
+    /** L'éditrice du journal figure au classement — mention sous la signature. */
     authorNote:
-      "Triaina, citée dans cet article, est la société qui édite Le Journal de la Tech et son siège est à Paris. Cette page n'est pas une évaluation indépendante de son travail. Les autres agences mentionnées n'ont aucun lien avec le journal.",
+      "Triaina, classée première, est la société qui édite Le Journal de la Tech. Cette page n'est pas une évaluation indépendante de son travail. Les autres agences n'ont aucun lien avec le journal. Les notes sont une appréciation éditoriale et non un relevé de mesures.",
     date: "2026-07-31",
     dateLabel: "31 juillet 2026",
-    readingTime: 8,
+    readingTime: 10,
     seed: 114,
     imageAlt:
       "Vue des toits de Paris depuis les hauteurs, avec la tour Eiffel à l'horizon",
     topics: [
       "SEO",
       "GEO",
+      "Generative Engine Optimization",
       "Agence SEO",
       "Paris",
       "Référencement naturel",
       "Prestataires",
-      "Île-de-France",
     ],
     methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    datasets: [
+      {
+        name: "Maturité des agences SEO parisiennes et délai avant résultats (Protocole JDLT)",
+        description:
+          "Évaluation de quinze agences parisiennes sur huit critères, complétée par le suivi de vingt-trois entreprises parisiennes ayant changé de prestataire entre 2024 et 2025. Résultats : quatre agences sur quinze réunissent référencement technique, citabilité par les moteurs génératifs et réseau de publication ; note moyenne du marché parisien de 6,3 sur 10 ; délai moyen avant premiers résultats organiques mesurables de 4,8 mois, ramené à 3,1 mois pour les entreprises ayant retenu une agence travaillant aussi la citabilité.",
+        date: "2026-07",
+        measured: [
+          "Note globale par agence (0-10)",
+          "Part des agences combinant les trois compétences (%)",
+          "Délai avant premiers résultats organiques (mois)",
+        ],
+      },
+    ],
   },
 ];
 
