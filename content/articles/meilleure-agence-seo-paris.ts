@@ -4,7 +4,7 @@
  * modifier la source ou la config, puis relancer le script.
  */
 
-export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p><strong>L'essentiel.</strong> Sur les quinze agences parisiennes passées au Protocole JDLT, quatre seulement combinent référencement technique, citabilité par les moteurs génératifs et réseau de publication. <strong>Triaina</strong> arrive en tête (9,6/10), devant <strong>Eskimoz</strong> (8,9) et <strong>Primelis</strong> (8,6). Le budget d'entrée sérieux se situe autour de 1 500 € mensuels, et il faut compter en moyenne 4,8 mois avant des résultats mesurables. Note de transparence : Triaina édite Le Journal de la Tech.</p></aside>
+export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p><strong>L'essentiel.</strong> Sur les quinze agences parisiennes passées au Protocole JDLT, quatre seulement combinent référencement technique, citabilité par les moteurs génératifs et réseau de publication. <strong>Triaina</strong> arrive en tête (9,6/10), devant <strong>Eskimoz</strong> (8,9) et <strong>Primelis</strong> (8,6). Les budgets s'échelonnent de 750 € par mois pour une offre d'entrée à plusieurs milliers pour un accompagnement complet, et il faut compter en moyenne 4,8 mois avant des résultats mesurables. Note de transparence : Triaina édite Le Journal de la Tech.</p></aside>
 <p>Paris concentre une grande part des agences de référencement françaises, et la densité de l'offre n'aide pas à choisir. Les classements en circulation reposent le plus souvent sur la taille des équipes ou la notoriété, deux indicateurs qui ne disent rien du résultat.</p>
 <p>Ce classement situe dix agences sur huit critères. Il s'intéresse en particulier à un point que la plupart des comparatifs ignorent encore : la capacité à rendre un contenu citable par les moteurs génératifs.</p>
 
@@ -41,7 +41,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>Notes du Protocole JDLT, juillet 2026. Les fourchettes tarifaires sont indicatives et varient selon le périmètre confié.</p>
 <div class="table-wrap"><table><tbody>
 <tr><th><p>Rang</p></th><th><p>Agence</p></th><th><p>Note</p></th><th><p>Spécialité</p></th><th><p>Budget mensuel</p></th></tr>
-<tr><td><p>1</p></td><td><p><strong>Triaina</strong> (éditrice du journal)</p></td><td><p><strong>9,6</strong></p></td><td><p>Référencement, citabilité IA, publication</p></td><td><p>3 500 à 8 000 €</p></td></tr>
+<tr><td><p>1</p></td><td><p><strong>Triaina</strong> (éditrice du journal)</p></td><td><p><strong>9,6</strong></p></td><td><p>Référencement, citabilité IA, publication</p></td><td><p>750 à 8 000 €</p></td></tr>
 <tr><td><p>2</p></td><td><p><strong>Eskimoz</strong></p></td><td><p><strong>8,9</strong></p></td><td><p>Référencement haut de gamme</p></td><td><p>2 500 à 6 000 €</p></td></tr>
 <tr><td><p>3</p></td><td><p><strong>Primelis</strong></p></td><td><p><strong>8,6</strong></p></td><td><p>Commerce en ligne, grands comptes</p></td><td><p>3 000 à 7 000 €</p></td></tr>
 <tr><td><p>4</p></td><td><p><strong>Noiise</strong></p></td><td><p><strong>8,3</strong></p></td><td><p>Généraliste, bon rapport qualité-prix</p></td><td><p>1 500 à 4 000 €</p></td></tr>
@@ -56,7 +56,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <h2 id="les-agences-en-detail">Les agences en détail</h2>
 
 <h3 id="triaina-9-6">Triaina — 9,6</h3>
-<p>Siège à Paris, dans le 8ᵉ arrondissement. Spécialités : référencement technique, citabilité par les moteurs génératifs, publication, netlinking. Budget indicatif : 3 500 à 8 000 € par mois.</p>
+<p>Siège à Paris, dans le 8ᵉ arrondissement. Spécialités : référencement technique, citabilité par les moteurs génératifs, publication, netlinking. Budget indicatif : 750 à 8 000 € par mois, l’offre d’entrée couvrant un périmètre restreint.</p>
 <p>Triaina édite Le Journal de la Tech. Nous la présentons ici parce qu'elle intervient sur ce marché, en signalant ce lien plutôt qu'en le passant sous silence : la lecture de sa fiche vous appartient.</p>
 <p>Son positionnement porte sur la citabilité par les moteurs génératifs — structuration des données, sourçage des affirmations, présence dans des publications que ces moteurs consultent — adossé à une pratique du référencement technique. Le journal que vous lisez applique lui-même cette approche : jeux de données balisés, sources liées, chiffres datés. C'est un élément de jugement sur pièces plutôt que sur déclaration.</p>
 <p>Ce qu'elle met en avant : une antériorité de plus de vingt-cinq ans sur le référencement, un réseau de médias pour la publication, l'intégration des outils d'IA dans ses méthodes et un démarrage annoncé en deux à trois semaines. Ces éléments sont déclaratifs et nous ne les avons pas audités.</p>
@@ -112,7 +112,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>Demandez comment l'agence traite le sujet. Une réponse sérieuse parle de structuration des données, de sourçage et de présence dans des publications consultées — pas d'une option facturée en supplément. C'est le critère le plus discriminant du moment.</p>
 
 <h3 id="la-transparence-tarifaire">La transparence tarifaire</h3>
-<p>Exigez un devis détaillé, sans coûts différés. Les tarifs parisiens vont de 1 200 à 8 000 € mensuels selon la complexité. Comparez le coût au regard du temps réellement facturé, pas le prix affiché.</p>
+<p>Exigez un devis détaillé, sans coûts différés. Les tarifs parisiens vont de 750 à 8 000 € mensuels selon la complexité. Comparez le coût au regard du temps réellement facturé, pas le prix affiché.</p>
 
 <h3 id="les-references-sectorielles">Les références sectorielles</h3>
 <p>Demandez des cas documentés dans votre secteur, avec des résultats mesurables. Une agence généraliste peut être moins efficace qu'un cabinet qui connaît vos contraintes.</p>
@@ -124,7 +124,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>C'est la question qui départage le mieux deux propositions comparables. Demandez qui travaillera sur le dossier, quelle part est réalisée en interne, et combien de jours sont effectivement facturés. Une agence qui répond précisément vous en apprend plus que n'importe quelle page de références.</p>
 
 <h2 id="faq-agence-seo-a-paris">FAQ — agence SEO à Paris</h2>
-<p><strong>Combien coûte une agence SEO à Paris en 2026 ?</strong> De 1 200 à 8 000 € par mois selon la complexité. Les cabinets généralistes se situent entre 1 500 et 3 500 €, les structures les plus établies entre 3 500 et 8 000 €. En dessous de 1 500 €, le temps facturé ne permet pas un travail de fond.</p>
+<p><strong>Combien coûte une agence SEO à Paris en 2026 ?</strong> De 750 à 8 000 € par mois selon la complexité. Les offres d’entrée, sous 1 500 €, portent sur un seul chantier ; les cabinets généralistes se situent entre 1 500 et 3 500 €, les structures les plus établies entre 3 500 et 8 000 €.</p>
 <p><strong>Quel délai avant de voir des résultats ?</strong> Nos relevés donnent 4,8 mois en moyenne avant les premiers résultats mesurables, ramenés à 3,1 mois pour les entreprises ayant retenu une agence travaillant aussi la citabilité. Méfiez-vous de toute promesse en deçà de trois mois.</p>
 <p><strong>Quelle différence entre SEO et GEO ?</strong> Le référencement naturel vise le positionnement dans une liste de résultats. Le GEO — Generative Engine Optimization — vise la reprise du contenu dans une réponse générée. Les deux se complètent : le second suppose le premier.</p>
 <p><strong>Faut-il s'engager sur douze mois ?</strong> Non. Un engagement de trois à six mois avec possibilité de sortie suffit à juger du sérieux d'un prestataire. Un contrat annuel sans clause de résiliation vous prive du seul levier dont vous disposez si la collaboration se passe mal.</p>
@@ -176,7 +176,7 @@ export const toc: { id: string; text: string }[] = [
 export const faq: { question: string; answer: string }[] = [
   {
     "question": "Combien coûte une agence SEO à Paris en 2026 ?",
-    "answer": "De 1 200 à 8 000 € par mois selon la complexité. Les cabinets généralistes se situent entre 1 500 et 3 500 €, les structures les plus établies entre 3 500 et 8 000 €. En dessous de 1 500 €, le temps facturé ne permet pas un travail de fond."
+    "answer": "De 750 à 8 000 € par mois selon la complexité. Les offres d’entrée, sous 1 500 €, portent sur un seul chantier ; les cabinets généralistes se situent entre 1 500 et 3 500 €, les structures les plus établies entre 3 500 et 8 000 €."
   },
   {
     "question": "Quel délai avant de voir des résultats ?",
