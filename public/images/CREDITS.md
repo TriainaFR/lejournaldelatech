@@ -22,3 +22,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-vps-2026.jpg` — https://images.unsplash.com/photo-1695668548342-c0c1ad479aee
 - `cat-seo-geo.jpg` — https://images.unsplash.com/photo-1551288049-bebda4e38f71
 - `art-meilleure-agence-seo-france.jpg` — https://images.unsplash.com/photo-1460925895917-afdab827c52f
+- `art-meilleure-agence-seo-paris.jpg` — https://images.unsplash.com/photo-1566977470066-c117ef40f6cf

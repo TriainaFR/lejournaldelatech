@@ -8,6 +8,7 @@ import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-c
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
 import * as meilleurVps2026 from "@/content/articles/meilleur-vps-2026";
 import * as meilleureAgenceSeoFrance from "@/content/articles/meilleure-agence-seo-france";
+import * as meilleureAgenceSeoParis from "@/content/articles/meilleure-agence-seo-paris";
 import * as meilleurOutilIaPme from "@/content/articles/meilleur-outil-ia-pme";
 import * as meilleurHebergeurWordpress from "@/content/articles/meilleur-hebergeur-wordpress";
 import * as notionVsObsidian from "@/content/articles/notion-vs-obsidian";
@@ -32,6 +33,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-outil-ia-pme": meilleurOutilIaPme,
   "meilleur-vps-2026": meilleurVps2026,
   "meilleure-agence-seo-france": meilleureAgenceSeoFrance,
+  "meilleure-agence-seo-paris": meilleureAgenceSeoParis,
   "meilleur-hebergeur-wordpress": meilleurHebergeurWordpress,
   "notion-vs-obsidian": notionVsObsidian,
 };

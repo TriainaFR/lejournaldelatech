@@ -1279,6 +1279,40 @@ export const articles: Article[] = [
     ],
     methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
   },
+  {
+    slug: "meilleure-agence-seo-paris",
+    kind: "Guide",
+    title: "Agence SEO à Paris : ce que change le marché parisien",
+    metaTitle: "Agence SEO Paris 2026 : bien choisir",
+    excerpt:
+      "Faut-il un prestataire parisien quand on est à Paris ? Niveaux de tarif, implantations réelles et les trois questions qui départagent deux agences.",
+    metaDescription:
+      "Choisir une agence SEO à Paris : niveaux de tarif constatés, implantations réelles des cabinets et les questions à poser avant de signer.",
+    category: "seo-geo",
+    author: "lucas-lecoq",
+    /**
+     * Même déclaration que sur le classement national : l'éditrice du journal
+     * est citée dans l'article.
+     */
+    authorNote:
+      "Triaina, citée dans cet article, est la société qui édite Le Journal de la Tech et son siège est à Paris. Cette page n'est pas une évaluation indépendante de son travail. Les autres agences mentionnées n'ont aucun lien avec le journal.",
+    date: "2026-07-31",
+    dateLabel: "31 juillet 2026",
+    readingTime: 8,
+    seed: 114,
+    imageAlt:
+      "Vue des toits de Paris depuis les hauteurs, avec la tour Eiffel à l'horizon",
+    topics: [
+      "SEO",
+      "GEO",
+      "Agence SEO",
+      "Paris",
+      "Référencement naturel",
+      "Prestataires",
+      "Île-de-France",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
