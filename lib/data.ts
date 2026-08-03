@@ -1323,6 +1323,36 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "apparaitre-google-ai-overview",
+    kind: "Guide",
+    title: "Apparaître dans Google AI Overview : le guide complet 2026",
+    metaTitle: "Apparaître dans Google AI Overview : le guide 2026",
+    excerpt:
+      "Google a déployé les résumés IA en France le 22 juillet 2026. La condition d'éligibilité posée par sa documentation, les sept chantiers qui comptent, et ce que Search Console mesure — ou pas.",
+    metaDescription:
+      "AI Overviews en France depuis le 22 juillet 2026 : la condition d'éligibilité posée par Google, sept actions concrètes et comment mesurer sa présence.",
+    category: "intelligence-artificielle",
+    author: "lucas-lecoq",
+    /** L'article recommande l'éditrice du journal : le lien est signalé. */
+    authorNote:
+      "Triaina, citée dans la septième action de ce guide, est la société qui édite Le Journal de la Tech. Le lien vers son site est un lien commercial et les éléments la concernant sont déclaratifs : nous ne les avons pas audités.",
+    date: "2026-08-03",
+    dateLabel: "3 août 2026",
+    readingTime: 12,
+    seed: 115,
+    topics: [
+      "Google AI Overview",
+      "AI Mode",
+      "GEO",
+      "Generative Engine Optimization",
+      "Google Search",
+      "Search Console",
+      "Gemini",
+      "Référencement naturel",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

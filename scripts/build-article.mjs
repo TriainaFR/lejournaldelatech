@@ -183,10 +183,18 @@ for (const m of faqSection.matchAll(/<p><strong>(.*?)<\/strong>\s*(.*?)<\/p>/gs)
 }
 
 /* — Sources citées : autorité et vérifiabilité — */
+/**
+ * `sources` alimente la propriété `citation` du balisage Article, qui désigne
+ * une œuvre citée. Un lien commercial — la page d'un produit classé, le site
+ * d'un annonceur — n'en est pas une : `excludeSources` permet de l'écarter du
+ * relevé sans le retirer du corps de l'article.
+ */
+const exclus = config.excludeSources ?? [];
 const sources = [];
 for (const m of html.matchAll(
   /<a[^>]*href="(https?:[^"]+)"[^>]*>(.*?)<\/a>/g
 )) {
+  if (exclus.some((needle) => m[1].includes(needle))) continue;
   sources.push({ url: m[1], label: m[2].replace(/<[^>]+>/g, "").trim() });
 }
 
