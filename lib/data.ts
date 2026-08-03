@@ -1341,6 +1341,8 @@ export const articles: Article[] = [
     dateLabel: "3 août 2026",
     readingTime: 12,
     seed: 115,
+    imageAlt:
+      "Écran d'ordinateur affichant la page d'accueil du moteur de recherche Google",
     topics: [
       "Google AI Overview",
       "AI Mode",
