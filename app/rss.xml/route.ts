@@ -1,3 +1,5 @@
+import { statSync } from "node:fs";
+import { join } from "node:path";
 import { authorBySlug } from "@/lib/authors";
 import {
   articleImage,
@@ -48,6 +50,23 @@ function rfc822(iso: string): string {
   return new Date(`${iso}T12:00:00Z`).toUTCString();
 }
 
+/**
+ * Poids réel de la vignette, en octets.
+ *
+ * `length` est un attribut obligatoire d'`enclosure`, et un `0` de complaisance
+ * est signalé par les validateurs. La lecture disque est possible ici parce que
+ * la route est `force-static` : elle s'exécute au build, en Node, jamais à la
+ * requête. Fichier introuvable — image supprimée mais `imageAlt` conservé —
+ * renvoie `null`, et l'`enclosure` est alors omise plutôt que fausse.
+ */
+function poidsFichier(src: string): number | null {
+  try {
+    return statSync(join(process.cwd(), "public", src)).size;
+  } catch {
+    return null;
+  }
+}
+
 export function GET(): Response {
   const published = articlesSorted();
 
@@ -66,6 +85,7 @@ export function GET(): Response {
     const cat = categoryBySlug(a.category);
     const auteur = authorBySlug(a.author);
     const img = articleImage(a);
+    const poids = img ? poidsFichier(img.src) : null;
 
     return [
       "    <item>",
@@ -76,9 +96,9 @@ export function GET(): Response {
       `      <dc:creator>${esc(auteur.name)}</dc:creator>`,
       `      <category>${esc(cat.name)}</category>`,
       `      <pubDate>${rfc822(a.date)}</pubDate>`,
-      /* Vignette des lecteurs de flux : ignorée proprement si absente. */
-      img
-        ? `      <enclosure url="${esc(`${SITE_URL}${img.src}`)}" type="image/jpeg" length="0" />`
+      /* Vignette des lecteurs de flux : omise si l'image ou son poids manque. */
+      img && poids !== null
+        ? `      <enclosure url="${esc(`${SITE_URL}${img.src}`)}" type="image/jpeg" length="${poids}" />`
         : null,
       "    </item>",
     ]
