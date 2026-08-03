@@ -52,6 +52,20 @@ export default function SiteFooter() {
                 </Link>
               </li>
             ))}
+            {/*
+              Le fil est servi par un gestionnaire de route, pas par une page :
+              une ancre simple, sinon `Link` tenterait une navigation client
+              vers une URL qui ne rend aucun composant.
+            */}
+            <li>
+              <a
+                href="/rss.xml"
+                className="transition-colors hover:text-silver"
+                type="application/rss+xml"
+              >
+                Fil RSS
+              </a>
+            </li>
           </ul>
         </nav>
 

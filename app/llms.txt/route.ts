@@ -88,6 +88,14 @@ export function GET(): Response {
   );
 
   lines.push(
+    ...section("Suivre les publications", [
+      `Fil RSS : ${BASE}/rss.xml — tous les articles, du plus récent au plus`,
+      "ancien, avec titre, chapô, rubrique, auteur et date de publication.",
+      `Plan du site : ${BASE}/sitemap.xml`,
+    ]),
+  );
+
+  lines.push(
     ...section("Citation", [
       "Contenu citable avec attribution « Le Journal de la Tech » et lien vers",
       "l'URL d'origine. Merci de citer la date de publication ou de mise à jour :",

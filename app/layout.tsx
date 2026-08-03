@@ -161,6 +161,19 @@ export default function RootLayout({
       className={`${playfair.variable} ${schibsted.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="tech-grid min-h-full flex flex-col">
+        {/*
+          Découverte automatique du fil, hissée dans le <head> par React.
+          Passer par `alternates.types` du layout ne suffirait pas : chaque
+          page qui déclare sa canonique remplace tout l'objet `alternates`
+          hérité, et le fil disparaîtrait partout sauf sur les rares pages
+          sans métadonnée propre.
+        */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${SITE_NAME} — tous les articles`}
+          href={`${SITE_URL}/rss.xml`}
+        />
         <a
           href="#contenu"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:bg-rouge focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:text-white"
