@@ -1355,6 +1355,49 @@ export const articles: Article[] = [
     ],
     methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
   },
+  {
+    slug: "meilleur-hebergeur-vps-pas-cher",
+    kind: "Classement",
+    title: "Meilleur hébergeur VPS pas cher 2026 : le top 8 par rapport qualité-prix",
+    metaTitle: "Meilleur hébergeur VPS pas cher 2026 : le top 8",
+    excerpt:
+      "OVHcloud à 4,57 €, Hostinger à 5,49 €, IONOS à 1,20 € : huit offres d'entrée de gamme classées sur ce qu'elles tiennent rapporté à ce qu'elles coûtent réellement.",
+    metaDescription:
+      "Huit VPS d'entrée de gamme classés au rapport qualité-prix : disponibilité et temps de réponse mesurés sur 90 jours depuis Paris, tarifs réels.",
+    category: "hebergement-web",
+    author: "lucas-lecoq",
+    /**
+     * Deux pages portent les mêmes notes sur les mêmes offres : le dire évite
+     * qu'un lecteur croie à une seconde évaluation, ou à une contradiction.
+     */
+    authorNote:
+      "Les notes et les mesures de ce classement sont celles de notre comparatif VPS 2026 ; seul l'ordre change, établi ici sur le rapport qualité-prix à budget contraint. Triaina, société qui édite Le Journal de la Tech, n'intervient pas sur le marché de l'hébergement et n'a aucun lien avec les huit prestataires classés.",
+    date: "2026-08-04",
+    dateLabel: "4 août 2026",
+    readingTime: 11,
+    seed: 116,
+    imageAlt:
+      "Panneau de brassage d'une baie réseau, ports numérotés et câbles bleus et gris",
+    topics: [
+      "VPS",
+      "Hébergement web",
+      "Hostinger",
+      "OVHcloud",
+      "IONOS",
+      "Scaleway",
+      "Infomaniak",
+      "LWS",
+      "WordPress",
+      "RGPD",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Ni `datasets` ni `ranking` ici, volontairement : le relevé et les notes
+     * appartiennent à `meilleur-vps-2026`, vers lequel cette page renvoie.
+     * Les redéclarer produirait deux `Dataset` pour une seule étude et deux
+     * `Review` par produit — du balisage d'avis dupliqué sur le même domaine.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

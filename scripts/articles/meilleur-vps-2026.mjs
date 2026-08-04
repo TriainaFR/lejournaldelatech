@@ -27,6 +27,10 @@ const config = {
       "notre comparatif des hébergeurs web couvre les offres mutualisées, moins coûteuses et plus simples à administrer\\.",
       "notre [[lien:meilleur-hebergeur-web-2026|comparatif des hébergeurs web]] couvre les offres mutualisées, moins coûteuses et plus simples à administrer.",
     ],
+    [
+      "notre classement des VPS au meilleur rapport qualité-prix reprend ces mêmes mesures",
+      "notre [[lien:meilleur-hebergeur-vps-pas-cher|classement des VPS au meilleur rapport qualité-prix]] reprend ces mêmes mesures",
+    ],
   ],
 
   /** Mesures produites par la rédaction. */

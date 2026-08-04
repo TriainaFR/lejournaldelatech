@@ -140,6 +140,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <p>Commencez par trancher la question de l'infogérance : elle détermine plus que toute autre votre expérience quotidienne, et elle élimine la moitié du tableau dans un sens ou dans l'autre.</p>
 <p>Regardez ensuite la localisation, qui conditionne à la fois le temps de réponse pour votre audience et le régime juridique applicable à vos données. Nos mesures montrent que la proximité géographique pèse plus lourd que la puissance de la machine.</p>
 <p>Comparez enfin les tarifs au renouvellement, pas au tarif d'appel. Trois des huit offres de ce comparatif affichent un prix promotionnel qui ne vaut que les premiers mois.</p>
+<p>Si le budget est votre contrainte principale, notre [[lien:meilleur-hebergeur-vps-pas-cher|classement des VPS au meilleur rapport qualité-prix]] reprend ces mêmes mesures et les ordonne sur ce seul critère : le classement y change, Infomaniak cède la tête à des offres deux fois moins chères.</p>
 <p>Pour un projet qui n'a pas encore besoin de ressources dédiées, notre [[lien:meilleur-hebergeur-web-2026|comparatif des hébergeurs web]] couvre les offres mutualisées, moins coûteuses et plus simples à administrer.</p>
 
 <h2 id="sources">Sources</h2>
