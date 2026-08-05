@@ -1,0 +1,195 @@
+/**
+ * Corps de l'article « Google AI Overview : définition, fonctionnement et impact 2026 ».
+ * Généré par scripts/build-article.mjs depuis scripts/raw/google-ai-overview-definition.html —
+ * modifier la source ou la config, puis relancer le script.
+ */
+
+export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p><strong>L'essentiel.</strong> Un AI Overview est un résumé rédigé par un modèle Gemini, affiché en tête des résultats de recherche, qui synthétise plusieurs pages web et les cite par des liens. Ce n'est pas un moteur séparé : c'est une couche générative posée sur l'index existant de Google Search, déployée en France depuis le <strong>22 juillet 2026</strong>. Contrairement à ce qu'on lit souvent, aucune balise, aucun fichier machine et aucun format particulier n'ouvre l'accès à ces résumés — Google l'écrit noir sur blanc. Pour la mise en œuvre, voir notre <a href="/intelligence-artificielle/apparaitre-google-ai-overview">guide pour apparaître dans Google AI Overview</a>.</p></aside>
+<p>Le terme circule depuis deux ans dans les conférences sans que grand monde en France ait eu l'occasion d'en voir un. Depuis le 22 juillet 2026, c'est fait : les résumés générés coiffent les pages de résultats françaises.</p>
+<p>Cette page explique ce qu'est la fonctionnalité et comment elle fonctionne. Elle ne traite pas de la méthode pour y figurer, qui fait l'objet d'un <a href="/intelligence-artificielle/apparaitre-google-ai-overview">guide distinct</a>.</p>
+
+<h2 id="comment-fonctionne-un-ai-overview">Comment fonctionne un AI Overview</h2>
+<p>Deux mécanismes documentés par Google produisent ces résumés : la génération augmentée de récupération et la démultiplication de requête.</p>
+
+<h3 id="recuperer-d-abord-generer-ensuite">Récupérer d'abord, générer ensuite</h3>
+<p>Le sigle RAG désigne la <strong>génération augmentée de récupération</strong>. Un agent conversationnel classique répond depuis sa seule mémoire d'entraînement ; Google procède autrement, en trois temps.</p>
+<ol>
+<li><p>Le système interroge l'index de Search pour récupérer des pages pertinentes et récentes sur la requête.</p></li>
+<li><p>Le contenu réel de ces pages est transmis au modèle Gemini.</p></li>
+<li><p>Le modèle rédige une synthèse à partir de ce contenu, avec des liens cliquables vers les sources retenues.</p></li>
+</ol>
+<p>C'est ce qui sépare un AI Overview d'un agent conversationnel : la réponse est censée être traçable jusqu'à une page qui existe dans l'index. Google parle d'« ancrage » pour désigner ce rattachement.</p>
+<p>Cette architecture a une conséquence pratique importante, et souvent mal comprise : puisque la source doit d'abord exister dans l'index, tout se joue sur des leviers de référencement connus. Il n'y a pas de second canal d'accès.</p>
+
+<h3 id="la-demultiplication-de-requete">La démultiplication de requête</h3>
+<p>Second mécanisme, que Google nomme <em>query fan-out</em>. Face à une question complexe, le système ne lance pas une recherche mais plusieurs, sur des sous-thèmes liés, avant d'agréger les résultats.</p>
+<p>Un résumé peut donc citer un éventail de sites plus large qu'une page de résultats classique. C'est une ouverture réelle pour les pages spécialisées : une page qui ne se classe pas première sur la requête principale peut être reprise parce qu'elle traite précisément l'un des sous-thèmes explorés. La granularité y gagne davantage que la généralité.</p>
+
+<h2 id="ce-que-dit-la-documentation-de-google">Ce que dit la documentation de Google</h2>
+<p>Sur ce sujet, l'écart entre ce que Google publie et ce qui circule est considérable. Voici les quatre positions officielles, telles qu'elles figurent dans le <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">guide d'optimisation pour la recherche générative</a>.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Question</p></th><th><p>Position de Google</p></th></tr>
+<tr><td><p><strong>Condition d'éligibilité</strong></p></td><td><p>La page doit être indexée et éligible à un affichage avec extrait dans Google Search. C'est la seule condition écrite.</p></td></tr>
+<tr><td><p><strong>Balisage dédié</strong></p></td><td><p>Les données structurées ne sont pas requises pour les fonctionnalités génératives, et aucun balisage spécial n'existe pour elles.</p></td></tr>
+<tr><td><p><strong>Découpage du contenu</strong></p></td><td><p>Il n'est pas nécessaire de fragmenter une page en petits blocs pour qu'un modèle la comprenne.</p></td></tr>
+<tr><td><p><strong>Fichiers <em>llms.txt</em></strong></p></td><td><p>Il n'y a pas de fichier machine à créer ; Google Search ignore ces fichiers.</p></td></tr>
+</tbody></table></div></div>
+<p>Autrement dit, les trois quarts des « techniques GEO » vendues aujourd'hui portent sur des leviers que Google déclare ne pas utiliser. Ce qu'il met en avant à la place tient en une phrase : un point de vue propre, du type qu'apporte un test de première main et qu'un résumé de contenus existants ne peut pas produire.</p>
+
+<h2 id="ai-overview-et-resultats-organiques-ce-qui-change">AI Overview et résultats organiques : ce qui change</h2>
+<p>Le résumé s'affiche au-dessus des résultats classiques, sans les supprimer. Ce qui change est la répartition de l'attention, et les mesures disponibles viennent des marchés ouverts avant la France.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Dimension</p></th><th><p>Avant</p></th><th><p>Après</p></th></tr>
+<tr><td><p><strong>Tête de page</strong></p></td><td><p>Extrait optimisé de quelques lignes</p></td><td><p>Synthèse construite, avec ses sources</p></td></tr>
+<tr><td><p><strong>Clics, ordinateur (Royaume-Uni)</strong></p></td><td><p>Référence</p></td><td><p>Baisse de 47,5 % quand un résumé occupe la première place</p></td></tr>
+<tr><td><p><strong>Clics, mobile (Royaume-Uni)</strong></p></td><td><p>Référence</p></td><td><p>Baisse de 37,7 % dans les mêmes conditions</p></td></tr>
+<tr><td><p><strong>Premiers liens (Allemagne)</strong></p></td><td><p>Référence</p></td><td><p>Érosion mesurée entre 25 et 30 %</p></td></tr>
+<tr><td><p><strong>Objectif mesurable</strong></p></td><td><p>Position et clics</p></td><td><p>Position, clics, et citation dans le résumé</p></td></tr>
+</tbody></table></div></div>
+<p>Google répond de son côté continuer d'envoyer des milliards de clics quotidiens vers le web. Les deux constats peuvent tenir ensemble : le volume global se maintient, sa répartition se déplace. Une page bien classée peut perdre des clics si elle n'est pas citée dans le résumé ; à l'inverse, être cité sans être premier devient un objectif en soi, qui se mesure en impressions et en notoriété plutôt qu'en visites.</p>
+
+<h2 id="quelles-requetes-declenchent-un-resume">Quelles requêtes déclenchent un résumé</h2>
+<p>Toutes ne le font pas. Google indique n'afficher un résumé que lorsque ses systèmes estiment qu'une réponse générée répond utilement à la demande.</p>
+<h3 id="celles-qui-en-declenchent">Celles qui en déclenchent</h3>
+<ul>
+<li><p><strong>Informationnelles</strong> — « qu'est-ce que », « pourquoi », « définition de ».</p></li>
+<li><p><strong>Procédurales</strong> — tutoriels, marches à suivre, guides pas à pas.</p></li>
+<li><p><strong>Comparatives</strong> — « X ou Y », « différence entre ».</p></li>
+<li><p><strong>De conseil</strong> — « meilleur », « comment choisir ».</p></li>
+</ul>
+<h3 id="celles-qui-en-declenchent-peu">Celles qui en déclenchent peu</h3>
+<ul>
+<li><p><strong>Transactionnelles</strong> — achat, réservation, inscription.</p></li>
+<li><p><strong>Navigationnelles</strong> — recherche d'une marque ou d'un site précis.</p></li>
+<li><p><strong>Locales</strong> — la recherche de proximité passe encore largement par ses propres formats.</p></li>
+</ul>
+<p>Les relevés de juillet 2026 situent la proportion à près de <strong>90 % des requêtes informationnelles</strong> sur les marchés matures, contre environ 21 % deux ans plus tôt. Par secteur, BrightEdge mesure la santé autour de <strong>88 %</strong> et la tech B2B à <strong>82 %</strong>, contre 36 % un an auparavant.</p>
+<p>Ces chiffres décrivent des marchés ouverts avant le nôtre : le corpus français a quelques semaines et le déploiement se poursuit. Le premier travail consiste donc à trier son propre corpus — les pages qui répondent à une question sont concernées, les autres beaucoup moins.</p>
+
+<h2 id="ai-overview-ou-ai-mode-deux-choses-differentes">AI Overview ou AI Mode : deux choses différentes</h2>
+<p>Le déploiement français du 22 juillet portait sur deux fonctionnalités que l'on confond souvent.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Critère</p></th><th><p>AI Overview</p></th><th><p>AI Mode</p></th></tr>
+<tr><td><p><strong>Nature</strong></p></td><td><p>Résumé affiché en tête des résultats</p></td><td><p>Interface conversationnelle distincte</p></td></tr>
+<tr><td><p><strong>Emplacement</strong></p></td><td><p>Au-dessus des résultats organiques</p></td><td><p>Onglet séparé</p></td></tr>
+<tr><td><p><strong>Interaction</strong></p></td><td><p>Lecture, puis clic éventuel sur une source</p></td><td><p>Questions de suivi, par texte, voix ou image</p></td></tr>
+<tr><td><p><strong>Sources</strong></p></td><td><p>Citées avec liens</p></td><td><p>Citées, mais moins mises en avant</p></td></tr>
+<tr><td><p><strong>Exposition</strong></p></td><td><p>Immédiate : vue par défaut</p></td><td><p>Conditionnée à une démarche de l'utilisateur</p></td></tr>
+</tbody></table></div></div>
+<p>Les deux s'appuient sur le même index et la même mécanique de récupération. Pour un éditeur, l'AI Overview reste prioritaire : c'est ce que voit l'utilisateur sans rien faire.</p>
+
+<h2 id="ce-que-cela-change-pour-le-referencement">Ce que cela change pour le référencement</h2>
+<h3 id="sur-les-clics">Sur les clics</h3>
+<p>Il faut s'attendre à une baisse sur les requêtes informationnelles où un résumé s'affiche, de l'ordre de 25 à 47 % selon les marchés et le type de requête. Cette part de trafic ne reviendra pas, et il vaut mieux en tenir compte dans les prévisions que la découvrir dans six mois.</p>
+<p>En contrepartie, une métrique nouvelle apparaît : l'impression dans un résumé. Elle ne se convertit pas en visite, mais elle construit une notoriété et un signal d'autorité qui, eux, se convertissent ailleurs.</p>
+<h3 id="sur-les-contenus">Sur les contenus</h3>
+<p>La démultiplication de requête récompense la granularité : mieux vaut une page qui traite précisément un sous-sujet qu'une page généraliste qui l'effleure. La réponse doit venir tout de suite, dans la première ou la deuxième phrase sous le titre — c'est la pyramide inversée du journalisme, et elle vaut aussi pour l'extraction automatique.</p>
+<p>Enfin, l'expertise doit être attribuable : un auteur identifiable, une compétence établie, un point de vue que la page est seule à porter.</p>
+<h3 id="sur-la-mesure">Sur la mesure</h3>
+<p>Depuis le 3 juin 2026, Search Console déploie un rapport dédié aux performances de la recherche générative, qui isole les impressions issues des AI Overviews, de l'AI Mode et de Discover, par page, pays et appareil. Il ne donne en revanche ni clics, ni taux de clic, ni requêtes, et son déploiement reste progressif.</p>
+<p>Le relevé manuel garde donc son utilité : tester ses requêtes cibles en navigation privée, noter lesquelles déclenchent un résumé et si l'on y figure. En période de déploiement, un point hebdomadaire vaut mieux qu'un point mensuel.</p>
+
+<h2 id="comment-y-figurer-en-quatre-points">Comment y figurer, en quatre points</h2>
+<p>Aucune balise, aucun fichier, aucun format ne garantit l'apparition. Ce qui compte se résume à quatre chantiers, détaillés dans notre <a href="/intelligence-artificielle/apparaitre-google-ai-overview">guide complet, qui en développe sept</a>.</p>
+<ul>
+<li><p><strong>Être indexé et éligible à un extrait</strong> — exploration autorisée, page indexable, contenu textuel réel, expérience de page correcte. C'est la seule condition écrite par Google.</p></li>
+<li><p><strong>Répondre à la question posée</strong> — la réponse dans les deux premières phrases, le contexte ensuite.</p></li>
+<li><p><strong>Structurer proprement</strong> — le balisage n'est pas requis pour les fonctionnalités génératives, mais une page lisible et correctement hiérarchisée sert l'ensemble du référencement.</p></li>
+<li><p><strong>Signer et établir l'expertise</strong> — un auteur identifiable, une compétence vérifiable, un point de vue de première main.</p></li>
+</ul>
+<p>Si l'enjeu justifie un accompagnement, notre <a href="/seo-geo/meilleure-agence-seo-france">classement des agences SEO françaises</a> situe une dizaine de cabinets sur ce critère.</p>
+
+<h2 id="faq-google-ai-overview">FAQ — Google AI Overview</h2>
+<p><strong>Comment fonctionne le mécanisme RAG d'un AI Overview ?</strong> RAG désigne la génération augmentée de récupération. Google interroge d'abord son index pour récupérer des pages pertinentes et récentes, transmet leur contenu réel au modèle Gemini, qui rédige alors une synthèse avec des liens vers les sources retenues. C'est ce qui distingue un AI Overview d'un agent conversationnel : la réponse reste traçable jusqu'à une page qui existe dans l'index.</p>
+<p><strong>Quelles requêtes déclenchent un AI Overview ?</strong> Principalement les requêtes informationnelles, procédurales et comparatives : « qu'est-ce que », « comment », « différence entre ». Les relevés de juillet 2026 situent la proportion à près de 90 % des requêtes informationnelles sur les marchés matures. Les requêtes transactionnelles, navigationnelles et locales en déclenchent nettement moins.</p>
+<p><strong>Quel est l'impact des AI Overviews sur les clics ?</strong> Au Royaume-Uni, une étude relève une baisse de 47,5 % des clics sur ordinateur et de 37,7 % sur mobile lorsqu'un résumé occupe la première place. En Allemagne, l'érosion mesurée sur les premiers liens s'établit entre 25 et 30 %. Google indique de son côté continuer d'envoyer des milliards de clics quotidiens vers le web : le volume global se maintient, sa répartition se déplace.</p>
+<p><strong>Quelle différence entre AI Overview et AI Mode ?</strong> L'AI Overview est un résumé affiché au-dessus des résultats classiques, vu par défaut. L'AI Mode est une interface conversationnelle distincte, accessible dans un onglet séparé, où l'on pose des questions de suivi par texte, voix ou image. Les deux s'appuient sur le même index ; seule l'exposition diffère, ce qui rend l'AI Overview prioritaire pour un éditeur.</p>
+<p><strong>Faut-il un balisage particulier pour figurer dans un AI Overview ?</strong> Non. Google écrit que les données structurées ne sont pas requises pour les fonctionnalités génératives et qu'aucun balisage spécial n'existe pour elles. Il indique également qu'il n'y a pas de fichier machine à créer, les fichiers de type llms.txt étant ignorés par Search. La seule condition écrite reste d'être indexé et éligible à un affichage avec extrait.</p>
+
+<h2 id="ce-qu-il-faut-retenir">Ce qu'il faut retenir</h2>
+<p>Un AI Overview n'est pas une rupture technique mais un déplacement de l'interface : la même infrastructure de recherche, avec une couche de rédaction par-dessus. Trois points suffisent à s'en faire une idée juste.</p>
+<ol>
+<li><p><strong>Il n'y a pas de porte dérobée.</strong> La documentation de Google referme méthodiquement chacune des pistes techniques qui circulent : pas de balisage dédié, pas de fichier à créer, pas de découpage à opérer.</p></li>
+<li><p><strong>Les fondamentaux restent les mêmes.</strong> Une page accessible et indexée, une réponse qui vient tout de suite, une expertise attribuable, un classement déjà solide sur la requête.</p></li>
+<li><p><strong>Le calendrier compte.</strong> Le corpus français a quelques semaines et le déploiement se poursuit jusqu'à l'automne. Les positions se prennent pendant cette fenêtre.</p></li>
+</ol>
+<p>La mise en œuvre, elle, tient en sept chantiers que nous détaillons dans le <a href="/intelligence-artificielle/apparaitre-google-ai-overview">guide pour apparaître dans Google AI Overview</a>. Côté production de contenu, notre comparatif des <a href="/intelligence-artificielle/meilleur-outil-ia-2026">meilleurs outils IA 2026</a> complète la chaîne.</p>
+
+<h2 id="transparence">Transparence</h2>
+<p>Le Journal de la Tech est édité par <a href="https://www.triaina.fr/" rel="nofollow sponsored">Triaina</a>, agence de référencement naturel et de citabilité par les moteurs génératifs, qui intervient sur le sujet traité ici. Le lien ci-dessus est commercial et signalé comme tel ; cette page n'est pas une évaluation indépendante de son travail.</p>`;
+
+/** Sommaire dérivé des titres de niveau 2. */
+export const toc: { id: string; text: string }[] = [
+  {
+    "id": "comment-fonctionne-un-ai-overview",
+    "text": "Comment fonctionne un AI Overview"
+  },
+  {
+    "id": "ce-que-dit-la-documentation-de-google",
+    "text": "Ce que dit la documentation de Google"
+  },
+  {
+    "id": "ai-overview-et-resultats-organiques-ce-qui-change",
+    "text": "AI Overview et résultats organiques : ce qui change"
+  },
+  {
+    "id": "quelles-requetes-declenchent-un-resume",
+    "text": "Quelles requêtes déclenchent un résumé"
+  },
+  {
+    "id": "ai-overview-ou-ai-mode-deux-choses-differentes",
+    "text": "AI Overview ou AI Mode : deux choses différentes"
+  },
+  {
+    "id": "ce-que-cela-change-pour-le-referencement",
+    "text": "Ce que cela change pour le référencement"
+  },
+  {
+    "id": "comment-y-figurer-en-quatre-points",
+    "text": "Comment y figurer, en quatre points"
+  },
+  {
+    "id": "faq-google-ai-overview",
+    "text": "FAQ — Google AI Overview"
+  },
+  {
+    "id": "ce-qu-il-faut-retenir",
+    "text": "Ce qu'il faut retenir"
+  },
+  {
+    "id": "transparence",
+    "text": "Transparence"
+  }
+];
+
+/** Questions/réponses de la FAQ, balisées en FAQPage. */
+export const faq: { question: string; answer: string }[] = [
+  {
+    "question": "Comment fonctionne le mécanisme RAG d'un AI Overview ?",
+    "answer": "RAG désigne la génération augmentée de récupération. Google interroge d'abord son index pour récupérer des pages pertinentes et récentes, transmet leur contenu réel au modèle Gemini, qui rédige alors une synthèse avec des liens vers les sources retenues. C'est ce qui distingue un AI Overview d'un agent conversationnel : la réponse reste traçable jusqu'à une page qui existe dans l'index."
+  },
+  {
+    "question": "Quelles requêtes déclenchent un AI Overview ?",
+    "answer": "Principalement les requêtes informationnelles, procédurales et comparatives : « qu'est-ce que », « comment », « différence entre ». Les relevés de juillet 2026 situent la proportion à près de 90 % des requêtes informationnelles sur les marchés matures. Les requêtes transactionnelles, navigationnelles et locales en déclenchent nettement moins."
+  },
+  {
+    "question": "Quel est l'impact des AI Overviews sur les clics ?",
+    "answer": "Au Royaume-Uni, une étude relève une baisse de 47,5 % des clics sur ordinateur et de 37,7 % sur mobile lorsqu'un résumé occupe la première place. En Allemagne, l'érosion mesurée sur les premiers liens s'établit entre 25 et 30 %. Google indique de son côté continuer d'envoyer des milliards de clics quotidiens vers le web : le volume global se maintient, sa répartition se déplace."
+  },
+  {
+    "question": "Quelle différence entre AI Overview et AI Mode ?",
+    "answer": "L'AI Overview est un résumé affiché au-dessus des résultats classiques, vu par défaut. L'AI Mode est une interface conversationnelle distincte, accessible dans un onglet séparé, où l'on pose des questions de suivi par texte, voix ou image. Les deux s'appuient sur le même index ; seule l'exposition diffère, ce qui rend l'AI Overview prioritaire pour un éditeur."
+  },
+  {
+    "question": "Faut-il un balisage particulier pour figurer dans un AI Overview ?",
+    "answer": "Non. Google écrit que les données structurées ne sont pas requises pour les fonctionnalités génératives et qu'aucun balisage spécial n'existe pour elles. Il indique également qu'il n'y a pas de fichier machine à créer, les fichiers de type llms.txt étant ignorés par Search. La seule condition écrite reste d'être indexé et éligible à un affichage avec extrait."
+  }
+];
+
+/** Sources citées, reprises en fin d'article et dans le balisage. */
+export const sources: { url: string; label: string }[] = [
+  {
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "label": "guide d'optimisation pour la recherche générative"
+  }
+];

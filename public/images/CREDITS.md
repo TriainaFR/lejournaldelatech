@@ -25,3 +25,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleure-agence-seo-paris.jpg` — https://images.unsplash.com/photo-1566977470066-c117ef40f6cf
 - `art-apparaitre-google-ai-overview.jpg` — https://images.unsplash.com/photo-1586125674857-4eb86880905d
 - `art-meilleur-hebergeur-vps-pas-cher.jpg` — https://images.unsplash.com/photo-1544197150-b99a580bb7a8
+- `art-google-ai-overview-definition.jpg` — https://images.unsplash.com/photo-1573804633927-bfcbcd909acd

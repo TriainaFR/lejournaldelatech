@@ -1398,6 +1398,42 @@ export const articles: Article[] = [
      * `Review` par produit — du balisage d'avis dupliqué sur le même domaine.
      */
   },
+  {
+    slug: "google-ai-overview-definition",
+    kind: "Décryptage",
+    title: "Google AI Overview : c'est quoi, comment ça marche et quel impact en 2026",
+    metaTitle: "Google AI Overview : définition et fonctionnement",
+    excerpt:
+      "Un résumé rédigé par Gemini au-dessus des résultats, déployé en France depuis le 22 juillet 2026. Le mécanisme, les requêtes concernées, et les quatre positions officielles de Google que le marché ignore.",
+    metaDescription:
+      "Google AI Overview : ce que c'est, comment le mécanisme RAG fonctionne, quelles requêtes en déclenchent un, et ce que Google documente officiellement.",
+    category: "intelligence-artificielle",
+    author: "lucas-lecoq",
+    /** Page de définition adossée au guide de mise en œuvre ; Triaina y est citée. */
+    authorNote:
+      "Cette page explique la fonctionnalité ; la méthode pour y figurer fait l'objet de notre guide « Apparaître dans Google AI Overview ». Triaina, société qui édite Le Journal de la Tech, intervient sur ce marché : le lien vers son site est commercial et signalé comme tel.",
+    date: "2026-08-05",
+    dateLabel: "5 août 2026",
+    readingTime: 9,
+    seed: 117,
+    imageAlt:
+      "Enseigne au néon reprenant les couleurs du logo Google sur un mur sombre",
+    topics: [
+      "Google AI Overview",
+      "AI Mode",
+      "Gemini",
+      "Google Search",
+      "GEO",
+      "Generative Engine Optimization",
+      "Search Console",
+      "Référencement naturel",
+    ],
+    /*
+     * Pas de `methodology` : cette page ne porte aucune mesure de la rédaction.
+     * Son autorité vient de la documentation de Google, citée et liée — la
+     * rattacher au Protocole JDLT laisserait croire à un relevé qui n'existe pas.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
