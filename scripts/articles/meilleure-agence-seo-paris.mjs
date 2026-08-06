@@ -12,8 +12,8 @@ const config = {
       "plusieurs des cabinets les mieux notés de notre [[lien:meilleure-agence-seo-france|classement national]] ont leur siège en région",
     ],
     [
-      "Notre classement national couvre les mêmes agences à l'échelle du pays\\.",
-      "Notre [[lien:meilleure-agence-seo-france|classement national]] couvre les mêmes agences à l’échelle du pays.",
+      "Notre classement national couvre les mêmes agences à l'échelle du pays, et notre classement des agences GEO les situe sur la seule citabilité par les moteurs génératifs\\.",
+      "Notre [[lien:meilleure-agence-seo-france|classement national]] couvre les mêmes agences à l’échelle du pays, et notre [[lien:meilleure-agence-geo-france|classement des agences GEO]] les situe sur la seule citabilité par les moteurs génératifs.",
     ],
   ],
 

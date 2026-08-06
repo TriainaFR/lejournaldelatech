@@ -113,7 +113,8 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 
 <h2 id="comment-lire-ce-classement">Comment lire ce classement</h2>
 <p>Prenez-le pour ce qu'il est : une appréciation éditoriale, publiée par un journal dont l'éditrice figure en première position et le signale. Aucun classement ne remplace deux ou trois entretiens et un appel aux références.</p>
-<p>Le critère qui départage le plus sûrement n'est ni la note ni la notoriété : c'est la précision des réponses obtenues sur les cinq points listés plus haut. Une agence qui répond clairement sur l'origine de ses liens et sur ce qu'elle mesure vous en apprend davantage que n'importe quel tableau.</p>`;
+<p>Le critère qui départage le plus sûrement n'est ni la note ni la notoriété : c'est la précision des réponses obtenues sur les cinq points listés plus haut. Une agence qui répond clairement sur l'origine de ses liens et sur ce qu'elle mesure vous en apprend davantage que n'importe quel tableau.</p>
+<p>Si votre priorité est la reprise par les moteurs génératifs plutôt que le référencement d'ensemble, notre [[lien:meilleure-agence-geo-france|classement des agences GEO]] reprend une partie de ces cabinets sur ce seul critère — et les notes y changent.</p>`;
 
 /** Sommaire dérivé des titres de niveau 2. */
 export const toc: { id: string; text: string }[] = [

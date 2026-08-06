@@ -1434,6 +1434,44 @@ export const articles: Article[] = [
      * rattacher au Protocole JDLT laisserait croire à un relevé qui n'existe pas.
      */
   },
+  {
+    slug: "meilleure-agence-geo-france",
+    kind: "Classement",
+    title: "Meilleure agence GEO France 2026 : le classement JDLT",
+    metaTitle: "Meilleure agence GEO France 2026 : le classement",
+    excerpt:
+      "Neuf agences françaises situées sur la seule citabilité par les moteurs génératifs : notes, spécialités, budgets de 750 à 15 000 €, et les cinq questions qui départagent deux propositions.",
+    metaDescription:
+      "Classement 2026 des agences GEO françaises : neuf cabinets notés sur huit critères, budgets indicatifs et les points à vérifier avant de signer.",
+    category: "seo-geo",
+    author: "lucas-lecoq",
+    /** Troisième classement où l'éditrice du journal figure : mention sous la signature. */
+    authorNote:
+      "Triaina, classée première, est la société qui édite Le Journal de la Tech. Cette page n'est pas une évaluation indépendante de son travail. Les huit autres agences n'ont aucun lien avec le journal. Les notes sont une appréciation éditoriale et non un relevé de mesures ; elles portent sur la seule citabilité générative, ce qui explique leur écart avec nos classements SEO.",
+    date: "2026-08-06",
+    dateLabel: "6 août 2026",
+    readingTime: 10,
+    seed: 118,
+    imageAlt:
+      "Équipe travaillant sur des ordinateurs portables autour d'une table de réunion",
+    topics: [
+      "GEO",
+      "Generative Engine Optimization",
+      "Agence GEO",
+      "Citabilité IA",
+      "ChatGPT",
+      "Perplexity",
+      "Google AI Overview",
+      "Prestataires",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Ni `ranking` ni `datasets`, comme sur les deux autres classements
+     * d'agences : l'éditrice du journal s'y note elle-même, et émettre des
+     * `Review` notées dans ce cas revient à publier son propre avis en
+     * balisage d'avis. Les notes restent lisibles dans le tableau.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

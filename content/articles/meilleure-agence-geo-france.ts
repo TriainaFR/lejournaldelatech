@@ -1,0 +1,218 @@
+/**
+ * Corps de l'article « Meilleure agence GEO France 2026 ».
+ * Généré par scripts/build-article.mjs depuis scripts/raw/meilleure-agence-geo-france.html —
+ * modifier la source ou la config, puis relancer le script.
+ */
+
+export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p><strong>Transparence.</strong> Triaina, classée première de ce comparatif, est la société qui édite Le Journal de la Tech. Cette page n'est donc pas une évaluation indépendante de son travail : lisez-la comme telle et confrontez ce classement à d'autres sources avant de choisir un prestataire. Les huit autres agences citées n'ont aucun lien avec le journal. <strong>L'essentiel :</strong> neuf agences retenues, notes de 7,3 à 9,7, budgets de 750 à 15 000 € par mois — et un critère qui départage plus que tous les autres, la capacité à faire citer un contenu plutôt qu'à le positionner.</p></aside>
+<p>Le marché des agences GEO s'est constitué en dix-huit mois. Beaucoup de cabinets de référencement ont ajouté trois lettres à leur plaquette sans changer grand-chose à leur méthode ; quelques-uns ont réellement construit une pratique.</p>
+<p>Ce classement essaie de faire le tri. Il porte sur un périmètre étroit — la citabilité par les moteurs génératifs — et non sur la qualité d'ensemble d'une prestation de référencement, que couvre notre <a href="/seo-geo/meilleure-agence-seo-france">classement des agences SEO françaises</a>.</p>
+
+<h2 id="ce-que-le-geo-change">Ce que le GEO change</h2>
+<p>Le sigle désigne la <strong>Generative Engine Optimization</strong>, l'optimisation pour les moteurs génératifs : ChatGPT, Perplexity, Gemini, et les résumés de Google déployés en France depuis le 22 juillet 2026.</p>
+<p>La différence avec le référencement classique tient au mode de réponse. Un moteur de recherche renvoie une liste de liens ; un moteur génératif compose une réponse et cite quelques sources. Être bien positionné ne suffit plus : il faut être repris — ce qui suppose un contenu structuré, sourcé et attribuable. Notre <a href="/intelligence-artificielle/google-ai-overview-definition">décryptage de Google AI Overview</a> détaille le mécanisme.</p>
+<p>Une précision qui évite bien des déconvenues : le GEO ne remplace pas le référencement, il s'y adosse. La condition d'éligibilité écrite par Google est qu'une page soit déjà indexée et éligible à un extrait. Une agence qui vend du GEO à un site mal indexé vend une deuxième couche sur des fondations absentes.</p>
+
+<h2 id="notre-methode-le-protocole-jdlt-applique-au-geo">Notre méthode : le Protocole JDLT appliqué au GEO</h2>
+<p>Le <a href="/protocole-jdlt">Protocole JDLT</a> est le cadre d'évaluation maison du journal. Appliqué aux prestataires GEO, il repose sur huit critères.</p>
+<ul>
+<li><p><strong>Citabilité par les moteurs génératifs</strong> — balisage, sourçage, présence dans les publications que ces moteurs consultent. Le critère le plus lourdement pondéré.</p></li>
+<li><p><strong>Expertise technique</strong> — architecture, exploration, indexation, performances.</p></li>
+<li><p><strong>Contenu</strong> — couverture sémantique, structure des pages, réponse directe.</p></li>
+<li><p><strong>Netlinking et citations tierces</strong> — qualité, diversité et pertinence thématique.</p></li>
+<li><p><strong>Antériorité et références</strong> — cas documentés, résultats présentés.</p></li>
+<li><p><strong>Équipe</strong> — compétences internes plutôt que sous-traitées.</p></li>
+<li><p><strong>Transparence</strong> — clarté du reporting et des engagements.</p></li>
+<li><p><strong>Adaptation</strong> — réaction aux évolutions des moteurs génératifs.</p></li>
+</ul>
+<p>Une précision de méthode, la même que pour nos autres classements de prestataires. Contrairement à nos comparatifs de logiciels ou d'hébergeurs, où nous mesurons des temps de réponse et des coûts réels, l'évaluation d'une agence repose sur des éléments déclaratifs et des travaux publics. <strong>Ces notes sont une appréciation éditoriale, pas un relevé de mesures.</strong></p>
+<p>Deuxième précision, indispensable à la lecture : <strong>les notes ci-dessous diffèrent de celles de nos classements SEO</strong>, et c'est voulu. Une agence excellente en référencement technique mais peu avancée sur la citabilité perd des points ici qu'elle conserve ailleurs. Eskimoz obtient 9,1 sur notre classement SEO national et 8,8 ici ; Primelis, 8,8 contre 8,3. Le périmètre n'est pas le même, les notes non plus.</p>
+
+<h2 id="le-classement-des-agences-geo-en-france">Le classement des agences GEO en France</h2>
+<p>Notes du Protocole JDLT, août 2026. Les fourchettes tarifaires sont indicatives et varient selon le périmètre confié.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Rang</p></th><th><p>Agence</p></th><th><p>Note</p></th><th><p>Spécialité</p></th><th><p>Budget mensuel</p></th></tr>
+<tr><td><p>1</p></td><td><p><strong>Triaina</strong> (éditrice du journal)</p></td><td><p><strong>9,7</strong></p></td><td><p>Citabilité IA, technique, publication</p></td><td><p>750 à 12 000 €</p></td></tr>
+<tr><td><p>2</p></td><td><p><strong>Eskimoz</strong></p></td><td><p><strong>8,8</strong></p></td><td><p>Généraliste, contenu, équipes internes</p></td><td><p>2 000 à 10 000 €</p></td></tr>
+<tr><td><p>3</p></td><td><p><strong>Webconversion</strong></p></td><td><p><strong>8,5</strong></p></td><td><p>GEO en B2B, audit</p></td><td><p>1 500 à 8 000 €</p></td></tr>
+<tr><td><p>4</p></td><td><p><strong>Primelis</strong></p></td><td><p><strong>8,3</strong></p></td><td><p>Technique, sites volumineux</p></td><td><p>2 500 à 9 000 €</p></td></tr>
+<tr><td><p>5</p></td><td><p><strong>Noiise</strong></p></td><td><p><strong>8,1</strong></p></td><td><p>Contenu et netlinking</p></td><td><p>2 000 à 8 000 €</p></td></tr>
+<tr><td><p>6</p></td><td><p><strong>Digimood</strong></p></td><td><p><strong>7,9</strong></p></td><td><p>Opérationnel, commerce en ligne, PME</p></td><td><p>1 500 à 7 000 €</p></td></tr>
+<tr><td><p>7</p></td><td><p><strong>Natural-Net</strong></p></td><td><p><strong>7,7</strong></p></td><td><p>Technique avancée, signaux d'expertise</p></td><td><p>2 000 à 8 500 €</p></td></tr>
+<tr><td><p>8</p></td><td><p><strong>Search Foresight</strong></p></td><td><p><strong>7,5</strong></p></td><td><p>Analyse de données, multilingue</p></td><td><p>3 000 à 15 000 €</p></td></tr>
+<tr><td><p>9</p></td><td><p><strong>Luneos</strong></p></td><td><p><strong>7,3</strong></p></td><td><p>GEO adossé à la performance</p></td><td><p>2 000 à 7 000 €</p></td></tr>
+</tbody></table></div></div>
+<p>Note moyenne des neuf agences retenues : <strong>8,2 sur 10</strong>. L'écart entre la première et la dernière tient presque entièrement au critère de citabilité — sur le référencement technique, les neuf se tiennent.</p>
+
+<h2 id="les-agences-en-detail">Les agences en détail</h2>
+
+<h3 id="triaina-9-7">Triaina — 9,7</h3>
+<p>Siège à Paris. Spécialités : citabilité par les moteurs génératifs, référencement technique, publication, netlinking. Budget indicatif : 750 à 12 000 € par mois, l'offre d'entrée couvrant un périmètre restreint.</p>
+<p>Triaina édite Le Journal de la Tech. Nous la présentons ici parce qu'elle intervient sur ce marché, en signalant ce lien plutôt qu'en le passant sous silence : la lecture de sa fiche vous appartient.</p>
+<p>Son positionnement repose sur une double approche — l'optimisation technique d'un côté, l'accès aux publications que les moteurs génératifs consultent de l'autre. Le journal que vous lisez applique lui-même cette méthode : jeux de données balisés, sources liées, chiffres datés. C'est un élément de jugement sur pièces plutôt que sur déclaration.</p>
+<p>Ce qu'elle met en avant : vingt-six ans d'expertise cumulée en référencement, huit médias propriétaires, plus de cent partenaires éditoriaux, et l'intégration des outils d'IA dans ses méthodes. Ces éléments sont déclaratifs et nous ne les avons pas audités. Son site : <a href="https://www.triaina.fr" rel="nofollow sponsored">triaina.fr</a>.</p>
+
+<h3 id="eskimoz-8-8">Eskimoz — 8,8</h3>
+<p>Budget indicatif : 2 000 à 10 000 € par mois.</p>
+<p>L'une des structures les plus étoffées du marché français. Sa taille lui permet de couvrir technique, contenu et netlinking avec des équipes internes, et de servir des comptes exigeants.</p>
+<p>Notre verdict : un choix solide pour un projet d'ampleur demandant plusieurs spécialités en parallèle. Sa note baisse ici par rapport à notre classement SEO : la citabilité générative n'est pas encore le cœur de sa pratique.</p>
+
+<h3 id="webconversion-8-5">Webconversion — 8,5</h3>
+<p>Agence lyonnaise orientée acquisition B2B. Budget indicatif : 1 500 à 8 000 € par mois.</p>
+<p>L'une des premières structures françaises à avoir formalisé une offre GEO distincte plutôt qu'une ligne ajoutée à une prestation de référencement : audit, analyse sémantique, production de contenus et vérification de la reprise par les moteurs génératifs.</p>
+<p>Notre verdict : pertinente pour une entreprise B2B qui veut un interlocuteur dont le GEO est le sujet principal et non l'appoint.</p>
+
+<h3 id="primelis-8-3">Primelis — 8,3</h3>
+<p>Budget indicatif : 2 500 à 9 000 € par mois.</p>
+<p>Reconnue pour la profondeur de son travail technique : architecture, performances, résolution des problèmes d'indexation sur les sites volumineux. C'est précisément le socle sans lequel aucun travail de citabilité ne tient.</p>
+<p>Notre verdict : cohérente quand le frein est technique. Moins avancée sur la production de signaux d'expertise.</p>
+
+<h3 id="noiise-8-1">Noiise — 8,1</h3>
+<p>Présence nationale, dont Paris, Lyon et Marseille. Budget indicatif : 2 000 à 8 000 € par mois.</p>
+<p>Sa force tient à l'articulation entre production de contenu et acquisition de liens, les deux leviers qui alimentent la reprise par un moteur génératif.</p>
+<p>Notre verdict : adaptée aux projets où le contenu est le principal levier, avec un bon rapport qualité-prix.</p>
+
+<h3 id="digimood-7-9">Digimood — 7,9</h3>
+<p>Siège à Marseille. Budget indicatif : 1 500 à 7 000 € par mois.</p>
+<p>Approche opérationnelle assumée : peu de conseil abstrait, beaucoup d'exécution. Convient aux PME qui veulent des chantiers courts et des résultats lisibles.</p>
+<p>Notre verdict : à retenir si votre frein est éditorial plutôt que technique.</p>
+
+<h3 id="natural-net-7-7">Natural-Net — 7,7</h3>
+<p>Budget indicatif : 2 000 à 8 500 € par mois.</p>
+<p>Profil technique marqué, avec un travail suivi sur les signaux d'expertise et une méthode formalisée pour mesurer la part de voix d'une marque sur les moteurs génératifs.</p>
+<p>Notre verdict : pertinente pour une entreprise qui veut piloter par les indicateurs plutôt que par les impressions.</p>
+
+<h3 id="search-foresight-7-5">Search Foresight — 7,5</h3>
+<p>Budget indicatif : 3 000 à 15 000 € par mois.</p>
+<p>Positionnée sur l'analyse de données et les problématiques internationales : sites multilingues, arbitrages entre marchés. Ses tarifs, les plus élevés du classement en haut de fourchette, correspondent à ce type de mission.</p>
+<p>Notre verdict : convient aux organisations multi-marchés. Surdimensionnée pour un site français unique.</p>
+
+<h3 id="luneos-7-3">Luneos — 7,3</h3>
+<p>Agence nantaise. Budget indicatif : 2 000 à 7 000 € par mois.</p>
+<p>Le GEO s'y intègre à une stratégie de référencement orientée résultats : analyse des performances sur les moteurs génératifs, structuration des pages pour la conversion autant que pour la reprise.</p>
+<p>Notre verdict : un choix cohérent quand la visibilité n'est pas une fin en soi mais un moyen d'acquisition mesuré.</p>
+
+<h2 id="ce-que-fait-vraiment-une-agence-geo">Ce que fait vraiment une agence GEO</h2>
+<p>Le métier est jeune et les plaquettes se ressemblent. En pratique, une prestation sérieuse couvre cinq chantiers.</p>
+<ul>
+<li><p><strong>Un audit d'éligibilité</strong> — vérifier que les pages sont explorables, indexées et éligibles à un extrait. Sans quoi rien d'autre ne compte.</p></li>
+<li><p><strong>La restructuration des contenus</strong> — réponse en tête de section, hiérarchie lisible, affirmations sourcées et datées.</p></li>
+<li><p><strong>La production de signaux d'expertise</strong> — auteurs identifiables, données de première main, point de vue que la page est seule à porter.</p></li>
+<li><p><strong>L'obtention de citations tierces</strong> — presse spécialisée, organisations professionnelles, travaux repris ailleurs.</p></li>
+<li><p><strong>La mesure</strong> — relevé des requêtes cibles sur chaque moteur, suivi des citations, rapport des impressions génératives de Search Console.</p></li>
+</ul>
+<p>Notre guide <a href="/intelligence-artificielle/apparaitre-google-ai-overview">pour apparaître dans Google AI Overview</a> détaille ces chantiers côté Google.</p>
+
+<h2 id="combien-coute-un-accompagnement-geo">Combien coûte un accompagnement GEO</h2>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Type d'accompagnement</p></th><th><p>Budget</p></th><th><p>Durée utile</p></th></tr>
+<tr><td><p>Audit initial</p></td><td><p>1 500 à 5 000 € au forfait</p></td><td><p>Ponctuel</p></td></tr>
+<tr><td><p>Offre d'entrée, périmètre restreint</p></td><td><p>750 à 1 500 € par mois</p></td><td><p>6 à 12 mois</p></td></tr>
+<tr><td><p>Accompagnement courant</p></td><td><p>3 000 à 6 000 € par mois</p></td><td><p>6 à 12 mois</p></td></tr>
+<tr><td><p>Grands comptes, multi-marchés</p></td><td><p>6 000 à 15 000 € par mois</p></td><td><p>12 mois et plus</p></td></tr>
+</tbody></table></div></div>
+<p>Une remarque sur le bas de la fourchette : une offre d'entrée n'est pas un accompagnement au rabais, c'est un périmètre réduit — un chantier à la fois. Elle a du sens pour éprouver une méthode avant d'engager davantage. Ce qui doit alerter, ce n'est pas un tarif bas, c'est un tarif bas assorti d'une promesse large.</p>
+
+<h2 id="un-outil-ne-remplace-pas-une-agence">Un outil ne remplace pas une agence</h2>
+<p>Une confusion revient souvent dans les classements en circulation : y figurent des <em>outils</em> de suivi présentés comme des agences. Ce sont deux achats différents.</p>
+<p><strong>Meteoria</strong>, par exemple, est un logiciel français de suivi de visibilité dans les réponses des modèles, facturé de 75 à 700 € par mois selon le volume de requêtes suivies. Il mesure ; il n'exécute pas. La plupart des agences de ce classement s'appuient d'ailleurs sur ce type d'outil, seules ou combinées à d'autres.</p>
+<p>Un tableau de bord ne restructure pas vos pages et n'obtient pas vos citations. Inversement, une agence sans instrument de mesure vous demandera de la croire sur parole. Les deux vont ensemble, ils ne se substituent pas.</p>
+
+<h2 id="geo-et-seo-un-seul-budget-deux-chantiers">GEO et SEO : un seul budget, deux chantiers</h2>
+<p>La question « faut-il choisir » est mal posée. Les deux leviers reposent sur les mêmes fondations : un site explorable, des contenus structurés, une autorité thématique. Le GEO ajoute une exigence — que le contenu soit repris et attribué — mais ne dispense d'aucune des précédentes.</p>
+<p>L'ordre qui fonctionne pour une entreprise qui démarre : d'abord un référencement propre, ensuite la citabilité. Confier le second à une agence pendant que le premier n'est pas fait revient à payer deux fois le même retard.</p>
+
+<h2 id="cinq-points-a-verifier-avant-de-signer">Cinq points à vérifier avant de signer</h2>
+<ul>
+<li><p><strong>Qui exécute.</strong> Demandez qui travaillera sur le dossier, quelle part est réalisée en interne, combien de jours sont effectivement facturés.</p></li>
+<li><p><strong>Comment les citations sont obtenues.</strong> Faites préciser l'origine des publications visées et le budget qui leur est consacré. Une réponse floue sur ce point est le meilleur indicateur du sérieux d'une offre GEO.</p></li>
+<li><p><strong>Ce qui est mesuré.</strong> Exigez un tableau de bord défini avant le démarrage, avec des indicateurs liés à votre activité et pas seulement au trafic.</p></li>
+<li><p><strong>Ce qui est garanti.</strong> Aucune agence sérieuse ne garantit une citation ni une position. Une promesse chiffrée à court terme est un signal d'alarme.</p></li>
+<li><p><strong>Ce que vous récupérez en partant.</strong> Contenus, accès, historique de suivi : faites-le écrire au contrat.</p></li>
+</ul>
+
+<h2 id="faq-agence-geo">FAQ — agence GEO</h2>
+<p><strong>Une agence GEO fait-elle autre chose qu'une agence SEO ?</strong> Elle fait un métier voisin sur des fondations identiques. Le référencement vise le positionnement dans une liste de résultats ; le GEO vise la reprise du contenu dans une réponse générée, ce qui suppose un balisage propre, des affirmations sourcées et une présence dans les publications que ces moteurs consultent. Une agence qui vend du GEO sans parler d'indexation vend une couche sur des fondations absentes.</p>
+<p><strong>Combien coûte un accompagnement GEO en France ?</strong> De 750 € par mois pour une offre d'entrée à périmètre restreint, à 15 000 € pour un dispositif multi-marchés. L'accompagnement courant se situe entre 3 000 et 6 000 €. Un audit initial seul se facture généralement de 1 500 à 5 000 € au forfait.</p>
+<p><strong>Au bout de combien de temps une marque commence-t-elle à être citée ?</strong> Personne ne peut le garantir, et les délais annoncés par les agences varient de six semaines à six mois. Le facteur déterminant n'est pas l'ancienneté de la prestation mais l'état du site au départ : une page déjà bien positionnée et bien structurée est reprise beaucoup plus vite qu'une page à reconstruire. Méfiez-vous de toute promesse chiffrée dans un délai court.</p>
+<p><strong>Peut-on faire du GEO sans agence ?</strong> Oui, pour l'essentiel. Les chantiers de fond — répondre directement à la question posée, signer ses contenus, sourcer ses affirmations, vérifier son indexation — ne demandent pas de prestataire. Une agence apporte surtout la vitesse d'exécution et l'accès à des publications tierces, deux choses difficiles à produire en interne.</p>
+<p><strong>Faut-il un outil de suivi en plus de l'agence ?</strong> C'est utile mais ce n'est pas la même dépense. Un logiciel de suivi de visibilité générative se facture de 75 à 700 € par mois et sert à mesurer. Il ne restructure pas les pages et n'obtient pas de citations. Demandez à votre agence quel outil elle utilise et si son coût est inclus dans le devis.</p>
+
+<h2 id="comment-lire-ce-classement">Comment lire ce classement</h2>
+<p>Prenez-le pour ce qu'il est : une appréciation éditoriale publiée par un journal dont l'éditrice figure en première position et le signale. Aucun classement ne remplace deux ou trois entretiens et un appel aux références.</p>
+<p>Le critère qui départage le plus sûrement n'est ni la note ni la notoriété, mais la précision des réponses obtenues sur les cinq points ci-dessus. Notre <a href="/seo-geo/meilleure-agence-seo-france">classement des agences SEO françaises</a> couvre les mêmes acteurs sur le périmètre du référencement d'ensemble, et notre <a href="/seo-geo/meilleure-agence-seo-paris">classement parisien</a> sur celui de la capitale.</p>`;
+
+/** Sommaire dérivé des titres de niveau 2. */
+export const toc: { id: string; text: string }[] = [
+  {
+    "id": "ce-que-le-geo-change",
+    "text": "Ce que le GEO change"
+  },
+  {
+    "id": "notre-methode-le-protocole-jdlt-applique-au-geo",
+    "text": "Notre méthode : le Protocole JDLT appliqué au GEO"
+  },
+  {
+    "id": "le-classement-des-agences-geo-en-france",
+    "text": "Le classement des agences GEO en France"
+  },
+  {
+    "id": "les-agences-en-detail",
+    "text": "Les agences en détail"
+  },
+  {
+    "id": "ce-que-fait-vraiment-une-agence-geo",
+    "text": "Ce que fait vraiment une agence GEO"
+  },
+  {
+    "id": "combien-coute-un-accompagnement-geo",
+    "text": "Combien coûte un accompagnement GEO"
+  },
+  {
+    "id": "un-outil-ne-remplace-pas-une-agence",
+    "text": "Un outil ne remplace pas une agence"
+  },
+  {
+    "id": "geo-et-seo-un-seul-budget-deux-chantiers",
+    "text": "GEO et SEO : un seul budget, deux chantiers"
+  },
+  {
+    "id": "cinq-points-a-verifier-avant-de-signer",
+    "text": "Cinq points à vérifier avant de signer"
+  },
+  {
+    "id": "faq-agence-geo",
+    "text": "FAQ — agence GEO"
+  },
+  {
+    "id": "comment-lire-ce-classement",
+    "text": "Comment lire ce classement"
+  }
+];
+
+/** Questions/réponses de la FAQ, balisées en FAQPage. */
+export const faq: { question: string; answer: string }[] = [
+  {
+    "question": "Une agence GEO fait-elle autre chose qu'une agence SEO ?",
+    "answer": "Elle fait un métier voisin sur des fondations identiques. Le référencement vise le positionnement dans une liste de résultats ; le GEO vise la reprise du contenu dans une réponse générée, ce qui suppose un balisage propre, des affirmations sourcées et une présence dans les publications que ces moteurs consultent. Une agence qui vend du GEO sans parler d'indexation vend une couche sur des fondations absentes."
+  },
+  {
+    "question": "Combien coûte un accompagnement GEO en France ?",
+    "answer": "De 750 € par mois pour une offre d'entrée à périmètre restreint, à 15 000 € pour un dispositif multi-marchés. L'accompagnement courant se situe entre 3 000 et 6 000 €. Un audit initial seul se facture généralement de 1 500 à 5 000 € au forfait."
+  },
+  {
+    "question": "Au bout de combien de temps une marque commence-t-elle à être citée ?",
+    "answer": "Personne ne peut le garantir, et les délais annoncés par les agences varient de six semaines à six mois. Le facteur déterminant n'est pas l'ancienneté de la prestation mais l'état du site au départ : une page déjà bien positionnée et bien structurée est reprise beaucoup plus vite qu'une page à reconstruire. Méfiez-vous de toute promesse chiffrée dans un délai court."
+  },
+  {
+    "question": "Peut-on faire du GEO sans agence ?",
+    "answer": "Oui, pour l'essentiel. Les chantiers de fond — répondre directement à la question posée, signer ses contenus, sourcer ses affirmations, vérifier son indexation — ne demandent pas de prestataire. Une agence apporte surtout la vitesse d'exécution et l'accès à des publications tierces, deux choses difficiles à produire en interne."
+  },
+  {
+    "question": "Faut-il un outil de suivi en plus de l'agence ?",
+    "answer": "C'est utile mais ce n'est pas la même dépense. Un logiciel de suivi de visibilité générative se facture de 75 à 700 € par mois et sert à mesurer. Il ne restructure pas les pages et n'obtient pas de citations. Demandez à votre agence quel outil elle utilise et si son coût est inclus dans le devis."
+  }
+];
+
+/** Sources citées, reprises en fin d'article et dans le balisage. */
+export const sources: { url: string; label: string }[] = [];

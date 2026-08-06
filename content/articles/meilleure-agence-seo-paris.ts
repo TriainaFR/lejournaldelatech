@@ -134,7 +134,7 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 
 <h2 id="comment-lire-ce-classement">Comment lire ce classement</h2>
 <p>Prenez-le pour ce qu'il est : une appréciation éditoriale publiée par un journal dont l'éditrice figure en première position et le signale. Aucun classement ne remplace deux ou trois entretiens et un appel aux références.</p>
-<p>Le critère qui départage le plus sûrement n'est ni la note ni la notoriété, mais la précision des réponses obtenues sur les cinq points ci-dessus. Notre [[lien:meilleure-agence-seo-france|classement national]] couvre les mêmes agences à l’échelle du pays.</p>`;
+<p>Le critère qui départage le plus sûrement n'est ni la note ni la notoriété, mais la précision des réponses obtenues sur les cinq points ci-dessus. Notre [[lien:meilleure-agence-seo-france|classement national]] couvre les mêmes agences à l’échelle du pays, et notre [[lien:meilleure-agence-geo-france|classement des agences GEO]] les situe sur la seule citabilité par les moteurs génératifs.</p>`;
 
 /** Sommaire dérivé des titres de niveau 2. */
 export const toc: { id: string; text: string }[] = [

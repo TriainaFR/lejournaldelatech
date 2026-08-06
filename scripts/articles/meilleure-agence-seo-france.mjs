@@ -11,6 +11,10 @@ const config = {
       "balisage des jeux de données, sources liées, chiffres datés",
       "balisage des jeux de données, sources liées, chiffres datés — voir par exemple notre [[lien:meilleur-vps-2026|comparatif des hébergeurs VPS]]",
     ],
+    [
+      "notre classement des agences GEO reprend une partie de ces cabinets sur ce seul critère",
+      "notre [[lien:meilleure-agence-geo-france|classement des agences GEO]] reprend une partie de ces cabinets sur ce seul critère",
+    ],
   ],
 
   /**
