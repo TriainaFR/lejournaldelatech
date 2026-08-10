@@ -1,0 +1,193 @@
+/**
+ * Corps de l'article « Meilleur outil IA pour les développeurs 2026 ».
+ * Généré par scripts/build-article.mjs depuis scripts/raw/meilleur-outil-ia-developpeurs.html —
+ * modifier la source ou la config, puis relancer le script.
+ */
+
+export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p><strong>L'essentiel.</strong> Pour un environnement de développement complet, <strong>Cursor</strong> (9,1) reste le plus abouti : édition multi-fichiers, complétion contextuelle, transition immédiate depuis VS Code. Pour comprendre avant d'écrire — refactorisation, revue, décision d'architecture —, <strong>Claude</strong> (8,9) domine. Pour de la complétion au fil de la frappe sans rien changer à ses habitudes, <strong>GitHub Copilot</strong> (8,4) suffit et coûte moitié moins cher. Côté gratuit, <strong>DeepSeek</strong> (7,1) est le seul illimité et auto-hébergeable ; côté confidentialité, <strong>Tabnine</strong> (6,8) est le seul à garantir que le code n'est jamais conservé.</p></aside>
+<p>Le marché s'est stabilisé autour de trois familles : les environnements de développement construits autour de l'IA, les extensions de complétion greffées sur un éditeur existant, et les modèles généralistes qu'on interroge dans une fenêtre à part. Elles ne se remplacent pas, et la plupart des développeurs en combinent deux.</p>
+<p>Ce classement porte sur le seul usage de développement. Notre <a href="/intelligence-artificielle/meilleur-outil-ia-2026">comparatif général des outils d'IA</a> couvre un périmètre plus large — rédaction, conformité, qualité du français —, et les notes y diffèrent, pour des raisons expliquées ci-dessous.</p>
+
+<h2 id="notre-methode-et-pourquoi-ces-notes-different">Notre méthode, et pourquoi ces notes diffèrent</h2>
+<p>Les six critères ci-dessous appliquent le <a href="/protocole-jdlt">Protocole JDLT</a> au travail de développement. Ils sont pondérés, et deux d'entre eux pèsent le double des autres : le raisonnement et la sécurité du code produit.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Critère</p></th><th><p>Poids</p></th><th><p>Ce qu'il mesure</p></th></tr>
+<tr><td><p><strong>Raisonnement</strong></p></td><td><p>20 %</p></td><td><p>Comprendre et restructurer du code complexe avant d'écrire</p></td></tr>
+<tr><td><p><strong>Sécurité du code produit</strong></p></td><td><p>20 %</p></td><td><p>Absence de vulnérabilités, gestion des dépendances</p></td></tr>
+<tr><td><p><strong>Complétion en temps réel</strong></p></td><td><p>15 %</p></td><td><p>Vitesse et pertinence des suggestions pendant la frappe</p></td></tr>
+<tr><td><p><strong>Édition multi-fichiers</strong></p></td><td><p>15 %</p></td><td><p>Modifications cohérentes sur plusieurs fichiers à la fois</p></td></tr>
+<tr><td><p><strong>Intégration à l'éditeur</strong></p></td><td><p>15 %</p></td><td><p>Fluidité avec VS Code, JetBrains et les autres</p></td></tr>
+<tr><td><p><strong>Rapport prix-performance</strong></p></td><td><p>15 %</p></td><td><p>Coût annuel rapporté aux capacités réelles</p></td></tr>
+</tbody></table></div></div>
+<p><strong>Pourquoi les notes s'écartent de notre comparatif général.</strong> Quatre outils y figurent déjà, avec d'autres résultats : Claude passe de 9,2 à 8,9, ChatGPT de 8,8 à 8,1, Gemini de 8,6 à 7,4, tandis que Cursor monte de 8,9 à 9,1. Ce n'est pas une révision : c'est un autre exercice. Le comparatif général pondère la rédaction, la conformité et la qualité du français natif, critères sur lesquels Claude et ChatGPT prennent l'avantage. Ici, ces critères ne comptent pas, et l'édition multi-fichiers ou l'intégration à l'éditeur — où un environnement dédié écrase un modèle généraliste — pèsent la moitié de la note.</p>
+<p>Une précision de méthode, comme pour tous nos classements de produits : ces notes agrègent des essais et des éléments publics, et non un relevé instrumenté comme nos mesures de disponibilité d'hébergeurs. Ce sont des appréciations, pas des mesures.</p>
+
+<h2 id="le-classement">Le classement</h2>
+<p>Les tarifs sont ceux des grilles publiques des éditeurs, relevés en août 2026. Ils sont affichés en dollars, monnaie de facturation de la plupart d'entre eux ; le montant prélevé varie avec le change et la TVA.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Rang</p></th><th><p>Outil</p></th><th><p>Note</p></th><th><p>Meilleur pour</p></th><th><p>Offre payante</p></th><th><p>Version gratuite</p></th></tr>
+<tr><td><p>1</p></td><td><p><strong>Cursor</strong></p></td><td><p><strong>9,1</strong></p></td><td><p>Environnement complet</p></td><td><p>À partir de 20 $</p></td><td><p>Oui, limitée</p></td></tr>
+<tr><td><p>2</p></td><td><p><strong>Claude</strong></p></td><td><p><strong>8,9</strong></p></td><td><p>Raisonnement, refactorisation</p></td><td><p>À partir de 20 $</p></td><td><p>Oui, limitée</p></td></tr>
+<tr><td><p>3</p></td><td><p><strong>GitHub Copilot</strong></p></td><td><p><strong>8,4</strong></p></td><td><p>Complétion au fil de la frappe</p></td><td><p>À partir de 10 $</p></td><td><p>Oui, quota mensuel</p></td></tr>
+<tr><td><p>4</p></td><td><p><strong>ChatGPT</strong></p></td><td><p><strong>8,1</strong></p></td><td><p>Prototypage, apprentissage</p></td><td><p>À partir de 20 $</p></td><td><p>Oui, limitée</p></td></tr>
+<tr><td><p>5</p></td><td><p><strong>Windsurf</strong></p></td><td><p><strong>7,8</strong></p></td><td><p>Environnements réglementés</p></td><td><p>À partir de 15 $</p></td><td><p>Oui, limitée</p></td></tr>
+<tr><td><p>6</p></td><td><p><strong>Gemini</strong></p></td><td><p><strong>7,4</strong></p></td><td><p>Écosystème Google Cloud</p></td><td><p>Facturation à l'usage</p></td><td><p>Oui, limitée</p></td></tr>
+<tr><td><p>7</p></td><td><p><strong>DeepSeek</strong></p></td><td><p><strong>7,1</strong></p></td><td><p>Budget nul, auto-hébergement</p></td><td><p>API à l'usage</p></td><td><p><strong>Oui, illimitée</strong></p></td></tr>
+<tr><td><p>8</p></td><td><p><strong>Tabnine</strong></p></td><td><p><strong>6,8</strong></p></td><td><p>Confidentialité du code</p></td><td><p>À partir de 12 $</p></td><td><p>Oui, basique</p></td></tr>
+</tbody></table></div></div>
+
+<h2 id="les-huit-outils-en-detail">Les huit outils en détail</h2>
+
+<h3 id="1-cursor-l-environnement-le-plus-abouti">1. Cursor — l'environnement le plus abouti</h3>
+<p>Note 9,1 · éditeur Anysphere · environnement de développement fondé sur VS Code</p>
+<p>Cursor n'est pas une extension mais un éditeur complet construit autour de l'IA. On décrit un changement en langage naturel et l'outil modifie plusieurs fichiers à la fois ; la complétion va chercher du contexte dans des fichiers qui ne sont pas ouverts. La bascule depuis VS Code est immédiate : mêmes extensions, mêmes raccourcis.</p>
+<p>Deux réserves. Le système de crédits reste difficile à anticiper d'un mois sur l'autre, et sur les très grosses bases de code la fenêtre de contexte devient le facteur limitant.</p>
+<p><strong>Notre verdict :</strong> au-delà de trois ou quatre heures de code par jour, c'est l'outil qui fait gagner le plus de temps.</p>
+
+<h3 id="2-claude-comprendre-avant-d-ecrire">2. Claude — comprendre avant d'écrire</h3>
+<p>Note 8,9 · éditeur Anthropic · modèle généraliste</p>
+<p>Claude n'est pas un outil de complétion, mais un modèle qui se trouve être très bon sur le code — en particulier là où il faut comprendre avant d'écrire : refactorisation, revue, débogage difficile, choix d'architecture. Les modèles actuels de la gamme disposent d'une fenêtre de contexte d'un million de jetons, de quoi tenir une base de code entière sans découpage.</p>
+<p>Pour du code écrit au fil de l'eau, Cursor ou Copilot restent plus fluides : Claude est un consultant, pas un dactylographe. À noter que Cursor et Copilot s'appuient eux-mêmes sur des modèles de cette génération — les comparer revient à comparer des interfaces autant que des modèles.</p>
+<p><strong>Notre verdict :</strong> le meilleur choix pour la revue de code et les décisions structurantes, et celui que nous retenons quand la sécurité du code produit prime.</p>
+
+<h3 id="3-github-copilot-la-completion-la-plus-fluide">3. GitHub Copilot — la complétion la plus fluide</h3>
+<p>Note 8,4 · éditeur GitHub · extension d'éditeur</p>
+<p>L'assistant le plus répandu, et le moins cher du classement. Il s'intègre à VS Code, JetBrains ou Neovim sans rien changer aux habitudes : on écrit, il complète, sans fenêtre séparée ni rupture de contexte.</p>
+<p>Moins capable que Cursor sur l'édition transversale, et sans mode autonome comparable.</p>
+<p><strong>Notre verdict :</strong> le meilleur rapport qualité-prix si le besoin se limite à gagner quelques secondes par fonction.</p>
+
+<h3 id="4-chatgpt-le-point-d-entree">4. ChatGPT — le point d'entrée</h3>
+<p>Note 8,1 · éditeur OpenAI · modèle généraliste</p>
+<p>C'est par là que la plupart commencent, et ce n'est pas un mauvais choix : prototypage, explication de code existant, génération de fonctions isolées, couverture large des langages.</p>
+<p>Deux limites en usage soutenu : la perte de contexte sur les projets longs, et un code produit qui demande une relecture de sécurité systématique — comme celui de tous les outils de cette liste, mais avec moins de garde-fous que les environnements dédiés.</p>
+<p><strong>Notre verdict :</strong> idéal pour débuter et pour les besoins ponctuels ; à compléter par un outil intégré à l'éditeur en usage professionnel.</p>
+
+<h3 id="5-windsurf-pour-les-environnements-contraints">5. Windsurf — pour les environnements contraints</h3>
+<p>Note 7,8 · éditeur Windsurf, anciennement Codeium · environnement de développement</p>
+<p>Windsurf joue sur deux tableaux : la productivité et la conformité. Sa fonction principale ne se contente pas de compléter, elle anticipe l'action suivante et propose des modifications. La couverture des langages et des éditeurs est large.</p>
+<p>Ses certifications de sécurité sont son vrai argument, et son écosystème reste plus petit que celui de Cursor.</p>
+<p><strong>Notre verdict :</strong> à considérer sérieusement en santé, défense ou services financiers, où la conformité conditionne le choix avant les performances.</p>
+
+<h3 id="6-gemini-l-option-google-cloud">6. Gemini — l'option Google Cloud</h3>
+<p>Note 7,4 · éditeur Google · modèle multimodal</p>
+<p>Pour les équipes déjà sur Firebase, BigQuery ou Cloud Run, l'intégration est native et le code produit tient compte de l'environnement. En dehors de cet écosystème, l'argument principal est le rapport performance-prix sur les usages intensifs.</p>
+<p>Moins immédiat que ChatGPT pour un débutant, et la facturation au jeton demande une surveillance.</p>
+<p><strong>Notre verdict :</strong> cohérent si votre infrastructure est déjà chez Google ; peu d'arguments décisifs sinon.</p>
+
+<h3 id="7-deepseek-le-seul-vraiment-gratuit">7. DeepSeek — le seul vraiment gratuit</h3>
+<p>Note 7,1 · éditeur DeepSeek · modèle ouvert</p>
+<p>DeepSeek a marqué 2025 en atteignant des performances de premier plan pour un coût d'entraînement sans commune mesure avec celui de ses concurrents. Le modèle est utilisable gratuitement et sans limite via son interface, et sa licence permet de l'héberger sur ses propres serveurs — ce qui règle la question du contrôle des données.</p>
+<p>En version hébergée, en revanche, les données transitent par des serveurs chinois : c'est le point à trancher avant tout usage professionnel. L'auto-hébergement lève l'objection mais demande des compétences d'infrastructure.</p>
+<p><strong>Notre verdict :</strong> imbattable sur le rapport performance-prix. Évaluez la question de la souveraineté avant de l'adopter en production.</p>
+
+<h3 id="8-tabnine-le-code-qui-ne-sort-pas">8. Tabnine — le code qui ne sort pas</h3>
+<p>Note 6,8 · éditeur Tabnine · complétion sous contrainte de confidentialité</p>
+<p>Tabnine ne fait pas parler de lui et garde pourtant une base d'utilisateurs fidèle en entreprise, pour une raison qui tient en une ligne : c'est le seul du panel à s'engager sur le fait que le code ne soit ni conservé ni utilisé pour entraîner un modèle. La complétion est précise, la détection d'erreurs fonctionne, la documentation automatique aussi.</p>
+<p>La version gratuite est limitée, et sur les tâches complexes Cursor et Claude restent un cran au-dessus.</p>
+<p><strong>Notre verdict :</strong> le choix logique pour une entreprise dont la politique de confidentialité interdit les autres.</p>
+
+<h2 id="quel-outil-selon-votre-profil">Quel outil selon votre profil</h2>
+
+<h3 id="vous-debutez">Vous débutez</h3>
+<p>Commencez par ChatGPT ou DeepSeek en version gratuite : les deux expliquent le code pas à pas, ce qui compte plus à ce stade que la vitesse de production. Passez à Cursor quand les fondamentaux sont acquis — pas avant, car un outil qui écrit à votre place pendant l'apprentissage vous prive de l'apprentissage.</p>
+
+<h3 id="vous-etes-developpeur-confirme">Vous êtes développeur confirmé</h3>
+<p>La combinaison qui revient le plus souvent : Cursor pour le travail quotidien, Claude pour les revues et les décisions d'architecture. Environ 40 $ par mois pour deux outils qui ne servent pas à la même chose.</p>
+
+<h3 id="vous-travaillez-sur-des-donnees-ou-du-modele">Vous travaillez sur des données ou du modèle</h3>
+<p>Claude sur le raisonnement mathématique et l'optimisation d'algorithmes, Gemini si votre chaîne de traitement est déjà chez Google, Copilot pour la complétion Python au quotidien.</p>
+
+<h3 id="vous-etes-independant-ou-en-jeune-entreprise">Vous êtes indépendant ou en jeune entreprise</h3>
+<p>DeepSeek gratuit plus Copilot à 10 $ couvre l'essentiel pour dix dollars par mois. Si vous pouvez en mettre vingt, Cursor seul suffit à la plupart des besoins.</p>
+
+<h2 id="ce-que-ces-outils-ne-font-pas">Ce que ces outils ne font pas</h2>
+<p>Ils accélèrent le développement ; ils ne remplacent pas un développeur. Trois domaines leur échappent encore, et ce sont ceux qui coûtent cher quand ils sont mal traités.</p>
+<ul>
+<li><p><strong>L'architecture.</strong> Trancher entre services distribués et application monolithique, définir les modes de communication, anticiper la montée en charge : ce sont des arbitrages de contexte, pas de syntaxe.</p></li>
+<li><p><strong>La sécurité de fond.</strong> Un outil produit du code qui compile et fonctionne. Il ne mesure pas ce que coûte une authentification mal posée ou des secrets mal rangés.</p></li>
+<li><p><strong>La revue expérimentée.</strong> Un développeur chevronné voit des motifs, de la dette technique, des risques à venir. L'outil voit du code qui marche.</p></li>
+</ul>
+<p>La conséquence pratique est simple : relisez chaque bloc avant de le pousser, vérifiez les dépendances avec un outil d'analyse, et n'écrivez jamais de clé d'API ni de schéma de base de données dans une invite.</p>
+
+<h2 id="faq-outils-d-ia-pour-developpeurs">FAQ — outils d'IA pour développeurs</h2>
+<p><strong>Quel est le meilleur outil IA pour coder en 2026 ?</strong> Cursor (9,1) pour un environnement de développement complet, Claude (8,9) pour le raisonnement et la refactorisation, GitHub Copilot (8,4) pour la complétion rapide. Le choix dépend moins d'un classement que de votre usage : un environnement intégré, un modèle qu'on interroge, ou une extension qui complète pendant la frappe.</p>
+<p><strong>Faut-il payer pour un bon outil de codage ?</strong> Non pour commencer. DeepSeek est gratuit et sans limite, ChatGPT et Claude ont des versions gratuites utilisables. Les offres payantes, de 10 à 20 $ par mois, se justifient dès l'usage professionnel quotidien — moins par les capacités brutes que par les quotas et l'intégration à l'éditeur.</p>
+<p><strong>Cursor ou GitHub Copilot ?</strong> Deux philosophies. Copilot est une extension qui complète pendant que vous écrivez, à partir de 10 $. Cursor est un éditeur entier qui raisonne et modifie plusieurs fichiers, à partir de 20 $. Pour de la complétion seule, Copilot suffit ; pour des modifications transversales, le surcoût de Cursor se rentabilise vite.</p>
+<p><strong>Quel outil pour la confidentialité des données ?</strong> Tabnine s'engage à ne jamais conserver le code. Windsurf porte les certifications attendues dans les environnements réglementés. DeepSeek peut être auto-hébergé, ce qui donne le contrôle le plus complet mais demande des compétences d'infrastructure. Pour les versions standard de ChatGPT ou Claude, le code transite par des serveurs tiers : lisez les conditions avant d'y soumettre du code sensible.</p>
+<p><strong>Un outil d'IA peut-il remplacer un développeur ?</strong> Non. Ce sont des accélérateurs sur les tâches répétitives, le prototypage et le débogage courant. Ils ne connaissent pas le contexte métier du projet, ne prennent pas de décision d'architecture, et produisent du code qui demande une relecture systématique.</p>
+<p><strong>Comment sécuriser du code produit par une IA ?</strong> Trois réflexes suffisent à couvrir l'essentiel : relire chaque bloc avant de le pousser en production, vérifier les dépendances avec un outil d'analyse, et ne jamais faire figurer de données sensibles — clés d'API, jetons, schémas de base — dans une invite.</p>
+
+<h2 id="comment-lire-ce-classement">Comment lire ce classement</h2>
+<p>Ces notes portent sur un usage précis et un moment précis. Le marché bouge vite : les modèles sous-jacents changent plusieurs fois par an, et un outil noté sur son interface peut gagner ou perdre en capacité sans que rien ne change à l'écran. Reprenez-les comme un point de départ, pas comme un verdict.</p>
+<p>Notre <a href="/intelligence-artificielle/meilleur-outil-ia-2026">comparatif général des outils d'IA</a> couvre les mêmes acteurs sur l'ensemble des usages, et notre <a href="/intelligence-artificielle/claude-vs-chatgpt">face-à-face Claude / ChatGPT</a> détaille les deux modèles généralistes de ce classement.</p>
+
+<h2 id="transparence">Transparence</h2>
+<p>Les tarifs sont relevés en août 2026 sur les grilles publiques des éditeurs et évoluent. Nos critères et leur pondération sont publics : voir le <a href="/protocole-jdlt">Protocole JDLT</a>.</p>
+<p>Le Journal de la Tech est édité par <a href="https://www.triaina.fr" rel="nofollow sponsored">Triaina</a>, agence de référencement naturel et de citabilité par les moteurs génératifs. Elle n'édite aucun des outils classés ici et n'a de lien avec aucun d'entre eux ; le lien ci-dessus est commercial.</p>`;
+
+/** Sommaire dérivé des titres de niveau 2. */
+export const toc: { id: string; text: string }[] = [
+  {
+    "id": "notre-methode-et-pourquoi-ces-notes-different",
+    "text": "Notre méthode, et pourquoi ces notes diffèrent"
+  },
+  {
+    "id": "le-classement",
+    "text": "Le classement"
+  },
+  {
+    "id": "les-huit-outils-en-detail",
+    "text": "Les huit outils en détail"
+  },
+  {
+    "id": "quel-outil-selon-votre-profil",
+    "text": "Quel outil selon votre profil"
+  },
+  {
+    "id": "ce-que-ces-outils-ne-font-pas",
+    "text": "Ce que ces outils ne font pas"
+  },
+  {
+    "id": "faq-outils-d-ia-pour-developpeurs",
+    "text": "FAQ — outils d'IA pour développeurs"
+  },
+  {
+    "id": "comment-lire-ce-classement",
+    "text": "Comment lire ce classement"
+  },
+  {
+    "id": "transparence",
+    "text": "Transparence"
+  }
+];
+
+/** Questions/réponses de la FAQ, balisées en FAQPage. */
+export const faq: { question: string; answer: string }[] = [
+  {
+    "question": "Quel est le meilleur outil IA pour coder en 2026 ?",
+    "answer": "Cursor (9,1) pour un environnement de développement complet, Claude (8,9) pour le raisonnement et la refactorisation, GitHub Copilot (8,4) pour la complétion rapide. Le choix dépend moins d'un classement que de votre usage : un environnement intégré, un modèle qu'on interroge, ou une extension qui complète pendant la frappe."
+  },
+  {
+    "question": "Faut-il payer pour un bon outil de codage ?",
+    "answer": "Non pour commencer. DeepSeek est gratuit et sans limite, ChatGPT et Claude ont des versions gratuites utilisables. Les offres payantes, de 10 à 20 $ par mois, se justifient dès l'usage professionnel quotidien — moins par les capacités brutes que par les quotas et l'intégration à l'éditeur."
+  },
+  {
+    "question": "Cursor ou GitHub Copilot ?",
+    "answer": "Deux philosophies. Copilot est une extension qui complète pendant que vous écrivez, à partir de 10 $. Cursor est un éditeur entier qui raisonne et modifie plusieurs fichiers, à partir de 20 $. Pour de la complétion seule, Copilot suffit ; pour des modifications transversales, le surcoût de Cursor se rentabilise vite."
+  },
+  {
+    "question": "Quel outil pour la confidentialité des données ?",
+    "answer": "Tabnine s'engage à ne jamais conserver le code. Windsurf porte les certifications attendues dans les environnements réglementés. DeepSeek peut être auto-hébergé, ce qui donne le contrôle le plus complet mais demande des compétences d'infrastructure. Pour les versions standard de ChatGPT ou Claude, le code transite par des serveurs tiers : lisez les conditions avant d'y soumettre du code sensible."
+  },
+  {
+    "question": "Un outil d'IA peut-il remplacer un développeur ?",
+    "answer": "Non. Ce sont des accélérateurs sur les tâches répétitives, le prototypage et le débogage courant. Ils ne connaissent pas le contexte métier du projet, ne prennent pas de décision d'architecture, et produisent du code qui demande une relecture systématique."
+  },
+  {
+    "question": "Comment sécuriser du code produit par une IA ?",
+    "answer": "Trois réflexes suffisent à couvrir l'essentiel : relire chaque bloc avant de le pousser en production, vérifier les dépendances avec un outil d'analyse, et ne jamais faire figurer de données sensibles — clés d'API, jetons, schémas de base — dans une invite."
+  }
+];
+
+/** Sources citées, reprises en fin d'article et dans le balisage. */
+export const sources: { url: string; label: string }[] = [];

@@ -4,6 +4,10 @@ const config = {
   /** Maillage : page méthode et comparatifs frères déjà publiés. */
   links: [
     [
+      "notre comparatif des outils d'IA pour développeurs reprend une partie de ces outils sur ce seul terrain",
+      "notre [[lien:meilleur-outil-ia-developpeurs|comparatif des outils d'IA pour développeurs]] reprend une partie de ces outils sur ce seul terrain",
+    ],
+    [
       "Le Protocole JDLT est notre cadre d'évaluation maison, déjà appliqué à nos comparatifs Claude vs ChatGPT et Notion vs Obsidian\\.",
       'Le <a href="/protocole-jdlt">Protocole JDLT</a> est notre cadre d’évaluation maison, déjà appliqué à nos comparatifs [[lien:claude-vs-chatgpt|Claude vs ChatGPT]] et [[lien:notion-vs-obsidian|Notion vs Obsidian]].',
     ],

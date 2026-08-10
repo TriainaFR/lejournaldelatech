@@ -27,3 +27,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-hebergeur-vps-pas-cher.jpg` — https://images.unsplash.com/photo-1544197150-b99a580bb7a8
 - `art-google-ai-overview-definition.jpg` — https://images.unsplash.com/photo-1573804633927-bfcbcd909acd
 - `art-meilleure-agence-geo-france.jpg` — https://images.unsplash.com/photo-1522071820081-009f0129c71c
+- `art-meilleur-outil-ia-developpeurs.jpg` — https://images.unsplash.com/photo-1587620962725-abab7fe55159

@@ -7,6 +7,7 @@ import * as meilleurCrmGratuit2026 from "@/content/articles/meilleur-crm-gratuit
 import * as meilleurCrmTpePme from "@/content/articles/meilleur-crm-tpe-pme";
 import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-crm-2026";
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
+import * as meilleurOutilIaDeveloppeurs from "@/content/articles/meilleur-outil-ia-developpeurs";
 import * as googleAiOverviewDefinition from "@/content/articles/google-ai-overview-definition";
 import * as meilleurHebergeurVpsPasCher from "@/content/articles/meilleur-hebergeur-vps-pas-cher";
 import * as meilleurVps2026 from "@/content/articles/meilleur-vps-2026";
@@ -35,6 +36,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-crm-tpe-pme": meilleurCrmTpePme,
   "meilleur-logiciel-crm-2026": meilleurLogicielCrm2026,
   "meilleur-outil-ia-2026": meilleurOutilIa2026,
+  "meilleur-outil-ia-developpeurs": meilleurOutilIaDeveloppeurs,
   "meilleur-outil-ia-pme": meilleurOutilIaPme,
   "google-ai-overview-definition": googleAiOverviewDefinition,
   "meilleur-hebergeur-vps-pas-cher": meilleurHebergeurVpsPasCher,

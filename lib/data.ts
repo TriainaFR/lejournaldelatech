@@ -1472,6 +1472,48 @@ export const articles: Article[] = [
      * balisage d'avis. Les notes restent lisibles dans le tableau.
      */
   },
+  {
+    slug: "meilleur-outil-ia-developpeurs",
+    kind: "Comparatif",
+    title: "Meilleur outil IA pour les développeurs 2026 : huit outils, un verdict par profil",
+    metaTitle: "Meilleur outil IA pour développeurs 2026 : le comparatif",
+    excerpt:
+      "Cursor, Claude, GitHub Copilot, ChatGPT, Windsurf, Gemini, DeepSeek, Tabnine : huit outils notés sur le seul usage de développement, avec le verdict par profil et les tarifs relevés.",
+    metaDescription:
+      "Huit outils d'IA pour coder comparés sur six critères pondérés : édition multi-fichiers, raisonnement, sécurité du code, tarifs relevés en août 2026.",
+    category: "intelligence-artificielle",
+    author: "lucas-lecoq",
+    /**
+     * Quatre outils sont déjà notés dans le comparatif général, sur un autre
+     * périmètre : le dire évite qu'un lecteur y voie une contradiction.
+     */
+    authorNote:
+      "Ce comparatif porte sur le seul usage de développement. Quatre de ces outils figurent aussi dans notre comparatif général des outils d'IA, avec d'autres notes : le périmètre y est plus large et pondère la rédaction, la conformité et la qualité du français. Triaina, société qui édite Le Journal de la Tech, n'édite aucun de ces outils.",
+    date: "2026-08-10",
+    dateLabel: "10 août 2026",
+    readingTime: 10,
+    seed: 119,
+    imageAlt:
+      "Écran d'éditeur de code affichant plusieurs fichiers ouverts côte à côte",
+    topics: [
+      "Outils IA",
+      "Développement logiciel",
+      "Cursor",
+      "Claude",
+      "GitHub Copilot",
+      "ChatGPT",
+      "Gemini",
+      "DeepSeek",
+      "Assistants de code",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Pas de `ranking` : Claude, ChatGPT, Gemini et Cursor portent déjà une
+     * `Review` notée dans l'`ItemList` de `meilleur-outil-ia-2026`. En publier
+     * une seconde, avec une note différente, produirait deux avis contradictoires
+     * sur le même produit et le même domaine.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
