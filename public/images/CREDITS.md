@@ -28,3 +28,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-google-ai-overview-definition.jpg` — https://images.unsplash.com/photo-1573804633927-bfcbcd909acd
 - `art-meilleure-agence-geo-france.jpg` — https://images.unsplash.com/photo-1522071820081-009f0129c71c
 - `art-meilleur-outil-ia-developpeurs.jpg` — https://images.unsplash.com/photo-1587620962725-abab7fe55159
+- `art-meilleur-logiciel-comptabilite-pme.jpg` — https://images.unsplash.com/photo-1450101499163-c8848c66ca85

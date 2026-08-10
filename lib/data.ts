@@ -1514,6 +1514,100 @@ export const articles: Article[] = [
      * sur le même produit et le même domaine.
      */
   },
+  {
+    slug: "meilleur-logiciel-comptabilite-pme",
+    kind: "Comparatif",
+    title: "Meilleur logiciel de comptabilité pour PME 2026 : neuf solutions comparées",
+    metaTitle: "Meilleur logiciel comptabilité PME 2026 : le comparatif",
+    excerpt:
+      "Pennylane, Axonaut, Sage, EBP, Cegid : neuf logiciels notés sur sept critères, et le calendrier réel de la facturation électronique — réception au 1ᵉʳ septembre 2026, émission des PME un an plus tard.",
+    metaDescription:
+      "Neuf logiciels de comptabilité PME comparés sur sept critères, tarifs relevés en août 2026 et le calendrier exact de l'obligation de facturation électronique.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    /** Aucun éditeur classé n'a de lien avec le journal ; l'échéance légale est datée. */
+    authorNote:
+      "Triaina, société qui édite Le Journal de la Tech, n'édite aucun des logiciels comparés ici. Les notes sont une appréciation éditoriale et non un relevé de mesures ; les tarifs et périmètres de conformité sont relevés en août 2026 et évoluent d'ici l'échéance d'émission de septembre 2027.",
+    date: "2026-08-10",
+    dateLabel: "10 août 2026",
+    readingTime: 11,
+    seed: 120,
+    imageAlt:
+      "Mains remplissant au stylo un document administratif posé sur un bureau",
+    topics: [
+      "Logiciel de comptabilité",
+      "PME",
+      "Facturation électronique",
+      "Pennylane",
+      "Sage",
+      "EBP",
+      "Cegid",
+      "Expert-comptable",
+      "SaaS",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * `ranking` déclaré, comme sur les autres comparatifs de logiciels : neuf
+     * produits tiers, aucun édité par la société qui édite le journal, et aucune
+     * note déjà publiée ailleurs sur le site — pas de risque d'avis dupliqué.
+     */
+    ranking: [
+      {
+        name: "Pennylane",
+        score: 9.1,
+        verdict:
+          "La meilleure automatisation bancaire du panel et une cinquantaine de connecteurs natifs. Paramétrage initial exigeant et facture qui grimpe avec le nombre d'utilisateurs.",
+      },
+      {
+        name: "Axonaut",
+        score: 8.7,
+        verdict:
+          "Comptabilité, facturation et suivi commercial dans un seul outil, pensé pour des dirigeants non comptables. Moins de profondeur comptable que Sage ou Cegid.",
+      },
+      {
+        name: "Sage 50cloud",
+        score: 8.4,
+        verdict:
+          "La profondeur comptable de référence : TVA multi-régimes, immobilisations, analytique et budgétaire. Interface datée et prise en main longue.",
+      },
+      {
+        name: "EBP Comptabilité Pro",
+        score: 8.1,
+        verdict:
+          "Le meilleur rapport qualité-prix à 19 € par mois, avec un support en France et une conformité fiscale suivie. Connecteurs souvent facturés en supplément.",
+      },
+      {
+        name: "Cegid Loop",
+        score: 7.8,
+        verdict:
+          "Approche modulaire proche d'un progiciel de gestion, avec multi-entités et multi-devises natifs. Entrée à 79 € par mois et mise en place qui se compte en semaines.",
+      },
+      {
+        name: "QuickBooks",
+        score: 7.5,
+        verdict:
+          "Multi-devises natif et écosystème d'applications très large. Adaptation partielle aux spécificités fiscales françaises et support moins présent en France.",
+      },
+      {
+        name: "Indy",
+        score: 7.2,
+        verdict:
+          "La prise en main la plus immédiate du panel à 9 € par mois. Outil de suivi plutôt que de comptabilité générale : ni immobilisations ni analytique.",
+      },
+      {
+        name: "Tiime",
+        score: 6.9,
+        verdict:
+          "Conçu autour de la relation avec le cabinet comptable : droits d'accès fins et partage sécurisé. Automatisation bancaire en retrait.",
+      },
+      {
+        name: "Evoliz",
+        score: 6.6,
+        verdict:
+          "Gestion des stocks intégrée et pré-comptabilité structurée, pertinentes en artisanat et commerce. Peu de connecteurs et fonctions comptables limitées.",
+      },
+    ],
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

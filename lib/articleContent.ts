@@ -5,6 +5,7 @@ import * as commentChoisirCrmSaas from "@/content/articles/comment-choisir-crm-s
 import * as meilleurHebergeurWeb2026 from "@/content/articles/meilleur-hebergeur-web-2026";
 import * as meilleurCrmGratuit2026 from "@/content/articles/meilleur-crm-gratuit-2026";
 import * as meilleurCrmTpePme from "@/content/articles/meilleur-crm-tpe-pme";
+import * as meilleurLogicielComptabilitePme from "@/content/articles/meilleur-logiciel-comptabilite-pme";
 import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-crm-2026";
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
 import * as meilleurOutilIaDeveloppeurs from "@/content/articles/meilleur-outil-ia-developpeurs";
@@ -34,6 +35,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-hebergeur-web-2026": meilleurHebergeurWeb2026,
   "meilleur-crm-gratuit-2026": meilleurCrmGratuit2026,
   "meilleur-crm-tpe-pme": meilleurCrmTpePme,
+  "meilleur-logiciel-comptabilite-pme": meilleurLogicielComptabilitePme,
   "meilleur-logiciel-crm-2026": meilleurLogicielCrm2026,
   "meilleur-outil-ia-2026": meilleurOutilIa2026,
   "meilleur-outil-ia-developpeurs": meilleurOutilIaDeveloppeurs,
