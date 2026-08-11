@@ -31,6 +31,10 @@ const config = {
       "notre classement des VPS au meilleur rapport qualité-prix reprend ces mêmes mesures",
       "notre [[lien:meilleur-hebergeur-vps-pas-cher|classement des VPS au meilleur rapport qualité-prix]] reprend ces mêmes mesures",
     ],
+    [
+      "notre comparatif des hébergeurs cloud français reprend le même relevé",
+      "notre [[lien:meilleur-hebergeur-cloud-france|comparatif des hébergeurs cloud français]] reprend le même relevé",
+    ],
   ],
 
   /** Mesures produites par la rédaction. */

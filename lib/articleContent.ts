@@ -11,6 +11,7 @@ import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-c
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
 import * as meilleurOutilIaDeveloppeurs from "@/content/articles/meilleur-outil-ia-developpeurs";
 import * as googleAiOverviewDefinition from "@/content/articles/google-ai-overview-definition";
+import * as meilleurHebergeurCloudFrance from "@/content/articles/meilleur-hebergeur-cloud-france";
 import * as meilleurHebergeurVpsPasCher from "@/content/articles/meilleur-hebergeur-vps-pas-cher";
 import * as meilleurVps2026 from "@/content/articles/meilleur-vps-2026";
 import * as meilleureAgenceGeoFrance from "@/content/articles/meilleure-agence-geo-france";
@@ -43,6 +44,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-outil-ia-developpeurs": meilleurOutilIaDeveloppeurs,
   "meilleur-outil-ia-pme": meilleurOutilIaPme,
   "google-ai-overview-definition": googleAiOverviewDefinition,
+  "meilleur-hebergeur-cloud-france": meilleurHebergeurCloudFrance,
   "meilleur-hebergeur-vps-pas-cher": meilleurHebergeurVpsPasCher,
   "meilleur-vps-2026": meilleurVps2026,
   "meilleure-agence-geo-france": meilleureAgenceGeoFrance,

@@ -1515,6 +1515,47 @@ export const articles: Article[] = [
      */
   },
   {
+    slug: "meilleur-hebergeur-cloud-france",
+    kind: "Comparatif",
+    title: "Meilleur hébergeur cloud français 2026 : huit offres souveraines comparées",
+    metaTitle: "Meilleur hébergeur cloud français 2026 : le comparatif",
+    excerpt:
+      "OVHcloud, Scaleway, Infomaniak, o2switch : huit offres notées sur la disponibilité et le temps de réponse mesurés depuis Paris, la juridiction et le support en français.",
+    metaDescription:
+      "Huit hébergeurs français et européens comparés : disponibilité et temps de réponse mesurés sur 90 jours depuis Paris, juridiction, support et tarifs réels.",
+    category: "hebergement-web",
+    author: "lucas-lecoq",
+    /**
+     * Sept de ces hébergeurs sont déjà notés dans le comparatif VPS, sur un
+     * autre usage : le dire évite qu'un lecteur y voie une contradiction.
+     */
+    authorNote:
+      "Les mesures de disponibilité et de temps de réponse sont celles de notre comparatif VPS 2026 : même relevé, mêmes chiffres. Les notes diffèrent parce que le périmètre n'est pas le même — ici, le support, la juridiction et la simplicité pèsent plus lourd que dans une évaluation de machines virtuelles. Triaina, société qui édite Le Journal de la Tech, n'exploite aucune infrastructure d'hébergement.",
+    date: "2026-08-11",
+    dateLabel: "11 août 2026",
+    readingTime: 11,
+    seed: 122,
+    imageAlt:
+      "Carte mère et câblage d'un serveur, éclairés en bleu et orange",
+    topics: [
+      "Hébergement cloud",
+      "Souveraineté des données",
+      "RGPD",
+      "OVHcloud",
+      "Scaleway",
+      "Infomaniak",
+      "o2switch",
+      "Performance web",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Ni `ranking` ni `datasets` : sept de ces huit hébergeurs portent déjà une
+     * `Review` notée dans l'`ItemList` de `meilleur-vps-2026`, et le relevé de
+     * quatre-vingt-dix jours y est déjà déclaré en `Dataset`. Les redéclarer
+     * produirait des avis contradictoires et une étude en double.
+     */
+  },
+  {
     slug: "agence-google-ai-overview",
     kind: "Classement",
     title: "Agence Google AI Overview : comment choisir en 2026",
