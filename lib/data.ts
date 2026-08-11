@@ -1515,6 +1515,41 @@ export const articles: Article[] = [
      */
   },
   {
+    slug: "agence-google-ai-overview",
+    kind: "Classement",
+    title: "Agence Google AI Overview : comment choisir en 2026",
+    metaTitle: "Agence Google AI Overview : comment choisir en 2026",
+    excerpt:
+      "Huit agences situées sur un périmètre étroit — la citation dans les résumés de Google et non dans l'ensemble des moteurs génératifs. Notes, tarifs, et les écarts avec notre classement GEO expliqués.",
+    metaDescription:
+      "Huit agences comparées sur la citation dans les résumés de Google : critères pondérés, budgets de 750 à 15 000 € et les points à vérifier avant de signer.",
+    category: "seo-geo",
+    author: "lucas-lecoq",
+    /** Quatrième classement où l'éditrice figure première : le dire, et dire aussi que c'est le quatrième. */
+    authorNote:
+      "Triaina, classée première, est la société qui édite Le Journal de la Tech. Cette page n'est pas une évaluation indépendante de son travail ; c'est le quatrième de nos classements d'agences où elle figure en tête. Les sept autres agences n'ont aucun lien avec le journal. Le périmètre est restreint aux résumés de Google, ce qui explique les écarts de notes avec notre classement GEO.",
+    date: "2026-08-11",
+    dateLabel: "11 août 2026",
+    readingTime: 11,
+    seed: 121,
+    imageAlt:
+      "Tableau de bord affichant des indicateurs de performance et des courbes de suivi",
+    topics: [
+      "Google AI Overview",
+      "Agence GEO",
+      "Generative Engine Optimization",
+      "Citabilité IA",
+      "Search Console",
+      "Référencement naturel",
+      "Prestataires",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Ni `ranking` ni `datasets`, comme sur les trois autres classements
+     * d'agences : l'éditrice du journal s'y note elle-même.
+     */
+  },
+  {
     slug: "meilleur-logiciel-comptabilite-pme",
     kind: "Comparatif",
     title: "Meilleur logiciel de comptabilité pour PME 2026 : neuf solutions comparées",

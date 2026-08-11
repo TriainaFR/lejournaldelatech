@@ -1,3 +1,4 @@
+import * as agenceGoogleAiOverview from "@/content/articles/agence-google-ai-overview";
 import * as apparaitreGoogleAiOverview from "@/content/articles/apparaitre-google-ai-overview";
 import * as claudeOuChatgptSelonVotreMetier from "@/content/articles/claude-ou-chatgpt-selon-votre-metier";
 import * as claudeVsChatgpt from "@/content/articles/claude-vs-chatgpt";
@@ -28,6 +29,7 @@ export type ArticleContent = {
 
 /** Corps des articles publiés, indexé par slug. */
 const CONTENTS: Record<string, ArticleContent> = {
+  "agence-google-ai-overview": agenceGoogleAiOverview,
   "apparaitre-google-ai-overview": apparaitreGoogleAiOverview,
   "claude-ou-chatgpt-selon-votre-metier": claudeOuChatgptSelonVotreMetier,
   "claude-vs-chatgpt": claudeVsChatgpt,

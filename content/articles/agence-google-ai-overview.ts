@@ -1,0 +1,228 @@
+/**
+ * Corps de l'article « Agence Google AI Overview : comment choisir en 2026 ».
+ * Généré par scripts/build-article.mjs depuis scripts/raw/agence-google-ai-overview.html —
+ * modifier la source ou la config, puis relancer le script.
+ */
+
+export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p><strong>Transparence.</strong> Triaina, classée première de ce comparatif, est la société qui édite Le Journal de la Tech. Cette page n'est donc pas une évaluation indépendante de son travail. Les sept autres agences citées n'ont aucun lien avec le journal. <strong>L'essentiel :</strong> ce classement porte sur un périmètre étroit — la citation dans les résumés de Google, déployés en France depuis le 22 juillet 2026 — et non sur la visibilité dans l'ensemble des moteurs génératifs, que couvre notre <a href="/seo-geo/meilleure-agence-geo-france">classement des agences GEO</a>. Les notes diffèrent entre les deux, pour des raisons expliquées ci-dessous.</p></aside>
+<p>Depuis le déploiement français, une catégorie de prestation s'est constituée en quelques semaines. Elle recoupe largement le GEO, sans se confondre avec lui : la mécanique de Google n'est pas celle de ChatGPT ni celle de Perplexity, et les leviers qui fonctionnent d'un côté ne sont pas ceux qui fonctionnent de l'autre.</p>
+
+<h2 id="ce-que-ce-perimetre-recouvre-et-ce-qu-il-ne-recouvre-pas">Ce que ce périmètre recouvre, et ce qu'il ne recouvre pas</h2>
+<p>La distinction n'est pas cosmétique, et elle explique l'essentiel des écarts de notes avec notre classement GEO. Trois particularités séparent l'AI Overview des autres moteurs génératifs.</p>
+<ul>
+<li><p><strong>L'éligibilité passe par l'index de Google.</strong> Sa documentation pose une condition écrite : une page doit être indexée et éligible à un affichage avec extrait dans Google Search pour pouvoir être citée. Aucun autre moteur génératif n'impose ce préalable. Une agence forte sur ChatGPT mais faible sur le référencement technique classique perd donc ici ce qu'elle gagne ailleurs.</p></li>
+<li><p><strong>La démultiplication de requête change la cible.</strong> Face à une question complexe, Google lance plusieurs recherches sur des sous-thèmes puis agrège. Travailler pour l'AI Overview suppose donc une granularité de contenu que les autres moteurs ne récompensent pas de la même façon.</p></li>
+<li><p><strong>La mesure existe, et elle est spécifique.</strong> Depuis le 3 juin 2026, Search Console isole les impressions issues des fonctionnalités génératives de Google. Aucun équivalent officiel n'existe pour ChatGPT ou Perplexity, où la mesure reste déclarative ou instrumentée par des outils tiers.</p></li>
+</ul>
+<p>Autrement dit : ce classement récompense la maîtrise de la chaîne Google — indexation, éligibilité à l'extrait, granularité, mesure en Search Console. Notre <a href="/seo-geo/meilleure-agence-geo-france">classement GEO</a> récompense la citabilité au sens large, tous moteurs confondus. Ce sont deux compétences voisines, pas la même.</p>
+
+<h2 id="pourquoi-ces-notes-s-ecartent-de-notre-classement-geo">Pourquoi ces notes s'écartent de notre classement GEO</h2>
+<p>Sept des huit agences ci-dessous figurent aussi dans ce classement, publié cinq jours plus tôt, avec d'autres résultats. Le tableau des écarts, pour que rien ne se lise comme une contradiction.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Agence</p></th><th><p>Classement GEO</p></th><th><p>Ce classement</p></th><th><p>Ce qui explique l'écart</p></th></tr>
+<tr><td><p><strong>Natural-Net</strong></p></td><td><p>7,7</p></td><td><p><strong>9,2</strong></p></td><td><p>Profil technique marqué et travail sur les signaux d'expertise : c'est exactement la chaîne d'éligibilité que Google impose</p></td></tr>
+<tr><td><p><strong>Eskimoz</strong></p></td><td><p>8,8</p></td><td><p><strong>8,2</strong></p></td><td><p>Sa force est l'étendue des équipes et la production de contenu, moins la mécanique d'éligibilité propre à Google</p></td></tr>
+<tr><td><p><strong>Webconversion</strong></p></td><td><p>8,5</p></td><td><p><strong>8,9</strong></p></td><td><p>Offre GEO formalisée tôt et orientée pages de conversion, terrain sur lequel l'AI Overview mord le plus</p></td></tr>
+<tr><td><p><strong>Luneos</strong></p></td><td><p>7,3</p></td><td><p><strong>7,7</strong></p></td><td><p>Approche orientée mesure, qui trouve dans le rapport Search Console un point d'appui inexistant ailleurs</p></td></tr>
+<tr><td><p><strong>Primelis</strong></p></td><td><p>8,3</p></td><td><p><strong>8,4</strong></p></td><td><p>Profondeur technique, qui pèse un peu plus ici que sur le périmètre général</p></td></tr>
+<tr><td><p><strong>Digimood</strong></p></td><td><p>7,9</p></td><td><p><strong>8,0</strong></p></td><td><p>Écart non significatif</p></td></tr>
+<tr><td><p><strong>Triaina</strong></p></td><td><p>9,7</p></td><td><p><strong>9,6</strong></p></td><td><p>Écart non significatif</p></td></tr>
+</tbody></table></div></div>
+<p>Search Factory, absente du classement GEO, entre ici en quatrième position sur son seul profil technique.</p>
+<p>Un avertissement de lecture, que nous préférons écrire nous-mêmes : quatre de nos classements d'agences placent Triaina en tête depuis trois semaines. Le périmètre change à chaque fois, l'éditrice du journal non. Confrontez ces pages à d'autres sources avant de choisir un prestataire.</p>
+
+<h2 id="ce-qu-une-agence-ai-overview-fait-reellement">Ce qu'une agence AI Overview fait réellement</h2>
+<p>Le métier a trois semaines et les plaquettes se ressemblent déjà. En pratique, une prestation sérieuse tient sur trois leviers, dans cet ordre.</p>
+<p><strong>L'éligibilité d'abord.</strong> Vérifier que les pages sont explorables, indexées et éligibles à un extrait. C'est la condition écrite par Google, et c'est là que la moitié des projets s'arrêtent sans le savoir. Une agence qui vend de l'AI Overview sans commencer par l'audit d'indexation vend une couche sur des fondations absentes.</p>
+<p><strong>La citabilité ensuite.</strong> Réponse en tête de section, structure lisible, affirmations sourcées et datées, auteurs identifiables. Ce que Google met en avant dans sa documentation tient en une phrase : un point de vue propre, du type qu'apporte un test de première main.</p>
+<p><strong>La mesure enfin.</strong> Relevé manuel des requêtes cibles, suivi des citations, lecture du rapport de performances de la recherche générative en Search Console — en gardant en tête que ce rapport donne des impressions, ni clics ni requêtes. Notre guide <a href="/intelligence-artificielle/apparaitre-google-ai-overview">pour apparaître dans Google AI Overview</a> détaille ces chantiers, et notre <a href="/intelligence-artificielle/google-ai-overview-definition">décryptage de la fonctionnalité</a> en explique le mécanisme.</p>
+
+<h2 id="ce-que-le-deploiement-change-pour-votre-trafic">Ce que le déploiement change pour votre trafic</h2>
+<p>Les mesures disponibles viennent des marchés ouverts avant la France. Au Royaume-Uni, une étude relève une baisse de 47,5 % des clics sur ordinateur et de 37,7 % sur mobile lorsqu'un résumé occupe la première place. En Allemagne, l'érosion mesurée sur les premiers liens s'établit entre 25 et 30 %.</p>
+<p>La proportion de requêtes concernées varie fortement selon le secteur. Les relevés de juillet 2026 situent la santé autour de 88 % et la tech B2B à 82 %, contre 36 % un an plus tôt. Sur l'ensemble des requêtes informationnelles, la proportion approche 90 % sur les marchés matures.</p>
+<p>Le corpus français, lui, a trois semaines. Ces chiffres décrivent ce qui s'est passé ailleurs, pas ce qui est mesuré ici : personne ne dispose encore de série française exploitable, et il faut se méfier de qui prétend le contraire.</p>
+
+<h2 id="les-huit-criteres-et-leur-ponderation">Les huit critères, et leur pondération</h2>
+<p>Ces critères appliquent le <a href="/protocole-jdlt">Protocole JDLT</a> au périmètre Google. Le premier pèse un quart de la note à lui seul.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Critère</p></th><th><p>Poids</p></th><th><p>Ce qu'il mesure</p></th></tr>
+<tr><td><p><strong>Maîtrise de la chaîne d'éligibilité Google</strong></p></td><td><p>25 %</p></td><td><p>Audit d'indexation, éligibilité à l'extrait, granularité des contenus, balisage</p></td></tr>
+<tr><td><p><strong>Expertise technique</strong></p></td><td><p>20 %</p></td><td><p>Architecture, exploration, performances, résolution des blocages d'indexation</p></td></tr>
+<tr><td><p><strong>Référencement classique</strong></p></td><td><p>15 %</p></td><td><p>Positionnement organique, couverture sémantique, netlinking</p></td></tr>
+<tr><td><p><strong>Antériorité et références</strong></p></td><td><p>15 %</p></td><td><p>Cas documentés, résultats présentés, ancienneté sur le sujet</p></td></tr>
+<tr><td><p><strong>Équipe interne</strong></p></td><td><p>10 %</p></td><td><p>Compétences internes plutôt que sous-traitées</p></td></tr>
+<tr><td><p><strong>Transparence</strong></p></td><td><p>10 %</p></td><td><p>Clarté du reporting et des engagements, absence de promesse de résultat</p></td></tr>
+<tr><td><p><strong>Adaptation</strong></p></td><td><p>3 %</p></td><td><p>Réaction aux évolutions d'une fonctionnalité qui a trois semaines</p></td></tr>
+<tr><td><p><strong>Tarification</strong></p></td><td><p>2 %</p></td><td><p>Lisibilité de la grille, absence de coûts différés</p></td></tr>
+</tbody></table></div></div>
+<p>Une précision de méthode, la même que sur nos autres classements de prestataires : l'évaluation d'une agence repose sur des éléments déclaratifs et des travaux publics. Ces notes sont une appréciation éditoriale, pas un relevé de mesures.</p>
+
+<h2 id="le-classement">Le classement</h2>
+<p>Notes d'août 2026. Les fourchettes tarifaires sont indicatives et varient selon le périmètre confié.</p>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Rang</p></th><th><p>Agence</p></th><th><p>Note</p></th><th><p>Spécialité</p></th><th><p>Budget mensuel</p></th></tr>
+<tr><td><p>1</p></td><td><p><strong>Triaina</strong> (éditrice du journal)</p></td><td><p><strong>9,6</strong></p></td><td><p>Citabilité, technique, publication</p></td><td><p>750 à 12 000 €</p></td></tr>
+<tr><td><p>2</p></td><td><p><strong>Natural-Net</strong></p></td><td><p><strong>9,2</strong></p></td><td><p>Audit de visibilité IA, technique</p></td><td><p>1 500 à 10 000 €</p></td></tr>
+<tr><td><p>3</p></td><td><p><strong>Webconversion</strong></p></td><td><p><strong>8,9</strong></p></td><td><p>Contenu et conversion en B2B</p></td><td><p>2 000 à 9 000 €</p></td></tr>
+<tr><td><p>4</p></td><td><p><strong>Search Factory</strong></p></td><td><p><strong>8,6</strong></p></td><td><p>Technique, architecture, performance</p></td><td><p>2 500 à 11 000 €</p></td></tr>
+<tr><td><p>5</p></td><td><p><strong>Primelis</strong></p></td><td><p><strong>8,4</strong></p></td><td><p>Stratégie, migrations, sites volumineux</p></td><td><p>2 500 à 9 000 €</p></td></tr>
+<tr><td><p>6</p></td><td><p><strong>Eskimoz</strong></p></td><td><p><strong>8,2</strong></p></td><td><p>Généraliste, contenu, équipes internes</p></td><td><p>2 000 à 10 000 €</p></td></tr>
+<tr><td><p>7</p></td><td><p><strong>Digimood</strong></p></td><td><p><strong>8,0</strong></p></td><td><p>Opérationnel, commerce en ligne</p></td><td><p>1 500 à 7 000 €</p></td></tr>
+<tr><td><p>8</p></td><td><p><strong>Luneos</strong></p></td><td><p><strong>7,7</strong></p></td><td><p>Jeunes pousses, pilotage par la mesure</p></td><td><p>1 000 à 6 000 €</p></td></tr>
+</tbody></table></div></div>
+
+<h2 id="les-agences-en-detail">Les agences en détail</h2>
+
+<h3 id="1-triaina-9-6">1. Triaina — 9,6</h3>
+<p>Siège à Paris. Budget indicatif : 750 à 12 000 € par mois, l'offre d'entrée couvrant un périmètre restreint.</p>
+<p>Triaina édite Le Journal de la Tech. Nous la présentons ici parce qu'elle intervient sur ce marché, en signalant ce lien plutôt qu'en le passant sous silence : la lecture de sa fiche vous appartient.</p>
+<p>Son positionnement croise l'optimisation technique et l'accès aux publications que les moteurs consultent. Ce qu'elle met en avant : vingt-six ans d'expertise cumulée en référencement, huit médias propriétaires, plus de cent partenaires éditoriaux. Ces éléments sont déclaratifs et nous ne les avons pas audités. Son site : <a href="https://www.triaina.fr" rel="nofollow sponsored">triaina.fr</a>.</p>
+
+<h3 id="2-natural-net-9-2">2. Natural-Net — 9,2</h3>
+<p>Agence bordelaise. Budget indicatif : 1 500 à 10 000 € par mois.</p>
+<p>Profil technique marqué, avec un travail suivi sur les signaux d'expertise et une méthode formalisée pour mesurer la part de voix d'une marque dans les réponses générées. C'est précisément la chaîne que Google impose — indexation, éligibilité, granularité —, ce qui explique qu'elle gagne quinze places de note entre notre périmètre GEO général et celui-ci.</p>
+<p>L'agence met en avant une accréditation publique liée à l'intelligence artificielle, plusieurs centaines de sites réalisés et une note client élevée sur une centaine d'avis. Ces éléments sont déclaratifs et nous ne les avons pas vérifiés auprès des organismes concernés.</p>
+<p><strong>Notre verdict :</strong> le meilleur choix parmi les agences sans lien avec le journal, pour une entreprise dont le frein est d'abord technique.</p>
+
+<h3 id="3-webconversion-8-9">3. Webconversion — 8,9</h3>
+<p>Agence lyonnaise orientée acquisition B2B. Budget indicatif : 2 000 à 9 000 € par mois.</p>
+<p>L'une des premières structures françaises à avoir formalisé une offre distincte plutôt qu'une ligne ajoutée à une prestation de référencement. Sa particularité est d'appliquer la démarche aux pages de conversion et pas seulement aux contenus d'information — terrain sur lequel le résumé de Google mord le plus.</p>
+<p><strong>Notre verdict :</strong> pertinente pour une entreprise B2B dont le tunnel de conversion passe par des requêtes informationnelles.</p>
+
+<h3 id="4-search-factory-8-6">4. Search Factory — 8,6</h3>
+<p>Budget indicatif : 2 500 à 11 000 € par mois.</p>
+<p>Profil technique : architecture, performances, résolution des problèmes d'indexation sur les sites volumineux. C'est le socle sans lequel aucun travail de citabilité ne tient, et la raison de son entrée directe dans ce classement.</p>
+<p><strong>Notre verdict :</strong> cohérente quand le frein est technique plutôt qu'éditorial.</p>
+
+<h3 id="5-primelis-8-4">5. Primelis — 8,4</h3>
+<p>Budget indicatif : 2 500 à 9 000 € par mois.</p>
+<p>Combine stratégie et profondeur technique, avec une réputation établie sur les refontes et les migrations sans perte de visibilité.</p>
+<p><strong>Notre verdict :</strong> adaptée aux projets d'ampleur qui mobilisent plusieurs spécialités en parallèle.</p>
+
+<h3 id="6-eskimoz-8-2">6. Eskimoz — 8,2</h3>
+<p>Budget indicatif : 2 000 à 10 000 € par mois.</p>
+<p>L'une des structures les plus étoffées du marché français. Sa taille lui permet de couvrir tous les chantiers avec des équipes internes et de servir des comptes exigeants.</p>
+<p><strong>Notre verdict :</strong> un choix solide pour un projet large. Sa note baisse ici parce que sa force — l'étendue de la production — pèse moins que la mécanique d'éligibilité propre à Google.</p>
+
+<h3 id="7-digimood-8-0">7. Digimood — 8,0</h3>
+<p>Siège à Marseille. Budget indicatif : 1 500 à 7 000 € par mois.</p>
+<p>Approche opérationnelle assumée : peu de conseil abstrait, beaucoup d'exécution. Convient aux PME qui veulent des chantiers courts et des résultats lisibles.</p>
+<p><strong>Notre verdict :</strong> à retenir si votre frein est éditorial plutôt que technique.</p>
+
+<h3 id="8-luneos-7-7">8. Luneos — 7,7</h3>
+<p>Agence nantaise. Budget indicatif : 1 000 à 6 000 € par mois.</p>
+<p>Orientée jeunes pousses et structures en croissance, avec une approche pilotée par la mesure — ce que le rapport de Search Console rend possible sur ce périmètre et nulle part ailleurs.</p>
+<p><strong>Notre verdict :</strong> le ticket d'entrée le plus bas du classement, pertinent pour une première prestation à budget contraint.</p>
+
+<h2 id="combien-coute-une-prestation">Combien coûte une prestation</h2>
+<div class="table-wrap"><div class="table-wrap"><table><tbody>
+<tr><th><p>Type de prestation</p></th><th><p>Budget</p></th><th><p>Durée utile</p></th></tr>
+<tr><td><p>Audit d'éligibilité et de visibilité</p></td><td><p>1 500 à 3 000 € au forfait</p></td><td><p>Ponctuel</p></td></tr>
+<tr><td><p>Offre d'entrée, périmètre restreint</p></td><td><p>750 à 2 000 € par mois</p></td><td><p>3 à 6 mois</p></td></tr>
+<tr><td><p>Citabilité seule</p></td><td><p>1 500 à 4 000 € par mois</p></td><td><p>6 mois</p></td></tr>
+<tr><td><p>Référencement et citabilité combinés</p></td><td><p>2 500 à 8 000 € par mois</p></td><td><p>6 à 12 mois</p></td></tr>
+<tr><td><p>Accompagnement complet</p></td><td><p>4 000 à 15 000 € par mois</p></td><td><p>12 mois et plus</p></td></tr>
+</tbody></table></div></div>
+<p>Les écarts tiennent à la taille du site, à la complexité technique, au secteur et au niveau de concurrence. Une agence qui produit en interne facture structurellement plus qu'une agence qui sous-traite — c'est un arbitrage, pas un défaut, et il se pose au moment de comparer deux devis.</p>
+
+<h2 id="sept-erreurs-a-eviter">Sept erreurs à éviter</h2>
+<ul>
+<li><p><strong>Confondre agence de référencement et agence de citabilité.</strong> Les deux métiers se recoupent sans se confondre. Demandez des cas documentés sur le second, pas seulement des positions sur le premier.</p></li>
+<li><p><strong>Accepter une promesse de citation.</strong> Personne ne peut garantir une apparition dans un résumé. Une promesse chiffrée à court terme est un signal d'alarme.</p></li>
+<li><p><strong>Choisir sur la notoriété.</strong> Les structures les plus connues ne sont pas nécessairement les plus avancées sur ce périmètre, qui a trois semaines d'existence en France.</p></li>
+<li><p><strong>Ne pas définir la mesure avant de démarrer.</strong> Exigez un tableau de bord arrêté avant la signature. Le trafic seul ne dit rien de la citabilité.</p></li>
+<li><p><strong>Ne pas demander qui exécute.</strong> Quelle part est réalisée en interne, par qui, et combien de jours sont effectivement facturés.</p></li>
+<li><p><strong>Laisser l'origine des liens dans le flou.</strong> Faites préciser d'où ils viennent et quel budget leur est consacré. Une réponse vague vous expose à des pratiques que les moteurs sanctionnent.</p></li>
+<li><p><strong>Signer sans clause de restitution.</strong> Contenus, accès, historique de suivi : faites-le écrire au contrat.</p></li>
+</ul>
+
+<h2 id="faq-agence-google-ai-overview">FAQ — agence Google AI Overview</h2>
+<p><strong>Qu'est-ce qu'une agence spécialisée sur l'AI Overview ?</strong> Un prestataire qui travaille la citation dans les résumés générés par Google, et non la visibilité dans l'ensemble des moteurs génératifs. La différence tient à la condition d'éligibilité écrite par Google : une page doit être indexée et éligible à un affichage avec extrait pour pouvoir être citée. Le métier commence donc par un audit d'indexation, pas par de la production de contenu.</p>
+<p><strong>Faut-il une agence différente de son agence de référencement ?</strong> Pas nécessairement, et c'est souvent l'inverse qui est vrai. Les fondations sont les mêmes, et une agence qui tient déjà votre référencement technique part avec un avantage. Ce qui manque parfois, c'est la partie citabilité — structuration des réponses, sourçage, signaux d'expertise —, qui peut s'ajouter au périmètre existant plutôt que se confier ailleurs.</p>
+<p><strong>Combien coûte un accompagnement sur ce périmètre ?</strong> De 750 € par mois pour une offre d'entrée à périmètre restreint, à 15 000 € pour un dispositif complet. L'accompagnement courant se situe entre 2 500 et 8 000 €. Un audit d'éligibilité seul se facture de 1 500 à 3 000 € au forfait, et c'est souvent par là qu'il faut commencer.</p>
+<p><strong>Au bout de combien de temps une marque est-elle citée ?</strong> Personne ne peut le garantir, et la fonctionnalité est trop récente en France pour qu'une moyenne ait un sens. Le facteur déterminant n'est pas la durée de la prestation mais l'état du site au départ : une page déjà bien positionnée et bien structurée est reprise beaucoup plus vite qu'une page à reconstruire. Méfiez-vous de toute promesse chiffrée dans un délai court.</p>
+<p><strong>Peut-on mesurer les résultats ?</strong> En partie. Depuis le 3 juin 2026, Search Console isole les impressions issues des fonctionnalités génératives, par page, pays et appareil. Ce rapport ne donne ni clics, ni taux de clic, ni requêtes, et son déploiement reste progressif : le relevé manuel des requêtes cibles en navigation privée reste indispensable en complément.</p>
+<p><strong>Peut-on s'en occuper sans agence ?</strong> Oui, pour l'essentiel. Vérifier son indexation, répondre directement à la question posée, signer ses contenus, sourcer ses affirmations : rien de tout cela ne demande un prestataire. Une agence apporte surtout la vitesse d'exécution et l'accès à des publications tierces, deux choses difficiles à produire en interne.</p>
+
+<h2 id="comment-lire-ce-classement">Comment lire ce classement</h2>
+<p>Prenez-le pour ce qu'il est : une appréciation éditoriale publiée par un journal dont l'éditrice figure en première position et le signale, sur une fonctionnalité qui a trois semaines d'existence en France. Aucun classement ne remplace deux ou trois entretiens et un appel aux références.</p>
+<p>Notre <a href="/seo-geo/meilleure-agence-geo-france">classement des agences GEO</a> couvre les mêmes acteurs sur l'ensemble des moteurs génératifs, notre <a href="/seo-geo/meilleure-agence-seo-france">classement des agences SEO</a> sur le référencement d'ensemble. Les trois pages ne disent pas la même chose, et c'est voulu.</p>`;
+
+/** Sommaire dérivé des titres de niveau 2. */
+export const toc: { id: string; text: string }[] = [
+  {
+    "id": "ce-que-ce-perimetre-recouvre-et-ce-qu-il-ne-recouvre-pas",
+    "text": "Ce que ce périmètre recouvre, et ce qu'il ne recouvre pas"
+  },
+  {
+    "id": "pourquoi-ces-notes-s-ecartent-de-notre-classement-geo",
+    "text": "Pourquoi ces notes s'écartent de notre classement GEO"
+  },
+  {
+    "id": "ce-qu-une-agence-ai-overview-fait-reellement",
+    "text": "Ce qu'une agence AI Overview fait réellement"
+  },
+  {
+    "id": "ce-que-le-deploiement-change-pour-votre-trafic",
+    "text": "Ce que le déploiement change pour votre trafic"
+  },
+  {
+    "id": "les-huit-criteres-et-leur-ponderation",
+    "text": "Les huit critères, et leur pondération"
+  },
+  {
+    "id": "le-classement",
+    "text": "Le classement"
+  },
+  {
+    "id": "les-agences-en-detail",
+    "text": "Les agences en détail"
+  },
+  {
+    "id": "combien-coute-une-prestation",
+    "text": "Combien coûte une prestation"
+  },
+  {
+    "id": "sept-erreurs-a-eviter",
+    "text": "Sept erreurs à éviter"
+  },
+  {
+    "id": "faq-agence-google-ai-overview",
+    "text": "FAQ — agence Google AI Overview"
+  },
+  {
+    "id": "comment-lire-ce-classement",
+    "text": "Comment lire ce classement"
+  }
+];
+
+/** Questions/réponses de la FAQ, balisées en FAQPage. */
+export const faq: { question: string; answer: string }[] = [
+  {
+    "question": "Qu'est-ce qu'une agence spécialisée sur l'AI Overview ?",
+    "answer": "Un prestataire qui travaille la citation dans les résumés générés par Google, et non la visibilité dans l'ensemble des moteurs génératifs. La différence tient à la condition d'éligibilité écrite par Google : une page doit être indexée et éligible à un affichage avec extrait pour pouvoir être citée. Le métier commence donc par un audit d'indexation, pas par de la production de contenu."
+  },
+  {
+    "question": "Faut-il une agence différente de son agence de référencement ?",
+    "answer": "Pas nécessairement, et c'est souvent l'inverse qui est vrai. Les fondations sont les mêmes, et une agence qui tient déjà votre référencement technique part avec un avantage. Ce qui manque parfois, c'est la partie citabilité — structuration des réponses, sourçage, signaux d'expertise —, qui peut s'ajouter au périmètre existant plutôt que se confier ailleurs."
+  },
+  {
+    "question": "Combien coûte un accompagnement sur ce périmètre ?",
+    "answer": "De 750 € par mois pour une offre d'entrée à périmètre restreint, à 15 000 € pour un dispositif complet. L'accompagnement courant se situe entre 2 500 et 8 000 €. Un audit d'éligibilité seul se facture de 1 500 à 3 000 € au forfait, et c'est souvent par là qu'il faut commencer."
+  },
+  {
+    "question": "Au bout de combien de temps une marque est-elle citée ?",
+    "answer": "Personne ne peut le garantir, et la fonctionnalité est trop récente en France pour qu'une moyenne ait un sens. Le facteur déterminant n'est pas la durée de la prestation mais l'état du site au départ : une page déjà bien positionnée et bien structurée est reprise beaucoup plus vite qu'une page à reconstruire. Méfiez-vous de toute promesse chiffrée dans un délai court."
+  },
+  {
+    "question": "Peut-on mesurer les résultats ?",
+    "answer": "En partie. Depuis le 3 juin 2026, Search Console isole les impressions issues des fonctionnalités génératives, par page, pays et appareil. Ce rapport ne donne ni clics, ni taux de clic, ni requêtes, et son déploiement reste progressif : le relevé manuel des requêtes cibles en navigation privée reste indispensable en complément."
+  },
+  {
+    "question": "Peut-on s'en occuper sans agence ?",
+    "answer": "Oui, pour l'essentiel. Vérifier son indexation, répondre directement à la question posée, signer ses contenus, sourcer ses affirmations : rien de tout cela ne demande un prestataire. Une agence apporte surtout la vitesse d'exécution et l'accès à des publications tierces, deux choses difficiles à produire en interne."
+  }
+];
+
+/** Sources citées, reprises en fin d'article et dans le balisage. */
+export const sources: { url: string; label: string }[] = [];
