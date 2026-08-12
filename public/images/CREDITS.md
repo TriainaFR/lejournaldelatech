@@ -31,3 +31,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-logiciel-comptabilite-pme.jpg` — https://images.unsplash.com/photo-1450101499163-c8848c66ca85
 - `art-agence-google-ai-overview.jpg` — https://images.unsplash.com/photo-1526628953301-3e589a6a8b74
 - `art-meilleur-hebergeur-cloud-france.jpg` — https://images.unsplash.com/photo-1560732488-6b0df240254a
+- `art-meilleur-logiciel-comptabilite-gratuit.jpg` — https://images.unsplash.com/photo-1454165804606-c3d57bc86b40

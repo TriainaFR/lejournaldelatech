@@ -1591,6 +1591,44 @@ export const articles: Article[] = [
      */
   },
   {
+    slug: "meilleur-logiciel-comptabilite-gratuit",
+    kind: "Comparatif",
+    title: "Meilleur logiciel de comptabilité gratuit 2026 : huit outils et leurs limites",
+    metaTitle: "Meilleur logiciel comptabilité gratuit 2026 : le comparatif",
+    excerpt:
+      "Indy, Wave, Dolibarr, Henrri : huit outils gratuits notés pour une structure française, avec les deux obligations légales que « gratuit » ne dispense pas de respecter.",
+    metaDescription:
+      "Huit logiciels de comptabilité gratuits comparés pour une structure française : fonctions, adaptation à la fiscalité française et limites du plan gratuit.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    /** Satellite du comparatif PME ; Indy figure dans les deux, sur deux panels différents. */
+    authorNote:
+      "Ce comparatif porte sur les offres gratuites. Indy figure aussi dans notre comparatif des logiciels pour PME, avec une autre note : il y est comparé à des solutions payantes, ici à d'autres outils gratuits. Aucun éditeur cité n'a été consulté, et nous n'avons audité aucune attestation de conformité : les déclarations des éditeurs sont signalées comme telles.",
+    date: "2026-08-12",
+    dateLabel: "12 août 2026",
+    readingTime: 10,
+    seed: 123,
+    imageAlt:
+      "Deux personnes examinant un cahier de comptes devant des ordinateurs portables",
+    topics: [
+      "Logiciel de comptabilité",
+      "Gratuit",
+      "Micro-entrepreneur",
+      "TPE",
+      "Indy",
+      "Dolibarr",
+      "Logiciel libre",
+      "Loi anti-fraude TVA",
+      "FEC",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Pas de `ranking` : Indy porte déjà une `Review` notée (7,2) dans
+     * l'`ItemList` de `meilleur-logiciel-comptabilite-pme`. En publier une
+     * seconde à 8,9 produirait deux avis contradictoires sur le même produit.
+     */
+  },
+  {
     slug: "meilleur-logiciel-comptabilite-pme",
     kind: "Comparatif",
     title: "Meilleur logiciel de comptabilité pour PME 2026 : neuf solutions comparées",
