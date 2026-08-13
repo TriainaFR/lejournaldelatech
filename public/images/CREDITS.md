@@ -32,3 +32,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-agence-google-ai-overview.jpg` — https://images.unsplash.com/photo-1526628953301-3e589a6a8b74
 - `art-meilleur-hebergeur-cloud-france.jpg` — https://images.unsplash.com/photo-1560732488-6b0df240254a
 - `art-meilleur-logiciel-comptabilite-gratuit.jpg` — https://images.unsplash.com/photo-1454165804606-c3d57bc86b40
+- `art-meilleure-agence-geo-lyon.jpg` — https://images.unsplash.com/photo-1674644098961-12311e9d7aff

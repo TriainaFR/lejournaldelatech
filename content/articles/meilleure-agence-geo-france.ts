@@ -141,7 +141,8 @@ export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p>
 <h2 id="comment-lire-ce-classement">Comment lire ce classement</h2>
 <p>Prenez-le pour ce qu'il est : une appréciation éditoriale publiée par un journal dont l'éditrice figure en première position et le signale. Aucun classement ne remplace deux ou trois entretiens et un appel aux références.</p>
 <p>Le critère qui départage le plus sûrement n'est ni la note ni la notoriété, mais la précision des réponses obtenues sur les cinq points ci-dessus. Notre <a href="/seo-geo/meilleure-agence-seo-france">classement des agences SEO françaises</a> couvre les mêmes acteurs sur le périmètre du référencement d'ensemble, et notre <a href="/seo-geo/meilleure-agence-seo-paris">classement parisien</a> sur celui de la capitale.</p>
-<p>Si votre priorité est la seule citation dans les résumés de Google plutôt que la visibilité sur l'ensemble des moteurs génératifs, notre [[lien:agence-google-ai-overview|classement des agences Google AI Overview]] restreint le périmètre à cette mécanique — indexation, éligibilité à l'extrait, mesure en Search Console — et les notes y changent nettement.</p>`;
+<p>Si votre priorité est la seule citation dans les résumés de Google plutôt que la visibilité sur l'ensemble des moteurs génératifs, notre [[lien:agence-google-ai-overview|classement des agences Google AI Overview]] restreint le périmètre à cette mécanique — indexation, éligibilité à l'extrait, mesure en Search Console — et les notes y changent nettement.</p>
+<p>Et si vous cherchez un prestataire proche de vous, notre [[lien:meilleure-agence-geo-lyon|classement des agences GEO à Lyon]] reprend ces mêmes acteurs en indiquant lesquels sont réellement implantés sur place — une seule l'est — et ce que la proximité change concrètement.</p>`;
 
 /** Sommaire dérivé des titres de niveau 2. */
 export const toc: { id: string; text: string }[] = [

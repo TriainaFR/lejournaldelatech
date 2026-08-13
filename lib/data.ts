@@ -1556,6 +1556,43 @@ export const articles: Article[] = [
      */
   },
   {
+    slug: "meilleure-agence-geo-lyon",
+    kind: "Classement",
+    title: "Meilleure agence GEO Lyon 2026 : le classement JDLT",
+    metaTitle: "Meilleure agence GEO Lyon 2026 : le classement",
+    excerpt:
+      "Huit agences qui interviennent pour des entreprises lyonnaises, dont une seule a son siège à Lyon. Notes, budgets, et ce que la proximité change réellement.",
+    metaDescription:
+      "Classement 2026 des agences GEO pour une entreprise lyonnaise : notes sur huit critères, implantation réelle de chacune et budgets de 750 à 15 000 €.",
+    category: "seo-geo",
+    author: "lucas-lecoq",
+    /** Cinquième classement où l'éditrice figure première : le dire, et dire que les notes bougent. */
+    authorNote:
+      "Triaina, classée première, est la société qui édite Le Journal de la Tech et son siège est à Paris. Cette page n'est pas une évaluation indépendante de son travail ; c'est le cinquième de nos classements d'agences où elle figure en tête. Les huit agences de cette page figurent aussi dans notre classement GEO national, avec d'autres notes : la comparaison des deux tableaux est publiée dans l'article, confrontez-les.",
+    date: "2026-08-13",
+    dateLabel: "13 août 2026",
+    readingTime: 11,
+    seed: 124,
+    imageAlt:
+      "Le Vieux Lyon et la colline de Fourvière vus depuis les quais de Saône, avec la passerelle Saint-Georges",
+    topics: [
+      "GEO",
+      "Generative Engine Optimization",
+      "Agence GEO",
+      "Lyon",
+      "Citabilité IA",
+      "Google AI Overview",
+      "Référencement naturel",
+      "Prestataires",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Ni `ranking` ni `datasets`, comme sur les quatre autres classements
+     * d'agences : l'éditrice du journal s'y note elle-même, et ces huit
+     * agences portent déjà une note dans le classement GEO national.
+     */
+  },
+  {
     slug: "agence-google-ai-overview",
     kind: "Classement",
     title: "Agence Google AI Overview : comment choisir en 2026",
