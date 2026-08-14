@@ -1759,6 +1759,47 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "meilleur-outil-geo-2026",
+    kind: "Classement",
+    title: "Meilleur outil GEO 2026 : le classement pour être cité par les IA",
+    metaTitle: "Meilleur outil GEO 2026 : optimiser pour l'IA (comparatif)",
+    excerpt:
+      "Dix-huit solutions pour suivre ses citations dans ChatGPT, Perplexity et Gemini — et un relevé de tarifs qui montre que sur onze d'entre elles, le prix affiché n'est pas le prix du service annoncé.",
+    metaDescription:
+      "Comparatif 2026 de 18 outils GEO : tarifs relevés le 14 août, couverture réelle des moteurs par palier, et le classement JDLT du gratuit à l'agence.",
+    category: "seo-geo",
+    author: "lucas-lecoq",
+    /**
+     * Sixième classement où l'éditrice figure première, et le premier où elle
+     * est confrontée à des logiciels alors qu'elle est une agence : les deux
+     * réserves sont signalées.
+     */
+    authorNote:
+      "Triaina, classée première, est la société qui édite Le Journal de la Tech. Cette page n'est pas une évaluation indépendante de son travail ; c'est le sixième de nos classements où elle figure en tête, et le premier où elle est comparée à des logiciels alors qu'elle est une agence — sa note ne se compare donc pas terme à terme aux précédentes. Les dix-sept autres solutions n'ont aucun lien avec le journal. Les tarifs cités ont été relevés le 14 août 2026 sur les grilles publiques des éditeurs, hors remise annuelle : vérifiez-les avant d'engager un budget.",
+    date: "2026-08-14",
+    dateLabel: "14 août 2026",
+    readingTime: 12,
+    seed: 125,
+    imageAlt:
+      "Gros plan sur un écran affichant un tableau de bord d'analyse d'audience, avec courbes, compteur de visiteurs et répartition par pays",
+    topics: [
+      "GEO",
+      "Generative Engine Optimization",
+      "Outils GEO",
+      "Citabilité IA",
+      "ChatGPT",
+      "Perplexity",
+      "Google AI Overview",
+      "Suivi de marque",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Ni `ranking` ni `datasets`, comme sur les cinq classements d'agences :
+     * l'éditrice du journal s'y note elle-même, et les notes de cette page sont
+     * déclarées appréciation éditoriale et non relevé de mesures.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

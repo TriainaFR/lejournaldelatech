@@ -10,6 +10,7 @@ import * as meilleurLogicielComptabiliteGratuit from "@/content/articles/meilleu
 import * as meilleurLogicielComptabilitePme from "@/content/articles/meilleur-logiciel-comptabilite-pme";
 import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-crm-2026";
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
+import * as meilleurOutilGeo2026 from "@/content/articles/meilleur-outil-geo-2026";
 import * as meilleurOutilIaDeveloppeurs from "@/content/articles/meilleur-outil-ia-developpeurs";
 import * as googleAiOverviewDefinition from "@/content/articles/google-ai-overview-definition";
 import * as meilleurHebergeurCloudFrance from "@/content/articles/meilleur-hebergeur-cloud-france";
@@ -44,6 +45,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-logiciel-comptabilite-pme": meilleurLogicielComptabilitePme,
   "meilleur-logiciel-crm-2026": meilleurLogicielCrm2026,
   "meilleur-outil-ia-2026": meilleurOutilIa2026,
+  "meilleur-outil-geo-2026": meilleurOutilGeo2026,
   "meilleur-outil-ia-developpeurs": meilleurOutilIaDeveloppeurs,
   "meilleur-outil-ia-pme": meilleurOutilIaPme,
   "google-ai-overview-definition": googleAiOverviewDefinition,
