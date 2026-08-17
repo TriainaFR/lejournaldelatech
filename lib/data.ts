@@ -1800,6 +1800,50 @@ export const articles: Article[] = [
      * déclarées appréciation éditoriale et non relevé de mesures.
      */
   },
+  {
+    slug: "meilleur-crm-ecommerce-2026",
+    kind: "Comparatif",
+    title:
+      "Meilleur CRM e-commerce 2026 : huit solutions pour une boutique en ligne",
+    metaTitle: "CRM e-commerce 2026 : 8 solutions pour boutiques en ligne",
+    excerpt:
+      "Klaviyo, HubSpot, Brevo, Axonaut : huit CRM notés sur neuf critères propres à la vente en ligne. Six portent déjà une note ailleurs sur ce site, et plusieurs changent nettement de rang — le tableau des trois grilles est publié.",
+    metaDescription:
+      "Comparatif 2026 de huit CRM e-commerce : paniers abandonnés, connecteurs Shopify et WooCommerce, tarifs réels relevés le 17 août et hébergement des données.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    /**
+     * Six des huit produits portent déjà une note dans nos comparatifs CRM
+     * généraliste et TPE/PME, avec des écarts allant jusqu'à 1,9 point. Le dire
+     * plutôt que de le laisser découvrir, et en faire le sujet de l'article.
+     */
+    authorNote:
+      "Six des huit CRM de cette page figurent déjà dans notre comparatif des logiciels CRM et, pour quatre d'entre eux, dans notre comparatif TPE et PME. Ils y portent d'autres notes : Axonaut est premier chez les TPE avec 9,0 et sixième ici avec 7,1, Pipedrive passe de 8,4 à 6,8. Ce n'est pas une correction mais un changement de grille — neuf critères propres à la vente en ligne, dont la récupération des paniers abandonnés qui pèse 15 %. Le tableau des trois classements est publié dans l'article. Les tarifs ont été relevés le 17 août 2026 sur les grilles publiques des éditeurs ; aucun éditeur n'a été consulté.",
+    date: "2026-08-17",
+    dateLabel: "17 août 2026",
+    readingTime: 14,
+    seed: 126,
+    imageAlt:
+      "Une commerçante en ligne scanne un colis avec son téléphone devant son ordinateur portable, entourée de cartons d'expédition",
+    topics: [
+      "CRM",
+      "E-commerce",
+      "Shopify",
+      "WooCommerce",
+      "Panier abandonné",
+      "Marketing automation",
+      "RGPD",
+      "SaaS",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Pas de `ranking`, contrairement aux autres comparatifs de logiciels :
+     * six de ces huit produits portent déjà une note publiée ailleurs sur le
+     * site. Émettre un second bloc `Review` avec une note différente pour le
+     * même produit et le même éditeur produirait un avis dupliqué et
+     * contradictoire. L'écart est expliqué dans le corps de l'article.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

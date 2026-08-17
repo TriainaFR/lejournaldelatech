@@ -34,3 +34,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-logiciel-comptabilite-gratuit.jpg` — https://images.unsplash.com/photo-1454165804606-c3d57bc86b40
 - `art-meilleure-agence-geo-lyon.jpg` — https://images.unsplash.com/photo-1674644098961-12311e9d7aff
 - `art-meilleur-outil-geo-2026.jpg` — https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0
+- `art-meilleur-crm-ecommerce-2026.jpg` — https://images.unsplash.com/photo-1770013413878-2530e2c3d82b

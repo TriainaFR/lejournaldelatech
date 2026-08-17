@@ -5,6 +5,7 @@ import * as claudeVsChatgpt from "@/content/articles/claude-vs-chatgpt";
 import * as commentChoisirCrmSaas from "@/content/articles/comment-choisir-crm-saas";
 import * as meilleurHebergeurWeb2026 from "@/content/articles/meilleur-hebergeur-web-2026";
 import * as meilleurCrmGratuit2026 from "@/content/articles/meilleur-crm-gratuit-2026";
+import * as meilleurCrmEcommerce2026 from "@/content/articles/meilleur-crm-ecommerce-2026";
 import * as meilleurCrmTpePme from "@/content/articles/meilleur-crm-tpe-pme";
 import * as meilleurLogicielComptabiliteGratuit from "@/content/articles/meilleur-logiciel-comptabilite-gratuit";
 import * as meilleurLogicielComptabilitePme from "@/content/articles/meilleur-logiciel-comptabilite-pme";
@@ -40,6 +41,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "comment-choisir-crm-saas": commentChoisirCrmSaas,
   "meilleur-hebergeur-web-2026": meilleurHebergeurWeb2026,
   "meilleur-crm-gratuit-2026": meilleurCrmGratuit2026,
+  "meilleur-crm-ecommerce-2026": meilleurCrmEcommerce2026,
   "meilleur-crm-tpe-pme": meilleurCrmTpePme,
   "meilleur-logiciel-comptabilite-gratuit": meilleurLogicielComptabiliteGratuit,
   "meilleur-logiciel-comptabilite-pme": meilleurLogicielComptabilitePme,

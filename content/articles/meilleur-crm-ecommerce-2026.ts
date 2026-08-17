@@ -1,0 +1,218 @@
+/**
+ * Corps de l'article « Meilleur CRM e-commerce 2026 ».
+ * Généré par scripts/build-article.mjs depuis scripts/raw/meilleur-crm-ecommerce-2026.html —
+ * modifier la source ou la config, puis relancer le script.
+ */
+
+export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p>Huit solutions notées sur neuf critères propres à la vente en ligne : récupération des paniers abandonnés, segmentation comportementale, connecteurs Shopify, WooCommerce et Magento, automatisation après achat, score RFM, analyse du revenu, conformité RGPD, support français et rapport prix-périmètre. <strong>Six de ces huit CRM portent déjà une note ailleurs sur ce site</strong>, dans nos comparatifs CRM généraliste et TPE/PME, et plusieurs changent nettement de rang ici. Ce n'est pas une correction : c'est ce que produit un changement de grille, et nous publions le tableau des trois classements pour que vous puissiez le vérifier. Tarifs relevés le 17 août 2026 sur les grilles publiques des éditeurs.</p></aside>
+<p>Un CRM généraliste sait qui est votre client, ce qu'il vous a acheté et à quelle étape du cycle de vente il se trouve. Un CRM e-commerce sait autre chose : qu'il a mis trois articles au panier hier soir, qu'il n'a pas finalisé, qu'il avait déjà fait la même chose il y a quinze jours, et qu'un client au même profil convertit dans 40 % des cas si on lui écrit dans les deux heures.</p>
+<p>C'est toute la différence, et elle explique pourquoi les notes de ce comparatif ne recoupent pas celles de notre <a href="/saas-logiciels/meilleur-logiciel-crm-2026">comparatif des logiciels CRM</a>. Un outil excellent pour un artisan qui facture peut être médiocre pour une boutique Shopify, et l'inverse est vrai aussi.</p>
+
+<h2 id="ce-qui-separe-un-crm-e-commerce-d-un-crm-generaliste">Ce qui sépare un CRM e-commerce d'un CRM généraliste</h2>
+<p>La distinction ne tient pas au nombre de fonctions mais à l'objet suivi. Un CRM commercial suit des <strong>affaires</strong> : une opportunité, un devis, une signature, un cycle de quelques semaines à quelques mois, piloté par un humain. Un CRM e-commerce suit des <strong>événements</strong> : une page produit consultée, un panier créé, un paiement abandonné, une commande livrée, un avis déposé. Le volume est mille fois supérieur, le cycle mille fois plus court, et personne ne pilote à la main.</p>
+<p>Trois conséquences pratiques.</p>
+<p><strong>Le connecteur compte plus que le logiciel.</strong> Un CRM e-commerce qui ne lit pas votre catalogue et vos commandes en temps réel ne peut rien automatiser d'utile. Un connecteur natif Shopify ou WooCommerce n'est pas un confort, c'est la condition d'entrée — et une intégration passant par un intermédiaire comme Zapier introduit une latence qui suffit à rater une relance de panier.</p>
+<p><strong>La facturation change de base.</strong> Les CRM commerciaux se facturent par utilisateur ; les outils e-commerce se facturent au contact, au profil actif ou à l'e-mail envoyé. Une boutique de deux personnes avec quarante mille contacts paiera beaucoup plus cher qu'une équipe commerciale de dix personnes. C'est le principal piège budgétaire de cette catégorie.</p>
+<p><strong>Le RGPD se joue sur l'hébergement.</strong> Les spécialistes e-commerce les plus puissants sont américains et traitent des données de comportement d'achat, plus sensibles qu'un simple fichier de contacts. Les alternatives européennes existent mais sont moins outillées. L'arbitrage est réel et nous le signalons solution par solution.</p>
+
+<h2 id="notre-grille-et-pourquoi-elle-donne-d-autres-notes-que-nos-c">Notre grille, et pourquoi elle donne d'autres notes que nos comparatifs CRM</h2>
+<p>Le <a href="/protocole-jdlt">Protocole JDLT</a> est le cadre d'évaluation maison du journal. Il est décliné par usage : les critères qui départagent un CRM pour artisan ne sont pas ceux qui départagent un CRM pour boutique en ligne. Voici la pondération retenue ici.</p>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>Critère</p></th><th><p>Poids</p></th><th><p>Ce qu'il regarde</p></th></tr>
+<tr><td><p>Récupération des paniers abandonnés</p></td><td><p>15 %</p></td><td><p>Automatisation native, délai de relance, personnalisation du message</p></td></tr>
+<tr><td><p>Connecteurs Shopify, WooCommerce, Magento</p></td><td><p>14 %</p></td><td><p>Natifs ou via intermédiaire, synchronisation temps réel</p></td></tr>
+<tr><td><p>Analyse du revenu</p></td><td><p>13 %</p></td><td><p>Revenu par scénario, valeur vie client, coût d'acquisition par canal</p></td></tr>
+<tr><td><p>Segmentation comportementale</p></td><td><p>12 %</p></td><td><p>Segments fondés sur le comportement d'achat, pas seulement sur la fiche client</p></td></tr>
+<tr><td><p>Automatisation après achat</p></td><td><p>11 %</p></td><td><p>Fidélisation, vente additionnelle, relance de réassort</p></td></tr>
+<tr><td><p>Score client RFM</p></td><td><p>10 %</p></td><td><p>Récence, fréquence, montant — calculé automatiquement et exploitable</p></td></tr>
+<tr><td><p>RGPD et localisation des données</p></td><td><p>10 %</p></td><td><p>Hébergement, consentement, droit à l'effacement, journal d'audit</p></td></tr>
+<tr><td><p>Support en français et documentation</p></td><td><p>8 %</p></td><td><p>Support francophone, documentation, communauté</p></td></tr>
+<tr><td><p>Rapport prix-périmètre</p></td><td><p>7 %</p></td><td><p>Coût réel à volume, hors tarif d'appel</p></td></tr>
+</tbody></table></div>
+<p>Cette grille produit mécaniquement d'autres résultats que nos deux autres comparatifs CRM. Nous préférons le montrer que le laisser découvrir.</p>
+<aside class="donnee-jdlt"><p class="data-badge">Relevé exclusif — Protocole JDLT · Les mêmes CRM notés trois fois avec trois grilles, et ce que l'écart révèle</p><p>Six des huit solutions de cette page figurent déjà dans notre <a href="/saas-logiciels/meilleur-logiciel-crm-2026">comparatif des logiciels CRM</a>, publié le 26 juillet, et quatre dans notre <a href="/saas-logiciels/meilleur-crm-tpe-pme">comparatif pour TPE et PME</a>. Voici les mêmes produits, notés trois fois avec trois grilles différentes.</p>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>CRM</p></th><th><p>CRM généraliste</p></th><th><p>TPE et PME</p></th><th><p>E-commerce (cette page)</p></th><th><p>Écart</p></th></tr>
+<tr><td><p><strong>Axonaut</strong></p></td><td><p>8,1</p></td><td><p><strong>9,0</strong> — 1er</p></td><td><p>7,1 — 6e</p></td><td><p>1,9 point</p></td></tr>
+<tr><td><p><strong>Pipedrive</strong></p></td><td><p>8,4</p></td><td><p>8,5</p></td><td><p>6,8 — 7e</p></td><td><p>1,7 point</p></td></tr>
+<tr><td><p>Zoho CRM</p></td><td><p>8,3</p></td><td><p>7,5</p></td><td><p>7,8</p></td><td><p>0,8 point</p></td></tr>
+<tr><td><p>Salesforce</p></td><td><p>7,9</p></td><td><p>—</p></td><td><p>7,4</p></td><td><p>0,5 point</p></td></tr>
+<tr><td><p>HubSpot</p></td><td><p>8,6</p></td><td><p>8,5</p></td><td><p>8,7</p></td><td><p>0,2 point</p></td></tr>
+<tr><td><p>Brevo</p></td><td><p>8,1</p></td><td><p>—</p></td><td><p>8,1</p></td><td><p>stable</p></td></tr>
+</tbody></table></div>
+<p>Deux enseignements, et ils valent plus que le classement lui-même.</p>
+<p><strong>Les deux outils qui bougent le plus sont les deux qui ne sont pas conçus pour la vente en ligne.</strong> Axonaut est premier de notre comparatif TPE/PME parce qu'un artisan a besoin de devis, de factures et de comptabilité dans le même outil ; il perd 1,9 point ici parce qu'une boutique n'a pas ce besoin et en a un autre, l'automatisation comportementale, qu'il ne couvre pas. Pipedrive suit exactement la même logique : excellent pour un pipeline commercial, hors sujet pour une relance de panier.</p>
+<p><strong>Les deux outils stables sont les deux qui font de l'e-mail marketing depuis toujours.</strong> HubSpot et Brevo ne bougent presque pas d'une grille à l'autre parce que leur socle — contacts, segmentation, scénarios automatisés — sert les deux usages.</p>
+<p>Autrement dit : ne cherchez pas le meilleur CRM, cherchez le meilleur CRM pour ce que vous vendez et comment vous le vendez. Un écart de deux points sur la même solution entre deux de nos pages n'est pas une contradiction, c'est le sujet.</p></aside>
+
+<h2 id="le-comparatif-des-huit-crm-e-commerce">Le comparatif des huit CRM e-commerce</h2>
+<p>Les tarifs ci-dessous sont ceux affichés publiquement par les éditeurs au 17 août 2026. Quand l'éditeur communique un prix en engagement annuel, nous indiquons aussi le prix au mois — c'est celui que vous paierez si vous testez.</p>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>CRM</p></th><th><p>Note</p></th><th><p>Tarif d'entrée réel</p></th><th><p>Base de facturation</p></th><th><p>Connecteurs</p></th><th><p>Pour qui</p></th></tr>
+<tr><td><p><strong>Klaviyo</strong></p></td><td><p><strong>9,2</strong></p></td><td><p>Gratuit jusqu'à 250 profils, puis 20 $ à 500 profils, 30 $ à 1 000</p></td><td><p>Profils actifs</p></td><td><p>Shopify, WooCommerce, Magento, BigCommerce — natifs</p></td><td><p>Boutiques en ligne, tous volumes</p></td></tr>
+<tr><td><p><strong>HubSpot</strong></p></td><td><p>8,7</p></td><td><p>Offre gratuite, puis 20 $ par siège en annuel ; 890 $ pour Professional, plus des frais de mise en service obligatoires</p></td><td><p>Sièges et contacts</p></td><td><p>Shopify, WooCommerce, Stripe — natifs</p></td><td><p>Boutiques qui vendent aussi en B2B</p></td></tr>
+<tr><td><p><strong>Brevo</strong></p></td><td><p>8,1</p></td><td><p>Gratuit à 300 e-mails par jour, puis 7 € (Starter) et 15 € (Standard)</p></td><td><p>E-mails envoyés, avec plafond de contacts</p></td><td><p>Shopify, WooCommerce, PrestaShop</p></td><td><p>Petites boutiques françaises</p></td></tr>
+<tr><td><p>Zoho CRM</p></td><td><p>7,8</p></td><td><p>Gratuit jusqu'à 3 utilisateurs, puis 14 € par utilisateur en annuel, 23 € pour Professional</p></td><td><p>Utilisateurs</p></td><td><p>Shopify, WooCommerce, Magento</p></td><td><p>PME qui veulent tout paramétrer</p></td></tr>
+<tr><td><p>Salesforce Commerce Cloud</p></td><td><p>7,4</p></td><td><p>Pourcentage du volume d'affaires, de l'ordre de 1 à 3 % par an, plus l'intégration</p></td><td><p>Volume d'affaires</p></td><td><p>Tous, par interface de programmation</p></td><td><p>Grandes enseignes</p></td></tr>
+<tr><td><p>Axonaut</p></td><td><p>7,1</p></td><td><p>69,99 € par utilisateur sans engagement, 34,99 € sur trois ans</p></td><td><p>Utilisateurs</p></td><td><p>Shopify, WooCommerce, PrestaShop</p></td><td><p>PME françaises qui facturent beaucoup</p></td></tr>
+<tr><td><p>Pipedrive</p></td><td><p>6,8</p></td><td><p>24 $ par utilisateur (Essential), jusqu'à 99 $</p></td><td><p>Utilisateurs</p></td><td><p>Shopify, WooCommerce — par intermédiaire</p></td><td><p>Vente en gros et B2B</p></td></tr>
+<tr><td><p>Odoo</p></td><td><p>6,5</p></td><td><p>19,90 € par utilisateur en annuel, 24,90 € au mois, plus l'intégration</p></td><td><p>Utilisateurs internes</p></td><td><p>Shopify, WooCommerce, Magento — par modules</p></td><td><p>Détaillants omnicanaux</p></td></tr>
+</tbody></table></div>
+<p>Une remarque sur Salesforce Commerce Cloud, parce que l'erreur est répandue : ce produit ne se facture pas au siège. Le tarif au siège que l'on voit circuler — vingt-cinq dollars et quelques — est celui de Sales Cloud, qui est un CRM commercial et non une plateforme de commerce. Commerce Cloud se facture en pourcentage du volume d'affaires réalisé, ce qui change entièrement la façon de calculer son coût.</p>
+
+<h2 id="les-huit-solutions-en-detail">Les huit solutions en détail</h2>
+
+<h3 id="1-klaviyo-9-2-le-specialiste-et-il-n-y-a-pas-photo">1. Klaviyo — 9,2 : le spécialiste, et il n'y a pas photo</h3>
+<p>Klaviyo n'est pas un CRM auquel on a ajouté des fonctions e-commerce : c'est un outil conçu autour du catalogue et des commandes. Chaque événement de la boutique — produit consulté, panier créé, commande passée, livraison reçue — devient un déclencheur exploitable. Le score RFM est calculé nativement et branchable directement dans un scénario, ce qu'aucun autre outil de cette liste ne fait aussi simplement.</p>
+<p><strong>Ce qui le distingue :</strong> connecteurs natifs et synchronisation temps réel sur Shopify, WooCommerce et Magento ; scénarios de panier abandonné paramétrables au niveau du produit et non seulement du panier ; analyse du revenu par scénario, qui permet de savoir ce que rapporte chaque automatisation.</p>
+<p><strong>Ce qui coince :</strong> la facturation au profil actif grimpe vite, et le SMS se facture en plus de l'e-mail. Le calcul à faire avant de signer est celui de votre coût à deux fois votre volume actuel, pas à votre volume d'aujourd'hui. Hébergement aux États-Unis, ce qui suppose d'encadrer les transferts.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> gratuit jusqu'à 250 profils actifs et 500 e-mails par mois, 20 $ par mois à 500 profils, 30 $ à 1 000, puis par paliers.</p>
+
+<h3 id="2-hubspot-8-7-le-polyvalent-quand-vous-vendez-aussi-en-b2b">2. HubSpot — 8,7 : le polyvalent quand vous vendez aussi en B2B</h3>
+<p>HubSpot est le seul de cette liste à tenir les deux bouts : le scénario marketing d'une boutique et le pipeline commercial d'une activité de gros. Si vous vendez au détail en ligne et en volume à des revendeurs, c'est l'argument décisif — vous n'aurez pas deux outils à réconcilier.</p>
+<p><strong>Ce qui le distingue :</strong> offre gratuite réellement utilisable et sans limite d'utilisateurs ; scénarios visuels puissants ; support et documentation en français de bon niveau. Il obtient ici 8,7 contre 8,6 dans notre comparatif généraliste, la seule progression de tout le tableau.</p>
+<p><strong>Ce qui coince :</strong> le coût. Le passage à Professional se fait à 890 $ par mois en engagement annuel, et surtout des <strong>frais de mise en service obligatoires</strong> s'y ajoutent au premier paiement — de l'ordre de trois mille euros. C'est la dépense que les comparatifs oublient et qui fait dérailler un budget.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> offre gratuite, Starter à 20 $ par siège et par mois en engagement annuel, Professional à 890 $ par mois plus la mise en service.</p>
+
+<h3 id="3-brevo-8-1-le-rapport-prix-perimetre-et-l-hebergement-franc">3. Brevo — 8,1 : le rapport prix-périmètre, et l'hébergement français</h3>
+<p>Brevo reste le choix par défaut d'une petite boutique française : hébergement en France, interface et support en français, conformité RGPD sans montage particulier. Les modèles de panier abandonné et de relance après achat sont fournis prêts à l'emploi.</p>
+<p><strong>Ce qui le distingue :</strong> la facturation à l'e-mail envoyé plutôt qu'au contact stocké, qui reste plus favorable qu'ailleurs pour une base large et peu sollicitée. Note identique à celle de notre comparatif généraliste, 8,1 : Brevo tient les deux usages.</p>
+<p><strong>Ce qui coince :</strong> deux choses. Les fonctions de CRM proprement dit restent basiques, et le score client est loin de celui de Klaviyo. Surtout, <strong>l'argument du « pas de limite de contacts » n'est plus tout à fait vrai</strong> : depuis octobre 2025, l'offre Starter est plafonnée à 500 contacts et Standard à 1 500. Vérifiez ce plafond avant de vous décider, c'est souvent lui qui déclenche le changement de palier, pas le volume d'envois.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> gratuit à 300 e-mails par jour, Starter à partir de 7 €, Standard à partir de 15 €, hors taxes.</p>
+
+<h3 id="4-zoho-crm-7-8-tout-parametrer-a-condition-d-aimer-ca">4. Zoho CRM — 7,8 : tout paramétrer, à condition d'aimer ça</h3>
+<p>Zoho est le plus configurable de cette liste, et son écosystème couvre bien au-delà du CRM. Pour une PME qui veut un outil taillé exactement à sa mesure sans budget d'intégration, c'est une option solide.</p>
+<p><strong>Ce qui le distingue :</strong> flexibilité réelle, tarif prévisible, et un ensemble applicatif cohérent si vous prenez plusieurs briques.</p>
+<p><strong>Ce qui coince :</strong> il faut y passer du temps. L'interface est datée et la prise en main plus longue que chez HubSpot ou Klaviyo. L'automatisation e-commerce se construit ; elle n'est pas livrée.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> gratuit jusqu'à trois utilisateurs, Standard à 14 € par utilisateur et par mois en annuel, Professional à 23 €, jusqu'à 52 € pour l'offre haute.</p>
+
+<h3 id="5-salesforce-commerce-cloud-7-4-la-plateforme-des-grandes-en">5. Salesforce Commerce Cloud — 7,4 : la plateforme des grandes enseignes</h3>
+<p>Commerce Cloud n'est pas un CRM que l'on installe : c'est une plateforme de commerce que l'on intègre, avec un partenaire, sur plusieurs mois. Elle sait tout faire, à condition d'en avoir les moyens et le besoin.</p>
+<p><strong>Ce qui le distingue :</strong> personnalisation sans limite pratique, place de marché d'extensions considérable, fonctions prédictives intégrées.</p>
+<p><strong>Ce qui coince :</strong> le modèle économique. La facturation en pourcentage du volume d'affaires signifie que la facture croît exactement avec votre succès, et le projet d'intégration se compte en centaines de milliers d'euros. Sans direction technique interne, l'affaire est mal engagée.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> pourcentage du volume d'affaires annuel, de l'ordre de 1 à 3 % selon l'édition et le palier, plus l'intégration. Salesforce ne publie pas ces taux.</p>
+
+<h3 id="6-axonaut-7-1-premier-ailleurs-sixieme-ici">6. Axonaut — 7,1 : premier ailleurs, sixième ici</h3>
+<p>Axonaut est premier de notre comparatif TPE/PME avec 9,0, et il le mérite : pour un artisan ou un indépendant, avoir le devis, la facture, la comptabilité et le suivi commercial dans un seul outil français règle le vrai problème.</p>
+<p>Pour une boutique en ligne, le besoin est ailleurs. La facturation est largement gérée par la plateforme e-commerce, et ce qui manque — segmentation comportementale, relance automatisée, score client — n'est pas le métier d'Axonaut. D'où 7,1, et l'illustration la plus nette de ce que ce comparatif cherche à montrer.</p>
+<p><strong>Ce qui le distingue :</strong> hébergement et société français, périmètre fonctionnel large, prise en main rapide.</p>
+<p><strong>Ce qui coince :</strong> le tarif réel est plus élevé qu'on ne le croit — <strong>69,99 € par utilisateur et par mois sans engagement</strong>, le tarif de 34,99 € souvent cité supposant trois ans d'engagement. Et l'automatisation marketing est hors de portée.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> 69,99 € par utilisateur et par mois sans engagement, 34,99 € sur trois ans, toutes fonctions comprises.</p>
+
+<h3 id="7-pipedrive-6-8-un-crm-de-vente-pas-de-boutique">7. Pipedrive — 6,8 : un CRM de vente, pas de boutique</h3>
+<p>Pipedrive a la meilleure interface de gestion de pipeline du marché, et notre comparatif généraliste le place à 8,4. Si votre activité en ligne est de la vente en gros, avec des commandes négociées et un cycle de plusieurs semaines, il reste un excellent choix.</p>
+<p>Pour du détail, non. Les connecteurs e-commerce passent par un intermédiaire, il n'y a pas de score RFM natif, et l'automatisation marketing est rudimentaire. Ce n'est pas un défaut du produit : ce n'est pas ce qu'il fait.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> Essential à 24 $ par utilisateur et par mois, jusqu'à 99 $ pour l'offre haute. Le tarif mensuel sans engagement est nettement supérieur au tarif annuel affiché.</p>
+
+<h3 id="8-odoo-6-5-un-progiciel-complet-pas-un-crm">8. Odoo — 6,5 : un progiciel complet, pas un CRM</h3>
+<p>Odoo est un progiciel de gestion intégré dont le CRM n'est qu'un module parmi une trentaine. Pour un détaillant qui gère des stocks, des points de vente physiques et une boutique en ligne, l'unification est un argument sérieux.</p>
+<p><strong>Ce qui coince :</strong> le coût réel n'a rien à voir avec le prix de la licence. Compter l'intégration, qui va de quelques milliers d'euros pour un périmètre simple à plusieurs dizaines de milliers pour un projet multi-modules. Et l'automatisation e-commerce reste loin derrière un outil spécialisé.</p>
+<p><strong>Tarif au 17/08/2026 :</strong> 19,90 € par utilisateur et par mois en engagement annuel, 24,90 € au mois sans engagement, hébergement compris. Seuls les utilisateurs internes sont facturés.</p>
+
+<h2 id="quel-crm-selon-votre-situation">Quel CRM selon votre situation</h2>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>Votre situation</p></th><th><p>Notre recommandation</p></th><th><p>Budget mensuel réaliste</p></th></tr>
+<tr><td><p>Boutique qui démarre, moins de 1 000 contacts</p></td><td><p>Klaviyo gratuit, ou Brevo si l'hébergement français compte</p></td><td><p>0 à 30 €</p></td></tr>
+<tr><td><p>Boutique Shopify ou WooCommerce établie</p></td><td><p>Klaviyo</p></td><td><p>30 à 150 €</p></td></tr>
+<tr><td><p>Détail en ligne et vente en gros</p></td><td><p>HubSpot</p></td><td><p>Gratuit, puis 20 $ par siège ; prévoir la mise en service avant Professional</p></td></tr>
+<tr><td><p>Vente en gros uniquement</p></td><td><p>Pipedrive</p></td><td><p>24 $ par utilisateur</p></td></tr>
+<tr><td><p>PME française, facturation lourde</p></td><td><p>Axonaut, avec un outil d'e-mailing à côté</p></td><td><p>70 € par utilisateur, plus l'e-mailing</p></td></tr>
+<tr><td><p>Enseigne multi-canal avec stocks</p></td><td><p>Odoo, ou Salesforce au-delà d'un certain volume</p></td><td><p>À partir de 20 € par utilisateur, hors intégration</p></td></tr>
+</tbody></table></div>
+<p>Un conseil qui vaut pour tous : commencez par le scénario de panier abandonné, seul. C'est celui qui se met en place en une journée, dont l'effet se mesure en deux semaines, et qui finance les suivants. Les projets de CRM e-commerce qui échouent sont presque toujours ceux qui ont voulu tout brancher avant de rien mesurer.</p>
+
+<h2 id="cinq-erreurs-a-eviter">Cinq erreurs à éviter</h2>
+<p><strong>Raisonner au tarif d'appel.</strong> Les huit solutions de cette page affichent un prix d'entrée qui n'est pas celui que vous paierez : engagement annuel non dit, frais de mise en service chez HubSpot, plafond de contacts chez Brevo, SMS facturé à part chez Klaviyo. Simulez votre coût à deux fois votre volume actuel.</p>
+<p><strong>Prendre un connecteur par intermédiaire pour un connecteur natif.</strong> Une intégration via un service tiers introduit une latence de quelques minutes à quelques heures. Sur une relance de panier, c'est la différence entre une vente récupérée et un e-mail inutile.</p>
+<p><strong>Négliger la localisation des données.</strong> Les données de comportement d'achat sont plus sensibles qu'un fichier de contacts. Klaviyo, HubSpot et Salesforce hébergent hors de l'Union ; Brevo, Axonaut et un Odoo installé chez vous restent en France. C'est un arbitrage, pas une évidence.</p>
+<p><strong>Choisir sur les fonctions plutôt que sur l'usage.</strong> C'est l'erreur que ce comparatif documente : Axonaut et Pipedrive sont d'excellents outils qui perdent près de deux points ici, uniquement parce qu'ils ne sont pas faits pour ça.</p>
+<p><strong>Oublier que personne ne l'utilisera.</strong> Un scénario mal réglé qui envoie trois relances à un client ayant déjà commandé fait plus de dégâts qu'une absence d'automatisation. Prévoyez le temps de réglage, et regardez les envois réels pendant le premier mois.</p>
+
+<h2 id="faq-crm-e-commerce">FAQ — CRM e-commerce</h2>
+<p><strong>Qu'est-ce qu'un CRM e-commerce ?</strong> C'est un logiciel qui relie votre boutique en ligne à votre base clients et déclenche des actions à partir du comportement d'achat : relance d'un panier abandonné, message après livraison, réactivation d'un client dormant. Il se distingue d'un CRM commercial par ce qu'il suit — des événements par milliers plutôt que des affaires par dizaines — et par sa facturation, au contact ou à l'envoi plutôt qu'au siège.</p>
+<p><strong>Quel CRM pour une boutique Shopify ?</strong> Klaviyo, dont c'est le terrain d'origine et qui obtient la meilleure note de ce comparatif. Si le budget est le critère principal ou si l'hébergement des données en France est une contrainte, Brevo est la solution à regarder en premier.</p>
+<p><strong>Quel CRM pour WooCommerce ?</strong> Les mêmes, pour les mêmes raisons : les connecteurs WooCommerce de Klaviyo et de Brevo sont natifs. Zoho convient si vous voulez tout paramétrer vous-même et disposez du temps nécessaire.</p>
+<p><strong>Quel est le meilleur CRM e-commerce français ?</strong> Brevo, à 8,1, pour l'hébergement en France, le support francophone et un tarif d'entrée bas. Axonaut est français aussi et obtient 7,1 : c'est un excellent outil de gestion, mais l'automatisation marketing n'est pas son métier.</p>
+<p><strong>Combien coûte réellement un CRM e-commerce ?</strong> De zéro à une centaine d'euros par mois pour une boutique de moins de dix mille contacts, et plusieurs centaines au-delà. Les postes que les grilles n'affichent pas : les frais de mise en service de HubSpot, le SMS chez Klaviyo, le plafond de contacts chez Brevo, l'intégration chez Odoo et Salesforce.</p>
+<p><strong>Pourquoi vos notes diffèrent-elles de celles de vos autres comparatifs CRM ?</strong> Parce que la grille change avec l'usage. Neuf critères propres à la vente en ligne sont appliqués ici, dont la récupération des paniers abandonnés qui pèse 15 % et n'existe pas dans nos autres comparatifs. Axonaut passe ainsi de 9,0 pour une TPE à 7,1 pour une boutique. Le tableau des trois classements est publié plus haut dans cet article.</p>
+<p><strong>Un CRM e-commerce récupère-t-il vraiment les paniers abandonnés ?</strong> Il envoie la relance, ce qui est la partie facile. Ce qui fait la différence tient au réglage : le délai, le nombre de relances, et surtout l'exclusion des clients qui ont finalement commandé par un autre canal. Un scénario mal réglé agace plus qu'il ne rapporte.</p>
+<p><strong>Faut-il un CRM séparé de sa plateforme e-commerce ?</strong> Pas toujours. Shopify et WooCommerce couvrent déjà, par leurs extensions, la relance de panier de base. L'outil dédié devient utile quand vous voulez segmenter selon l'historique d'achat, mesurer ce que rapporte chaque scénario et travailler la valeur vie client — en pratique, à partir de quelques milliers de clients.</p>
+
+<h2 id="comment-lire-ce-comparatif">Comment lire ce comparatif</h2>
+<p>Ces notes sont une appréciation éditoriale appuyée sur les grilles tarifaires publiques, la documentation des éditeurs et les connecteurs annoncés. Nous n'avons pas fait tourner les huit solutions en parallèle sur une même boutique pendant plusieurs mois : ce qui est vérifiable ici, ce sont les tarifs et les périmètres, datés du 17 août 2026.</p>
+<p>Ce comparatif porte sur la vente en ligne. Pour un besoin généraliste, voyez notre <a href="/saas-logiciels/meilleur-logiciel-crm-2026">comparatif des logiciels CRM</a> ; pour une très petite structure, notre <a href="/saas-logiciels/meilleur-crm-tpe-pme">comparatif TPE et PME</a> ; et si le budget est nul, notre sélection des <a href="/saas-logiciels/meilleur-crm-gratuit-2026">CRM gratuits</a>. Les mêmes produits y portent d'autres notes, et c'est voulu.</p>`;
+
+/** Sommaire dérivé des titres de niveau 2. */
+export const toc: { id: string; text: string }[] = [
+  {
+    "id": "ce-qui-separe-un-crm-e-commerce-d-un-crm-generaliste",
+    "text": "Ce qui sépare un CRM e-commerce d'un CRM généraliste"
+  },
+  {
+    "id": "notre-grille-et-pourquoi-elle-donne-d-autres-notes-que-nos-c",
+    "text": "Notre grille, et pourquoi elle donne d'autres notes que nos comparatifs CRM"
+  },
+  {
+    "id": "le-comparatif-des-huit-crm-e-commerce",
+    "text": "Le comparatif des huit CRM e-commerce"
+  },
+  {
+    "id": "les-huit-solutions-en-detail",
+    "text": "Les huit solutions en détail"
+  },
+  {
+    "id": "quel-crm-selon-votre-situation",
+    "text": "Quel CRM selon votre situation"
+  },
+  {
+    "id": "cinq-erreurs-a-eviter",
+    "text": "Cinq erreurs à éviter"
+  },
+  {
+    "id": "faq-crm-e-commerce",
+    "text": "FAQ — CRM e-commerce"
+  },
+  {
+    "id": "comment-lire-ce-comparatif",
+    "text": "Comment lire ce comparatif"
+  }
+];
+
+/** Questions/réponses de la FAQ, balisées en FAQPage. */
+export const faq: { question: string; answer: string }[] = [
+  {
+    "question": "Qu'est-ce qu'un CRM e-commerce ?",
+    "answer": "C'est un logiciel qui relie votre boutique en ligne à votre base clients et déclenche des actions à partir du comportement d'achat : relance d'un panier abandonné, message après livraison, réactivation d'un client dormant. Il se distingue d'un CRM commercial par ce qu'il suit — des événements par milliers plutôt que des affaires par dizaines — et par sa facturation, au contact ou à l'envoi plutôt qu'au siège."
+  },
+  {
+    "question": "Quel CRM pour une boutique Shopify ?",
+    "answer": "Klaviyo, dont c'est le terrain d'origine et qui obtient la meilleure note de ce comparatif. Si le budget est le critère principal ou si l'hébergement des données en France est une contrainte, Brevo est la solution à regarder en premier."
+  },
+  {
+    "question": "Quel CRM pour WooCommerce ?",
+    "answer": "Les mêmes, pour les mêmes raisons : les connecteurs WooCommerce de Klaviyo et de Brevo sont natifs. Zoho convient si vous voulez tout paramétrer vous-même et disposez du temps nécessaire."
+  },
+  {
+    "question": "Quel est le meilleur CRM e-commerce français ?",
+    "answer": "Brevo, à 8,1, pour l'hébergement en France, le support francophone et un tarif d'entrée bas. Axonaut est français aussi et obtient 7,1 : c'est un excellent outil de gestion, mais l'automatisation marketing n'est pas son métier."
+  },
+  {
+    "question": "Combien coûte réellement un CRM e-commerce ?",
+    "answer": "De zéro à une centaine d'euros par mois pour une boutique de moins de dix mille contacts, et plusieurs centaines au-delà. Les postes que les grilles n'affichent pas : les frais de mise en service de HubSpot, le SMS chez Klaviyo, le plafond de contacts chez Brevo, l'intégration chez Odoo et Salesforce."
+  },
+  {
+    "question": "Pourquoi vos notes diffèrent-elles de celles de vos autres comparatifs CRM ?",
+    "answer": "Parce que la grille change avec l'usage. Neuf critères propres à la vente en ligne sont appliqués ici, dont la récupération des paniers abandonnés qui pèse 15 % et n'existe pas dans nos autres comparatifs. Axonaut passe ainsi de 9,0 pour une TPE à 7,1 pour une boutique. Le tableau des trois classements est publié plus haut dans cet article."
+  },
+  {
+    "question": "Un CRM e-commerce récupère-t-il vraiment les paniers abandonnés ?",
+    "answer": "Il envoie la relance, ce qui est la partie facile. Ce qui fait la différence tient au réglage : le délai, le nombre de relances, et surtout l'exclusion des clients qui ont finalement commandé par un autre canal. Un scénario mal réglé agace plus qu'il ne rapporte."
+  },
+  {
+    "question": "Faut-il un CRM séparé de sa plateforme e-commerce ?",
+    "answer": "Pas toujours. Shopify et WooCommerce couvrent déjà, par leurs extensions, la relance de panier de base. L'outil dédié devient utile quand vous voulez segmenter selon l'historique d'achat, mesurer ce que rapporte chaque scénario et travailler la valeur vie client — en pratique, à partir de quelques milliers de clients."
+  }
+];
+
+/** Sources citées, reprises en fin d'article et dans le balisage. */
+export const sources: { url: string; label: string }[] = [];
