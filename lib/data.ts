@@ -1844,6 +1844,49 @@ export const articles: Article[] = [
      * contradictoire. L'écart est expliqué dans le corps de l'article.
      */
   },
+  {
+    slug: "meilleur-outil-ia-marketing",
+    kind: "Comparatif",
+    title: "Meilleur outil IA marketing 2026 : dix solutions comparées",
+    metaTitle: "Meilleur outil IA marketing 2026 : le comparatif",
+    excerpt:
+      "ChatGPT, Claude, Jasper, Canva, Midjourney : dix outils notés sur une grille marketing. Quatre portent déjà une note ailleurs sur le site, et Midjourney y perd 2,5 points — le tableau des deux classements est publié.",
+    metaDescription:
+      "Comparatif 2026 de dix outils d'IA pour le marketing : qualité des productions, français natif, hébergement des données et tarifs réels relevés le 18 août.",
+    category: "intelligence-artificielle",
+    author: "lucas-lecoq",
+    /**
+     * Quatre des dix outils portent déjà une note dans nos comparatifs d'IA,
+     * avec un écart allant jusqu'à 2,5 points sur Midjourney. Le dire, et en
+     * faire le sujet de l'article plutôt qu'un angle mort.
+     */
+    authorNote:
+      "Quatre des dix outils de cette page figurent déjà dans notre comparatif général des outils d'IA, et Notion AI dans notre sélection pour PME. Ils y portent d'autres notes : Midjourney passe de 9,0 à 6,5 ici, ChatGPT et Claude s'inversent. Ce n'est pas une correction mais un changement de grille — neuf critères propres au marketing, dont la conformité RGPD qui pèse 15 %. Le tableau des deux classements est publié dans l'article. Les tarifs ont été relevés le 18 août 2026 sur les grilles publiques des éditeurs, au mois et sans engagement ; aucun éditeur n'a été consulté.",
+    date: "2026-08-18",
+    dateLabel: "18 août 2026",
+    readingTime: 13,
+    seed: 127,
+    imageAlt:
+      "Deux personnes organisent un plan de travail trimestriel avec des notes autocollantes sur une cloison vitrée",
+    topics: [
+      "Intelligence artificielle",
+      "Marketing",
+      "ChatGPT",
+      "Claude",
+      "IA générative",
+      "Marketing automation",
+      "RGPD",
+      "SaaS",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Pas de `ranking` : quatre de ces dix produits portent déjà une note
+     * publiée ailleurs sur le site. Émettre un second bloc `Review` avec une
+     * autre note pour le même produit et le même éditeur produirait un avis
+     * dupliqué et contradictoire — même règle que sur le comparatif des CRM
+     * e-commerce. L'écart est expliqué dans le corps de l'article.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
