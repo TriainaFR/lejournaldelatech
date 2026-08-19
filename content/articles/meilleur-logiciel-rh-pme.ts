@@ -1,0 +1,217 @@
+/**
+ * Corps de l'article « Meilleur logiciel RH PME 2026 ».
+ * Généré par scripts/build-article.mjs depuis scripts/raw/meilleur-logiciel-rh-pme.html —
+ * modifier la source ou la config, puis relancer le script.
+ */
+
+export const html = `<aside class="tldr"><p class="tldr-label">L’essentiel</p><p>Dix logiciels de ressources humaines notés sur neuf critères, dont la paie qui pèse à elle seule 20 %. <strong>C'est précisément la colonne où l'on se trompe le plus :</strong> sur les dix solutions, quatre ne produisent pas un bulletin français sans un second outil ou une facturation séparée — et deux d'entre elles sont vendues comme des suites complètes. Le relevé est publié plus bas. Tarifs relevés le 19 août 2026 sur les grilles publiques des éditeurs et de leurs revendeurs.</p></aside>
+<p>Le marché du logiciel RH pour PME a une particularité qui le rend difficile à comparer : presque toutes les solutions annoncent couvrir la paie, et presque aucune ne veut dire la même chose par là. Certaines calculent et éditent le bulletin. D'autres préparent les variables et transmettent à un outil tiers. D'autres encore facturent la paie séparément, à l'unité, en plus de l'abonnement affiché.</p>
+<p>Pour une entreprise française, la différence n'est pas théorique : produire un bulletin conforme suppose de gérer la convention collective, le prélèvement à la source et la déclaration sociale nominative. Un outil qui ne fait pas ça n'est pas un logiciel de paie, quoi qu'en dise sa page d'accueil.</p>
+
+<h2 id="ce-que-logiciel-rh-recouvre-et-pourquoi-le-mot-induit-en-err">Ce que « logiciel RH » recouvre, et pourquoi le mot induit en erreur</h2>
+<p>Trois familles cohabitent sous la même étiquette, et elles ne s'achètent pas de la même façon.</p>
+<p><strong>Les moteurs de paie.</strong> Ils calculent le bulletin et produisent la déclaration sociale. C'est le cœur réglementaire, celui qui doit suivre chaque évolution du droit du travail. Silae et Sage relèvent de cette famille.</p>
+<p><strong>Les suites de gestion administrative.</strong> Congés, absences, temps de travail, notes de frais, entretiens. Elles facilitent le quotidien mais ne produisent aucun bulletin. Lucca, Kammi et BambooHR sont d'abord cela, quels que soient les modules ajoutés depuis.</p>
+<p><strong>Les plateformes intégrées.</strong> Elles visent les deux et y parviennent inégalement selon les pays. Payfit couvre réellement la paie française ; Personio et Factorial, conçus pour le marché européen, s'appuient sur un partenaire pour la partie française.</p>
+<p>Un dernier point vaut d'être connu avant de comparer les prix : <strong>Silae ne vend pas directement aux entreprises.</strong> L'éditeur facture les cabinets d'expertise comptable, qui refacturent leurs clients. Si votre paie est externalisée, vous utilisez peut-être déjà Silae sans le savoir, à un tarif que votre cabinet fixe et non l'éditeur.</p>
+
+<h2 id="notre-grille-d-evaluation">Notre grille d'évaluation</h2>
+<p>Le <a href="/protocole-jdlt">Protocole JDLT</a> est le cadre d'évaluation maison du journal. Décliné aux logiciels RH pour PME françaises, il pèse neuf critères.</p>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>Critère</p></th><th><p>Poids</p></th><th><p>Ce qu'il regarde</p></th></tr>
+<tr><td><p>Gestion de la paie</p></td><td><p>20 %</p></td><td><p>Le bulletin est-il produit par l'outil, et à quelles conditions</p></td></tr>
+<tr><td><p>Conformité française</p></td><td><p>15 %</p></td><td><p>Déclaration sociale nominative, prélèvement à la source, conventions collectives</p></td></tr>
+<tr><td><p>Ergonomie</p></td><td><p>12 %</p></td><td><p>Utilisable par un manager qui n'est pas des RH</p></td></tr>
+<tr><td><p>Modules couverts</p></td><td><p>12 %</p></td><td><p>Congés, temps, entretiens, recrutement, notes de frais</p></td></tr>
+<tr><td><p>Intégrations</p></td><td><p>10 %</p></td><td><p>Comptabilité, moteur de paie tiers, outils existants</p></td></tr>
+<tr><td><p>Support francophone</p></td><td><p>10 %</p></td><td><p>Disponibilité et réactivité en français</p></td></tr>
+<tr><td><p>Lisibilité tarifaire</p></td><td><p>8 %</p></td><td><p>Écart entre le prix affiché et la facture réelle</p></td></tr>
+<tr><td><p>Délai de mise en service</p></td><td><p>8 %</p></td><td><p>Temps avant le premier bulletin ou la première campagne de congés</p></td></tr>
+<tr><td><p>Évolutivité</p></td><td><p>5 %</p></td><td><p>Comportement quand l'effectif double</p></td></tr>
+</tbody></table></div>
+<p>Ces notes sont une appréciation éditoriale appuyée sur les grilles publiques, la documentation des éditeurs et les périmètres annoncés. Nous n'avons pas fait tourner dix paies en parallèle pendant un exercice : ce qui est mesuré et vérifiable ici, ce sont les tarifs et les périmètres, datés du 19 août 2026.</p>
+
+<h2 id="la-paie-n-est-pas-incluse-la-ou-on-le-croit">La paie n'est pas incluse là où on le croit</h2>
+<p>C'est le constat qui a le plus changé notre lecture de ce marché, et il porte sur le critère le plus lourd de la grille.</p>
+<aside class="donnee-jdlt"><p class="data-badge">Relevé exclusif — Protocole JDLT · Ce que « paie comprise » recouvre réellement, 10 solutions, 19 août 2026</p><p><strong>Sur les dix solutions examinées, quatre ne produisent pas un bulletin de paie français dans le périmètre et au tarif affichés.</strong> Deux ne le font pas du tout sans un logiciel tiers, une le facture séparément à l'unité, une le fait de façon trop limitée pour une convention collective un peu chargée. Aucune ne le cache formellement ; toutes le rangent sous une formulation qui laisse croire le contraire.</p>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>Solution</p></th><th><p>Ce que la page d'accueil laisse entendre</p></th><th><p>Ce qu'il faut réellement pour un bulletin français</p></th></tr>
+<tr><td><p><strong>Personio</strong></p></td><td><p>Plateforme RH tout-en-un, paie comprise</p></td><td><p>Paie préparatoire seulement : ni bulletin français ni déclaration sociale. Un moteur de paie français par connecteur est indispensable.</p></td></tr>
+<tr><td><p><strong>Factorial</strong></p></td><td><p>Solution RH tout-en-un pour PME</p></td><td><p>Pas de moteur de paie français en propre : la paie passe par une intégration avec Silae, dont la licence s'ajoute à l'abonnement.</p></td></tr>
+<tr><td><p><strong>Eurécia</strong></p></td><td><p>SIRH complet français</p></td><td><p>L'abonnement couvre le SIRH. L'édition des bulletins et des déclarations est un service facturé en sus, de 15 à 30 € par bulletin selon le volume.</p></td></tr>
+<tr><td><p><strong>Axonaut</strong></p></td><td><p>Gestion du personnel et bulletins centralisés</p></td><td><p>Partie sociale basique, suffisante pour quelques salaires fixes. Un outil dédié reste nécessaire dès qu'il y a des variables ou une convention collective particulière.</p></td></tr>
+</tbody></table></div>
+<p>Le cas d'Eurécia mérite d'être détaillé, parce que l'écart de facture est considérable. À 5,40 € par salarié et par mois, une PME de cinquante personnes paie environ 270 € pour le SIRH. Si elle confie aussi l'édition des bulletins, à 15 à 30 € l'unité, la même PME ajoute 750 à 1 500 € par mois. <strong>La facture est multipliée par quatre à six, sans que le tarif affiché soit faux pour autant</strong> : il ne couvre simplement pas ce que la plupart des acheteurs croient acheter.</p>
+<p>La conséquence pratique : quand vous comparez deux devis, la seule question qui tranche est « qui édite le bulletin, et combien coûte cette ligne-là ». Le reste se négocie.</p></aside>
+
+<h2 id="le-comparatif-des-dix-logiciels-rh-pour-pme">Le comparatif des dix logiciels RH pour PME</h2>
+<p>Les tarifs ci-dessous sont ceux affichés au 19 août 2026 par les éditeurs ou leurs revendeurs. La colonne « paie » dit ce que l'outil produit lui-même, pas ce que sa page d'accueil annonce.</p>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>Rang</p></th><th><p>Solution</p></th><th><p>Note</p></th><th><p>Bulletin français produit ?</p></th><th><p>Tarif affiché</p></th><th><p>Pour qui</p></th></tr>
+<tr><td><p>1</p></td><td><p><strong>Silae</strong></p></td><td><p><strong>9,2</strong></p></td><td><p>Oui, c'est son métier</p></td><td><p>3 à 12 € par bulletin selon le volume, via votre cabinet</p></td><td><p>Paie complexe, conventions chargées</p></td></tr>
+<tr><td><p>2</p></td><td><p><strong>Payfit</strong></p></td><td><p>8,8</p></td><td><p>Oui</p></td><td><p>Forfait par tranche d'effectif, de 49 € à 199 €, plus un montant par salarié</p></td><td><p>PME de 5 à 100 salariés</p></td></tr>
+<tr><td><p>3</p></td><td><p><strong>Lucca</strong></p></td><td><p>8,5</p></td><td><p>Oui, module dédié</p></td><td><p>Pack de trois modules à 6,75 € par salarié ; 8 à 22 € selon le périmètre</p></td><td><p>PME en croissance</p></td></tr>
+<tr><td><p>4</p></td><td><p>Eurécia</p></td><td><p>8,2</p></td><td><p><strong>Facturé à part</strong></p></td><td><p>Dès 5,40 € par salarié, plus 15 à 30 € par bulletin</p></td><td><p>PME voulant un SIRH français complet</p></td></tr>
+<tr><td><p>5</p></td><td><p>Personio</p></td><td><p>7,9</p></td><td><p><strong>Non</strong></p></td><td><p>6 à 10 € par salarié</p></td><td><p>Groupes multi-pays</p></td></tr>
+<tr><td><p>6</p></td><td><p>Factorial</p></td><td><p>7,6</p></td><td><p><strong>Non, via Silae</strong></p></td><td><p>Dès 5,75 €, 8 à 9 € l'offre complète</p></td><td><p>PME structurant ses RH</p></td></tr>
+<tr><td><p>7</p></td><td><p>Sage 100 Paie &amp; RH</p></td><td><p>7,3</p></td><td><p>Oui</p></td><td><p>Sur devis</p></td><td><p>PME déjà équipées en Sage</p></td></tr>
+<tr><td><p>8</p></td><td><p>Axonaut</p></td><td><p>7,1</p></td><td><p><strong>Basique</strong></p></td><td><p>69,99 € par utilisateur sans engagement, 34,99 € sur trois ans</p></td><td><p>Très petites structures, salaires fixes</p></td></tr>
+<tr><td><p>9</p></td><td><p>Kammi</p></td><td><p>6,8</p></td><td><p>Oui, suite paie séparée</p></td><td><p>À partir de 2 € par utilisateur et par module</p></td><td><p>Budget serré, besoins administratifs</p></td></tr>
+<tr><td><p>10</p></td><td><p>BambooHR</p></td><td><p>6,5</p></td><td><p><strong>Non</strong></p></td><td><p>Sur devis</p></td><td><p>Filiales de groupes anglophones</p></td></tr>
+</tbody></table></div>
+
+<h2 id="les-dix-solutions-en-detail">Les dix solutions en détail</h2>
+
+<h3 id="1-silae-9-2">1. Silae — 9,2</h3>
+<p>La référence de la paie française, et le moteur qui tourne derrière une bonne partie des cabinets d'expertise comptable du pays. Conventions collectives, prélèvement à la source, déclaration sociale nominative : c'est un logiciel réglementaire avant d'être un logiciel RH, et c'est ce qui fait sa valeur.</p>
+<p><strong>Ce qu'il faut savoir avant de le chercher :</strong> Silae ne vend pas aux entreprises. L'éditeur facture les cabinets, qui refacturent. Le tarif que vous verrez dépend donc de votre expert-comptable — de 8 à 18 € par bulletin en pratique, quand le coût logiciel se situe entre 3 et 12 € selon le volume. Les tarifs de l'éditeur ont augmenté de 20 à 40 % selon les profils en 2025 et 2026, hausse largement répercutée.</p>
+<p><strong>Ce qui coince :</strong> les modules RH autres que la paie sont peu développés, et l'interface porte son âge.</p>
+
+<h3 id="2-payfit-8-8">2. Payfit — 8,8</h3>
+<p>Payfit fait ce que peu de solutions de cette liste font vraiment : produire un bulletin français conforme sans intermédiaire, avec une interface qu'un dirigeant non spécialiste peut piloter. Pour une PME de cinq à cent salariés dont la paie est régulière, c'est le meilleur compromis du marché.</p>
+<p><strong>Ce qui coince :</strong> la grille tarifaire n'est plus publiée et l'éditeur passe par devis. La structure connue combine un forfait par tranche d'effectif — de 49 € pour un à trois salariés à 199 € à partir de vingt-cinq — et un montant par collaborateur, avec 29 € par établissement secondaire. Sur la tranche de cinq à trente salariés, cela revient à 7 à 14 € par salarié tout compris. Méfiez-vous des chiffres qui circulent : les tarifs par salarié annoncés par les comparateurs sont souvent très au-dessus.</p>
+
+<h3 id="3-lucca-8-5">3. Lucca — 8,5</h3>
+<p>Suite modulaire française, la plus agréable à utiliser de cette sélection. On commence par les congés et l'administration du personnel, on ajoute les entretiens, les notes de frais, la paie. L'intérêt est de ne payer que ce qu'on utilise et de faire adopter l'outil progressivement.</p>
+<p><strong>Ce qui coince :</strong> le tarif par module se cumule vite, et les prix d'appel qui circulent sont trompeurs. Le pack de trois modules est à 6,75 € par salarié et par mois ; selon le périmètre, comptez de 8 à 22 €. Une PME de cinquante personnes avec un périmètre étendu est plus proche de 700 € par mois que des 150 € que suggèrent les tarifs par module pris isolément.</p>
+
+<h3 id="4-eurecia-8-2">4. Eurécia — 8,2</h3>
+<p>SIRH français complet et cohérent, avec un vrai support francophone et une bonne couverture des obligations réglementaires. Pour une PME qui veut un seul outil et un seul interlocuteur, la proposition se tient.</p>
+<p><strong>Ce qui coince, et c'est le point à négocier :</strong> l'abonnement à partir de 5,40 € par salarié couvre le SIRH, pas l'édition des bulletins. Celle-ci est un service distinct facturé 15 à 30 € par bulletin. Pour cinquante salariés, on passe d'environ 270 € par mois à 1 000 € ou plus. Demandez un devis qui chiffre les deux lignes séparément.</p>
+
+<h3 id="5-personio-7-9">5. Personio — 7,9</h3>
+<p>Plateforme européenne solide sur tout ce qui n'est pas la paie française : dossiers, recrutement, entretiens, tableaux de bord. Pour un groupe qui gère plusieurs pays et veut une vue unique, c'est un bon choix.</p>
+<p><strong>Ce qui coince :</strong> <strong>Personio ne produit pas de bulletin français ni de déclaration sociale.</strong> Il propose une paie préparatoire et se branche sur un moteur français. Le budget réel est donc celui de Personio, entre 6 et 10 € par salarié, plus celui d'une solution de paie. Une PME française mono-site qui cherche à remplacer son tableur trouvera moins cher et plus direct ailleurs.</p>
+
+<h3 id="6-factorial-7-6">6. Factorial — 7,6</h3>
+<p>Interface moderne, mise en service rapide, tarif d'entrée bas : Factorial est bien placé pour une PME qui veut structurer ses RH sans projet lourd. Les modules administratifs sont complets et l'adoption est facile.</p>
+<p><strong>Ce qui coince :</strong> comme Personio, <strong>Factorial n'a pas de moteur de paie français en propre</strong> et s'appuie sur une intégration avec Silae. L'abonnement, de 5,75 € à 9 € par salarié selon l'offre, ne couvre donc pas la paie : il faut y ajouter la licence Silae ou la facture du cabinet. Le rapport reste bon, à condition de compter les deux lignes.</p>
+
+<h3 id="7-sage-100-paie-amp-rh-7-3">7. Sage 100 Paie &amp; RH — 7,3</h3>
+<p>Solution éprouvée pour les PME et ETI déjà équipées en Sage, dont l'intérêt principal est l'intégration native avec la comptabilité de l'éditeur. La paie est robuste et conforme.</p>
+<p><strong>Ce qui coince :</strong> l'interface est datée, les modules de gestion des talents sont pauvres, et la tarification passe par devis avec un partenaire intégrateur. Hors écosystème Sage, l'argument s'affaiblit nettement.</p>
+
+<h3 id="8-axonaut-7-1">8. Axonaut — 7,1</h3>
+<p>Axonaut est un outil de gestion français tout-en-un — devis, facturation, comptabilité, relation client — auquel s'ajoute un volet social. Pour une très petite structure, avoir tout au même endroit est un vrai gain.</p>
+<p><strong>Ce qui coince :</strong> le volet social est basique. Il convient pour quelques salaires fixes ; dès qu'il y a des variables ou une convention collective particulière, un outil dédié redevient nécessaire. Et le tarif souvent cité de 30 à 50 € par mois est faux : c'est <strong>69,99 € par utilisateur et par mois sans engagement</strong>, 34,99 € seulement en s'engageant trois ans.</p>
+<p>Une précision d'usage : Axonaut figure dans quatre autres de nos comparatifs, avec des notes qui vont de 7,1 à 9,0 selon la grille appliquée. Il est premier de notre <a href="/saas-logiciels/meilleur-crm-tpe-pme">comparatif pour TPE et PME</a> parce qu'un artisan y trouve tout ce dont il a besoin, et huitième ici parce qu'une PME de cinquante salariés attend d'un logiciel RH ce qu'Axonaut ne fait pas.</p>
+
+<h3 id="9-kammi-6-8">9. Kammi — 6,8</h3>
+<p>SIRH français développé depuis 2007, organisé en douze modules répartis en trois suites : gestion RH, talents, paie. C'est de loin le tarif le plus bas de cette sélection — à partir de 2 € par utilisateur et par mois pour les modules administratifs, moins encore pour les entretiens.</p>
+<p><strong>Ce qui coince :</strong> l'ergonomie est en retrait par rapport à Lucca ou Payfit, et les fonctions avancées manquent. Mais pour une PME qui veut sortir du tableur sur les congés et les absences sans engager de budget, le rapport est difficile à battre — bien meilleur que ce que laissent croire les estimations à quelques centaines d'euros qui circulent.</p>
+
+<h3 id="10-bamboohr-6-5">10. BambooHR — 6,5</h3>
+<p>Bonne plateforme de gestion du personnel et des talents, moderne et agréable, très répandue dans le monde anglophone.</p>
+<p><strong>Ce qui coince :</strong> pas de paie française, pas de déclaration sociale, support francophone limité. Pour une PME française mono-site, l'intérêt est faible ; pour la filiale d'un groupe qui l'a déjà déployé, la question ne se pose pas de la même façon.</p>
+
+<h2 id="quel-logiciel-selon-votre-situation">Quel logiciel selon votre situation</h2>
+<div class="table-wrap"><table><tbody>
+<tr><th><p>Votre situation</p></th><th><p>Notre recommandation</p></th><th><p>Ordre de grandeur pour 50 salariés</p></th></tr>
+<tr><td><p>Paie déjà chez l'expert-comptable, vous voulez sortir du tableur</p></td><td><p>Kammi ou Lucca sur les modules administratifs</p></td><td><p>100 à 350 € par mois</p></td></tr>
+<tr><td><p>Paie régulière, vous voulez l'internaliser</p></td><td><p>Payfit</p></td><td><p>Forfait plus le montant par salarié, à demander en devis</p></td></tr>
+<tr><td><p>Paie complexe, conventions chargées</p></td><td><p>Silae, par votre cabinet</p></td><td><p>8 à 18 € par bulletin, soit 400 à 900 €</p></td></tr>
+<tr><td><p>Vous voulez un seul outil et un seul interlocuteur</p></td><td><p>Eurécia, en chiffrant la ligne bulletins à part</p></td><td><p>270 € le SIRH, plus 750 à 1 500 € la paie</p></td></tr>
+<tr><td><p>Moins de dix salariés, salaires fixes</p></td><td><p>Axonaut si vous cherchez aussi la facturation</p></td><td><p>70 € par utilisateur</p></td></tr>
+<tr><td><p>Plusieurs pays</p></td><td><p>Personio, plus un moteur de paie français</p></td><td><p>300 à 500 €, plus la paie</p></td></tr>
+</tbody></table></div>
+<p>Un conseil qui vaut pour tous : demandez un devis qui sépare explicitement la ligne « édition des bulletins et déclarations » du reste. C'est la seule façon de comparer deux propositions, et c'est la ligne sur laquelle les écarts se chiffrent en milliers d'euros par an.</p>
+
+<h2 id="cinq-erreurs-a-eviter">Cinq erreurs à éviter</h2>
+<p><strong>Croire que « paie comprise » veut dire que le bulletin sort de l'outil.</strong> C'est l'erreur qui coûte le plus cher, et elle concerne quatre des dix solutions de cette page. Posez la question dans ces termes : est-ce que votre logiciel produit le bulletin et la déclaration sociale, ou est-ce qu'il prépare des données pour un autre outil ?</p>
+<p><strong>Comparer un tarif par salarié à un tarif par bulletin.</strong> Ce ne sont pas les mêmes unités et elles ne se convertissent pas simplement, notamment quand l'effectif varie en cours d'année ou quand il y a plusieurs établissements.</p>
+<p><strong>Oublier que le tarif affiché suppose souvent un engagement.</strong> Axonaut passe de 34,99 € à 69,99 € par utilisateur selon la durée. Sur trois ans, l'écart pour dix personnes dépasse douze mille euros.</p>
+<p><strong>Choisir sans faire tester l'interface par un manager.</strong> Un logiciel RH n'est pas utilisé que par les RH : ce sont les managers qui valident les congés et les variables. Si l'outil leur résiste, les demandes repartent par courriel et vous payez un abonnement pour rien.</p>
+<p><strong>Négliger le transfert des données.</strong> Historique des congés, soldes acquis, ancienneté, données de paie de l'année en cours : la reprise est le poste qui fait déraper les calendriers, bien plus que le paramétrage. Demandez qui la fait et si elle est comprise.</p>
+
+<h2 id="faq-logiciel-rh-pour-pme">FAQ — logiciel RH pour PME</h2>
+<p><strong>Quel est le meilleur logiciel RH pour une PME en 2026 ?</strong> Cela dépend d'abord d'une question : voulez-vous que le bulletin sorte de l'outil ? Si oui, Silae par votre cabinet pour une paie complexe, Payfit si elle est régulière. Si votre paie reste chez l'expert-comptable, prenez une suite administrative comme Lucca ou Kammi, nettement moins chère.</p>
+<p><strong>Combien coûte un logiciel RH pour une PME de cinquante salariés ?</strong> De 100 à 350 € par mois pour une suite administrative sans paie, de 400 à 900 € si le bulletin est produit, et jusqu'à 1 500 € et plus si vous ajoutez l'édition des bulletins à un SIRH qui la facture à l'unité. L'écart tient presque entièrement à cette dernière ligne.</p>
+<p><strong>Quelle différence entre un SIRH et un logiciel de paie ?</strong> Un logiciel de paie calcule le bulletin et produit la déclaration sociale : c'est un outil réglementaire. Un SIRH gère les congés, les temps, les entretiens et les dossiers du personnel. Beaucoup de SIRH annoncent la paie, mais peu la produisent réellement pour la France.</p>
+<p><strong>Personio et Factorial gèrent-ils la paie française ?</strong> Non, pas en propre. Personio propose une paie préparatoire et se branche sur un moteur français par connecteur. Factorial passe par une intégration avec Silae. Dans les deux cas, le coût de la paie s'ajoute à l'abonnement affiché.</p>
+<p><strong>Peut-on gérer les RH d'une PME gratuitement ?</strong> Pour la paie, non : les obligations françaises rendent un outil conforme indispensable, et aucune solution gratuite sérieuse n'existe. Pour l'administratif — congés, absences, notes de frais —, des offres à 2 € par salarié et par mois existent, ce qui rend la question du gratuit peu pertinente au regard du temps gagné.</p>
+<p><strong>Combien de temps prend la mise en service ?</strong> De quelques semaines pour une suite administrative à plusieurs mois pour un SIRH complet avec reprise de la paie en cours d'exercice. Le facteur déterminant n'est pas le logiciel mais la qualité de vos données de départ et le moment de l'année choisi — une bascule au 1er janvier évite de reprendre un historique partiel.</p>
+<p><strong>Faut-il externaliser la paie ou l'internaliser ?</strong> Si votre paie tient en salaires fixes et que votre effectif est stable, l'internaliser avec un outil comme Payfit fait gagner du temps et de l'argent. Dès qu'il y a des conventions particulières, des variables nombreuses ou des contrats courts, l'expertise d'un cabinet reste moins coûteuse qu'une erreur de déclaration.</p>
+<p><strong>Pourquoi Axonaut a-t-il des notes différentes dans vos comparatifs ?</strong> Parce que la grille change avec l'usage. Axonaut est premier de notre comparatif TPE et PME avec 9,0, où l'on juge la capacité à couvrir tout le quotidien d'un artisan, et huitième ici avec 7,1, où le critère le plus lourd est la production d'un bulletin — ce qu'il ne fait que très sommairement. Les deux notes portent sur des questions différentes.</p>
+
+<h2 id="comment-lire-ce-comparatif">Comment lire ce comparatif</h2>
+<p>Prenez-le pour ce qu'il est : une appréciation éditoriale sur un marché où les tarifs sont rarement publiés en entier et où plusieurs éditeurs ne vendent pas directement. La partie la plus utile de cette page n'est pas le classement, c'est la colonne « bulletin français produit ». Elle est vérifiable auprès de chaque éditeur, et elle change le budget d'un facteur trois à six.</p>
+<p>Nos autres comparatifs de logiciels de gestion couvrent des besoins voisins : la <a href="/saas-logiciels/meilleur-logiciel-comptabilite-pme">comptabilité pour PME</a>, la <a href="/saas-logiciels/meilleur-logiciel-crm-2026">relation client</a> et, pour les très petites structures, notre <a href="/saas-logiciels/meilleur-crm-tpe-pme">sélection TPE et PME</a>. Plusieurs produits y figurent avec d'autres notes, et c'est voulu.</p>`;
+
+/** Sommaire dérivé des titres de niveau 2. */
+export const toc: { id: string; text: string }[] = [
+  {
+    "id": "ce-que-logiciel-rh-recouvre-et-pourquoi-le-mot-induit-en-err",
+    "text": "Ce que « logiciel RH » recouvre, et pourquoi le mot induit en erreur"
+  },
+  {
+    "id": "notre-grille-d-evaluation",
+    "text": "Notre grille d'évaluation"
+  },
+  {
+    "id": "la-paie-n-est-pas-incluse-la-ou-on-le-croit",
+    "text": "La paie n'est pas incluse là où on le croit"
+  },
+  {
+    "id": "le-comparatif-des-dix-logiciels-rh-pour-pme",
+    "text": "Le comparatif des dix logiciels RH pour PME"
+  },
+  {
+    "id": "les-dix-solutions-en-detail",
+    "text": "Les dix solutions en détail"
+  },
+  {
+    "id": "quel-logiciel-selon-votre-situation",
+    "text": "Quel logiciel selon votre situation"
+  },
+  {
+    "id": "cinq-erreurs-a-eviter",
+    "text": "Cinq erreurs à éviter"
+  },
+  {
+    "id": "faq-logiciel-rh-pour-pme",
+    "text": "FAQ — logiciel RH pour PME"
+  },
+  {
+    "id": "comment-lire-ce-comparatif",
+    "text": "Comment lire ce comparatif"
+  }
+];
+
+/** Questions/réponses de la FAQ, balisées en FAQPage. */
+export const faq: { question: string; answer: string }[] = [
+  {
+    "question": "Quel est le meilleur logiciel RH pour une PME en 2026 ?",
+    "answer": "Cela dépend d'abord d'une question : voulez-vous que le bulletin sorte de l'outil ? Si oui, Silae par votre cabinet pour une paie complexe, Payfit si elle est régulière. Si votre paie reste chez l'expert-comptable, prenez une suite administrative comme Lucca ou Kammi, nettement moins chère."
+  },
+  {
+    "question": "Combien coûte un logiciel RH pour une PME de cinquante salariés ?",
+    "answer": "De 100 à 350 € par mois pour une suite administrative sans paie, de 400 à 900 € si le bulletin est produit, et jusqu'à 1 500 € et plus si vous ajoutez l'édition des bulletins à un SIRH qui la facture à l'unité. L'écart tient presque entièrement à cette dernière ligne."
+  },
+  {
+    "question": "Quelle différence entre un SIRH et un logiciel de paie ?",
+    "answer": "Un logiciel de paie calcule le bulletin et produit la déclaration sociale : c'est un outil réglementaire. Un SIRH gère les congés, les temps, les entretiens et les dossiers du personnel. Beaucoup de SIRH annoncent la paie, mais peu la produisent réellement pour la France."
+  },
+  {
+    "question": "Personio et Factorial gèrent-ils la paie française ?",
+    "answer": "Non, pas en propre. Personio propose une paie préparatoire et se branche sur un moteur français par connecteur. Factorial passe par une intégration avec Silae. Dans les deux cas, le coût de la paie s'ajoute à l'abonnement affiché."
+  },
+  {
+    "question": "Peut-on gérer les RH d'une PME gratuitement ?",
+    "answer": "Pour la paie, non : les obligations françaises rendent un outil conforme indispensable, et aucune solution gratuite sérieuse n'existe. Pour l'administratif — congés, absences, notes de frais —, des offres à 2 € par salarié et par mois existent, ce qui rend la question du gratuit peu pertinente au regard du temps gagné."
+  },
+  {
+    "question": "Combien de temps prend la mise en service ?",
+    "answer": "De quelques semaines pour une suite administrative à plusieurs mois pour un SIRH complet avec reprise de la paie en cours d'exercice. Le facteur déterminant n'est pas le logiciel mais la qualité de vos données de départ et le moment de l'année choisi — une bascule au 1er janvier évite de reprendre un historique partiel."
+  },
+  {
+    "question": "Faut-il externaliser la paie ou l'internaliser ?",
+    "answer": "Si votre paie tient en salaires fixes et que votre effectif est stable, l'internaliser avec un outil comme Payfit fait gagner du temps et de l'argent. Dès qu'il y a des conventions particulières, des variables nombreuses ou des contrats courts, l'expertise d'un cabinet reste moins coûteuse qu'une erreur de déclaration."
+  },
+  {
+    "question": "Pourquoi Axonaut a-t-il des notes différentes dans vos comparatifs ?",
+    "answer": "Parce que la grille change avec l'usage. Axonaut est premier de notre comparatif TPE et PME avec 9,0, où l'on juge la capacité à couvrir tout le quotidien d'un artisan, et huitième ici avec 7,1, où le critère le plus lourd est la production d'un bulletin — ce qu'il ne fait que très sommairement. Les deux notes portent sur des questions différentes."
+  }
+];
+
+/** Sources citées, reprises en fin d'article et dans le balisage. */
+export const sources: { url: string; label: string }[] = [];

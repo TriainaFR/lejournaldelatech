@@ -36,3 +36,4 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-outil-geo-2026.jpg` — https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0
 - `art-meilleur-crm-ecommerce-2026.jpg` — https://images.unsplash.com/photo-1770013413878-2530e2c3d82b
 - `art-meilleur-outil-ia-marketing.jpg` — https://images.unsplash.com/photo-1590402494587-44b71d7772f6
+- `art-meilleur-logiciel-rh-pme.jpg` — https://images.unsplash.com/photo-1775163024488-e88e4a71179f

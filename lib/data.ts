@@ -1887,6 +1887,49 @@ export const articles: Article[] = [
      * e-commerce. L'écart est expliqué dans le corps de l'article.
      */
   },
+  {
+    slug: "meilleur-logiciel-rh-pme",
+    kind: "Comparatif",
+    title: "Meilleur logiciel RH PME 2026 : dix solutions comparées",
+    metaTitle: "Meilleur logiciel RH PME 2026 : le comparatif",
+    excerpt:
+      "Silae, Payfit, Lucca, Eurécia, Personio : dix solutions notées sur neuf critères. Quatre ne produisent pas un bulletin français au tarif affiché — c'est le critère le plus lourd, et celui où l'on se trompe le plus.",
+    metaDescription:
+      "Comparatif 2026 de dix logiciels RH pour PME : qui produit vraiment le bulletin français, tarifs relevés le 19 août et coût réel de la ligne paie.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    /**
+     * Le relevé porte sur la colonne « paie intégrée » : quatre solutions sur
+     * dix ne produisent pas de bulletin français dans le périmètre affiché.
+     * Axonaut porte déjà quatre notes ailleurs sur le site — d'où l'absence de
+     * `ranking`, et l'explication de l'écart dans le corps.
+     */
+    authorNote:
+      "Ce comparatif porte sur des solutions dont plusieurs ne vendent pas directement aux entreprises : Silae facture les cabinets d'expertise comptable, qui refacturent leurs clients. Les tarifs cités ont été relevés le 19 août 2026 sur les grilles publiques des éditeurs et de leurs revendeurs ; aucun éditeur n'a été consulté et nous n'avons audité aucune attestation de conformité. Axonaut figure aussi dans quatre autres de nos comparatifs, avec des notes allant de 7,1 à 9,0 selon la grille appliquée : l'écart est expliqué dans l'article.",
+    date: "2026-08-19",
+    dateLabel: "19 août 2026",
+    readingTime: 13,
+    seed: 128,
+    imageAlt:
+      "Deux personnes examinent des documents administratifs imprimés sur une table de réunion, un stylo et une tablette posés à côté",
+    topics: [
+      "Logiciel RH",
+      "SIRH",
+      "Paie",
+      "PME",
+      "Déclaration sociale nominative",
+      "Conformité",
+      "SaaS",
+      "Gestion du personnel",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Pas de `ranking` : Axonaut porte déjà quatre notes publiées ailleurs sur
+     * le site (7,1 à 9,0). Émettre un cinquième bloc `Review` du même éditeur
+     * pour le même produit serait un avis dupliqué — même règle que sur les
+     * comparatifs CRM e-commerce et IA marketing.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

@@ -9,6 +9,7 @@ import * as meilleurCrmEcommerce2026 from "@/content/articles/meilleur-crm-ecomm
 import * as meilleurCrmTpePme from "@/content/articles/meilleur-crm-tpe-pme";
 import * as meilleurLogicielComptabiliteGratuit from "@/content/articles/meilleur-logiciel-comptabilite-gratuit";
 import * as meilleurLogicielComptabilitePme from "@/content/articles/meilleur-logiciel-comptabilite-pme";
+import * as meilleurLogicielRhPme from "@/content/articles/meilleur-logiciel-rh-pme";
 import * as meilleurLogicielCrm2026 from "@/content/articles/meilleur-logiciel-crm-2026";
 import * as meilleurOutilIa2026 from "@/content/articles/meilleur-outil-ia-2026";
 import * as meilleurOutilGeo2026 from "@/content/articles/meilleur-outil-geo-2026";
@@ -46,6 +47,7 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-crm-tpe-pme": meilleurCrmTpePme,
   "meilleur-logiciel-comptabilite-gratuit": meilleurLogicielComptabiliteGratuit,
   "meilleur-logiciel-comptabilite-pme": meilleurLogicielComptabilitePme,
+  "meilleur-logiciel-rh-pme": meilleurLogicielRhPme,
   "meilleur-logiciel-crm-2026": meilleurLogicielCrm2026,
   "meilleur-outil-ia-2026": meilleurOutilIa2026,
   "meilleur-outil-geo-2026": meilleurOutilGeo2026,
