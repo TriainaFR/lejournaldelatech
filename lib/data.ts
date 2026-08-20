@@ -1930,6 +1930,154 @@ export const articles: Article[] = [
      * comparatifs CRM e-commerce et IA marketing.
      */
   },
+  {
+    slug: "meilleur-logiciel-rh-gratuit",
+    kind: "Enquête",
+    title: "Meilleur logiciel RH gratuit 2026 : ce qui l'est vraiment",
+    metaTitle: "Meilleur logiciel RH gratuit 2026 : ce qui l'est vraiment",
+    excerpt:
+      "Sur huit logiciels RH présentés partout comme gratuits, un seul propose un plan gratuit permanent. Deux n'ont aucune offre gratuite, quatre sont des essais de 7 à 30 jours, et aucun ne produit de déclaration sociale.",
+    metaDescription:
+      "Vérification des offres gratuites de huit logiciels RH au 20 août 2026 : lesquelles existent, ce qu'elles couvrent et à partir de quand il faut payer.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    /**
+     * Cette page ne note pas des produits : elle vérifie une affirmation
+     * commerciale. Le classement suit ce qu'on obtient réellement sans payer,
+     * pas la qualité des logiciels — d'où l'absence de notes JDLT.
+     */
+    authorNote:
+      "Cette page ne classe pas des produits selon leur qualité : elle vérifie l'existence et le périmètre des offres gratuites annoncées, au 20 août 2026, sur les grilles publiques des éditeurs. Deux des huit solutions habituellement citées comme gratuites n'ont aucune offre gratuite, et quatre proposent un essai limité dans le temps présenté comme tel par erreur ailleurs. Aucun éditeur n'a été consulté. Les régimes tarifaires de ce marché changent vite : considérez la date du relevé comme faisant partie de l'information.",
+    date: "2026-08-20",
+    dateLabel: "20 août 2026",
+    readingTime: 11,
+    seed: 129,
+    imageAlt:
+      "Une dirigeante de petite entreprise travaille sur son ordinateur portable dans un bureau clair",
+    topics: [
+      "Logiciel RH",
+      "SIRH",
+      "Gratuit",
+      "TPE",
+      "Déclaration sociale nominative",
+      "Congés et absences",
+      "RGPD",
+      "SaaS",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Pas de `ranking` : cette page n'émet aucune note de qualité produit, et
+     * plusieurs de ces solutions portent déjà une note dans le comparatif RH
+     * pour PME publié le même jour. Un second bloc `Review` serait à la fois
+     * dupliqué et hors sujet.
+     */
+  },
+  {
+    slug: "meilleur-logiciel-gestion-projet",
+    kind: "Comparatif",
+    title: "Meilleur logiciel de gestion de projet 2026 : dix solutions comparées",
+    metaTitle: "Meilleur logiciel gestion de projet 2026 : le comparatif",
+    excerpt:
+      "Monday, ClickUp, Asana, Jira : dix outils notés sur douze critères. Le palier gratuit s'est effondré en 2025-2026 — Asana est passé à deux utilisateurs — et Microsoft retire Project Online le 30 septembre.",
+    metaDescription:
+      "Comparatif 2026 de dix logiciels de gestion de projet : limites gratuites réelles, tarifs au mois relevés le 20 août et arrêt de Microsoft Project Online.",
+    category: "saas-logiciels",
+    author: "lucas-lecoq",
+    /**
+     * Deux informations datées portent l'article : le resserrement des paliers
+     * gratuits (Asana passé à deux utilisateurs en novembre 2025) et l'arrêt de
+     * Project Online au 30/09/2026, à six semaines de la publication.
+     */
+    authorNote:
+      "Les limites des offres gratuites de cette catégorie ont changé plusieurs fois en dix-huit mois et la plupart des comparatifs en ligne annoncent encore des paliers périmés : Asana est passé à deux utilisateurs pour les comptes créés après le 12 novembre 2025, Trello plafonne à dix collaborateurs, Monday impose un minimum de trois sièges payants. Les tarifs et les limites de cette page ont été relevés le 20 août 2026 sur les grilles publiques des éditeurs, au mois et sans engagement ; aucun éditeur n'a été consulté. Microsoft retire Project Online le 30 septembre 2026 : si vous l'utilisez, l'arbitrage est à faire maintenant.",
+    date: "2026-08-20",
+    dateLabel: "20 août 2026",
+    readingTime: 13,
+    seed: 130,
+    imageAlt:
+      "Trois collègues discutent devant un tableau de projet mural couvert de plans et de documents épinglés",
+    topics: [
+      "Gestion de projet",
+      "SaaS",
+      "Monday.com",
+      "Asana",
+      "Jira",
+      "Diagramme de Gantt",
+      "Méthode agile",
+      "Logiciel gratuit",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * `ranking` déclaré sur décision de Lucas. Les noms lèvent l'ambiguïté avec
+     * les produits homonymes déjà notés ailleurs sur le site : « Monday.com »
+     * n'est pas « Monday CRM », « Zoho Projects » n'est pas « Zoho CRM », et
+     * « Notion » désigne l'espace de travail, distinct de « Notion AI » noté
+     * dans nos comparatifs d'outils d'IA. Sept des dix produits n'ont aucune
+     * note publiée ailleurs.
+     */
+    ranking: [
+      {
+        name: "Monday.com",
+        score: 9.1,
+        verdict:
+          "Le plus polyvalent et le plus rapide à installer dans une équipe qui n'a jamais utilisé d'outil de gestion de projet. Offre gratuite symbolique à deux utilisateurs, et minimum de trois sièges facturés sur le premier palier payant.",
+      },
+      {
+        name: "ClickUp",
+        score: 8.8,
+        verdict:
+          "Le périmètre fonctionnel le plus large à ce prix, hiérarchisé sur cinq niveaux. Densité réelle pour une équipe non technique, tarif affiché à 7 $ qui est annuel — 10 $ au mois — et assistant d'IA facturé 9 $ par utilisateur en option.",
+      },
+      {
+        name: "Asana",
+        score: 8.5,
+        verdict:
+          "La meilleure prise en main de la catégorie et la gestion de portefeuille la plus lisible. Son offre gratuite est passée à deux utilisateurs pour les comptes créés après le 12 novembre 2025 : ce n'est plus une option sans budget.",
+      },
+      {
+        name: "Notion",
+        score: 8.2,
+        verdict:
+          "Un espace de travail dans lequel on construit son outil de gestion de projet, cohérent avec la documentation d'équipe. Suppose un travail de structuration initial, et les agents d'IA sont désormais facturés en crédits.",
+      },
+      {
+        name: "Jira",
+        score: 7.9,
+        verdict:
+          "Le standard du développement logiciel, mûr sur les backlogs, sprints et points de complexité, gratuit jusqu'à dix utilisateurs. Hostile à une équipe non technique et exigeant à configurer.",
+      },
+      {
+        name: "Wrike",
+        score: 7.6,
+        verdict:
+          "La meilleure restitution et la meilleure vue de charge pour une structure matricielle, avec l'offre gratuite la plus large du marché. Les licences payantes se vendent par paliers fixes : six personnes paient dix sièges.",
+      },
+      {
+        name: "Trello",
+        score: 7.3,
+        verdict:
+          "La simplicité qui fait qu'un outil est réellement utilisé, imbattable sur un flux opérationnel récurrent. L'offre gratuite n'est plus illimitée : dix collaborateurs et dix tableaux par espace de travail.",
+      },
+      {
+        name: "Microsoft Project",
+        score: 7.0,
+        verdict:
+          "La planification lourde reste son domaine, avec l'intégration Microsoft 365. Aucune offre gratuite, interface exigeante, et Project Online ferme le 30 septembre 2026 — la version bureau n'est pas concernée.",
+      },
+      {
+        name: "Zoho Projects",
+        score: 6.8,
+        verdict:
+          "Complet et bon marché, surtout si d'autres briques Zoho sont déjà en place. L'offre gratuite accepte cinq utilisateurs mais plafonne à trois projets, ce qui bloque une agence dès le premier jour.",
+      },
+      {
+        name: "OpenProject",
+        score: 6.5,
+        verdict:
+          "La seule solution réellement libre du panel, hébergeable en France, bien couverte sur les méthodes classiques. Interface datée, pas d'assistant d'IA, et un coût déplacé vers l'hébergement et la maintenance.",
+      },
+    ],
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };
