@@ -2078,6 +2078,86 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    slug: "meilleure-agence-geo-paris",
+    kind: "Classement",
+    title: "Meilleure agence GEO Paris 2026 : le classement JDLT",
+    metaTitle: "Meilleure agence GEO Paris 2026 : le classement",
+    excerpt:
+      "Dix agences GEO qui interviennent pour des entreprises parisiennes, notées sur huit critères. Trois d'entre elles revendiquent l'antériorité sur le GEO en France — et le site de l'éditrice l'attribue à une concurrente.",
+    metaDescription:
+      "Classement 2026 des agences GEO à Paris : dix cabinets notés sur huit critères, budgets de 750 à 15 000 € et comparaison avec nos classements précédents.",
+    category: "seo-geo",
+    author: "lucas-lecoq",
+    /** Septième classement où l'éditrice figure première, et le troisième d'affilée où sa note ne bouge pas. */
+    authorNote:
+      "Triaina, classée première, est la société qui édite Le Journal de la Tech et son siège est à Paris. Cette page n'est pas une évaluation indépendante de son travail ; c'est le septième de nos classements où elle figure en tête, et le troisième d'affilée où sa note reste à 9,7 alors qu'aucune des sept autres agences déjà notées ne retrouve son niveau du classement national. Le tableau de comparaison des trois classements est publié dans l'article. Les chiffres retenus pour Triaina sont ceux qu'elle publie elle-même — vingt-six ans d'expertise cumulée, huit médias propriétaires — et restent déclaratifs.",
+    date: "2026-08-21",
+    dateLabel: "21 août 2026",
+    readingTime: 12,
+    seed: 131,
+    imageAlt:
+      "Façades haussmanniennes et balcons en fer forgé rue Saint-Martin, dans le 3e arrondissement de Paris",
+    topics: [
+      "GEO",
+      "Generative Engine Optimization",
+      "Agence GEO",
+      "Paris",
+      "Citabilité IA",
+      "Google AI Overview",
+      "Référencement naturel",
+      "Prestataires",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Ni `ranking` ni `datasets`, comme sur les six autres classements
+     * d'agences : l'éditrice du journal s'y note elle-même, et sept de ces dix
+     * agences portent déjà une note ailleurs sur le site.
+     */
+  },
+  {
+    slug: "meilleur-outil-ia-redacteurs",
+    kind: "Comparatif",
+    title: "Meilleur outil IA pour les rédacteurs 2026 : dix solutions comparées",
+    metaTitle: "Meilleur outil IA pour les rédacteurs 2026 : le comparatif",
+    excerpt:
+      "Claude, ChatGPT, Le Chat, Jasper : dix outils d'écriture assistée notés sur quatorze critères. Un comparatif d'IA se périme en semaines — celui-ci dit ce qui tient d'une version à l'autre et ce qui ne tient pas.",
+    metaDescription:
+      "Comparatif 2026 de dix outils d'IA pour rédiger : qualité du français, fiabilité, hébergement des données et tarifs relevés le 21 août.",
+    category: "intelligence-artificielle",
+    author: "lucas-lecoq",
+    /**
+     * Cinquième comparatif d'outils d'IA du site. Claude et ChatGPT y portent
+     * leur quatrième note ; le tableau des quatre grilles est publié dans
+     * l'article, avec l'écart le plus large — Le Chat, 8,7 en PME contre 7,0
+     * ici — et son explication.
+     */
+    authorNote:
+      "Cinq de ces dix outils portent déjà une note dans nos autres comparatifs d'IA, sous le même nom : Claude et ChatGPT en sont à leur quatrième. Ils y obtiennent d'autres résultats parce que la grille change avec l'usage — Le Chat passe de 8,7 dans notre sélection pour PME, où l'hébergement en France pèse lourd, à 7,0 ici, où la qualité du texte représente 35 % de la note. Le tableau des quatre classements est publié dans l'article. Les tarifs et les localisations de données ont été relevés le 21 août 2026 ; sur cette catégorie, ils changent en semaines.",
+    date: "2026-08-21",
+    dateLabel: "21 août 2026",
+    readingTime: 11,
+    seed: 132,
+    imageAlt:
+      "Vue de dessus d'un bureau de rédaction : carnet fermé, ordinateur portable, crayon et tasse de café sur un plan blanc",
+    topics: [
+      "Intelligence artificielle",
+      "Rédaction",
+      "Claude",
+      "ChatGPT",
+      "Mistral",
+      "IA générative",
+      "RGPD",
+      "Écriture assistée",
+    ],
+    methodology: { name: "Protocole JDLT", href: "/protocole-jdlt" },
+    /*
+     * Pas de `ranking` : Claude, ChatGPT, Gemini, Perplexity, Le Chat et
+     * Notion AI portent déjà une note publiée sous le même nom de produit. La
+     * règle retenue le 20/08 autorise le `ranking` quand le nom lève
+     * l'ambiguïté — ce n'est pas le cas ici, ce sont les mêmes produits.
+     */
+  },
 ];
 
 export type FaqItem = { question: string; answer: string };

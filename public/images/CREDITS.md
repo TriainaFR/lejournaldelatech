@@ -39,3 +39,5 @@ Photos téléchargées depuis Unsplash (licence Unsplash : usage commercial auto
 - `art-meilleur-logiciel-rh-pme.jpg` — https://images.unsplash.com/photo-1775163024488-e88e4a71179f
 - `art-meilleur-logiciel-rh-gratuit.jpg` — https://images.unsplash.com/photo-1507206130118-b5907f817163
 - `art-meilleur-logiciel-gestion-projet.jpg` — https://images.unsplash.com/photo-1681949270990-cecd4728d2e0
+- `art-meilleure-agence-geo-paris.jpg` — https://images.unsplash.com/photo-1772119065264-490a6ff55e63
+- `art-meilleur-outil-ia-redacteurs.jpg` — https://images.unsplash.com/photo-1784065647713-d50e315596d1

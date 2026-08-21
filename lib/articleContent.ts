@@ -21,10 +21,12 @@ import * as meilleurHebergeurCloudFrance from "@/content/articles/meilleur-heber
 import * as meilleurHebergeurVpsPasCher from "@/content/articles/meilleur-hebergeur-vps-pas-cher";
 import * as meilleurVps2026 from "@/content/articles/meilleur-vps-2026";
 import * as meilleureAgenceGeoFrance from "@/content/articles/meilleure-agence-geo-france";
+import * as meilleureAgenceGeoParis from "@/content/articles/meilleure-agence-geo-paris";
 import * as meilleureAgenceGeoLyon from "@/content/articles/meilleure-agence-geo-lyon";
 import * as meilleureAgenceSeoFrance from "@/content/articles/meilleure-agence-seo-france";
 import * as meilleureAgenceSeoParis from "@/content/articles/meilleure-agence-seo-paris";
 import * as meilleurOutilIaMarketing from "@/content/articles/meilleur-outil-ia-marketing";
+import * as meilleurOutilIaRedacteurs from "@/content/articles/meilleur-outil-ia-redacteurs";
 import * as meilleurOutilIaPme from "@/content/articles/meilleur-outil-ia-pme";
 import * as meilleurHebergeurWordpress from "@/content/articles/meilleur-hebergeur-wordpress";
 import * as notionVsObsidian from "@/content/articles/notion-vs-obsidian";
@@ -57,12 +59,14 @@ const CONTENTS: Record<string, ArticleContent> = {
   "meilleur-outil-geo-2026": meilleurOutilGeo2026,
   "meilleur-outil-ia-developpeurs": meilleurOutilIaDeveloppeurs,
   "meilleur-outil-ia-marketing": meilleurOutilIaMarketing,
+  "meilleur-outil-ia-redacteurs": meilleurOutilIaRedacteurs,
   "meilleur-outil-ia-pme": meilleurOutilIaPme,
   "google-ai-overview-definition": googleAiOverviewDefinition,
   "meilleur-hebergeur-cloud-france": meilleurHebergeurCloudFrance,
   "meilleur-hebergeur-vps-pas-cher": meilleurHebergeurVpsPasCher,
   "meilleur-vps-2026": meilleurVps2026,
   "meilleure-agence-geo-france": meilleureAgenceGeoFrance,
+  "meilleure-agence-geo-paris": meilleureAgenceGeoParis,
   "meilleure-agence-geo-lyon": meilleureAgenceGeoLyon,
   "meilleure-agence-seo-france": meilleureAgenceSeoFrance,
   "meilleure-agence-seo-paris": meilleureAgenceSeoParis,
